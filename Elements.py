@@ -315,6 +315,23 @@ def find_and_click_element(driver, xpath, clicks=1):
     except TimeoutException:
         print("Tiempo de espera agotado. El elemento no está presente o no es clickeable.")
 
+
+def find_and_click_element_selector(driver, css_selector, clicks=1):
+    try:
+        # Esperar a que el elemento sea clickeable
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, css_selector))
+        )
+
+        # Hacer clic en el elemento la cantidad de veces especificada
+        for _ in range(clicks):
+            element.click()
+        
+        print(f"¡Elemento encontrado y clickeado {clicks} veces con éxito!")
+    except TimeoutException:
+        print("Tiempo de espera agotado. El elemento no está presente o no es clickeable.")
+
+
 def click_checkbox(driver, checkbox_id):
     try:
         # Espera hasta que el checkbox sea clickeable
@@ -335,7 +352,7 @@ def click_checkbox_xpaht(driver, checkbox_xpaht):
     try:
         # Espera hasta que el checkbox sea clickeable
         checkbox_element = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, checkbox_xpaht))
+            EC.presence_of_element_located((By.XPATH, checkbox_xpaht))
         )
 
         # Hacer clic en el checkbox
@@ -433,22 +450,21 @@ def validate_strt(driver, expected_text, xpaht):
     except TimeoutException:
         print(f"Tiempo de espera agotado. El texto por texto no está presente.")
 
-def validate_strt_selector(driver, expected_text, css_selector):
+def validate_strt_selector(driver, expected_text, css_aelector):
     try:
         elemento = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, css_selector))
+            EC.presence_of_element_located((By.CSS_SELECTOR, css_aelector))
         )
-        valor = elemento.text.strip()  # Agrega strip() para eliminar posibles espacios en blanco al inicio y al final
-
+        valor = elemento.text
         if isinstance(valor, str):
-            
-            print(f"El texto encontrado es un str:  '{valor}'")
+            if valor == expected_text:
+                print(f"El texto encontrado es  {expected_text}")
+            else:
+                print(f"El texto encontrado '{valor}' no coincide con el esperado '{expected_text}'")
         else:
             print(f"El valor encontrado no es un string: {valor}")
-
-    except Exception as e:
-            print(f"Error al obtener el valor del elemento: {e}")
-
+    except TimeoutException:
+        print(f"Tiempo de espera agotado. El texto por texto no está presente.")
 
 
 

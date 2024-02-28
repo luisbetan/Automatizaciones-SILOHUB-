@@ -53,7 +53,7 @@ class comprobanteEntregas(unittest.TestCase):
         time.sleep(2)
 
         select_arrow_filter1 = "/html/body/div/div[1]/span[1]"
-        amount_click1 = 1
+        amount_click1 = 2
         find_and_click_element(self.driver, select_arrow_filter1, amount_click1)
         time.sleep(2)
 

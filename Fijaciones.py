@@ -108,7 +108,7 @@ class Fijaciones_precio(unittest.TestCase):
 
         ## seleccionar fecha 
 
-        select_date = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-set-price/div/div[1]/section/form/div/div/div[14]/app-date-picker/div/input[2]"
+        """select_date = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-set-price/div/div[1]/section/form/div/div/div[14]/app-date-picker/div/input[2]"
         find_elements(self.driver,select_date )
         time.sleep(2)
 
@@ -119,20 +119,20 @@ class Fijaciones_precio(unittest.TestCase):
 
         select_date_day = "/html/body/div[1]/div[2]/div/div[2]/div/span[34]"
         find_elements(self.driver,select_date_day )
-        time.sleep(2)
+        time.sleep(2) """
 
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(2)
 
-        select_nex_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-set-price/div/div[1]/section/form/div/div/div[16]/div/div[2]/app-button/button"
+        select_nex_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-set-price/div/div[1]/section/form/div/div/div[14]/div/div[2]/app-button/button"
         find_elements(self.driver,select_nex_button )
         time.sleep(2)
 
-        continue_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-set-price/div/div[1]/section/form/div/div/div[16]/div/div[2]/app-button/button"
+        continue_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-set-price/div/div[1]/section/form/div/div/div[14]/div/div[2]/app-button/button"
         find_elements(self.driver,continue_button )
         time.sleep(2)
 
-        confim_button = "/html/body/div[3]/div/div[6]/button[3]"
+        confim_button = "/html/body/div[2]/div/div[6]/button[3]"
         find_elements(self.driver,confim_button )
         time.sleep(2)
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IndicaInsumosHome-20240228175754" tests="1" file=".py" time="20.675" timestamp="2024-02-28T17:58:14" failures="0" errors="0" skipped="0">
+	<testcase classname="IndicaInsumosHome" name="test__indicators_home" time="20.675" timestamp="2024-02-28T17:58:14" file="indicaInsumosHome.py" line="18">
+		<system-out><![CDATA[La cadena de texto no coincide con los valores esperados. Texto actual: 'Indicadores de Insumos (correspondiente a los últimos 6 meses)'
+El texto encontrado es  Insumos Pendientes de Retirar
+]]></system-out>
+	</testcase>
+</testsuite>

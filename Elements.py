@@ -1,5 +1,7 @@
+
 import time
 from typing import KeysView
+from bs4 import BeautifulSoup
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -7,6 +9,7 @@ from selenium.common.exceptions import TimeoutException, ElementClickIntercepted
 import re
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 
 
 
@@ -997,15 +1000,74 @@ def validate_text_visible_selector(driver, css_selector, text_expected):
     else:
         print("No se pudo validar el texto")
 
-def handle_system_dialog(driver, xpath):
+def extract_percentage_values(driver, xpaht):
+    try:
+        # Esperar a que el gráfico esté presente en la página
+        elemento_grafico = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, xpaht))
+        )
+        # Obtener el HTML del gráfico
+        html_grafico = elemento_grafico.get_attribute('outerHTML')
+        
+        # Parsear el HTML con BeautifulSoup
+        soup = BeautifulSoup(html_grafico, 'html.parser')
+        
+        # Encontrar los elementos <path> dentro del gráfico
+        path_elements = soup.find_all('path')
+        
+        # Inicializar un diccionario para almacenar los valores de porcentajes
+        valores_porcentaje = {}
+        
+        # Iterar sobre los elementos y extraer los valores de porcentajes
+        for path_element in path_elements:
+            color = path_element.get('fill')
+            valor = path_element.get('data:value')
+            if color and valor:  # Asegurar que ambos color y valor existan
+                valores_porcentaje[color] = valor
+                print(f"Color: {color}, Valor: {valor}")
+        
+        return valores_porcentaje
+        
+    except TimeoutException:
+        print("El elemento del gráfico no se encontró en el tiempo especificado.")
+        return {}
     
-    driver.find_element(By.XPATH, xpath).click()
+def extract_percentage_values(driver, grafico_selector, valores_selector, tiempo_espera=10):
+    try:
+        # Localizar el elemento del gráfico interactivo
+        grafico_interactivo = WebDriverWait(driver, tiempo_espera).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, grafico_selector))
+        )
 
+        # Simular mover el mouse sobre el gráfico para activar la visualización de los valores
+        actions = ActionChains(driver)
+        actions.move_to_element(grafico_interactivo).perform()
+
+        # Esperar un momento para que el gráfico muestre los valores de porcentaje
+        # Puedes ajustar el tiempo de espera según tus necesidades
+        WebDriverWait(driver, tiempo_espera).until(
+            EC.visibility_of_element_located((By.CSS_SELECTOR, valores_selector))
+        )
+
+        # Una vez que los valores de porcentaje se han activado, extraer la información del gráfico
+        valores_de_porcentaje = driver.find_element(By.CSS_SELECTOR, valores_selector).text
+
+        print("Valores de porcentaje del gráfico:", valores_de_porcentaje)
+
+        return valores_de_porcentaje
+    except Exception as e:
+        print("Error al extraer los valores de porcentaje del gráfico:", e)
+        return None
     
-    driver.switch_to.active_element.send_keys(Keys.TAB)
-    time.sleep(1)
+def simulate_hover(driver, css_selector):
+    # Encontrar el elemento del gráfico interactivo
+    graph_element = driver.find_element(By.CSS_SELECTOR, css_selector)
+    
+    # Ejecutar un script JavaScript para simular el evento de pasar el mouse
+    driver.execute_script("arguments[0].dispatchEvent(new MouseEvent('mouseover', { bubbles: true }))", graph_element)
+    
+    
+    time.sleep(2)  
+    
 
    
-    driver.switch_to.active_element.send_keys(KeysView.ENTER)
-
-    

@@ -68,11 +68,11 @@ class detalle_ctro_entregaVentas(unittest.TestCase):
         amount_click1 = 3
         find_and_click_element_selector(self.driver, arrow_filter1, amount_click1)
 
-        arrow_filter2 = "/html/body/div/div[1]/span[2]"
+        arrow_filter2 = "/html/body/div/div[1]/span[1]"
         amount_click2 = 1
         find_and_click_element(self.driver, arrow_filter2, amount_click2)
 
-        select_date1 = "/html/body/div/div[2]/div/div[2]/div/span[1]"
+        select_date1 = "/html/body/div/div[2]/div/div[2]/div/span[2]"
         find_elements(self.driver, select_date1 )
 
         arrow_filter3 = "/html/body/div/div[1]/span[2]"
@@ -92,7 +92,7 @@ class detalle_ctro_entregaVentas(unittest.TestCase):
         validate_text_by_text(self.driver, text_expected)
         
         #ingresar al detalle de tercer contrato del listado
-        selet_list_contract = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-contracts/app-responsive-table-multiple-items/div/table/tbody/tr[3]/td[1]/app-contract/div/div[2]/div[1]"
+        selet_list_contract = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-contracts/app-responsive-table-multiple-items/div/table/tbody/tr[3]/td[1]/app-contract/div"
         find_elements(self.driver, selet_list_contract )
         time.sleep(3)
 
@@ -101,7 +101,7 @@ class detalle_ctro_entregaVentas(unittest.TestCase):
 
         # validar numero de contrato 
         element1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/div/div[1]/div[1]/div/span"
-        number_expected = "Contrato 108280"
+        number_expected = "Contrato 108169"
         validate_text_visible(self.driver, element1, number_expected)
 
         # validar produto 
@@ -109,16 +109,13 @@ class detalle_ctro_entregaVentas(unittest.TestCase):
         text_expected = "De Maiz"
         validate_text_visible(self.driver, element2, text_expected)
         
-
-        
-
-
-        # Validar kilos pactados 
-
+       # Validar kilos pactados 
         
         amount_kilos = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/div/div[1]/div[2]/div[2]/div[2]/span[1]"
         amount_kilos_expected = ["500,00 Tn", "De 5000,00 QQ Pactados", "De 500.000,00 Kg Pactados"]
         validate_chain_text_xpaht(self.driver, amount_kilos, amount_kilos_expected)
+
+        self.driver.execute_script("window.scrollTo(0, 900);")
       
         # validar Mis entregas 
 
@@ -139,7 +136,7 @@ class detalle_ctro_entregaVentas(unittest.TestCase):
         validate_text_visible(self.driver, element6, text_expected)
 
         date_delivery = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[2]/span/span"
-        strt_expected = "15/03/2022"
+        strt_expected = "14/03/2022"
         validate_text_visible(self.driver,date_delivery, strt_expected)
 
         element7 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/thead/tr/th[4]'
@@ -197,8 +194,6 @@ class detalle_ctro_entregaVentas(unittest.TestCase):
         validate_character_numeric_element(self.driver, number_ctgctr)
         time.sleep(2)
 
-        
-        # descargar archivo
 
         select_moviments = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/tbody/tr[1]/th/input"
         click_checkbox_xpaht(self.driver, select_moviments )
@@ -220,11 +215,9 @@ class detalle_ctro_entregaVentas(unittest.TestCase):
         find_elements(self.driver, select_files_pdf )
         time.sleep(5)
 
-    
-        go_out_pag = "/html/body/app-root/app-layout/app-vertical/div/div/div/app-header-for-screen/div/div/div/a"
-        find_elements(self.driver, go_out_pag )
-        time.sleep(5)
 
+        
+        
 
 
     def tearDown(self):

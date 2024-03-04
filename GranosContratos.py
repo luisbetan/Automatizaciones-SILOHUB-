@@ -41,7 +41,7 @@ class granos_contratos(unittest.TestCase):
 
         # cargar opción de tipo de confirmación
       
-        button_dopdown = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[2]/div[2]/select"
+        button_dopdown = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[2]/div[2]/ng-select/div/span"
         option_desired = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[2]/div[2]/select/option[9]"
         value_to_search = "Confirmación De Venta"
         select_option_dropdown(self.driver, button_dopdown, option_desired,value_to_search )

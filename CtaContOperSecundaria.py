@@ -1,14 +1,14 @@
 import unittest
 import xmlrunner
 import time
-from Elements import find_and_click_element, find_elements, validate_chain_text_xpaht, validate_text_by_text, validate_text_visible
+from Elements import find_and_click_element, find_and_click_element_selector, find_elements, validate_chain_text_xpaht, validate_character_numeric_element, validate_text_by_text, validate_text_visible
 from loginhelper import LoginHelper
 from startSession import StartSession
 
 
 
 
-class contrato_tenant(unittest.TestCase):
+class contrato_operSecundarias(unittest.TestCase):
     
     def setUp(self):
        
@@ -19,11 +19,11 @@ class contrato_tenant(unittest.TestCase):
         self.login_helper = LoginHelper(self.driver)
    
    
-    def test_contrato_tenant(self):
+    def test_contratc_oparSecondary(self):
         # Utilizar métodos de LoginHelper para el inicio de sesión
         self.login_helper.login("admingd@silohub.ag", "G@viglio123")
         self.login_helper.select_tenant()
-        self.login_helper.search_and_select_account("1023")
+        self.login_helper.search_and_select_account("150000")
 
         # ingresar al menú de cuentas 
 
@@ -42,37 +42,37 @@ class contrato_tenant(unittest.TestCase):
         find_elements(self.driver,select_filter )
         time.sleep(3)
 
-        cleam_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-filter-buttons/div/app-button[1]/button"
-        find_elements(self.driver,cleam_filter )
+        select_secondary = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-radio-button-list/div/app-radio[2]/div/input"
+        find_elements(self.driver,select_secondary )
         time.sleep(3)
 
         # aplicar un nuevo filtro
 
-        select_product_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-grain-container/div/app-grain-button[1]/div/img"
+        select_product_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-grain-container/div/app-grain-button[1]/div/div"
         find_elements(self.driver,select_product_filter )
-        time.sleep(3)
+        time.sleep(2)
 
         select_campaign = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-season-container/div/app-season-button[2]/div/div"
         find_elements(self.driver, select_campaign )
-        time.sleep(3)
-
-        select_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-date-filter/div/app-date-picker/div/input[2]"
-        find_elements(self.driver, select_filter )
         time.sleep(2)
 
-        arrow_filter1 = "/html/body/div/div[1]/span[1]"
-        amount_click1 = 5
-        find_and_click_element(self.driver, arrow_filter1, amount_click1)
+        select_date = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-date-filter/div/app-date-picker/div/input[2]"
+        find_elements(self.driver, select_date )
+        time.sleep(2)
 
-        select_date1 = "/html/body/div/div[2]/div/div[2]/div/span[7]"
-        find_elements(self.driver, select_date1 )
+        arrow_filter1 = "body > div > div.flatpickr-months > div > div > div > span.arrowDown"
+        amount_click1 = 2
+        find_and_click_element_selector(self.driver, arrow_filter1, amount_click1)
+        time.sleep(2)
 
-        arrow_filter2 = "/html/body/div/div[1]/span[2]"
-        amount_click2 = 1
+        arrow_filter2 = "/html/body/div/div[1]/span[1]"
+        amount_click2 = 3
         find_and_click_element(self.driver, arrow_filter2, amount_click2)
+        time.sleep(2)
 
-        select_date2 = "/html/body/div/div[2]/div/div[2]/div/span[32]"
+        select_date2 = "/html/body/div/div[2]/div/div[2]/div/span[12]"
         find_elements(self.driver, select_date2 )
+        time.sleep(2)
 
         apply_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-filter-buttons/div/app-button[2]/button"
         find_elements(self.driver, apply_filter )
@@ -84,46 +84,41 @@ class contrato_tenant(unittest.TestCase):
         validate_text_by_text(self.driver, text_expected)
         
         #ingresar al detalle de segundo contrato del listado
-        selet_list_contract = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-contracts/app-responsive-table-multiple-items/div/table/tbody/tr[2]/td[1]/app-contract/div/div[2]/div[2]/div[2]"
+        selet_list_contract = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-contracts/app-responsive-table-multiple-items/div/table/tbody/tr/td[1]/app-contract/div/div[2]/div[2]/div[2]"
         find_elements(self.driver, selet_list_contract )
         time.sleep(3)
 
         
 
         # validar numero de contrato 
-        element1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/div/div[1]/div[1]/div/span"
-        number_expected = "Contrato 121261"
+        element1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/div/div/div[1]/div/span"
+        number_expected = "Contrato 2070"
         validate_text_visible(self.driver, element1, number_expected)
 
         # validar produto 
-        element2 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/div/div[1]/div[2]/div[2]/div[2]/span[2]'
+        element2 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/div/div/div[2]/div[2]/div[2]/span[2]'
         text_expected = "De Soja"
         validate_text_visible(self.driver, element2, text_expected)
+        
+        # validar campaña
 
+        contract_campaign = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-detail-contract-secondary-table/div/div/div[1]/div[5]/div[2]/div[2]"
+        contract_campaign_expected = "2122"
+        validate_text_visible(self.driver, contract_campaign, contract_campaign_expected)
 
-        # Validar kilos pactados 
+        # Validar kilos contrato
 
         
-        amount_kilos = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/div/div[2]/div/span"
-        amount_kilos_expected = ["50,00 Tn", "De 500,00 QQ Pactados", "De 50.000,00 Kg Pactados"]
+        amount_kilos = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/div/div/div[2]/div[2]/div[2]/span[1]"
+        amount_kilos_expected = ["0,00 Tn", "0,01 QQ", "1,00 Kg"]
         validate_chain_text_xpaht(self.driver, amount_kilos, amount_kilos_expected)
       
 
 
         # validar la cantidad de toneladas del contrato 
-        amount_product = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/div/div[1]/div[2]/div[2]/div[2]/span[1]"
-        amount_product_expected = ["50,00 Tn", "500,00 QQ", "50.000,00 Kg"]
-        validate_chain_text_xpaht(self.driver, amount_product, amount_product_expected)
+       
 
-        # validar aplicadas
-        applied_contract = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/div/div[2]/app-card-with-grafic/div/div/swiper/div/div[1]/div[1]/div/div[2]/span[1]"
-        applied_contract_expected = ["9,37 Tn","93,65 QQ","9.365,00 Kg"]
-        validate_chain_text_xpaht(self.driver, applied_contract, applied_contract_expected)
-
-        # validar fijadas
-        fixed_contract = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/div/div[2]/app-card-with-grafic/div/div/swiper/div/div[1]/div[2]/div/div[2]/span[1]"
-        fixed_contract_expected = ["3,70 Tn","37,00 QQ","3.700,00 Kg"]
-        validate_chain_text_xpaht(self.driver, fixed_contract, fixed_contract_expected)
+        
 
         # descargar archivo
 
@@ -147,7 +142,7 @@ class contrato_tenant(unittest.TestCase):
 
 
 if __name__ == "__main__":
-  test_suite = unittest.TestLoader().loadTestsFromTestCase(contrato_tenant)
+  test_suite = unittest.TestLoader().loadTestsFromTestCase(contrato_operSecundarias)
   runner = xmlrunner.XMLTestRunner(output='reportCuentaContratos')
   runner.run(test_suite)
    

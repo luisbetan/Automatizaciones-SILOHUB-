@@ -8,7 +8,7 @@ from startSession import StartSession
 
 
 
-class detalle_ctro_entregaVentas(unittest.TestCase):
+class detalle_ctro_liquidaciones(unittest.TestCase):
     
     def setUp(self):
        
@@ -19,7 +19,7 @@ class detalle_ctro_entregaVentas(unittest.TestCase):
         self.login_helper = LoginHelper(self.driver)
    
    
-    def test_detail_deriverySales(self):
+    def test_detail_liquidations(self):
         # Utilizar métodos de LoginHelper para el inicio de sesión
         self.login_helper.login("admingd@silohub.ag", "G@viglio123")
         self.login_helper.select_tenant()
@@ -119,83 +119,66 @@ class detalle_ctro_entregaVentas(unittest.TestCase):
       
         # validar Mis entregas 
 
-        element3 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[1]/span'
-        text_expected = "Mis Entregas"
+        select_liquidations = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/ul/li[2]/a"
+        find_elements(self.driver, select_liquidations )
+        time.sleep(3)
+
+
+        element3 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/div/span'
+        text_expected = "Mis Ventas"
         validate_text_visible(self.driver, element3, text_expected)
 
-        element4 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/thead/tr/th[2]'
+        element4 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/thead/tr/th[2]'
         text_expected = "Producto"
         validate_text_visible(self.driver, element4, text_expected)
 
-        element5 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[1]/span/span'
+        element5 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/tbody/tr/td[1]/span/span'
         text_expected = "Maiz"
         validate_text_visible(self.driver, element5, text_expected)
 
-        element6 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/thead/tr/th[3]'
+        element6 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/thead/tr/th[3]'
         text_expected = "Fecha"
         validate_text_visible(self.driver, element6, text_expected)
 
-        date_delivery = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[2]/span/span"
-        strt_expected = "14/03/2022"
+        date_delivery = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/tbody/tr/td[2]/span/span"
+        strt_expected = "20/04/2021"
         validate_text_visible(self.driver,date_delivery, strt_expected)
 
-        element7 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/thead/tr/th[4]'
-        text_expected = ["Kg Brutos","Tn Brutos", "QQ Brutos" ]
-        validate_chain_text_xpaht(self.driver, element7, text_expected)
+        element7 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/thead/tr/th[4]'
+        text_expected =  "Comprobante" 
+        validate_text_visible(self.driver, element7, text_expected)
 
-        gross_kilos = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[3]/span/span"
+        gross_kilos = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/tbody/tr/td[3]/span/span"
         validate_character_numeric_element(self.driver,gross_kilos)
 
 
-        element8 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/thead/tr/th[5]'
-        text_expected = "Humedad"
-        validate_text_visible(self.driver, element8, text_expected)
+        element8 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/thead/tr/th[5]'
+        text_expected = ["Kg Fijados","Tn Fijados","QQ Fijados"]
+        validate_chain_text_xpaht(self.driver, element8, text_expected)
 
         
-        humidity = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[4]/span/span"
-        validate_character_numeric_element(self.driver,humidity)
+        set_kilos = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/tbody/tr/td[4]/span/span"
+        validate_character_numeric_element(self.driver, set_kilos)
 
-        element9 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/thead/tr/th[6]'
-        text_expected = "Zaranda"
+        element9 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/thead/tr/th[6]'
+        text_expected = "Precio"
         validate_text_visible(self.driver, element9, text_expected)
 
-        Zaranda = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[5]/span/span"
-        validate_character_numeric_element(self.driver,Zaranda)
+        price = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/tbody/tr/td[5]/span/span"
+        validate_character_numeric_element(self.driver, price)
 
 
-        element10 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/thead/tr/th[7]'
-        text_expected = "Volátil"
+        element10 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/thead/tr/th[7]'
+        text_expected = "Moneda"
         validate_text_visible(self.driver, element10, text_expected)
 
-        volatile = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[6]/span/span"
-        validate_character_numeric_element(self.driver,volatile)
+        type_money = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/tbody/tr/td[6]/span/span"
+        text_expected = "USD"
+        validate_text_visible(self.driver, type_money, text_expected)
 
 
-        element11 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/thead/tr/th[8]"
-        text_expected = "Factor/Grado"
-        validate_text_visible(self.driver, element11, text_expected)
 
-        degree_factor = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[7]/span/span"
-        validate_character_numeric_element(self.driver,degree_factor)
-
-
-        element12 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/thead/tr/th[9]'
-        text_expected = ["Kg Netos","Tn Netos","QQ Netos"]
-        validate_chain_text_xpaht(self.driver, element12, text_expected)
-
-        net_kilos = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[8]/span/span"
-        validate_character_numeric_element(self.driver,net_kilos)
-
-        element13 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/thead/tr/th[10]'
-        text_expected = "CTG/CRT"
-        validate_text_visible(self.driver, element13, text_expected)
-
-        number_ctgctr = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[9]/span/span"
-        validate_character_numeric_element(self.driver, number_ctgctr)
-        time.sleep(2)
-
-
-        select_moviments = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/tbody/tr[1]/th/input"
+        select_moviments = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/tbody/tr/th/input"
         click_checkbox_xpaht(self.driver, select_moviments )
         time.sleep(2)
 
@@ -228,7 +211,7 @@ class detalle_ctro_entregaVentas(unittest.TestCase):
 
 
 if __name__ == "__main__":
-  test_suite = unittest.TestLoader().loadTestsFromTestCase(detalle_ctro_entregaVentas)
+  test_suite = unittest.TestLoader().loadTestsFromTestCase(detalle_ctro_liquidaciones)
   runner = xmlrunner.XMLTestRunner(output='reportCuentaContratos')
   runner.run(test_suite)
    

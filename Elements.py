@@ -69,6 +69,17 @@ def find_elements_link_text(driver, link_text):
         print("Tiempo de espera agotado. El elemento no está presente o no es clickeable.")
 
 
+def find_elements_located(driver, xpath):
+    try:
+        select_nex_button = WebDriverWait(driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, xpath))
+        )
+        select_nex_button.click()
+        print("¡Elemento encontrado y clickeado con éxito!")
+    except TimeoutException:
+        print("Tiempo de espera agotado. El elemento no está presente o no es clickeable.")
+
+
 def find_elements_cleam(driver, xpath):
     try:
         select_nex_button = WebDriverWait(driver, 10).until(
@@ -916,11 +927,11 @@ def validate_chain_text_xpaht(driver, xpath, expected_texts):
         # Verificar si el texto obtenido es un substring de alguno de los textos esperados
         for expected_text in expected_texts:
             if expected_text in actual_text:
-                print(f"La cadena de texto es visible para el usuario: '{actual_text}'")
+                print(f"El texto es visible para el usuario: '{actual_text}'")
                 return  # Sale del bucle si encuentra una coincidencia
 
         # Si no se encontró ninguna coincidencia
-        print(f"La cadena de texto no coincide con los valores esperados. Texto actual: '{actual_text}'")
+        print(f"El texto no coincide con los valores esperados. Texto actual: '{actual_text}'")
 
     except TimeoutException:
         print("Tiempo de espera agotado. El elemento no se ha vuelto visible.")
@@ -1059,9 +1070,9 @@ def extract_percentage_values(driver, grafico_selector, valores_selector, tiempo
         print("Error al extraer los valores de porcentaje del gráfico:", e)
         return None
     
-def simulate_hover(driver, css_selector):
+def simulate_hover(driver, id):
     # Encontrar el elemento del gráfico interactivo
-    graph_element = driver.find_element(By.CSS_SELECTOR, css_selector)
+    graph_element = driver.find_element(By.ID, id)
     
     # Ejecutar un script JavaScript para simular el evento de pasar el mouse
     driver.execute_script("arguments[0].dispatchEvent(new MouseEvent('mouseover', { bubbles: true }))", graph_element)

@@ -215,7 +215,8 @@ class detalle_ctro_entregaVentas(unittest.TestCase):
         find_elements_located(self.driver, select_files_pdf )
         time.sleep(5)
 
-
+        self.driver.execute_script("window.scrollTo(0, -1200);")
+        time.sleep(2)
         
         go_out_pag = "/html/body/app-root/app-layout/app-vertical/div/div/div/app-header-for-screen/div/div/div/a"
         find_elements_located(self.driver, go_out_pag )

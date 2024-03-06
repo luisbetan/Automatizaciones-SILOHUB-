@@ -1,7 +1,7 @@
 import unittest
 import xmlrunner
 import time
-from Elements import click_checkbox_xpaht, find_and_click_element, find_and_click_element_selector, find_and_click_element_with_style, find_elements, find_elements_located, validate_chain_text_xpaht, validate_character_numeric_element, validate_text_by_text, validate_text_visible
+from Elements import click_checkbox_xpaht, find_and_click_element, find_and_click_element_selector, find_and_click_element_with_style, find_elements, find_elements_id, find_elements_located, validate_chain_text_xpaht, validate_character_numeric_element, validate_text_by_text, validate_text_visible
 from loginhelper import LoginHelper
 from startSession import StartSession
 
@@ -46,7 +46,7 @@ class detalle_ctro_liquidaciones(unittest.TestCase):
         find_elements(self.driver,cleam_filter )
         time.sleep(3)
 
-        # aplicar un nuevo filtro
+        # aplicar un nuevo filtro Maiz cosecha 2122 desde 01/02/2021 hasta 30/04/2021 estado cumplidos
 
         select_product_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-grain-container/div/app-grain-button[2]/div/img"
         find_elements(self.driver,select_product_filter )
@@ -115,12 +115,13 @@ class detalle_ctro_liquidaciones(unittest.TestCase):
         amount_kilos_expected = ["500,00 Tn", "De 5000,00 QQ Pactados", "De 500.000,00 Kg Pactados"]
         validate_chain_text_xpaht(self.driver, amount_kilos, amount_kilos_expected)
 
-        self.driver.execute_script("window.scrollTo(0, 900);")
+        self.driver.execute_script("window.scrollTo(0, 1000);")
+        time.sleep(2)
       
         # validar Mis entregas 
 
-        select_liquidations = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/ul/li[2]/a"
-        find_elements(self.driver, select_liquidations )
+        select_liquidations = "sales-tab"
+        find_elements_id(self.driver, select_liquidations )
         time.sleep(3)
 
 
@@ -182,26 +183,27 @@ class detalle_ctro_liquidaciones(unittest.TestCase):
         click_checkbox_xpaht(self.driver, select_moviments )
         time.sleep(2)
 
-        download_button1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/button[2]"
+        download_button1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/button[2]"
         find_elements(self.driver, download_button1 )
         time.sleep(2)
 
-        select_files_excel = '//*[@id="deliveries"]/app-deliveries-applied/app-deliveries-shared/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/ul/li[1]/a'
+        select_files_excel = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/ul/li[1]/a'
         find_elements_located(self.driver, select_files_excel )
         time.sleep(5)
 
-        download_button2 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/button[2]"
+        download_button2 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/button[2]"
         find_elements(self.driver, download_button2 )
         time.sleep(2)
 
-        select_files_pdf = '//*[@id="deliveries"]/app-deliveries-applied/app-deliveries-shared/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/ul/li[2]/a'
+        select_files_pdf = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/ul/li[2]/a'
         find_elements_located(self.driver, select_files_pdf )
         time.sleep(5)
 
-
+        self.driver.execute_script("window.scrollTo(0, -1200);")
+        time.sleep(2)
         
         go_out_pag = "/html/body/app-root/app-layout/app-vertical/div/div/div/app-header-for-screen/div/div/div/a"
-        find_elements_located(self.driver, go_out_pag )
+        find_elements(self.driver, go_out_pag )
         time.sleep(5)
 
 

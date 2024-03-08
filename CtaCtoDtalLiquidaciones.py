@@ -1,14 +1,14 @@
 import unittest
 import xmlrunner
 import time
-from Elements import click_checkbox_xpaht, find_and_click_element, find_and_click_element_selector, find_and_click_element_with_style, find_elements, find_elements_id, find_elements_located, validate_chain_text_xpaht, validate_character_numeric_element, validate_text_by_text, validate_text_visible
+from Elements import click_checkbox_xpaht, find_and_click_element, find_and_click_element_selector,find_elements, find_elements_id, validate_chain_text_xpaht, validate_character_numeric_element, validate_text_by_text, validate_text_visible
 from loginhelper import LoginHelper
 from startSession import StartSession
 
 
 
 
-class detalle_ctro_liquidaciones(unittest.TestCase):
+class detalle_cto_liquidaciones(unittest.TestCase):
     
     def setUp(self):
        
@@ -118,93 +118,69 @@ class detalle_ctro_liquidaciones(unittest.TestCase):
         self.driver.execute_script("window.scrollTo(0, 1000);")
         time.sleep(2)
       
-        # validar Mis entregas 
+        # validar listato de certificados 
 
-        select_liquidations = "sales-tab"
+        select_liquidations = "settlements-tab"
         find_elements_id(self.driver, select_liquidations )
         time.sleep(3)
 
 
-        element3 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/div/span'
-        text_expected = "Mis Ventas"
+        element3 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[4]/app-contract-closeouts/div/span'
+        text_expected = "Listado de liquidaciones"
         validate_text_visible(self.driver, element3, text_expected)
 
-        element4 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/thead/tr/th[2]'
-        text_expected = "Producto"
+        
+
+        element4 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[4]/app-contract-closeouts/app-responsive-table/div/div/table/thead/tr/th[2]'
+        text_expected = "Fecha"
         validate_text_visible(self.driver, element4, text_expected)
 
-        element5 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/tbody/tr/td[1]/span/span'
-        text_expected = "Maiz"
-        validate_text_visible(self.driver, element5, text_expected)
-
-        element6 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/thead/tr/th[3]'
-        text_expected = "Fecha"
-        validate_text_visible(self.driver, element6, text_expected)
-
-        date_delivery = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/tbody/tr/td[2]/span/span"
-        strt_expected = "20/04/2021"
+        date_delivery = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[4]/app-contract-closeouts/app-responsive-table/div/div/table/tbody/tr[1]/td[1]/span/span"
+        strt_expected = "29/03/2022"
         validate_text_visible(self.driver,date_delivery, strt_expected)
 
-        element7 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/thead/tr/th[4]'
+        element7 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[4]/app-contract-closeouts/app-responsive-table/div/div/table/thead/tr/th[3]'
         text_expected =  "Comprobante" 
         validate_text_visible(self.driver, element7, text_expected)
 
-        gross_kilos = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/tbody/tr/td[3]/span/span"
-        validate_character_numeric_element(self.driver,gross_kilos)
+        number_vaucher = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[4]/app-contract-closeouts/app-responsive-table/div/div/table/tbody/tr[1]/td[2]/span/span"
+        validate_character_numeric_element(self.driver, number_vaucher)
 
 
-        element8 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/thead/tr/th[5]'
-        text_expected = ["Kg Fijados","Tn Fijados","QQ Fijados"]
-        validate_chain_text_xpaht(self.driver, element8, text_expected)
+        element8 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[4]/app-contract-closeouts/app-responsive-table/div/div/table/thead/tr/th[4]'
+        text_expected = "Tn Totales"
+        validate_text_visible(self.driver, element8, text_expected)
 
         
-        set_kilos = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/tbody/tr/td[4]/span/span"
+        set_kilos = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[4]/app-contract-closeouts/app-responsive-table/div/div/table/tbody/tr[1]/td[3]/span/span"
         validate_character_numeric_element(self.driver, set_kilos)
 
-        element9 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/thead/tr/th[6]'
-        text_expected = "Precio"
+        element9 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[4]/app-contract-closeouts/app-responsive-table/div/div/table/thead/tr/th[5]'
+        text_expected = "Precio en pesos"
         validate_text_visible(self.driver, element9, text_expected)
 
-        price = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/tbody/tr/td[5]/span/span"
-        validate_character_numeric_element(self.driver, price)
+        tn_applied = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[4]/app-contract-closeouts/app-responsive-table/div/div/table/tbody/tr[1]/td[4]/span/span"
+        validate_character_numeric_element(self.driver, tn_applied)
 
 
-        element10 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/thead/tr/th[7]'
-        text_expected = "Moneda"
+        element10 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[4]/app-contract-closeouts/app-responsive-table/div/div/table/thead/tr/th[6]'
+        text_expected = "Fecha de pago"
         validate_text_visible(self.driver, element10, text_expected)
 
-        type_money = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/tbody/tr/td[6]/span/span"
-        text_expected = "USD"
-        validate_text_visible(self.driver, type_money, text_expected)
+        date_pay = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[4]/app-contract-closeouts/app-responsive-table/div/div/table/tbody/tr[1]/td[5]/span/span"
+        strt_expected = "31/03/2022"
+        validate_text_visible(self.driver,date_pay, strt_expected)
 
 
-
-        select_moviments = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/tbody/tr/th/input"
+        select_moviments = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[4]/app-contract-closeouts/app-responsive-table/div/div/table/tbody/tr[1]/th/input"
         click_checkbox_xpaht(self.driver, select_moviments )
         time.sleep(2)
 
-        download_button1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/button[2]"
-        find_elements(self.driver, download_button1 )
-        time.sleep(2)
-
-        select_files_excel = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/ul/li[1]/a'
-        find_elements_located(self.driver, select_files_excel )
+        download_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[4]/app-contract-closeouts/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-button/button"
+        find_elements(self.driver, download_button )
         time.sleep(5)
 
-        download_button2 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/button[2]"
-        find_elements(self.driver, download_button2 )
-        time.sleep(2)
-
-        select_files_pdf = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/ul/li[2]/a'
-        find_elements_located(self.driver, select_files_pdf )
-        time.sleep(5)
-
-        self.driver.execute_script("window.scrollTo(0, -1200);")
-        time.sleep(2)
-        
-        go_out_pag = "/html/body/app-root/app-layout/app-vertical/div/div/div/app-header-for-screen/div/div/div/a"
-        find_elements(self.driver, go_out_pag )
-        time.sleep(5)
+       
 
 
 
@@ -213,7 +189,6 @@ class detalle_ctro_liquidaciones(unittest.TestCase):
 
 
 if __name__ == "__main__":
-  test_suite = unittest.TestLoader().loadTestsFromTestCase(detalle_ctro_liquidaciones)
+  test_suite = unittest.TestLoader().loadTestsFromTestCase(detalle_cto_liquidaciones)
   runner = xmlrunner.XMLTestRunner(output='reportCuentaContratos')
   runner.run(test_suite)
-   

@@ -8,7 +8,7 @@ from startSession import StartSession
 
 
 
-class cuenta_entregas(unittest.TestCase):
+class cta_entregasAplicadas(unittest.TestCase):
     
     def setUp(self):
        
@@ -19,7 +19,7 @@ class cuenta_entregas(unittest.TestCase):
         self.login_helper = LoginHelper(self.driver)
    
    
-    def test_cuenta_entregas(self):
+    def test_delivery_applied(self):
         # Utilizar métodos de LoginHelper para el inicio de sesión
         self.login_helper.login("admingd@silohub.ag", "G@viglio123")
         self.login_helper.select_tenant()
@@ -52,7 +52,7 @@ class cuenta_entregas(unittest.TestCase):
         find_elements(self.driver, clean_filter )
         time.sleep(4)
 
-        self.driver.execute_script("window.scrollTo(0, 0);")
+      
 
         # aplicar filtro Maiz 2122  01/01/2022 al 28/02/2022
 
@@ -62,6 +62,10 @@ class cuenta_entregas(unittest.TestCase):
 
         apply_Campaign_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-season-container/div/app-season-button[3]/div/div"
         find_elements(self.driver, apply_Campaign_filter )
+        time.sleep(3)
+
+        apply_state_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-checklist/div/app-checks[1]/div/input"
+        find_elements(self.driver, apply_state_filter )
         time.sleep(3)
        
         select_date = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-date-filter/div/app-date-picker/div/input[2]"
@@ -232,7 +236,7 @@ class cuenta_entregas(unittest.TestCase):
 
 
 if __name__ == "__main__":
-  test_suite = unittest.TestLoader().loadTestsFromTestCase(cuenta_entregas)
+  test_suite = unittest.TestLoader().loadTestsFromTestCase(cta_entregasAplicadas)
   runner = xmlrunner.XMLTestRunner(output='reportCuentaEntregas')
   runner.run(test_suite)
    

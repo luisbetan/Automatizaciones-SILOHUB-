@@ -282,6 +282,21 @@ def send_element(driver, xpath, input_data):
     except TimeoutException:
         print("Tiempo de espera agotado. El input no está presente o no es clickeable.")
 
+def send_element_xpaht(driver, xpath, input_data):
+    try:
+        # Esperar a que el elemento sea clickeable
+        input_element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, xpath))
+        )
+
+        # Si hay datos para ingresar, establecer el valor
+        # Limpiar el input
+        input_element.send_keys(input_data)  # Ingresar los datos
+
+        print("¡Input encontrado y enviado con éxito!")
+    except TimeoutException:
+        print("Tiempo de espera agotado. El input no está presente o no es clickeable.")
+
 def send_element_id(driver, id, input_data):
     try:
         # Esperar a que el elemento sea clickeable
@@ -312,6 +327,7 @@ def find_send_element_selector(driver, css_selector, input_data=None):
         print("¡Input encontrado y enviado con éxito!")
     except TimeoutException:
         print("Tiempo de espera agotado. El input no está presente o no es clickeable.")
+
 
 
 def find_and_click_element(driver, xpath, clicks=1):
@@ -689,6 +705,38 @@ def search_and_select_option(driver, xpath_search_input, xpath_search_result, va
 
 
 
+def search_for_selector_option(driver, selector_search_input, selector_search_result, value_to_search, send_input_element):
+    try:
+        # Esperar hasta que el campo de búsqueda sea clickeable
+        search_input_element = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.CSS_SELECTOR, selector_search_input))
+        )
+        
+        search_input_element.click()
+        
+        send_input_element.send_keys(value_to_search)
+        time.sleep(1)
+
+        # Esperar a que aparezcan las opciones de búsqueda después de ingresar el valor
+        search_result_element = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.CSS_SELECTOR, selector_search_result))
+        )
+
+        # Hacer clic en la opción de búsqueda deseada
+        search_result_element.click()
+
+        print(f"¡Valor '{value_to_search}' ingresado y opción seleccionada con éxito!")
+
+    except TimeoutException:
+        print("Tiempo de espera agotado. El campo de búsqueda, las opciones de búsqueda, o ambos, no están presentes o no son clickeables.")
+
+
+
+
+
+
+
+
 def clear_and_send_keys(driver, xpath_field, value_to_send):
     try:
         # Esperar hasta que el campo sea clickeable
@@ -907,7 +955,7 @@ def select_option_click(driver, xpath_chevron, xpath_upload_field ):
         # Adjuntar el archivo al campo de carga de archivo
         upload_input_element.click()
 
-        print( "La opcion fue seleccionada con éxito después de hacer clic en el chevron!")
+        print( "La opcion fue seleccionada en el dropdown con exito  ")
 
     except TimeoutException:
         print("Tiempo de espera agotado. El chevron no están presentes o no son clickeables.")
@@ -1078,7 +1126,52 @@ def simulate_hover(driver, id):
     driver.execute_script("arguments[0].dispatchEvent(new MouseEvent('mouseover', { bubbles: true }))", graph_element)
     
     
-    time.sleep(2)  
+def search_for_select_account(driver, account_number, xpaht, send_element, select_element ):
+    try:
+        # Encontrar el elemento de entrada y escribir el número de cuenta
+
+        select_element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, xpaht ))
+        )
+        select_element.click()
+
+        send_element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, xpaht ))
+        )
+        send_element.send_keys(account_number)
+
+        send_element.send_keys(Keys.ENTER)
+
+        # Encontrar y hacer clic en el elemento deseado
+        select_input = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.XPATH, xpaht ))
+        )
+        select_input.click()
+
+        print(f"¡Cuenta encontrada y seleccionada {account_number}  con éxito!")
+    except TimeoutException:
+        print("Tiempo de espera agotado. El elemento no está presente o no es clickeable.")     
     
 
-   
+def search_and_displace_account(driver, account_number, located_element, xpaht):
+    try:
+
+        located_element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located(( By.XPATH, xpaht)))
+        
+        located_element.click()
+        
+        input_element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located(( By.XPATH, xpaht)))
+        
+        driver.execute_script("arguments[0].style.display = 'block';", input_element)
+        
+        input_element.send_keys(account_number)
+        time.sleep(2)
+
+        
+
+        print(f"¡Cuenta encontrada y seleccionada {account_number}  con éxito!")
+    except TimeoutException:
+        print("Tiempo de espera agotado. El elemento no está presente o no es clickeable.")     
+    

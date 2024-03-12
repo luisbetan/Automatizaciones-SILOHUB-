@@ -552,6 +552,7 @@ def displace_element(driver, xpath):
     except TimeoutException:
         print(f"Tiempo de espera agotado. El elemento no está presente o no es visible.")
 
+
 def displace_element_clear_send_keys(driver, xpath, new_amount):
     try:
         # Esperar hasta que el elemento sea visible
@@ -962,6 +963,31 @@ def select_option_click(driver, xpath_chevron, xpath_upload_field ):
     except ElementClickInterceptedException:
         print("El clic en el chevron fue interceptado por otro elemento en la página.")
 
+def locate_option_click(driver, xpath_chevron, xpath_upload_field ):
+    try:
+        # Esperar hasta que el chevron sea clickeable
+        xpath_chevron = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, xpath_chevron))
+        )
+
+        # Hacer clic en el chevron para desplegar el campo de carga de archivo
+        xpath_chevron.click()
+
+        # Encontrar el campo de carga de archivo después de desplegar el chevron
+        upload_input_element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, xpath_upload_field))
+        )
+
+        # Adjuntar el archivo al campo de carga de archivo
+        upload_input_element.click()
+
+        print( "La opcion fue seleccionada en el dropdown con exito  ")
+
+    except TimeoutException:
+        print("Tiempo de espera agotado. El chevron no están presentes o no son clickeables.")
+    except ElementClickInterceptedException:
+        print("El clic en el chevron fue interceptado por otro elemento en la página.")
+
 
 def validate_chain_text_xpaht(driver, xpath, expected_texts):
     try:
@@ -1167,6 +1193,28 @@ def search_and_displace_account(driver, account_number, located_element, xpaht):
         driver.execute_script("arguments[0].style.display = 'block';", input_element)
         
         input_element.send_keys(account_number)
+        time.sleep(2)
+
+        
+
+        print(f"¡Cuenta encontrada y seleccionada {account_number}  con éxito!")
+    except TimeoutException:
+        print("Tiempo de espera agotado. El elemento no está presente o no es clickeable.")     
+    
+def search_and_displace_element(driver, account_number, located_element, xpaht):
+    try:
+
+        located_element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located(( By.XPATH, xpaht)))
+        
+        located_element.click()
+        
+        input_element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located(( By.XPATH, xpaht)))
+        
+        driver.execute_script("arguments[0].style.display = 'block';", input_element)
+        
+        input_element.click()
         time.sleep(2)
 
         

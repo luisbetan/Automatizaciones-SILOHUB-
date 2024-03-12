@@ -6,7 +6,7 @@ from loginhelper import LoginHelper
 from startSession import StartSession
 
 
-class cuenta_ctacte_historica(unittest.TestCase):
+class cuenta_ctacte_histAcobrar(unittest.TestCase):
     def setUp(self):
         self.start_session = StartSession()
         self.driver = self.start_session.driver
@@ -18,7 +18,7 @@ class cuenta_ctacte_historica(unittest.TestCase):
         # Utilizar métodos de LoginHelper para el inicio de sesión
         self.login_helper.login("admingd@silohub.ag", "G@viglio123")
         self.login_helper.select_tenant()
-        self.login_helper.search_and_select_account("1023")
+        self.login_helper.search_and_select_account("484")
 
         # ingresar al menú de cuentas 
 
@@ -46,7 +46,7 @@ class cuenta_ctacte_historica(unittest.TestCase):
         find_elements(self.driver, select_filter)
         time.sleep(2)
 
-          ## aplicar filtro de rubros 
+          ## aplicar filtro de rubros 06/05/2023 al 28/06/2023
 
         apply_filter_1 = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-agricultural-category-container/div/app-agricultural-category-button[1]/div/img"
         find_elements(self.driver, apply_filter_1)
@@ -59,6 +59,9 @@ class cuenta_ctacte_historica(unittest.TestCase):
         apply_filter_3 = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-agricultural-category-container/div/app-agricultural-category-button[3]/div/img"
         find_elements(self.driver, apply_filter_3)
         time.sleep(2)
+
+        apply_state = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-checklist/div/app-checks[1]/div/input"
+        find_elements(self.driver,   apply_state)
 
         ## seleccionar filtro ordenado por 
 
@@ -73,21 +76,21 @@ class cuenta_ctacte_historica(unittest.TestCase):
 
       
         select_arrow_1 = "/html/body/div/div[1]/span[1]"
-        clicks = 10
+        clicks = 3
         find_and_click_element(self.driver, select_arrow_1, clicks)
         time.sleep(2)
 
-        select_date_1 = "/html/body/div/div[2]/div/div[2]/div/span[6]"
+        select_date_1 = "/html/body/div/div[2]/div/div[2]/div/span[16]"
         find_elements(self.driver, select_date_1)
         time.sleep(2)
 
 
         select_arrow_2 = "/html/body/div/div[1]/span[2]"
-        clicks = 1
+        clicks = 3
         find_and_click_element(self.driver, select_arrow_2, clicks)
         time.sleep(2)
 
-        select_date_2 ="/html/body/div/div[2]/div/div[2]/div/span[31]"
+        select_date_2 ="/html/body/div/div[2]/div/div[2]/div/span[16]"
         find_elements(self.driver, select_date_2)
         time.sleep(2)
 
@@ -97,8 +100,8 @@ class cuenta_ctacte_historica(unittest.TestCase):
 
         ## validar titulo de pantalla cuenta corriente aplicada 
 
-        title_account = "/html/body/app-root/app-layout/app-vertical/div/div/div/app-header-for-screen/div/div/span"
-        title_account_expected = "CUENTA CORRIENTE"
+        title_account = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/div/div/div"
+        title_account_expected = "Cuenta Corriente"
         validate_text(self.driver,title_account,title_account_expected )
         ## validar totalizadores 
 
@@ -149,9 +152,9 @@ class cuenta_ctacte_historica(unittest.TestCase):
         time.sleep(3)
 
 
-        ## ingresar al detalle 
+        ## ingresar al detalle  del cuarto movimiento
 
-        detail_movements = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[4]/td[2]"
+        detail_movements = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[4]/td[2]/span/span"
         find_elements(self.driver, detail_movements)
         time.sleep(3)
 
@@ -163,16 +166,16 @@ class cuenta_ctacte_historica(unittest.TestCase):
         ## validar datos del detalle 
 
         number_movements = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account-detail/app-header-for-detail/div[1]/div"
-        number_movements_expected = "Movimiento RI 0011 00077998"
+        number_movements_expected = "Movimiento LC 3302 11350773"
         validate_text(self.driver,number_movements,number_movements_expected )
 
         balance_movements = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account-detail/app-header-for-detail/div[2]/div/div[2]/div[1]"
-        balance_movements_expected = "+ ARS 1.234,20"
+        balance_movements_expected = "+ ARS 19.640,53"
         validate_text(self.driver, balance_movements, balance_movements_expected )
 
 
         settlement = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account-detail/app-header-for-detail/div[2]/div/div[2]/div[2]"
-        settlement_expected = "Comprobante Contrapartida de: OP 0001 - 00038025 0"
+        settlement_expected = "Liq.1116C SOJA 2223 100 Kgs. 100,00%"
         validate_text(self.driver,  settlement, settlement_expected )
 
         ## Seleccionar salida al listado 
@@ -193,6 +196,6 @@ class cuenta_ctacte_historica(unittest.TestCase):
 
 
 if __name__ == "__main__":
-  test_suite = unittest.TestLoader().loadTestsFromTestCase(cuenta_ctacte_historica)
-  runner = xmlrunner.XMLTestRunner(output='reportCtacteHistorica')
+  test_suite = unittest.TestLoader().loadTestsFromTestCase(cuenta_ctacte_histAcobrar)
+  runner = xmlrunner.XMLTestRunner(output='reportCtacteHistAcobar')
   runner.run(test_suite)

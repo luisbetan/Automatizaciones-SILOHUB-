@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="reportPendFacturar-20240129175338" tests="1" file=".py" time="97.428" timestamp="2024-01-29T17:55:15" failures="0" errors="0" skipped="0">
-	<testcase classname="reportPendFacturar" name="test_Report_PendFacturar" time="97.428" timestamp="2024-01-29T17:55:15" file="ReportCompPenFact.py" line="17">
+<testsuite name="reportPendFacturar-20240314175941" tests="1" file=".py" time="99.766" timestamp="2024-03-14T18:01:21" failures="0" errors="0" skipped="0">
+	<testcase classname="reportPendFacturar" name="test_Report_PendFacturar" time="99.766" timestamp="2024-03-14T18:01:21" file="ReportCompPenFact.py" line="17">
 		<system-out><![CDATA[¡Elemento encontrado y clickeado con éxito!
 ¡Elemento encontrado y clickeado con éxito!
 ¡Elemento encontrado y clickeado con éxito!
@@ -13,18 +13,18 @@ El texto encontrado es  Pendiente
 El texto no fue encontrado Precio Unit.
 El texto encontrado es  Moneda
 El texto no fue encontrado Total
-El valor es un carácter numérico. Valor: 0051 00016343
+El valor es un carácter numérico. Valor: 0051 00017084
 Tiempo de espera agotado. El texto por texto no está presente.
 ¡Elemento encontrado y clickeado con éxito!
 El texto encontrado es  DATOS DEL COMPROBANTE PENDIENTE DE FACTURAR
 El texto encontrado es  FECHA
-El valor es un carácter numérico. Valor: 23/08/2023
+El valor es un carácter numérico. Valor: 15/01/2024
 El texto encontrado es  ARTÍCULO
 Tiempo de espera agotado. El texto por texto no está presente.
 El texto encontrado es  CANTIDAD
-El valor es un carácter numérico. Valor: 5
+El valor es un carácter numérico. Valor: 1
 El texto encontrado es  CANTIDAD PENDIENTE
-El valor es un carácter numérico. Valor: 5
+El valor es un carácter numérico. Valor: 1
 ¡Elemento encontrado y clickeado con éxito!
 ¡Elemento encontrado y clickeado con éxito!
 ¡Elemento encontrado y clickeado con éxito!

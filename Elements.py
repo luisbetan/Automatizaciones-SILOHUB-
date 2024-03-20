@@ -497,6 +497,17 @@ def validate_strt_selector(driver, expected_text, css_aelector):
         print(f"Tiempo de espera agotado. El texto por texto no está presente.")
 
 
+def validate_chart_value(driver, html_content, valor_esperado):
+    try:
+        soup = BeautifulSoup(html_content, 'html.parser')
+        data_value = soup.find('path')['data:value']
+        if data_value == valor_esperado:
+            print(f"El valor del gráfico es {valor_esperado}.")
+        else:
+            print(f"El valor del gráfico es {data_value}, pero se esperaba {valor_esperado}.")
+    except TimeoutException:
+        print("Tiempo de espera agotado.")
+    
 
 # Otra función útil si deseas manipular la visibilidad de un elemento antes de interactuar con él
 def make_visible(driver, xpath):
@@ -1201,6 +1212,7 @@ def search_and_displace_account(driver, account_number, located_element, xpaht):
     except TimeoutException:
         print("Tiempo de espera agotado. El elemento no está presente o no es clickeable.")     
     
+
 def search_and_displace_element(driver, account_number, located_element, xpaht):
     try:
 

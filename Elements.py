@@ -211,6 +211,27 @@ def send_display_element_id(driver, id, input_data):
     except TimeoutException:
         print("Tiempo de espera agotado. El input no está presente o no es clickeable.")
 
+def send_display_element_xpaht(driver, xpaht, input_data):
+    try:
+        # Desplazarse hasta el elemento
+        input_element = driver.find_element_by_id(xpaht)
+        driver.execute_script("arguments[0].scrollIntoView(true);", input_element)
+
+        # Esperar a que el elemento sea clickeable
+        input_element = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.XPATH, xpaht))
+        )
+
+        # Si hay datos para ingresar, establecer el valor
+        # Limpiar el input
+        input_element.clear()  # Limpiar el input antes de ingresar datos
+        input_element.send_keys(input_data)  # Ingresar los datos
+
+        print("¡Input encontrado y enviado con éxito!")
+    except TimeoutException:
+        print("Tiempo de espera agotado. El input no está presente o no es clickeable.")
+
+
 
 
 def find_and_send_element(driver, xpath, input_data=None):

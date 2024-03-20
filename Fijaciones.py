@@ -31,8 +31,8 @@ class Fijaciones_precio(unittest.TestCase):
 
 
 
-        select_fijaciones = self.driver.find_element(By.XPATH,'/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[2]/div/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[3]/div/ul/li[1]/a')
-        select_fijaciones.click()
+        select_fijaciones =  '/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[2]/div/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[3]/div/ul/li[1]/a'
+        find_elements(self.driver,select_fijaciones )
 
 
         ## validar que estamos en la solapa fijaciones habilitadas 

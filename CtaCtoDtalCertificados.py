@@ -19,7 +19,7 @@ class detalle_cto_certificados(unittest.TestCase):
         self.login_helper = LoginHelper(self.driver)
    
    
-    def test_detail_liquidations(self):
+    def test_detail_certificates(self):
         # Utilizar métodos de LoginHelper para el inicio de sesión
         self.login_helper.login("admingd@silohub.ag", "G@viglio123")
         self.login_helper.select_tenant()

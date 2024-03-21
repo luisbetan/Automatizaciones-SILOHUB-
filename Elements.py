@@ -232,6 +232,23 @@ def send_display_element_xpaht(driver, xpaht, input_data):
         print("Tiempo de espera agotado. El input no está presente o no es clickeable.")
 
 
+def display_and_do_click(driver, xpath):
+    try:
+        # Esperar a que el elemento esté presente en la página
+        elemento = driver.find_element(By.XPATH, xpath)
+        
+        # Desplazar el elemento al área visible utilizando JavaScript
+        driver.execute_script("arguments[0].scrollIntoView(true);", elemento)
+        
+        # Hacer clic en el elemento
+        elemento.click()
+        
+        return True  # Indica que se pudo realizar el desplazamiento y clic correctamente
+    except Exception as e:
+        print("Error al desplazar y hacer clic:", e)
+        return False
+
+
 
 
 def find_and_send_element(driver, xpath, input_data=None):

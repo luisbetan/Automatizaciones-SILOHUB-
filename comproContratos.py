@@ -1,23 +1,30 @@
-import time
 import unittest
 import xmlrunner
-from Elements import displace_element, find_and_click_element, find_elements, find_elements_css_selector, validate_text
-from loginhelper import LoginHelper
+import time
+from Elements import displace_element, find_and_click_element, find_elements, find_elements_css_selector,validate_text
+from Loginhelper import LoginHelper
 from startSession import StartSession
 
+
+
+
 class comprobanteContrato(unittest.TestCase):
+    
     def setUp(self):
+       
+       
         self.start_session = StartSession()
         self.driver = self.start_session.driver
-
         # Inicializar la clase LoginHelper
         self.login_helper = LoginHelper(self.driver)
-
-    def test_vouchers_contract(self):
+   
+   
+    def test_comprobante_contrato(self):
         # Utilizar métodos de LoginHelper para el inicio de sesión
         self.login_helper.login("admingd@silohub.ag", "G@viglio123")
         self.login_helper.select_tenant()
         self.login_helper.search_and_select_account("1023")
+
 
 
         # ingresar al menú de cuentas 

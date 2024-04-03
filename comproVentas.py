@@ -1,18 +1,19 @@
 import time
 import unittest
-from HtmlTestRunner import HTMLTestRunner
 import xmlrunner
 from Elements import displace_element, find_and_click_element, find_elements, find_elements_css_selector, validate_text
-from loginhelper import LoginHelper
+from Loginhelper import LoginHelper
 from startSession import StartSession
+
+
 
 class comprobanteVentas(unittest.TestCase):
     def setUp(self):
         self.start_session = StartSession()
         self.driver = self.start_session.driver
-
         # Inicializar la clase LoginHelper
         self.login_helper = LoginHelper(self.driver)
+   
 
     def test_vouchers_sales(self):
         # Utilizar métodos de LoginHelper para el inicio de sesión

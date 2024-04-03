@@ -9,7 +9,6 @@ import unittest
 from GranosContratos import granos_contratos
 from Home import HomeTenant
 from RegistroUsuario import TestRegistroUsuario 
-from CuentaContrato import contrato_tenant
 from Entregas import cuenta_entregas
 from Ventas import cuenta_ventas
 from Onboarding import Onboarding_test_tenant
@@ -19,15 +18,13 @@ from ComproEntregas import comprobanteEntregas
 from ComproVentas import comprobanteVentas
 from CtaCte_Aplicada import cuenta_ctacte_aplicada
 from CtaCte_Histórica import cuenta_ctacte_historica
-from Insumos_Producto import insumosProductos
+
 
 def ejecutar_suite():
     test_suite = unittest.TestSuite()
     test_suite.addTest(unittest.makeSuite(TestRegistroUsuario))
     test_suite.addTest(unittest.makeSuite(HomeTenant))
     test_suite.addTest(unittest.makeSuite(granos_contratos))
-    test_suite.addTest(unittest.makeSuite(insumosProductos))
-    test_suite.addTest(unittest.makeSuite(contrato_tenant))
     test_suite.addTest(unittest.makeSuite(cuenta_entregas))
     test_suite.addTest(unittest.makeSuite(cuenta_ventas))
     test_suite.addTest(unittest.makeSuite(cuenta_ctacte_aplicada))

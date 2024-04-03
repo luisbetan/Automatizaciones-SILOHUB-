@@ -1,4 +1,3 @@
-from  selenium.webdriver.common.keys import Keys
 import time
 from FindElements import find_element_by_css_selector, find_element_by_xpath, find_element_by_id
 

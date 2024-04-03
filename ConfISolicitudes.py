@@ -1,7 +1,7 @@
 import unittest
 import time
 import xmlrunner
-from Elements import display_and_do_click, find_elements, find_send_element,  validate_text
+from Elements import find_elements, find_send_element,  validate_text
 from LoginSample import LoginSample
 from startSession import StartSession
 

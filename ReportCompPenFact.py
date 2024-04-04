@@ -3,7 +3,7 @@ import unittest
 from selenium.webdriver.common.by import By
 import xmlrunner
 from Elements import find_elements, validate_character_numeric_element, validate_text, validate_text_by_strt
-from loginhelper import LoginHelper
+from Loginhelper import LoginHelper
 from startSession import StartSession
 
 class reportPendFacturar(unittest.TestCase):

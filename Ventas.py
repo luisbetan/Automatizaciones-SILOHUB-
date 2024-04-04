@@ -2,7 +2,7 @@ import unittest
 import xmlrunner
 import time
 from Elements import find_and_click_element, find_elements, validate_chain_text_xpaht, validate_text, validate_text_by_text, validate_text_visible, validate_text_visible_selector
-from loginhelper import LoginHelper
+from Loginhelper import LoginHelper
 from startSession import StartSession
 
 
@@ -57,7 +57,7 @@ class cuenta_ventas(unittest.TestCase):
         find_elements(self.driver,clean_filter )
         time.sleep(2)
 
-        # aplicar filtro
+        # aplicar filtro  
 
         apply_product_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-grain-container/div/app-grain-button[1]/div/img"
         find_elements(self.driver,apply_product_filter )
@@ -72,7 +72,7 @@ class cuenta_ventas(unittest.TestCase):
         time.sleep(2)
 
         arrow_filter1 = "/html/body/div/div[1]/span[1]"
-        amount_click1 = 11
+        amount_click1 = 12
         find_and_click_element(self.driver, arrow_filter1, amount_click1)
 
         select_date1 = "/html/body/div/div[2]/div/div[2]/div/span[3]"

@@ -101,9 +101,13 @@ class Onboarding_test_tenant(unittest.TestCase):
         click_checkbox_xpaht(self.driver, check_button)
         time.sleep(2)
 
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(2)
+
+
         continue_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-documentation-process/div/div/aw-wizard/div/app-account-type/div/div[3]/div/div/app-button/button" 
         find_elements(self.driver, continue_button)
-        time.sleep(3)
+        time.sleep(5)
 
         insert_document = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-documentation-process/div/div/aw-wizard/div/app-identity-validation/div/div[3]/app-button/button"
         find_elements(self.driver, insert_document)

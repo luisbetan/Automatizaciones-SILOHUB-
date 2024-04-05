@@ -48,7 +48,8 @@ class comprobanteContrato(unittest.TestCase):
         select_filter_button1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-receipts/app-header-for-responsive-table/div/div/div[2]/div/div/app-filter-button/button/div/span"
         find_elements(self.driver, select_filter_button1)
         time.sleep(2)
-
+       
+       # aplicar filtro con rango de fecha 29/12/2023 al 26/01/2024
        
         select_contract_filter1 = '/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-radio-button-list/div/app-radio[1]/div/input'
         find_elements(self.driver, select_contract_filter1)
@@ -60,7 +61,7 @@ class comprobanteContrato(unittest.TestCase):
         time.sleep(2)
 
         select_arrow_filter1 = "/html/body/div/div[1]/span[1]"
-        amount_click1 = 3
+        amount_click1 = 4
         find_and_click_element(self.driver, select_arrow_filter1, amount_click1)
         time.sleep(2)
 

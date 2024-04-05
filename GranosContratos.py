@@ -95,6 +95,8 @@ class granos_contratos(unittest.TestCase):
         send_price = "3000"
         find_send_element(self.driver, insert_price, send_price )
 
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
         # seleccionar pizarra
 
         button_dopdown4 ="/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[7]/div[2]/ng-select/div/span"
@@ -102,23 +104,21 @@ class granos_contratos(unittest.TestCase):
         select_option_click(self.driver, button_dopdown4, option_desired4  )
         
         
-        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-
         # codigo estandar 
         button_dopdown5 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[8]/div[2]/ng-select/div/span"
         option_desired5 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[8]/div[2]/ng-select/ng-dropdown-panel/div/div[2]/div/span"
         select_option_click(self.driver, button_dopdown5, option_desired5 )
-        time.sleep(2)
+       
 
+        
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(2)
 
         # seleccionar fecha de pago
 
-        select_date = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[2]/div[2]/app-date-picker/div"
+        select_date = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[2]/div[2]/app-date-picker/div/input[2]"
         displace_element(self.driver, select_date)
 
-        
         select_arrow = "/html/body/div[1]/div[1]/span[2]"
         clicks = 1
         find_and_click_element(self.driver, select_arrow, clicks)
@@ -126,10 +126,12 @@ class granos_contratos(unittest.TestCase):
         insert_date = "/html/body/div[1]/div[2]/div/div[2]/div/span[30]"
         find_elements(self.driver, insert_date)
         time.sleep(2)
+
+        self.driver.execute_script("window.scrollTo(0, 0);")
    
         # seleccionar la fecha desde
 
-        select_date = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[2]/div[2]/div/div[1]/div[2]/app-date-picker/div"
+        select_date = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[2]/div[2]/div/div[1]/div[2]/app-date-picker/div/input[2]"
         displace_element(self.driver, select_date)
         time.sleep(2)
 
@@ -138,11 +140,11 @@ class granos_contratos(unittest.TestCase):
         find_and_click_element(self.driver, select_arrow2, clicks) 
         time.sleep(2)
 
-        select_calendar1 = "/html/body/div[4]/div[2]/div/div[2]/div/span[1]"
+        select_calendar1 = "/html/body/div[4]/div[2]/div/div[2]/div/span[4]"
         find_elements(self.driver, select_calendar1)
         time.sleep(1)
 
-        select_calendar2 = "/html/body/div[4]/div[2]/div/div[2]/div/span[30]"
+        select_calendar2 = "/html/body/div[4]/div[2]/div/div[2]/div/span[32]"
         find_elements(self.driver, select_calendar2)
         time.sleep(2)
 
@@ -185,6 +187,23 @@ class granos_contratos(unittest.TestCase):
 
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(2)
+
+        #insertar fecha de fijacióm Tdc 
+
+        select_date = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[2]/div[4]/div[2]/app-date-picker/div/input[2]"
+        displace_element(self.driver, select_date)
+        time.sleep(2)
+
+        select_arrow3 = "/html/body/div[2]/div[1]/span[2]"
+        clicks = 1
+        find_and_click_element(self.driver, select_arrow3, clicks) 
+        time.sleep(2)
+
+        select_calendar3 = "/html/body/div[2]/div[2]/div/div[2]/div/span[18]"
+        find_elements(self.driver, select_calendar3)
+        time.sleep(1)
+
+        
 
         # seleccionar el botón de continuar
 

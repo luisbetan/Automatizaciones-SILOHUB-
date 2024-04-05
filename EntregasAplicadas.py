@@ -54,7 +54,7 @@ class cta_entregasAplicadas(unittest.TestCase):
 
       
 
-        # aplicar filtro Maiz 2122  01/01/2022 al 28/02/2022
+        # aplicar filtro Maiz 2122  02/01/2022 al 01/03/2022
 
         apply_product_filter = "body > ngb-offcanvas-panel > div > ngx-simplebar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > app-filter-content > div.filter-container > app-grain-container > div > app-grain-button:nth-child(3) > div > img"
         find_elements_css_selector(self.driver, apply_product_filter )
@@ -77,7 +77,7 @@ class cta_entregasAplicadas(unittest.TestCase):
         find_and_click_element_selector(self.driver, arrow_filter1, amount_click1)
 
         arrow_filter1 = "/html/body/div/div[1]/span[1]"
-        amount_click1 = 2
+        amount_click1 = 3
         find_and_click_element(self.driver, arrow_filter1, amount_click1)
 
         select_date1 = "/html/body/div/div[2]/div/div[2]/div/span[7]"

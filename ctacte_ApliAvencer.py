@@ -60,7 +60,7 @@ class cta_cte_apliAvencer(unittest.TestCase):
         time.sleep(2)
 
         select_arrow_1 = "/html/body/div/div[1]/span[1]"
-        clicks = 5
+        clicks = 6
         find_and_click_element(self.driver, select_arrow_1, clicks)
         time.sleep(2)
 
@@ -69,11 +69,11 @@ class cta_cte_apliAvencer(unittest.TestCase):
         time.sleep(2)
 
         select_arrow_2 = "/html/body/div/div[1]/span[2]"
-        clicks = 1
+        clicks = 2
         find_and_click_element(self.driver, select_arrow_2, clicks)
         time.sleep(2)
 
-        select_date_2 = "/html/body/div/div[2]/div/div[2]/div/span[33]"
+        select_date_2 = "/html/body/div/div[2]/div/div[2]/div/span[5]"
         find_elements(self.driver, select_date_2)
         time.sleep(2)
 
@@ -143,15 +143,15 @@ class cta_cte_apliAvencer(unittest.TestCase):
 
         ## validar datos del detalle 
 
-        number_movements = "Movimiento FC 1118 00075686"
+        number_movements = "Movimiento NC 1051 00007140"
         validate_text_by_strt(self.driver, number_movements )
 
 
  
-        balance_movements = "+ ARS 207.368,71"
+        balance_movements = "USD 236,68"
         validate_text_by_strt(self.driver, balance_movements )
 
-        settlement = "GASTOS COMER. S/ 30120 KGRS.  Trig Cosecha 2324-E"
+        settlement = "NC Bonificacion afecta a fra. 1051-14310-(3 bidon"
         validate_text_by_strt(self.driver, settlement )
 
         ## Seleccionar salida al listado 

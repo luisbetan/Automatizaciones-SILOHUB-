@@ -71,20 +71,25 @@ class cuenta_entregas(unittest.TestCase):
         arrow_filter1 = "body > div > div.flatpickr-months > div > div > div > span.arrowDown"
         amount_click1 = 2
         find_and_click_element_selector(self.driver, arrow_filter1, amount_click1)
+        time.sleep(2)
 
         arrow_filter1 = "/html/body/div/div[1]/span[1]"
-        amount_click1 = 2
+        amount_click1 = 3
         find_and_click_element(self.driver, arrow_filter1, amount_click1)
+        time.sleep(2)
 
         select_date1 = "/html/body/div/div[2]/div/div[2]/div/span[7]"
         find_elements(self.driver, select_date1 )
+        time.sleep(2)
 
         arrow_filter2 = "/html/body/div/div[1]/span[2]"
         amount_click2 = 1
         find_and_click_element(self.driver, arrow_filter2, amount_click2)
+        time.sleep(2)
 
         select_date2 = "/html/body/div/div[2]/div/div[2]/div/span[30]"
         find_elements(self.driver, select_date2 )
+        time.sleep(2)
 
         apply_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-filter-buttons/div/app-button[2]/button"
         find_elements(self.driver, apply_filter )

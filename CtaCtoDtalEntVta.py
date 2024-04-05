@@ -1,7 +1,7 @@
 import unittest
 import xmlrunner
 import time
-from Elements import click_checkbox_xpaht, find_and_click_element, find_and_click_element_selector, find_and_click_element_with_style, find_elements, find_elements_located, validate_chain_text_xpaht, validate_character_numeric_element, validate_text_by_text, validate_text_visible
+from Elements import click_checkbox_xpaht, find_and_click_element, find_and_click_element_selector, find_elements, find_elements_located, validate_chain_text_xpaht, validate_character_numeric_element, validate_text_by_text, validate_text_visible
 from Loginhelper import LoginHelper
 from startSession import StartSession
 
@@ -46,7 +46,7 @@ class detalle_ctro_entregaVentas(unittest.TestCase):
         find_elements(self.driver,cleam_filter )
         time.sleep(3)
 
-        # aplicar un nuevo filtro
+        # aplicar un nuevo filtro Maiz cosecha 2122 desde 02/02/2021 hasta 28/05/2021 estado cumplidos
 
         select_product_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-grain-container/div/app-grain-button[2]/div/img"
         find_elements(self.driver,select_product_filter )
@@ -69,14 +69,14 @@ class detalle_ctro_entregaVentas(unittest.TestCase):
         find_and_click_element_selector(self.driver, arrow_filter1, amount_click1)
 
         arrow_filter2 = "/html/body/div/div[1]/span[1]"
-        amount_click2 = 1
+        amount_click2 = 2
         find_and_click_element(self.driver, arrow_filter2, amount_click2)
 
         select_date1 = "/html/body/div/div[2]/div/div[2]/div/span[2]"
         find_elements(self.driver, select_date1 )
 
         arrow_filter3 = "/html/body/div/div[1]/span[2]"
-        amount_click3 = 2
+        amount_click3 = 3
         find_and_click_element(self.driver, arrow_filter3, amount_click3)
 
         select_date2 = "/html/body/div/div[2]/div/div[2]/div/span[33]"
@@ -101,7 +101,7 @@ class detalle_ctro_entregaVentas(unittest.TestCase):
 
         # validar numero de contrato 
         element1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/div/div[1]/div[1]/div/span"
-        number_expected = "Contrato 108169"
+        number_expected = "Contrato 108280"
         validate_text_visible(self.driver, element1, number_expected)
 
         # validar produto 
@@ -136,7 +136,7 @@ class detalle_ctro_entregaVentas(unittest.TestCase):
         validate_text_visible(self.driver, element6, text_expected)
 
         date_delivery = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[2]/span/span"
-        strt_expected = "14/03/2022"
+        strt_expected = "15/03/2022"
         validate_text_visible(self.driver,date_delivery, strt_expected)
 
         element7 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/thead/tr/th[4]'

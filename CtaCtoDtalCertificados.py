@@ -46,7 +46,7 @@ class detalle_cto_certificados(unittest.TestCase):
         find_elements(self.driver,cleam_filter )
         time.sleep(3)
 
-        # aplicar un nuevo filtro Maiz cosecha 2122 desde 01/02/2021 hasta 30/04/2021 estado cumplidos
+        # aplicar un nuevo filtro Maiz cosecha 2122 desde 02/02/2021 hasta 28/05/2021 estado cumplidos
 
         select_product_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-grain-container/div/app-grain-button[2]/div/img"
         find_elements(self.driver,select_product_filter )
@@ -67,20 +67,25 @@ class detalle_cto_certificados(unittest.TestCase):
         arrow_filter1 = "body > div > div.flatpickr-months > div > div > div > span.arrowDown"
         amount_click1 = 3
         find_and_click_element_selector(self.driver, arrow_filter1, amount_click1)
+        time.sleep(2)
 
         arrow_filter2 = "/html/body/div/div[1]/span[1]"
-        amount_click2 = 1
+        amount_click2 = 2
         find_and_click_element(self.driver, arrow_filter2, amount_click2)
+        time.sleep(2)
 
         select_date1 = "/html/body/div/div[2]/div/div[2]/div/span[2]"
         find_elements(self.driver, select_date1 )
+        time.sleep(2)
 
         arrow_filter3 = "/html/body/div/div[1]/span[2]"
-        amount_click3 = 2
+        amount_click3 = 3
         find_and_click_element(self.driver, arrow_filter3, amount_click3)
+        time.sleep(2)
 
         select_date2 = "/html/body/div/div[2]/div/div[2]/div/span[33]"
         find_elements(self.driver, select_date2 )
+        time.sleep(2)
 
         apply_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-filter-buttons/div/app-button[2]/button"
         find_elements(self.driver, apply_filter )
@@ -92,7 +97,7 @@ class detalle_cto_certificados(unittest.TestCase):
         validate_text_by_text(self.driver, text_expected)
         
         #ingresar al detalle de tercer contrato del listado
-        selet_list_contract = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-contracts/app-responsive-table-multiple-items/div/table/tbody/tr[3]/td[1]/app-contract/div"
+        selet_list_contract = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-contracts/app-responsive-table-multiple-items/div/table/tbody/tr[3]/td[1]/app-contract/div/div[2]/div[1]/div[1]/span"
         find_elements(self.driver, selet_list_contract )
         time.sleep(3)
 
@@ -101,7 +106,7 @@ class detalle_cto_certificados(unittest.TestCase):
 
         # validar numero de contrato 
         element1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/div/div[1]/div[1]/div/span"
-        number_expected = "Contrato 108169"
+        number_expected = "Contrato 108280"
         validate_text_visible(self.driver, element1, number_expected)
 
         # validar produto 

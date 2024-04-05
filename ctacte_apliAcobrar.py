@@ -60,7 +60,7 @@ class cta_cte_apliAcobrar(unittest.TestCase):
         time.sleep(2)
 
         select_arrow_1 = "/html/body/div/div[1]/span[1]"
-        clicks = 5
+        clicks = 6
         find_and_click_element(self.driver, select_arrow_1, clicks)
         time.sleep(2)
 
@@ -69,11 +69,11 @@ class cta_cte_apliAcobrar(unittest.TestCase):
         time.sleep(2)
 
         select_arrow_2 = "/html/body/div/div[1]/span[2]"
-        clicks = 1
+        clicks = 2
         find_and_click_element(self.driver, select_arrow_2, clicks)
         time.sleep(2)
 
-        select_date_2 = "/html/body/div/div[2]/div/div[2]/div/span[33]"
+        select_date_2 = "/html/body/div/div[2]/div/div[2]/div/span[5]"
         find_elements(self.driver, select_date_2)
         time.sleep(2)
 
@@ -132,7 +132,7 @@ class cta_cte_apliAcobrar(unittest.TestCase):
 
         ## ingresar al detalle 
 
-        detail_movements4 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[1]/app-current-account-applied-list/app-responsive-table/div/div/table/tbody/tr[3]/td[2]/span/span"
+        detail_movements4 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[1]/app-current-account-applied-list/app-responsive-table/div/div/table/tbody/tr[3]/td[2]"
         find_elements(self.driver, detail_movements4)
         time.sleep(3)
 

@@ -46,7 +46,7 @@ class contrato_operSecundarias(unittest.TestCase):
         find_elements(self.driver,select_secondary )
         time.sleep(3)
 
-        # aplicar un nuevo filtro
+        # aplicar un nuevo filtro soja 2122 rango 10/12/2021 al 16/12/2021
 
         select_product_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-grain-container/div/app-grain-button[1]/div/div"
         find_elements(self.driver,select_product_filter )
@@ -66,11 +66,15 @@ class contrato_operSecundarias(unittest.TestCase):
         time.sleep(2)
 
         arrow_filter2 = "/html/body/div/div[1]/span[1]"
-        amount_click2 = 3
+        amount_click2 = 4
         find_and_click_element(self.driver, arrow_filter2, amount_click2)
         time.sleep(2)
 
-        select_date2 = "/html/body/div/div[2]/div/div[2]/div/span[12]"
+        select_date1 = "/html/body/div/div[2]/div/div[2]/div/span[12]"
+        find_elements(self.driver, select_date1 )
+        time.sleep(2)
+
+        select_date2 = "/html/body/div/div[2]/div/div[2]/div/span[18]"
         find_elements(self.driver, select_date2 )
         time.sleep(2)
 

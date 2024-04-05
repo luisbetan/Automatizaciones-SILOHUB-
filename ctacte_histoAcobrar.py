@@ -68,7 +68,7 @@ class cuenta_ctacte_histAcobrar(unittest.TestCase):
         older_by_expiration = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-radio-button-list[1]/div/app-radio[2]/div/input"
         find_elements(self.driver,   older_by_expiration)
 
-        ## seleccionar rango de fecha
+        ## seleccionar rango de fecha 16/01/2024 al 16/04/2024
 
         select_field_date = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-date-filter/div/app-date-picker/div/input[2]"
         find_elements(self.driver,   select_field_date)
@@ -76,7 +76,7 @@ class cuenta_ctacte_histAcobrar(unittest.TestCase):
 
       
         select_arrow_1 = "/html/body/div/div[1]/span[1]"
-        clicks = 3
+        clicks = 4
         find_and_click_element(self.driver, select_arrow_1, clicks)
         time.sleep(2)
 
@@ -86,7 +86,7 @@ class cuenta_ctacte_histAcobrar(unittest.TestCase):
 
 
         select_arrow_2 = "/html/body/div/div[1]/span[2]"
-        clicks = 3
+        clicks = 4
         find_and_click_element(self.driver, select_arrow_2, clicks)
         time.sleep(2)
 

@@ -103,7 +103,7 @@ class Onboarding_test_tenant(unittest.TestCase):
 
         continue_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-documentation-process/div/div/aw-wizard/div/app-account-type/div/div[3]/div/div/app-button/button" 
         find_elements(self.driver, continue_button)
-        time.sleep(2)
+        time.sleep(3)
 
         insert_document = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-documentation-process/div/div/aw-wizard/div/app-identity-validation/div/div[3]/app-button/button"
         find_elements(self.driver, insert_document)

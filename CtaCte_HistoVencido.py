@@ -80,7 +80,7 @@ class cuenta_ctacte_histVencido(unittest.TestCase):
 
       
         select_arrow_1 = "/html/body/div/div[1]/span[1]"
-        clicks = 3
+        clicks = 4
         find_and_click_element(self.driver, select_arrow_1, clicks)
         time.sleep(2)
 
@@ -90,7 +90,7 @@ class cuenta_ctacte_histVencido(unittest.TestCase):
 
 
         select_arrow_2 = "/html/body/div/div[1]/span[2]"
-        clicks = 3
+        clicks = 4
         find_and_click_element(self.driver, select_arrow_2, clicks)
         time.sleep(2)
 

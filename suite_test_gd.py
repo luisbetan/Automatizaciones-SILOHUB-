@@ -27,7 +27,7 @@ from ComproEntregas import comprobanteEntregas
 from ComproVentas import comprobanteVentas
 from CtaCte_Aplicada import cuenta_ctacte_aplicada
 from CtaCte_Histórica import cuenta_ctacte_historica
-from insumos_producto import insumosProductos
+from Insumos_Producto import insumosProductos
 
 
 def ejecutar_suite():

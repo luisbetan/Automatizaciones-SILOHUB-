@@ -72,7 +72,7 @@ class cuenta_ctacte_histAvencer(unittest.TestCase):
         find_elements(self.driver,   older_by_date_expiration)
 
 
-        ## seleccionar rango de fecha 12/12/2023 al 12/03/2024
+        ## seleccionar rango de fecha 12/12/2023 al 16/04/2024
 
         select_field_date = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-date-filter/div/app-date-picker/div/input[2]"
         find_elements(self.driver,   select_field_date)

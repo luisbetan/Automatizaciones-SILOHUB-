@@ -50,7 +50,7 @@ class cuenta_ctacte_aplicada(unittest.TestCase):
         find_elements(self.driver, apply_filter_3)
         time.sleep(2)
 
-        ## seleccionar rango de fecha
+        ## seleccionar rango de fecha 02-10-2023 a 01/12/2023
 
         select_field_date = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-date-filter/div/app-date-picker/div/input[2]"
         find_elements(self.driver, select_field_date)

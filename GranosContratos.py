@@ -188,7 +188,7 @@ class granos_contratos(unittest.TestCase):
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(2)
 
-        #insertar fecha de fijacióm Tdc 
+        #insertar fecha de fijacióm Tdc 16/05/2024
 
         select_date = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[2]/div[4]/div[2]/app-date-picker/div/input[2]"
         displace_element(self.driver, select_date)

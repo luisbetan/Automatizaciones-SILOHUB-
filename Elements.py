@@ -1,6 +1,6 @@
 
 import time
-from typing import KeysView
+
 from bs4 import BeautifulSoup
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -19,7 +19,7 @@ def find_elements(driver, xpath):
             EC.element_to_be_clickable((By.XPATH, xpath))
         )
         select_nex_button.click()
-        print("¡Elemento encontrado y clickeado con éxito!")
+        
     except TimeoutException:
         print("Tiempo de espera agotado. El elemento no está presente o no es clickeable.")
 
@@ -29,7 +29,7 @@ def find_elements_css_selector(driver, css_selector):
             EC.element_to_be_clickable((By.CSS_SELECTOR, css_selector))
         )
         select_nex_button.click()
-        print("¡Elemento encontrado y clickeado con éxito!")
+        
 
         # Devolver el elemento encontrado
         return select_nex_button
@@ -44,7 +44,7 @@ def find_elements_id(driver, id):
             EC.element_to_be_clickable((By.ID, id))
         )
         select_nex_button.click()
-        print("¡Elemento encontrado y clickeado con éxito!")
+        
     except TimeoutException:
         print("Tiempo de espera agotado. El elemento no está presente o no es clickeable.")
 
@@ -54,7 +54,7 @@ def find_elements_name(driver, class_name):
             EC.element_to_be_clickable((By.CLASS_NAME, class_name))
         )
         select_nex_button.click()
-        print("¡Elemento encontrado y clickeado con éxito!")
+        
     except TimeoutException:
         print("Tiempo de espera agotado. El elemento no está presente o no es clickeable.")
 
@@ -64,7 +64,7 @@ def find_elements_link_text(driver, link_text):
             EC.element_to_be_clickable((By.LINK_TEXT, link_text))
         )
         select_nex_button.click()
-        print("¡Elemento encontrado y clickeado con éxito!")
+        
     except TimeoutException:
         print("Tiempo de espera agotado. El elemento no está presente o no es clickeable.")
 
@@ -75,7 +75,7 @@ def find_elements_located(driver, xpath):
             EC.visibility_of_element_located((By.XPATH, xpath))
         )
         select_nex_button.click()
-        print("¡Elemento encontrado y clickeado con éxito!")
+        
     except TimeoutException:
         print("Tiempo de espera agotado. El elemento no está presente o no es clickeable.")
 
@@ -86,7 +86,7 @@ def find_elements_cleam(driver, xpath):
             EC.element_to_be_clickable((By.XPATH, xpath))
         )
         select_nex_button.clear
-        print("¡Elemento encontrado y limpiado con éxito!")
+        
     except TimeoutException:
         print("Tiempo de espera agotado. El elemento no está presente o no es limpiar.")
 
@@ -151,7 +151,7 @@ def wait_and_click(driver, xpath):
         )
         # Hacer clic una vez que el elemento sea visible
         element.click()
-        print("¡Elemento visible y clickeado con éxito!")
+        
     except TimeoutException:
         print("Tiempo de espera agotado. El elemento no está visible o no es clickeable.")
 
@@ -170,7 +170,7 @@ def find_and_click_element_with_style_ID(driver, id):
         # Hacer clic en el elemento
         element_to_click.click()
 
-        print("¡Elemento encontrado, hecho visible y clickeado con éxito!")
+        
     except TimeoutException:
         print("Tiempo de espera agotado. El elemento no está presente o no es visible o clickeable.")
 
@@ -187,7 +187,7 @@ def find_and_click_element_with_style(driver, xpath):
         # Hacer clic en el elemento
         element_to_click.click()
 
-        print("¡Elemento encontrado, hecho visible y clickeado con éxito!")
+        
     except TimeoutException:
         print("Tiempo de espera agotado. El elemento no está presente o no es visible o clickeable.")
 
@@ -207,7 +207,7 @@ def send_display_element_id(driver, id, input_data):
         input_element.clear()  # Limpiar el input antes de ingresar datos
         input_element.send_keys(input_data)  # Ingresar los datos
 
-        print("¡Input encontrado y enviado con éxito!")
+        
     except TimeoutException:
         print("Tiempo de espera agotado. El input no está presente o no es clickeable.")
 
@@ -227,7 +227,7 @@ def send_display_element_xpaht(driver, xpaht, input_data):
         input_element.clear()  # Limpiar el input antes de ingresar datos
         input_element.send_keys(input_data)  # Ingresar los datos
 
-        print("¡Input encontrado y enviado con éxito!")
+        
     except TimeoutException:
         print("Tiempo de espera agotado. El input no está presente o no es clickeable.")
 

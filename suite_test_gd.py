@@ -6,8 +6,17 @@ import os
 import smtplib
 import xmlrunner
 import unittest
+from CtaContOperSecundaria import contrato_operSecundarias
+from CtaCtoDtalCertificados import detalle_cto_certificados
+from CtaCtoDtalEntVta import detalle_ctro_entregaVentas
+from CtaCtoDtalFijaciones import detalle_ctro_fijaciones
+from CtaCtoDtalLiquidaciones import detalle_cto_liquidaciones
+from Cuentacontrato import contrato_tenant
+from EntregasAplicadas import cta_entregasAplicadas
+from EntregasPendApli import entregas_pend_Aplicadas
 from GranosContratos import granos_contratos
 from Home import HomeTenant
+from IndicaInsumosHome import IndicaInsumosHome
 from RegistroUsuario import TestRegistroUsuario 
 from Entregas import cuenta_entregas
 from Ventas import cuenta_ventas
@@ -18,14 +27,25 @@ from ComproEntregas import comprobanteEntregas
 from ComproVentas import comprobanteVentas
 from CtaCte_Aplicada import cuenta_ctacte_aplicada
 from CtaCte_Histórica import cuenta_ctacte_historica
+from insumos_producto import insumosProductos
 
 
 def ejecutar_suite():
     test_suite = unittest.TestSuite()
     test_suite.addTest(unittest.makeSuite(TestRegistroUsuario))
     test_suite.addTest(unittest.makeSuite(HomeTenant))
+    test_suite.addTest(unittest.makeSuite(IndicaInsumosHome))
     test_suite.addTest(unittest.makeSuite(granos_contratos))
+    test_suite.addTest(unittest.makeSuite(insumosProductos))
+    test_suite.addTest(unittest.makeSuite(contrato_tenant))
+    test_suite.addTest(unittest.makeSuite(detalle_ctro_entregaVentas))
+    test_suite.addTest(unittest.makeSuite(detalle_ctro_fijaciones))
+    test_suite.addTest(unittest.makeSuite(detalle_cto_certificados))
+    test_suite.addTest(unittest.makeSuite(detalle_cto_liquidaciones))
+    test_suite.addTest(unittest.makeSuite(contrato_operSecundarias))
     test_suite.addTest(unittest.makeSuite(cuenta_entregas))
+    test_suite.addTest(unittest.makeSuite(cta_entregasAplicadas))
+    test_suite.addTest(unittest.makeSuite(entregas_pend_Aplicadas))
     test_suite.addTest(unittest.makeSuite(cuenta_ventas))
     test_suite.addTest(unittest.makeSuite(cuenta_ctacte_aplicada))
     test_suite.addTest(unittest.makeSuite(cuenta_ctacte_historica))

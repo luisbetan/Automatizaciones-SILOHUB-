@@ -54,7 +54,7 @@ class cuenta_entregas(unittest.TestCase):
 
         self.driver.execute_script("window.scrollTo(0, 0);")
 
-        # aplicar filtro Maiz 2122  01/01/2022 al 28/02/2022
+        # aplicar filtro Maiz 2122  02/01/2022 al 01/03/2022
 
         apply_product_filter = "body > ngb-offcanvas-panel > div > ngx-simplebar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > app-filter-content > div.filter-container > app-grain-container > div > app-grain-button:nth-child(3) > div > img"
         find_elements_css_selector(self.driver, apply_product_filter )

@@ -1,201 +1,154 @@
-from selenium  import webdriver
+from telnetlib import EC
 import unittest
-from pyunitreport import HTMLTestRunner
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
+import xmlrunner
 import time
-from selenium.webdriver.support.ui import Select
+from Elements import  click_icon_delete,displace_element, find_and_click_element, find_elements, find_send_element, search_and_displace_account, seleccionar_ultimo_icono, select_option_click, validate_text
+from LoginSample import LoginSample
+from startSession import StartSession
+
+
 
 
 class precio_granos(unittest.TestCase):
-
-    def     setUp(self):
-        self.driver = webdriver.Chrome(executable_path=r"C:\driverchrome\chromedriver-win64\chromedriver.exe")
-        driver = self.driver
-        driver.implicitly_wait(30)
-        driver.maximize_window()
-        driver.get("https://pwa-portal-staging.silohub.ag/login")
-
-
-    def test_precio_granos(self):
-        driver = self.driver
-        username = driver.find_element_by_id("email")
-        username.send_keys("admingd@silohub.ag")
-        username.send_keys(Keys.ENTER)
-        time.sleep(3)
-        
-        passwordUser = driver.find_element_by_id("password")
-        passwordUser.send_keys("G@viglio123")
-        passwordUser.send_keys(Keys.ENTER)
-        time.sleep(3)
-
-        insertButton = driver.find_element_by_xpath("/html/body/app-root/app-login-main/div/div[2]/div/app-login-form/div/div/div[1]/div/div[2]/form/div[4]/app-button/button")
-        insertButton.send_keys(Keys.ENTER) 
-        time.sleep(3)
-
-      ## seleccionar el tenant 
-        selectTenant = driver.find_element_by_xpath("/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-main/div/div[1]/app-tenant-main/app-tenant[8]/div/div/img")
-        selectTenant.click()
-        time.sleep(3)
-
     
-
-        ## seleccionar el menú de granos 
-
-        select_menu_grain = driver.find_element_by_xpath("/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[2]/div[1]/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[3]/a/span")
-        select_menu_grain.click()
-        time.sleep(2)
-
-        # seleccionar submenú de precio de granos 
-
-        price_grain = driver.find_element_by_xpath("/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[2]/div[1]/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[3]/div/ul/li[3]/a")
-        price_grain.click()
-        time.sleep(2)
-
-        # validar titulo de la pantalla de precio de granos 
-
-        title_international_market = driver.find_element_by_xpath("/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-international-market/app-market-table/app-market-header/app-market-header-info/div/div[1]/h4")
-        title_international_expected = title_international_market.text
-        title_international_obtained = "Mercado Internacional"
-
-        if title_international_expected == title_international_obtained:
-            print("El titulo de la pantalla es: ", title_international_obtained)
-
-        else:
-            print("El titulo de la pantalla no es el correcto")
-
-       # validar el tipo de cambio y el banco 
-
-        type_change = driver.find_element_by_xpath("/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-international-market/app-market-table/app-market-header/app-market-header-controls/div/app-market-currency/div[1]")
-        type_change_expected = type_change.text
-        type_change_obtained = "ARS 130.48"
-
-        if type_change_expected == type_change_obtained:
-            print("El tipo de cambio para el dia de hoy es :", type_change_obtained)
-
-        else:
-            print("El tipo de cambio no es correcto")
-
-        # seleccionar un tipo de mercado 
-
- 
-        dropdown_element = driver.find_element_by_xpath("/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-international-market/app-market-table/app-market-header/app-market-header-controls/div/div/div/div[1]/select")
-
-        # Crear un objeto Select para interactuar con el dropdown
-        dropdown = Select(dropdown_element)
-
-       # Seleccionar una opción por su valor
-        dropdown.select_by_value("2")  
-
-       # Obtener el elemento seleccionado en el dropdown
-        option_seleccted = dropdown.first_selected_option
-
-       # Hacer clic en el elemento seleccionado (en este caso, el <option> del dropdown)
-        option_seleccted.click()
-        time.sleep(2)
-
-        # seleccionar fecha 
-
-        date_market = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-international-market/app-market-table/app-market-header/app-market-header-controls/div/div/div/div[2]/app-date-picker/div/input[2]")))
-        date_market.click()
-
-        select_moth = driver.find_element_by_xpath("/html/body/div[1]/div[1]/span[2]")
-        select_moth.click()
-
+    def setUp(self):
        
-        target_date_xpath = f"/html/body/div[1]/div[2]/div/div[2]/div/span[18]"
-        target_date_element = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, target_date_xpath)))
-        target_date_element.click()
-        time.sleep(2)
-
-        ## agregar mercado internacional
-
-        
-        selct_button_add = driver.find_element_by_xpath("/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-international-market/app-market-table/app-market-header/app-market-header-controls/div/div/div/div[3]/app-add-and-clean/div/div[2]/app-button/button")
-        selct_button_add.click()
-        time.sleep(2)
-
-        select_switch = driver.find_element_by_xpath("/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-international-market/app-market-table/div/table/tbody/tr[2]/td[1]/app-switch/div/input")
-        select_switch.click()
-        time.sleep(3)
        
-        insert_product = driver.find_element_by_xpath("/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-international-market/app-market-table/div/table/tbody/tr[2]/td[2]/input")
-        insert_product.send_keys("SOJA")
-        insert_product.send_keys(Keys.ENTER)
+        self.start_session = StartSession()
+        self.driver = self.start_session.driver
+        # Inicializar la clase LoginHelper
+        self.login_sample = LoginSample(self.driver)
+   
+   
+    def test_granos_contratos(self):
+        # Utilizar métodos de LoginHelper para el inicio de sesión
+        self.login_sample.login("admingd@silohub.ag", "G@viglio123")
+        self.login_sample.select_tenant()
+
+        select_grain = "/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[2]/div[1]/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[3]/a/span"
+        find_elements(self.driver,select_grain)
         time.sleep(2)
-       
 
-        
-        element_to_select = driver.find_element_by_css_selector('input[type="number"]')
-        element_to_select.send_keys("300")
-        element_to_select.send_keys(Keys.ENTER)
+        select_price_grain = "/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[2]/div[1]/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[3]/div/ul/li[3]/a"
+        find_elements(self.driver,select_price_grain)
         time.sleep(2)
 
-        # validar titulo de preccio de cereales 
-
-
-        titel_price_cereal = driver.find_element_by_xpath("/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[1]/app-grain-price-header/app-grain-price-header-release/div/div[1]/h4")
-        titel_price_cereal_expected = titel_price_cereal.text
-        titel_price_cereal_obtained = "Precio de Cereales"
-
-        if titel_price_cereal_expected == titel_price_cereal_obtained:
-            print("El titulo del formulario es :", titel_price_cereal_obtained)
-
-        else:
-            print("El titulo del formulario no es correcto")
-
+        # validar titulo de la pantalla
         
+        title_pag_market = "/html/body/app-root/app-layout/app-vertical/div/div/div/app-header-for-screen/div/div/span"
+        value_expected = "MERCADOS"
+        validate_text(self.driver, title_pag_market, value_expected)
 
-        titel_price_available = driver.find_element_by_xpath("/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/app-grain-price-table-header/div/div[1]")
-        titel_price_available_expected = titel_price_available.text
-        titel_price_available_obtained = "Disponible"
+        self.driver.execute_script("window.scrollTo(0,300);")
+        time.sleep(2)
 
-        if titel_price_available_expected == titel_price_available_obtained:
-            print("El titulo del formulario es :", titel_price_available_obtained)
+        # borrar listado de disponible
 
-        else:
-            print("El titulo del formulario no es correcto")
-
-
-        add_comment = driver.find_element_by_xpath("/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[1]/app-grain-price-header/app-grain-price-header-observations/div/div[2]/div/div[2]/input")
-        add_comment.send_keys("El cereal esta cargado")
-        add_comment.send_keys(Keys.ENTER)
+        delete_price_grain = "#layout-wrapper > div > div > div > app-market-main > app-grain-price > div:nth-child(2) > app-grain-price-table:nth-child(1) > div > div > table > tbody > tr:nth-child(1) > td.pt-3.padding-last-column > svg-icon > svg"
+        click_icon_delete(self.driver, delete_price_grain)
         time.sleep(2)
 
         
+        # agrgar productos 
 
-        # Agregar cerial 
-
-        add_cereal_available = driver.find_element_by_xpath('/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/app-grain-price-table-header/div/div[2]/app-add-and-clean/div/div[1]/app-button/button')
-        add_cereal_available.click()
-        time.sleep(5)
-
-        select_switch2 = driver.find_element_by_xpath("/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[1]/app-switch/div/input")
-        select_switch2.click()
-        time.sleep(3)
-
-        select_grain = driver.find_element_by_xpath("/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[2]/app-select/select")
-        select_grain.click()
-
-        select_grain_dropdown = driver.find_element_by_xpath("/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[2]/app-select/select/option[8]")
-        select_grain_dropdown.click()
-        
-        select_Campaign = driver.find_element_by_xpath("/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[3]/app-select/select")
-        select_Campaign.click()
-
-        select_Campaign_dropdown = driver.find_element_by_xpath("/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[3]/app-select/select/option[2]")
-        select_Campaign_dropdown.click()
-
-
+        available = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/app-grain-price-table-header/div/div[2]/app-add-and-clean/div/div[1]/app-button/button"
+        find_elements(self.driver,available)
 
         
 
+        switch_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[1]/app-switch/div/input"
+        find_elements(self.driver,switch_button)
+        time.sleep(2)
+
+        select_option_grain = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[2]/app-select/select"
+        option_grain = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr[1]/td[2]/app-select/select/option[14]"
+        select_option_click(self.driver, select_option_grain, option_grain )
+        time.sleep(2)
+
+        select_campaign = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr[1]/td[3]/app-select/select"
+        option_campaign = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr[1]/td[3]/app-select/select/option[2]"
+        select_option_click(self.driver, select_campaign, option_campaign )
+        time.sleep(2)
+
+        select_destination = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[4]/app-select/select"
+        option_destination = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[4]/app-select/select/option[3]"
+        select_option_click(self.driver, select_destination, option_destination )
+        time.sleep(2)
+
+        select_money = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[5]/app-select/select"
+        option_money = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[5]/app-select/select/option[1]"
+        select_option_click(self.driver, select_money, option_money )
+        time.sleep(2)
+
+        insert_price = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[6]/input"
+        send_price = "3000"
+        find_send_element(self.driver, insert_price, send_price )
+
+        select_date = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[7]/app-date-picker/div/input[2]"
+        displace_element(self.driver, select_date)
+
+        select_arrow = "/html/body/div[2]/div[1]/span[2]"
+        clicks = 1
+        find_and_click_element(self.driver, select_arrow, clicks)
+
+        insert_date1 = "/html/body/div[2]/div[2]/div/div[2]/div/span[18]"
+        find_elements(self.driver, insert_date1)
+        time.sleep(2)
+
+        insert_date2 = "/html/body/div[2]/div[2]/div/div[2]/div/span[27]"
+        find_elements(self.driver, insert_date2)
+        time.sleep(2)
+
+        insert_amount1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[8]/input"
+        send_amount1 = "8000"
+        find_send_element(self.driver, insert_amount1, send_amount1 )
 
 
 
+        select_idea = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[10]/input"
+        find_elements(self.driver, select_idea)
+        time.sleep(2)
 
+        select_post = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[1]/app-grain-price-header/app-grain-price-header-release/div/div[2]/div/div[2]/app-button/button"
+        find_elements(self.driver, select_post)
+        time.sleep(2)
+
+        select_accept_post = "/html/body/div[3]/div/div[6]/button[3]"
+        find_elements(self.driver, select_accept_post)
+        time.sleep(2)
+
+        select_button_accept = "/html/body/div[2]/div/div[6]/button[1]"
+        find_elements(self.driver, select_button_accept)
+        time.sleep(2)
+
+        select_menu = "/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[2]/div[1]/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[2]/a/span"
+        find_elements(self.driver, select_menu)
+        time.sleep(2)
+
+        select_market_home = "/html/body/app-root/app-layout/app-vertical/div/div/div/app-header-for-screen/div/div/span"
+        find_elements(self.driver, select_market_home)
+        time.sleep(2)
+
+        selector_iconos = "//div[@class='selector m-auto bg-primary']"
+        seleccionar_ultimo_icono(self.driver, selector_iconos)
+        
+        """select_icon_hand = "Grupo_10473"
+        find_elements_id(self.driver, select_icon_hand)
+        time.sleep(2)"""
+
+        located_element = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/div/div/div[2]/input"
+        select_input = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[1]/span"
+        account_number = "1023"
+        search_and_displace_account(self.driver, account_number, select_input, located_element )
+        time.sleep(2)
+
+        insert_amount2 = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[2]/div/div[2]/div/div/input"
+        send_amount = "300"
+        find_send_element(self.driver, insert_amount2, send_amount )
+
+        select_button_request = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[5]/app-button[2]/button"
+        find_elements(self.driver, select_button_request)
+        time.sleep(2)
 
 
 
@@ -209,7 +162,6 @@ class precio_granos(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main(verbosity= 2, testRunner= HTMLTestRunner(output= 'reportes', report_name='reporte_precioGranos'))
-        
-
-
+  test_suite = unittest.TestLoader().loadTestsFromTestCase(precio_granos)
+  runner = xmlrunner.XMLTestRunner(output='reportGranosprecio')
+  runner.run(test_suite)

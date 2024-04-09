@@ -1005,7 +1005,6 @@ def select_option_click(driver, xpath_chevron, xpath_upload_field ):
         # Adjuntar el archivo al campo de carga de archivo
         upload_input_element.click()
 
-        print( "La opcion fue seleccionada en el dropdown con exito  ")
 
     except TimeoutException:
         print("Tiempo de espera agotado. El chevron no están presentes o no son clickeables.")
@@ -1271,5 +1270,28 @@ def search_and_displace_element(driver, account_number, located_element, xpaht):
 
         print(f"¡Cuenta encontrada y seleccionada {account_number}  con éxito!")
     except TimeoutException:
-        print("Tiempo de espera agotado. El elemento no está presente o no es clickeable.")     
+        print("Tiempo de espera agotado. El elemento no está presente o no es clickeable.")  
+
+def click_icon_delete(driver, css_selector):
+    while True:
+        try:
+            icono_borrar = WebDriverWait(driver, 10).until(
+            EC.visibility_of_element_located((By.CSS_SELECTOR, css_selector)))
+            driver.execute_script("arguments[0].style.display = 'block';", icono_borrar)
+             
+            icono_borrar.click()
+            print("Se hizo clic en un icono de borrar.")
+        except TimeoutException:
+            print("No se encontraron más movimientos para borrar.")
+            break
+        except NoSuchElementException:
+            print("No se encontró el icono de borrar.")
+            break
+
+
+def seleccionar_ultimo_icono(driver, selector_iconos):
+    WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.XPATH, selector_iconos)))
+    iconos = driver.find_elements(By.XPATH, selector_iconos)
     
+    ultimo_icono = iconos[-1]
+    ultimo_icono.click()

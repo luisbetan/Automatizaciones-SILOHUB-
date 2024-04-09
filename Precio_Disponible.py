@@ -2,7 +2,7 @@ from telnetlib import EC
 import unittest
 import xmlrunner
 import time
-from Elements import  click_icon_delete,displace_element, find_and_click_element, find_elements, find_send_element, search_and_displace_account, seleccionar_ultimo_icono, select_option_click, validate_text
+from Elements import  click_icon_delete,displace_element, find_and_click_element, find_elements, find_elements_id, find_send_element, search_and_displace_account, select_option_click, validate_text
 from LoginSample import LoginSample
 from startSession import StartSession
 
@@ -129,12 +129,10 @@ class precio_granos(unittest.TestCase):
         find_elements(self.driver, select_market_home)
         time.sleep(2)
 
-        selector_iconos = "//div[@class='selector m-auto bg-primary']"
-        seleccionar_ultimo_icono(self.driver, selector_iconos)
         
-        """select_icon_hand = "Grupo_10473"
+        select_icon_hand = "Grupo_10473"
         find_elements_id(self.driver, select_icon_hand)
-        time.sleep(2)"""
+        time.sleep(2)
 
         located_element = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/div/div/div[2]/input"
         select_input = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[1]/span"

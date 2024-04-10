@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dashboard_granos-20240410174527" tests="2" file=".py" time="25.718" timestamp="2024-04-10T17:45:53" failures="0" errors="2" skipped="0">
+	<testcase classname="dashboard_granos" name="test_dashboard_grain" time="0.000" timestamp="0001-01-01T00:00:00" file="DashboarGranos.py" line="23">
+		<error type="AttributeError" message="'NoneType' object has no attribute 'is_displayed'"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\DashboarGranos.py", line 33, in test_dashboard_grain
+    find_elements(self.driver,select_dashboard_grain)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 18, in find_elements
+    select_nex_button = WebDriverWait(driver, 10).until(
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 364, in _predicate
+    element = visibility_of(target)(driver)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 173, in _predicate
+    return _element_if_visible(element)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 179, in _element_if_visible
+    return element if element.is_displayed() == visibility else False
+AttributeError: 'NoneType' object has no attribute 'is_displayed'
+]]></error>
+	</testcase>
+	<testcase classname="dashboard_granos" name="test_dashboard_grain" time="25.718" timestamp="2024-04-10T17:45:53" file="DashboarGranos.py" line="23">
+		<error type="WebDriverException" message="Message: disconnected: Unable to receive message from renderer
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7FB937032+63090]
+	(No symbol) [0x00007FF7FB8A2C82]
+	(No symbol) [0x00007FF7FB73EC65]
+	(No symbol) [0x00007FF7FB72D1EF]
+	(No symbol) [0x00007FF7FB72B0A8]
+	(No symbol) [0x00007FF7FB72BA8F]
+	(No symbol) [0x00007FF7FB73F1C5]
+	(No symbol) [0x00007FF7FB71C65C]
+	(No symbol) [0x00007FF7FB7B3C74]
+	(No symbol) [0x00007FF7FB7A6FA0]
+	(No symbol) [0x00007FF7FB7783A8]
+	(No symbol) [0x00007FF7FB779441]
+	GetHandleVerifier [0x00007FF7FBD325AD+4238317]
+	GetHandleVerifier [0x00007FF7FBD6F70D+4488525]
+	GetHandleVerifier [0x00007FF7FBD679EF+4456495]
+	GetHandleVerifier [0x00007FF7FBA10576+953270]
+	(No symbol) [0x00007FF7FB8AE54F]
+	(No symbol) [0x00007FF7FB8A9224]
+	(No symbol) [0x00007FF7FB8A935B]
+	(No symbol) [0x00007FF7FB899B94]
+	BaseThreadInitThunk [0x00007FFF9727257D+29]
+	RtlUserThreadStart [0x00007FFF9922AA58+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\DashboarGranos.py", line 37, in tearDown
+    self.driver.close()
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 459, in close
+    self.execute(Command.CLOSE)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: disconnected: Unable to receive message from renderer
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7FB937032+63090]
+	(No symbol) [0x00007FF7FB8A2C82]
+	(No symbol) [0x00007FF7FB73EC65]
+	(No symbol) [0x00007FF7FB72D1EF]
+	(No symbol) [0x00007FF7FB72B0A8]
+	(No symbol) [0x00007FF7FB72BA8F]
+	(No symbol) [0x00007FF7FB73F1C5]
+	(No symbol) [0x00007FF7FB71C65C]
+	(No symbol) [0x00007FF7FB7B3C74]
+	(No symbol) [0x00007FF7FB7A6FA0]
+	(No symbol) [0x00007FF7FB7783A8]
+	(No symbol) [0x00007FF7FB779441]
+	GetHandleVerifier [0x00007FF7FBD325AD+4238317]
+	GetHandleVerifier [0x00007FF7FBD6F70D+4488525]
+	GetHandleVerifier [0x00007FF7FBD679EF+4456495]
+	GetHandleVerifier [0x00007FF7FBA10576+953270]
+	(No symbol) [0x00007FF7FB8AE54F]
+	(No symbol) [0x00007FF7FB8A9224]
+	(No symbol) [0x00007FF7FB8A935B]
+	(No symbol) [0x00007FF7FB899B94]
+	BaseThreadInitThunk [0x00007FFF9727257D+29]
+	RtlUserThreadStart [0x00007FFF9922AA58+40]
+
+]]></error>
+	</testcase>
+</testsuite>

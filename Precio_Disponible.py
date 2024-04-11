@@ -2,14 +2,14 @@ from telnetlib import EC
 import unittest
 import xmlrunner
 import time
-from Elements import  click_icon_delete,displace_element, find_and_click_element, find_elements, find_elements_id, find_send_element, search_and_displace_account, select_option_click, validate_text
+from Elements import  click_icon_delete,displace_element, find_and_click_element, find_and_click_element_selector, find_elements, find_elements_id, find_send_element, search_and_displace_account, select_option_click, validate_text
 from LoginSample import LoginSample
 from startSession import StartSession
 
 
 
 
-class precio_granos(unittest.TestCase):
+class precio_granos_desponible(unittest.TestCase):
     
     def setUp(self):
        
@@ -20,7 +20,7 @@ class precio_granos(unittest.TestCase):
         self.login_sample = LoginSample(self.driver)
    
    
-    def test_granos_contratos(self):
+    def test_price_available(self):
         # Utilizar métodos de LoginHelper para el inicio de sesión
         self.login_sample.login("admingd@silohub.ag", "G@viglio123")
         self.login_sample.select_tenant()
@@ -84,18 +84,20 @@ class precio_granos(unittest.TestCase):
         send_price = "3000"
         find_send_element(self.driver, insert_price, send_price )
 
+        # aplicar fecha 01/07/2024 al 25/07/2024
+
         select_date = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[7]/app-date-picker/div/input[2]"
         displace_element(self.driver, select_date)
 
-        select_arrow = "/html/body/div[2]/div[1]/span[2]"
-        clicks = 1
-        find_and_click_element(self.driver, select_arrow, clicks)
+        select_arrow = "body > div.flatpickr-calendar.rangeMode.animate.open.arrowBottom.arrowLeft > div.flatpickr-months > span.flatpickr-next-month"
+        clicks = 3
+        find_and_click_element_selector(self.driver, select_arrow, clicks)
 
-        insert_date1 = "/html/body/div[2]/div[2]/div/div[2]/div/span[18]"
+        insert_date1 = "/html/body/div[2]/div[2]/div/div[2]/div/span[1]"
         find_elements(self.driver, insert_date1)
         time.sleep(2)
 
-        insert_date2 = "/html/body/div[2]/div[2]/div/div[2]/div/span[27]"
+        insert_date2 = "/html/body/div[2]/div[2]/div/div[2]/div/span[31]"
         find_elements(self.driver, insert_date2)
         time.sleep(2)
 
@@ -160,6 +162,6 @@ class precio_granos(unittest.TestCase):
 
 
 if __name__ == "__main__":
-  test_suite = unittest.TestLoader().loadTestsFromTestCase(precio_granos)
-  runner = xmlrunner.XMLTestRunner(output='reportGranosprecio')
+  test_suite = unittest.TestLoader().loadTestsFromTestCase(precio_granos_desponible)
+  runner = xmlrunner.XMLTestRunner(output='reportGranospreciodisponible')
   runner.run(test_suite)

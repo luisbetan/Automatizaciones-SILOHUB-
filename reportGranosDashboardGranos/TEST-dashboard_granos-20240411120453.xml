@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dashboard_granos-20240411120453" tests="1" file=".py" time="27.179" timestamp="2024-04-11T12:05:20" failures="0" errors="1" skipped="0">
+	<testcase classname="dashboard_granos" name="test_dashboard_grain" time="27.179" timestamp="2024-04-11T12:05:20" file="DashboarGranos.py" line="23">
+		<error type="ElementNotInteractableException" message="Message: element not interactable
+  (Session info: chrome=123.0.6312.122)
+Stacktrace:
+	GetHandleVerifier [0x00007FF768B57032+63090]
+	(No symbol) [0x00007FF768AC2C82]
+	(No symbol) [0x00007FF76895EB1D]
+	(No symbol) [0x00007FF76899FA67]
+	(No symbol) [0x00007FF76899E66B]
+	(No symbol) [0x00007FF7689C6FDA]
+	(No symbol) [0x00007FF76899A00A]
+	(No symbol) [0x00007FF7689C71F0]
+	(No symbol) [0x00007FF7689E3412]
+	(No symbol) [0x00007FF7689C6D83]
+	(No symbol) [0x00007FF7689983A8]
+	(No symbol) [0x00007FF768999441]
+	GetHandleVerifier [0x00007FF768F525AD+4238317]
+	GetHandleVerifier [0x00007FF768F8F70D+4488525]
+	GetHandleVerifier [0x00007FF768F879EF+4456495]
+	GetHandleVerifier [0x00007FF768C30576+953270]
+	(No symbol) [0x00007FF768ACE54F]
+	(No symbol) [0x00007FF768AC9224]
+	(No symbol) [0x00007FF768AC935B]
+	(No symbol) [0x00007FF768AB9B94]
+	BaseThreadInitThunk [0x00007FFF9727257D+29]
+	RtlUserThreadStart [0x00007FFF9922AA58+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\DashboarGranos.py", line 52, in test_dashboard_grain
+    ingresar_rango_fecha(xpath_input_fecha, self.driver)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1316, in ingresar_rango_fecha
+    input_fecha.send_keys(fecha_ayer)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 231, in send_keys
+    self._execute(
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=123.0.6312.122)
+Stacktrace:
+	GetHandleVerifier [0x00007FF768B57032+63090]
+	(No symbol) [0x00007FF768AC2C82]
+	(No symbol) [0x00007FF76895EB1D]
+	(No symbol) [0x00007FF76899FA67]
+	(No symbol) [0x00007FF76899E66B]
+	(No symbol) [0x00007FF7689C6FDA]
+	(No symbol) [0x00007FF76899A00A]
+	(No symbol) [0x00007FF7689C71F0]
+	(No symbol) [0x00007FF7689E3412]
+	(No symbol) [0x00007FF7689C6D83]
+	(No symbol) [0x00007FF7689983A8]
+	(No symbol) [0x00007FF768999441]
+	GetHandleVerifier [0x00007FF768F525AD+4238317]
+	GetHandleVerifier [0x00007FF768F8F70D+4488525]
+	GetHandleVerifier [0x00007FF768F879EF+4456495]
+	GetHandleVerifier [0x00007FF768C30576+953270]
+	(No symbol) [0x00007FF768ACE54F]
+	(No symbol) [0x00007FF768AC9224]
+	(No symbol) [0x00007FF768AC935B]
+	(No symbol) [0x00007FF768AB9B94]
+	BaseThreadInitThunk [0x00007FFF9727257D+29]
+	RtlUserThreadStart [0x00007FFF9922AA58+40]
+
+]]></error>
+	</testcase>
+</testsuite>

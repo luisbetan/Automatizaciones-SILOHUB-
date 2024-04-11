@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dashboard_granos-20240411123228" tests="1" file=".py" time="59.645" timestamp="2024-04-11T12:33:28" failures="0" errors="1" skipped="0">
+	<testcase classname="dashboard_granos" name="test_dashboard_grain" time="59.645" timestamp="2024-04-11T12:33:28" file="DashboarGranos.py" line="23">
+		<error type="TimeoutException" message="Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6A18B7032+63090]
+	(No symbol) [0x00007FF6A1822C82]
+	(No symbol) [0x00007FF6A16BEC65]
+	(No symbol) [0x00007FF6A170499D]
+	(No symbol) [0x00007FF6A1704ADC]
+	(No symbol) [0x00007FF6A1745B37]
+	(No symbol) [0x00007FF6A172701F]
+	(No symbol) [0x00007FF6A1743412]
+	(No symbol) [0x00007FF6A1726D83]
+	(No symbol) [0x00007FF6A16F83A8]
+	(No symbol) [0x00007FF6A16F9441]
+	GetHandleVerifier [0x00007FF6A1CB25AD+4238317]
+	GetHandleVerifier [0x00007FF6A1CEF70D+4488525]
+	GetHandleVerifier [0x00007FF6A1CE79EF+4456495]
+	GetHandleVerifier [0x00007FF6A1990576+953270]
+	(No symbol) [0x00007FF6A182E54F]
+	(No symbol) [0x00007FF6A1829224]
+	(No symbol) [0x00007FF6A182935B]
+	(No symbol) [0x00007FF6A1819B94]
+	BaseThreadInitThunk [0x00007FFF9727257D+29]
+	RtlUserThreadStart [0x00007FFF9922AA58+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\DashboarGranos.py", line 52, in test_dashboard_grain
+    ingresar_rango_fecha(select_data_day, self.driver)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1319, in ingresar_rango_fecha
+    fecha_actual_element = WebDriverWait(driver, 10).until(
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6A18B7032+63090]
+	(No symbol) [0x00007FF6A1822C82]
+	(No symbol) [0x00007FF6A16BEC65]
+	(No symbol) [0x00007FF6A170499D]
+	(No symbol) [0x00007FF6A1704ADC]
+	(No symbol) [0x00007FF6A1745B37]
+	(No symbol) [0x00007FF6A172701F]
+	(No symbol) [0x00007FF6A1743412]
+	(No symbol) [0x00007FF6A1726D83]
+	(No symbol) [0x00007FF6A16F83A8]
+	(No symbol) [0x00007FF6A16F9441]
+	GetHandleVerifier [0x00007FF6A1CB25AD+4238317]
+	GetHandleVerifier [0x00007FF6A1CEF70D+4488525]
+	GetHandleVerifier [0x00007FF6A1CE79EF+4456495]
+	GetHandleVerifier [0x00007FF6A1990576+953270]
+	(No symbol) [0x00007FF6A182E54F]
+	(No symbol) [0x00007FF6A1829224]
+	(No symbol) [0x00007FF6A182935B]
+	(No symbol) [0x00007FF6A1819B94]
+	BaseThreadInitThunk [0x00007FFF9727257D+29]
+	RtlUserThreadStart [0x00007FFF9922AA58+40]
+
+]]></error>
+	</testcase>
+</testsuite>

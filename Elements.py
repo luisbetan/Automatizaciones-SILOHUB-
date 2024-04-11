@@ -10,6 +10,7 @@ import re
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
+from datetime import date, timedelta
 
 
 
@@ -388,8 +389,8 @@ def find_and_click_element_selector(driver, css_selector, clicks=1):
     try:
         # Esperar a que el elemento sea clickeable
         element = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, css_selector))
-        )
+            EC.presence_of_element_located((By.CSS_SELECTOR, css_selector)))
+        driver.execute_script("arguments[0].style.display = 'block';", element)
 
         # Hacer clic en el elemento la cantidad de veces especificada
         for _ in range(clicks):
@@ -601,6 +602,19 @@ def displace_element(driver, xpath):
     except TimeoutException:
         print(f"Tiempo de espera agotado. El elemento no está presente o no es visible.")
 
+def displace_element_selector(driver, css_selector):
+    try:
+
+        search_input_element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, css_selector))
+        )
+# Desplazarse al elemento
+        driver.execute_script("arguments[0].scrollIntoView();", search_input_element)
+ 
+# Ahora puedes interactuar con el elemento
+        search_input_element.click()
+    except TimeoutException:
+        print(f"Tiempo de espera agotado. El elemento no está presente o no es visible.")
 
 def displace_element_clear_send_keys(driver, xpath, new_amount):
     try:
@@ -632,8 +646,7 @@ def displace_element_clear_send_keys(driver, xpath, new_amount):
         print(f"Tiempo de espera agotado. El elemento '{xpath}' no está presente o no es visible.")
     except StaleElementReferenceException:
         print(f"Elemento obsoleto después de desplazarse. Intentando recuperarlo y reintentar...")
-        displace_element_clear_send_keys(driver, xpath, new_amount)
-
+        
 
 
 def displace_element_clear_send_keys_selector(driver, css_selector, new_amount):
@@ -669,7 +682,7 @@ def displace_element_clear_send_keys_selector(driver, css_selector, new_amount):
         displace_element_clear_send_keys_selector(driver, css_selector, new_amount)
     except InvalidSelectorException:
         print(f"Selector CSS '{css_selector}' no es válido.")
-
+        displace_element_clear_send_keys_selector(driver, css_selector, new_amount)
 
 def displace_element_clear_send_keys_id(driver, id, new_amount):
     try:
@@ -1295,3 +1308,40 @@ def seleccionar_ultimo_icono(driver, selector_iconos):
     
     ultimo_icono = iconos[-1]
     ultimo_icono.click()
+
+def ingresar_rango_fecha(xpath_calendario, driver):
+    # Obtener la fecha de hoy y la de ayer
+    hoy = date.today()
+    fecha_hoy = hoy.strftime("%d")
+
+    
+
+    # Encontrar el elemento de entrada de fecha por su XPath
+    calendario_element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located(( By.XPATH, xpath_calendario)))
+    driver.execute_script("arguments[0].style.display = 'block';",  calendario_element)
+    
+
+    calendario_element.click()
+
+    # Ingresar las fechas directamente en el campo de entrada
+    
+
+     # Encontrar el elemento que corresponde a la fecha actual y hacer clic en él
+    fecha_actual_element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH,"//td[@aria-label='Today']")))
+    fecha_actual_element.click()
+
+def delete_element(driver, xpaht):
+    try:
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH,xpaht)))
+        element.click()
+
+        element.send_keys(Keys.CONTROL, "a")
+
+        element.send_keys(Keys.BACKSPACE)
+
+        
+    except TimeoutException:
+            print("No se encontraron los datos para borrar.")

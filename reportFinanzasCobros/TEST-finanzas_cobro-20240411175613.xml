@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="finanzas_cobro-20240411175613" tests="1" file=".py" time="30.011" timestamp="2024-04-11T17:56:43" failures="0" errors="1" skipped="0">
+	<testcase classname="finanzas_cobro" name="test_finance_payment" time="30.011" timestamp="2024-04-11T17:56:43" file="FinanzasCobro.py" line="23">
+		<error type="AttributeError" message="'str' object has no attribute 'find_element'"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\FinanzasCobro.py", line 53, in test_finance_payment
+    displace_element_clear_send_keys_selector(insert_amount,value_amount, self.driver)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 656, in displace_element_clear_send_keys_selector
+    element = WebDriverWait(driver, 10).until(
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 156, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+AttributeError: 'str' object has no attribute 'find_element'
+]]></error>
+	</testcase>
+</testsuite>

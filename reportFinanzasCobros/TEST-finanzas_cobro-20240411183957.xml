@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="finanzas_cobro-20240411183957" tests="1" file=".py" time="39.289" timestamp="2024-04-11T18:40:37" failures="0" errors="1" skipped="0">
+	<testcase classname="finanzas_cobro" name="test_finance_payment" time="39.289" timestamp="2024-04-11T18:40:37" file="FinanzasCobro.py" line="23">
+		<error type="ElementClickInterceptedException" message="Message: element click intercepted: Element &lt;button _ngcontent-uca-c133=&quot;&quot; type=&quot;button&quot; class=&quot;btn waves-effect waves-light fw-bold d-flex justify-content-center shadow-none button btn-primary w-100&quot;&gt;...&lt;/button&gt; is not clickable at point (1391, 403). Other element would receive the click: &lt;div class=&quot;swal2-container swal2-center swal2-backdrop-show&quot; style=&quot;overflow-y: auto;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=123.0.6312.122)
+Stacktrace:
+	GetHandleVerifier [0x00007FF612287032+63090]
+	(No symbol) [0x00007FF6121F2C82]
+	(No symbol) [0x00007FF61208EC65]
+	(No symbol) [0x00007FF6120DBB34]
+	(No symbol) [0x00007FF6120D9954]
+	(No symbol) [0x00007FF6120D7164]
+	(No symbol) [0x00007FF6120D5EF9]
+	(No symbol) [0x00007FF6120CA708]
+	(No symbol) [0x00007FF6120F6FDA]
+	(No symbol) [0x00007FF6120CA00A]
+	(No symbol) [0x00007FF6120F71F0]
+	(No symbol) [0x00007FF612113412]
+	(No symbol) [0x00007FF6120F6D83]
+	(No symbol) [0x00007FF6120C83A8]
+	(No symbol) [0x00007FF6120C9441]
+	GetHandleVerifier [0x00007FF6126825AD+4238317]
+	GetHandleVerifier [0x00007FF6126BF70D+4488525]
+	GetHandleVerifier [0x00007FF6126B79EF+4456495]
+	GetHandleVerifier [0x00007FF612360576+953270]
+	(No symbol) [0x00007FF6121FE54F]
+	(No symbol) [0x00007FF6121F9224]
+	(No symbol) [0x00007FF6121F935B]
+	(No symbol) [0x00007FF6121E9B94]
+	BaseThreadInitThunk [0x00007FFF9727257D+29]
+	RtlUserThreadStart [0x00007FFF9922AA58+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\FinanzasCobro.py", line 68, in test_finance_payment
+    find_elements(self.driver,add_payment)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 22, in find_elements
+    select_nex_button.click()
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button _ngcontent-uca-c133="" type="button" class="btn waves-effect waves-light fw-bold d-flex justify-content-center shadow-none button btn-primary w-100">...</button> is not clickable at point (1391, 403). Other element would receive the click: <div class="swal2-container swal2-center swal2-backdrop-show" style="overflow-y: auto;">...</div>
+  (Session info: chrome=123.0.6312.122)
+Stacktrace:
+	GetHandleVerifier [0x00007FF612287032+63090]
+	(No symbol) [0x00007FF6121F2C82]
+	(No symbol) [0x00007FF61208EC65]
+	(No symbol) [0x00007FF6120DBB34]
+	(No symbol) [0x00007FF6120D9954]
+	(No symbol) [0x00007FF6120D7164]
+	(No symbol) [0x00007FF6120D5EF9]
+	(No symbol) [0x00007FF6120CA708]
+	(No symbol) [0x00007FF6120F6FDA]
+	(No symbol) [0x00007FF6120CA00A]
+	(No symbol) [0x00007FF6120F71F0]
+	(No symbol) [0x00007FF612113412]
+	(No symbol) [0x00007FF6120F6D83]
+	(No symbol) [0x00007FF6120C83A8]
+	(No symbol) [0x00007FF6120C9441]
+	GetHandleVerifier [0x00007FF6126825AD+4238317]
+	GetHandleVerifier [0x00007FF6126BF70D+4488525]
+	GetHandleVerifier [0x00007FF6126B79EF+4456495]
+	GetHandleVerifier [0x00007FF612360576+953270]
+	(No symbol) [0x00007FF6121FE54F]
+	(No symbol) [0x00007FF6121F9224]
+	(No symbol) [0x00007FF6121F935B]
+	(No symbol) [0x00007FF6121E9B94]
+	BaseThreadInitThunk [0x00007FFF9727257D+29]
+	RtlUserThreadStart [0x00007FFF9922AA58+40]
+
+]]></error>
+		<system-out><![CDATA[¡Input encontrado y enviado con éxito!
+]]></system-out>
+	</testcase>
+</testsuite>

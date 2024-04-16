@@ -61,7 +61,7 @@ class precio_granos_desponible(unittest.TestCase):
         time.sleep(2)
 
         select_option_grain = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[2]/app-select/select"
-        option_grain = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr[1]/td[2]/app-select/select/option[14]"
+        option_grain = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[2]/app-select/select/option[8]"
         select_option_click(self.driver, select_option_grain, option_grain )
         time.sleep(2)
 

@@ -20,7 +20,7 @@ class precio_granos_fijaciones(unittest.TestCase):
         self.login_sample = LoginSample(self.driver)
    
    
-    def test_granos_contratos(self):
+    def test_price_fixings(self):
         # Utilizar métodos de LoginHelper para el inicio de sesión
         self.login_sample.login("admingd@silohub.ag", "G@viglio123")
         self.login_sample.select_tenant()

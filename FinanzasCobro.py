@@ -2,7 +2,7 @@ from telnetlib import EC
 import unittest
 import xmlrunner
 import time
-from Elements import   delete_element, displace_element_selector, find_elements, find_send_element, select_option_click, validate_text
+from Elements import   delete_element, displace_element_selector, find_elements, find_elements_id, find_send_element, select_option_click, validate_character_numeric_element, validate_text, validate_text_by_strt
 from Loginhelper import LoginHelper
 from startSession import StartSession
 
@@ -106,8 +106,30 @@ class finanzas_cobro(unittest.TestCase):
         find_elements(self.driver,select_button_end )
         time.sleep(2)
 
-
+        select_request_collection = "/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[3]/div[1]/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[7]/div/ul/li[2]/a"
+        find_elements(self.driver,select_request_collection)
+        time.sleep(10)
         
+        date_issue = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-charge-request-main/div[2]/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[1]/app-row-for-finance-charge-request/td/div/span"
+        validate_character_numeric_element(self.driver,date_issue)
+        time.sleep(2)
+
+        number_previsión = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-charge-request-main/div[2]/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[3]/app-row-for-finance-charge-request/td/div/span"
+        validate_character_numeric_element(self.driver,number_previsión)
+        time.sleep(2)
+
+        enter_detail = "Shape"
+        find_elements_id(self.driver,enter_detail)
+        time.sleep(4)
+
+        data_concept = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-payment-collection-detail-main/div/app-selected-voucher-detail/app-responsive-table/div/div[2]/table/tbody/tr/td[2]/span/span"
+        validate_text_by_strt(self.driver, data_concept)
+
+        select_go_out = "/html/body/app-root/app-layout/app-vertical/div/div/div/app-header-for-screen/div/div/div/a"
+        find_elements(self.driver,  select_go_out)
+        time.sleep(5)
+
+
 
     def tearDown(self):
            self.driver.close()

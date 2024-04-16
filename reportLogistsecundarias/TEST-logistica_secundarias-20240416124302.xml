@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="logistica_secundarias-20240416124302" tests="1" file=".py" time="68.451" timestamp="2024-04-16T12:44:11" failures="0" errors="0" skipped="0">
+	<testcase classname="logistica_secundarias" name="test_logistics_primaries" time="68.451" timestamp="2024-04-16T12:44:11" file="LogistSecundarias.py" line="23">
+		<system-out><![CDATA[¡Cuenta encontrada y seleccionada 1023  con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+El texto encontrado es  Tu Solicitud fue enviada al sistema
+]]></system-out>
+	</testcase>
+</testsuite>

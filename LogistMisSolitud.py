@@ -20,7 +20,7 @@ class logistica_MisSolitudes(unittest.TestCase):
         self.login_sample = LoginSample(self.driver)
    
    
-    def test_logistics_primaries(self):
+    def test_logistics_MyRequest(self):
         # Utilizar métodos de LoginSample para el inicio de sesión
         self.login_sample.login("admingd@silohub.ag", "G@viglio123")
         self.login_sample.select_tenant()

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="logistica_MisSolitudes-20240416130317" tests="1" file=".py" time="92.491" timestamp="2024-04-16T13:04:50" failures="0" errors="0" skipped="0">
+	<testcase classname="logistica_MisSolitudes" name="test_logistics_primaries" time="92.491" timestamp="2024-04-16T13:04:50" file="LogistMisSolitud.py" line="23">
+		<system-out><![CDATA[Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+]]></system-out>
+	</testcase>
+</testsuite>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="logistica_MisSolitudes-20240416151159" tests="1" file=".py" time="53.684" timestamp="2024-04-16T15:12:52" failures="0" errors="0" skipped="0">
+	<testcase classname="logistica_MisSolitudes" name="test_logistics_primaries" time="53.684" timestamp="2024-04-16T15:12:52" file="LogistMisSolitud.py" line="23">
+		<system-out><![CDATA[¡Cuenta encontrada y seleccionada 1023  con éxito!
+El texto encontrado es  Estado de Solicitudes
+El texto encontrado es  Solicita-dos
+El valor es un carácter numérico. Valor: 2
+El texto encontrado es  Pen-dientes
+El valor es un carácter numérico. Valor: 2
+El texto encontrado es  Recha-zados
+El valor es un carácter numérico. Valor: 0
+El texto encontrado es  Recibi-dos
+El valor es un carácter numérico. Valor: 0
+El texto encontrado es  Estado Cupos Asignados
+El texto encontrado es  Sin CTG
+El valor es un carácter numérico. Valor: 0
+El texto encontrado es  CTG
+El valor es un carácter numérico. Valor: 0
+El texto encontrado es  En Destino
+El valor es un carácter numérico. Valor: 0
+El texto encontrado es  Descar-gados
+El valor es un carácter numérico. Valor: 0
+¡Input encontrado y enviado con éxito!
+]]></system-out>
+	</testcase>
+</testsuite>

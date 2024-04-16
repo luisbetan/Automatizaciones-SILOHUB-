@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="logistica_primarias-20240416114633" tests="1" file=".py" time="21.466" timestamp="2024-04-16T11:46:55" failures="0" errors="0" skipped="0">
+	<testcase classname="logistica_primarias" name="test_logistics_primaries" time="21.466" timestamp="2024-04-16T11:46:55" file="LogistPrimaria.py" line="23"/>
+</testsuite>

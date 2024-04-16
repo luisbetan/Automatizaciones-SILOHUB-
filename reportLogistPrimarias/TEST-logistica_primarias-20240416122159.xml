@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="logistica_primarias-20240416122159" tests="1" file=".py" time="50.683" timestamp="2024-04-16T12:22:50" failures="0" errors="1" skipped="0">
+	<testcase classname="logistica_primarias" name="test_logistics_primaries" time="50.683" timestamp="2024-04-16T12:22:50" file="LogistPrimaria.py" line="23">
+		<error type="ElementClickInterceptedException" message="Message: element click intercepted: Element is not clickable at point (412, 944)
+  (Session info: chrome=123.0.6312.123)
+Stacktrace:
+	GetHandleVerifier [0x00007FF70EFB7032+63090]
+	(No symbol) [0x00007FF70EF22C82]
+	(No symbol) [0x00007FF70EDBEC65]
+	(No symbol) [0x00007FF70EE0BB34]
+	(No symbol) [0x00007FF70EE09954]
+	(No symbol) [0x00007FF70EE07164]
+	(No symbol) [0x00007FF70EE05EF9]
+	(No symbol) [0x00007FF70EDFA708]
+	(No symbol) [0x00007FF70EE26FDA]
+	(No symbol) [0x00007FF70EDFA00A]
+	(No symbol) [0x00007FF70EE271F0]
+	(No symbol) [0x00007FF70EE43412]
+	(No symbol) [0x00007FF70EE26D83]
+	(No symbol) [0x00007FF70EDF83A8]
+	(No symbol) [0x00007FF70EDF9441]
+	GetHandleVerifier [0x00007FF70F3B25AD+4238317]
+	GetHandleVerifier [0x00007FF70F3EF70D+4488525]
+	GetHandleVerifier [0x00007FF70F3E79EF+4456495]
+	GetHandleVerifier [0x00007FF70F090576+953270]
+	(No symbol) [0x00007FF70EF2E54F]
+	(No symbol) [0x00007FF70EF29224]
+	(No symbol) [0x00007FF70EF2935B]
+	(No symbol) [0x00007FF70EF19B94]
+	BaseThreadInitThunk [0x00007FFA9757257D+29]
+	RtlUserThreadStart [0x00007FFA98AAAA48+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\LogistPrimaria.py", line 94, in test_logistics_primaries
+    find_elements(self.driver,select_confirm)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 22, in find_elements
+    select_nex_button.click()
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (412, 944)
+  (Session info: chrome=123.0.6312.123)
+Stacktrace:
+	GetHandleVerifier [0x00007FF70EFB7032+63090]
+	(No symbol) [0x00007FF70EF22C82]
+	(No symbol) [0x00007FF70EDBEC65]
+	(No symbol) [0x00007FF70EE0BB34]
+	(No symbol) [0x00007FF70EE09954]
+	(No symbol) [0x00007FF70EE07164]
+	(No symbol) [0x00007FF70EE05EF9]
+	(No symbol) [0x00007FF70EDFA708]
+	(No symbol) [0x00007FF70EE26FDA]
+	(No symbol) [0x00007FF70EDFA00A]
+	(No symbol) [0x00007FF70EE271F0]
+	(No symbol) [0x00007FF70EE43412]
+	(No symbol) [0x00007FF70EE26D83]
+	(No symbol) [0x00007FF70EDF83A8]
+	(No symbol) [0x00007FF70EDF9441]
+	GetHandleVerifier [0x00007FF70F3B25AD+4238317]
+	GetHandleVerifier [0x00007FF70F3EF70D+4488525]
+	GetHandleVerifier [0x00007FF70F3E79EF+4456495]
+	GetHandleVerifier [0x00007FF70F090576+953270]
+	(No symbol) [0x00007FF70EF2E54F]
+	(No symbol) [0x00007FF70EF29224]
+	(No symbol) [0x00007FF70EF2935B]
+	(No symbol) [0x00007FF70EF19B94]
+	BaseThreadInitThunk [0x00007FFA9757257D+29]
+	RtlUserThreadStart [0x00007FFA98AAAA48+40]
+
+]]></error>
+		<system-out><![CDATA[¡Cuenta encontrada y seleccionada 1023  con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+]]></system-out>
+	</testcase>
+</testsuite>

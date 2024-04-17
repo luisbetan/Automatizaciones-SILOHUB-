@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Fijaciones_tc-20240417114029" tests="1" file=".py" time="42.280" timestamp="2024-04-17T11:41:11" failures="0" errors="1" skipped="0">
+	<testcase classname="Fijaciones_tc" name="test_grain_pipup" time="42.280" timestamp="2024-04-17T11:41:11" file="FijacionTdc.py" line="20">
+		<error type="ElementClickInterceptedException" message="Message: element click intercepted: Element is not clickable at point (1260, 722)
+  (Session info: chrome=123.0.6312.123)
+Stacktrace:
+	GetHandleVerifier [0x00007FF642E17032+63090]
+	(No symbol) [0x00007FF642D82C82]
+	(No symbol) [0x00007FF642C1EC65]
+	(No symbol) [0x00007FF642C6BB34]
+	(No symbol) [0x00007FF642C69954]
+	(No symbol) [0x00007FF642C67164]
+	(No symbol) [0x00007FF642C65EF9]
+	(No symbol) [0x00007FF642C5A708]
+	(No symbol) [0x00007FF642C86FDA]
+	(No symbol) [0x00007FF642C5A00A]
+	(No symbol) [0x00007FF642C871F0]
+	(No symbol) [0x00007FF642CA3412]
+	(No symbol) [0x00007FF642C86D83]
+	(No symbol) [0x00007FF642C583A8]
+	(No symbol) [0x00007FF642C59441]
+	GetHandleVerifier [0x00007FF6432125AD+4238317]
+	GetHandleVerifier [0x00007FF64324F70D+4488525]
+	GetHandleVerifier [0x00007FF6432479EF+4456495]
+	GetHandleVerifier [0x00007FF642EF0576+953270]
+	(No symbol) [0x00007FF642D8E54F]
+	(No symbol) [0x00007FF642D89224]
+	(No symbol) [0x00007FF642D8935B]
+	(No symbol) [0x00007FF642D79B94]
+	BaseThreadInitThunk [0x00007FFA9757257D+29]
+	RtlUserThreadStart [0x00007FFA98AAAA48+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\FijacionTdc.py", line 84, in test_grain_pipup
+    displace_element(self.driver,select_button_pinup )
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 602, in displace_element
+    search_input_element.click()
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (1260, 722)
+  (Session info: chrome=123.0.6312.123)
+Stacktrace:
+	GetHandleVerifier [0x00007FF642E17032+63090]
+	(No symbol) [0x00007FF642D82C82]
+	(No symbol) [0x00007FF642C1EC65]
+	(No symbol) [0x00007FF642C6BB34]
+	(No symbol) [0x00007FF642C69954]
+	(No symbol) [0x00007FF642C67164]
+	(No symbol) [0x00007FF642C65EF9]
+	(No symbol) [0x00007FF642C5A708]
+	(No symbol) [0x00007FF642C86FDA]
+	(No symbol) [0x00007FF642C5A00A]
+	(No symbol) [0x00007FF642C871F0]
+	(No symbol) [0x00007FF642CA3412]
+	(No symbol) [0x00007FF642C86D83]
+	(No symbol) [0x00007FF642C583A8]
+	(No symbol) [0x00007FF642C59441]
+	GetHandleVerifier [0x00007FF6432125AD+4238317]
+	GetHandleVerifier [0x00007FF64324F70D+4488525]
+	GetHandleVerifier [0x00007FF6432479EF+4456495]
+	GetHandleVerifier [0x00007FF642EF0576+953270]
+	(No symbol) [0x00007FF642D8E54F]
+	(No symbol) [0x00007FF642D89224]
+	(No symbol) [0x00007FF642D8935B]
+	(No symbol) [0x00007FF642D79B94]
+	BaseThreadInitThunk [0x00007FFA9757257D+29]
+	RtlUserThreadStart [0x00007FFA98AAAA48+40]
+
+]]></error>
+		<system-out><![CDATA[El texto encontrado es  Fijaciones Habilitadas
+Número de cuenta '484' ingresado y opción seleccionada con éxito!
+]]></system-out>
+	</testcase>
+</testsuite>

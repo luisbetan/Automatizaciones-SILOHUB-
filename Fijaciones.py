@@ -2,6 +2,7 @@ import unittest
 import time
 from selenium.webdriver.common.by import By
 from pyunitreport import HTMLTestRunner
+import xmlrunner
 from Elements import  find_and_click_element, find_and_click_element_selector, find_elements, find_send_element, find_send_element_selector, search_and_select_producer, select_option_click, validate_strt, validate_text
 from Loginhelper import LoginHelper
 from startSession import StartSession
@@ -178,5 +179,8 @@ class Fijaciones_precio(unittest.TestCase):
 
 
 if __name__ == "__main__":
-  unittest.main(verbosity= 2, testRunner = HTMLTestRunner(output = 'reportes', report_name = 'reporte_fijaciones'))
+  test_suite = unittest.TestLoader().loadTestsFromTestCase(Fijaciones_precio)
+  runner = xmlrunner.XMLTestRunner(output='reportFijacionesPrecio')
+  runner.run(test_suite)
+        
         

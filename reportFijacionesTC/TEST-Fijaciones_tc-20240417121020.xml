@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Fijaciones_tc-20240417121020" tests="1" file=".py" time="99.091" timestamp="2024-04-17T12:11:59" failures="0" errors="0" skipped="0">
+	<testcase classname="Fijaciones_tc" name="test_grain_pipup" time="99.091" timestamp="2024-04-17T12:11:59" file="FijacionTdc.py" line="20">
+		<system-out><![CDATA[El texto encontrado es  Fijaciones Habilitadas
+Número de cuenta '484' ingresado y opción seleccionada con éxito!
+El texto encontrado es  Nueva Fijación de Tipo de Cambio
+¡Input encontrado y enviado con éxito!
+¡Elemento encontrado y clickeado 1 veces con éxito!
+Tiempo de espera agotado. El texto por texto no está presente.
+]]></system-out>
+	</testcase>
+</testsuite>

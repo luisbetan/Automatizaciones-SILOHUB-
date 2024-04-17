@@ -373,8 +373,9 @@ def find_and_click_element(driver, xpath, clicks=1):
     try:
         # Esperar a que el elemento sea clickeable
         element = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, xpath))
-        )
+            EC.element_to_be_clickable((By.XPATH, xpath)))
+        driver.execute_script("arguments[0].style.display = 'block';", element)
+        
 
         # Hacer clic en el elemento la cantidad de veces especificada
         for _ in range(clicks):

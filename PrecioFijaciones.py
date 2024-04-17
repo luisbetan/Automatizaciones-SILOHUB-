@@ -143,17 +143,17 @@ class precio_granos_fijaciones(unittest.TestCase):
         time.sleep(2)
 
         located_element = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/div/div/div[2]/input"
-        select_input = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[1]/span"
-        account_number = "1023"
+        select_input = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[5]"
+        account_number = "484"
         search_and_displace_account(self.driver, account_number, select_input, located_element )
         time.sleep(2)
 
-        select_account = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[1]/span"
+        select_account = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[5]/span"
         find_elements(self.driver, select_account)
         time.sleep(2)
 
         select_number_contract = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[2]/div/div[2]/div/app-contract-searcher/ng-select/div/div/div[2]/input"
-        option_number_contract = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[2]/div/div[2]/div/app-contract-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[2]/span"
+        option_number_contract = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[2]/div/div[2]/div/app-contract-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[3]/span"
         select_option_click(self.driver, select_number_contract, option_number_contract )
         time.sleep(2)
 

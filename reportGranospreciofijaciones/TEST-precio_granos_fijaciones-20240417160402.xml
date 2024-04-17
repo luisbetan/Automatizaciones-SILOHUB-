@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="precio_granos_fijaciones-20240417160402" tests="2" file=".py" time="109.631" timestamp="2024-04-17T16:05:51" failures="0" errors="2" skipped="0">
+	<testcase classname="precio_granos_fijaciones" name="test_price_fixings" time="0.000" timestamp="0001-01-01T00:00:00" file="PrecioFijaciones.py" line="23">
+		<error type="AttributeError" message="'NoneType' object has no attribute 'is_displayed'"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\PrecioFijaciones.py", line 142, in test_price_fixings
+    hop_element_xpaht(self.driver, select_icon_hand)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1355, in hop_element_xpaht
+    elementos = WebDriverWait(driver, 10).until(
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 364, in _predicate
+    element = visibility_of(target)(driver)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 173, in _predicate
+    return _element_if_visible(element)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 179, in _element_if_visible
+    return element if element.is_displayed() == visibility else False
+AttributeError: 'NoneType' object has no attribute 'is_displayed'
+]]></error>
+		<system-out><![CDATA[El texto encontrado es  MERCADOS
+Se hizo clic en un icono de borrar.
+No se encontraron más movimientos para borrar.
+¡Input encontrado y enviado con éxito!
+¡Elemento encontrado y clickeado 6 veces con éxito!
+¡Input encontrado y enviado con éxito!
+]]></system-out>
+	</testcase>
+	<testcase classname="precio_granos_fijaciones" name="test_price_fixings" time="109.631" timestamp="2024-04-17T16:05:51" file="PrecioFijaciones.py" line="23">
+		<error type="WebDriverException" message="Message: disconnected: Unable to receive message from renderer
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=123.0.6312.123)
+Stacktrace:
+	GetHandleVerifier [0x00007FF623377032+63090]
+	(No symbol) [0x00007FF6232E2C82]
+	(No symbol) [0x00007FF62317EC65]
+	(No symbol) [0x00007FF62316D1EF]
+	(No symbol) [0x00007FF62316B0A8]
+	(No symbol) [0x00007FF62316BA8F]
+	(No symbol) [0x00007FF62317F1C5]
+	(No symbol) [0x00007FF62315C65C]
+	(No symbol) [0x00007FF6231F3C74]
+	(No symbol) [0x00007FF6231E6FA0]
+	(No symbol) [0x00007FF6231B83A8]
+	(No symbol) [0x00007FF6231B9441]
+	GetHandleVerifier [0x00007FF6237725AD+4238317]
+	GetHandleVerifier [0x00007FF6237AF70D+4488525]
+	GetHandleVerifier [0x00007FF6237A79EF+4456495]
+	GetHandleVerifier [0x00007FF623450576+953270]
+	(No symbol) [0x00007FF6232EE54F]
+	(No symbol) [0x00007FF6232E9224]
+	(No symbol) [0x00007FF6232E935B]
+	(No symbol) [0x00007FF6232D9B94]
+	BaseThreadInitThunk [0x00007FFA9757257D+29]
+	RtlUserThreadStart [0x00007FFA98AAAA48+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\PrecioFijaciones.py", line 177, in tearDown
+    self.driver.close()
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 459, in close
+    self.execute(Command.CLOSE)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: disconnected: Unable to receive message from renderer
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=123.0.6312.123)
+Stacktrace:
+	GetHandleVerifier [0x00007FF623377032+63090]
+	(No symbol) [0x00007FF6232E2C82]
+	(No symbol) [0x00007FF62317EC65]
+	(No symbol) [0x00007FF62316D1EF]
+	(No symbol) [0x00007FF62316B0A8]
+	(No symbol) [0x00007FF62316BA8F]
+	(No symbol) [0x00007FF62317F1C5]
+	(No symbol) [0x00007FF62315C65C]
+	(No symbol) [0x00007FF6231F3C74]
+	(No symbol) [0x00007FF6231E6FA0]
+	(No symbol) [0x00007FF6231B83A8]
+	(No symbol) [0x00007FF6231B9441]
+	GetHandleVerifier [0x00007FF6237725AD+4238317]
+	GetHandleVerifier [0x00007FF6237AF70D+4488525]
+	GetHandleVerifier [0x00007FF6237A79EF+4456495]
+	GetHandleVerifier [0x00007FF623450576+953270]
+	(No symbol) [0x00007FF6232EE54F]
+	(No symbol) [0x00007FF6232E9224]
+	(No symbol) [0x00007FF6232E935B]
+	(No symbol) [0x00007FF6232D9B94]
+	BaseThreadInitThunk [0x00007FFA9757257D+29]
+	RtlUserThreadStart [0x00007FFA98AAAA48+40]
+
+]]></error>
+		<system-out><![CDATA[El texto encontrado es  MERCADOS
+Se hizo clic en un icono de borrar.
+No se encontraron más movimientos para borrar.
+¡Input encontrado y enviado con éxito!
+¡Elemento encontrado y clickeado 6 veces con éxito!
+¡Input encontrado y enviado con éxito!
+]]></system-out>
+	</testcase>
+</testsuite>

@@ -236,7 +236,9 @@ def send_display_element_xpaht(driver, xpaht, input_data):
 def display_and_do_click(driver, xpath):
     try:
         # Esperar a que el elemento esté presente en la página
-        elemento = driver.find_element(By.XPATH, xpath)
+        elemento = WebDriverWait(driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, xpath))
+        )
         
         # Desplazar el elemento al área visible utilizando JavaScript
         driver.execute_script("arguments[0].scrollIntoView(true);", elemento)
@@ -1346,3 +1348,22 @@ def delete_element(driver, xpaht):
         
     except TimeoutException:
             print("No se encontraron los datos para borrar.")
+
+
+
+def hop_element(driver, xpath):
+    try:
+        # Espera hasta que los elementos sean clickeables
+        elementos = WebDriverWait(driver, 10).until(
+            EC.presence_of_all_elements_located((By.XPATH, xpath))
+        )
+
+        # Haz clic en el segundo elemento si existe
+        if len(elementos) >= 2:
+            segundo_elemento = elementos[1]
+            segundo_elemento.click()
+            print("¡Elemento encontrado y clickeado con éxito!")
+        else:
+            print("No se encontraron suficientes elementos.")
+    except TimeoutException:
+        print("No se encontraron elementos o no fueron clickeables dentro del tiempo de espera.")

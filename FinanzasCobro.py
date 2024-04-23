@@ -25,6 +25,7 @@ class finanzas_cobro(unittest.TestCase):
         self.login_helper.login("admingd@silohub.ag", "G@viglio123")
         self.login_helper.select_tenant()
         self.login_helper.search_and_select_account("484")
+        time.sleep(5)
 
         select_finance = "/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[3]/div[1]/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[7]/a/span"
         find_elements(self.driver,select_finance)

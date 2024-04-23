@@ -2,7 +2,7 @@ from telnetlib import EC
 import unittest
 import xmlrunner
 import time
-from Elements import  click_icon_delete,displace_element, find_and_click_element, find_and_click_element_selector, find_elements, find_elements_id, find_send_element, search_and_displace_account, select_option_click, validate_text
+from Elements import  click_icon_delete,displace_element, find_and_click_element,find_elements, find_elements_id, find_send_element, search_and_displace_account, select_option_click, validate_text
 from LoginSample import LoginSample
 from startSession import StartSession
 

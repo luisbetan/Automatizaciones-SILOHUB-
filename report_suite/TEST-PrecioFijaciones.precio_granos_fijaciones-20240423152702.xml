@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="PrecioFijaciones.precio_granos_fijaciones-20240423152702" tests="1" file="PrecioFijaciones.py" time="162.363" timestamp="2024-04-23T15:29:44" failures="0" errors="0" skipped="0">
+	<testcase classname="PrecioFijaciones.precio_granos_fijaciones" name="test_price_fixings" time="162.363" timestamp="2024-04-23T15:29:44" file="PrecioFijaciones.py" line="23">
+		<system-out><![CDATA[El texto encontrado es  CONTRATOS
+El texto encontrado es  MERCADOS
+¡Cuenta encontrada y seleccionada 1023  con éxito!
+Se hizo clic en un icono de borrar.
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+El texto encontrado es  MIS ENTREGAS
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+¡Elemento encontrado y clickeado 1 veces con éxito!
+El texto es visible para el usuario
+El texto fue validado correctamente: ANÁLISIS
+El texto es visible para el usuario
+El texto fue validado correctamente: Peso Hectolítrico
+El texto es visible para el usuario
+El texto fue validado correctamente: 69.961%
+El texto no coincide con los valores esperados. Texto actual: '1.052.210,00'
+El texto es visible para el usuario: '982.676,00'
+Tiempo de espera agotado. El input no está presente o no es clickeable.
+¡Cuenta encontrada y seleccionada 484  con éxito!
+¡Input encontrado y enviado con éxito!
+Email generado: _7ycq2k8f@yopmail.com
+]]></system-out>
+		<system-err><![CDATA[
+Running tests...
+----------------------------------------------------------------------
+
+Running tests...
+----------------------------------------------------------------------
+
+Running tests...
+----------------------------------------------------------------------
+
+Running tests...
+----------------------------------------------------------------------
+.
+----------------------------------------------------------------------
+Ran 1 test in 143.204s
+
+OK
+
+Generating XML reports...
+.
+----------------------------------------------------------------------
+Ran 1 test in 141.219s
+
+OK
+
+Generating XML reports...
+
+Running tests...
+----------------------------------------------------------------------
+
+Running tests...
+----------------------------------------------------------------------
+]]></system-err>
+	</testcase>
+</testsuite>

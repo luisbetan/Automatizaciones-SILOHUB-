@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FinanzasCobro.finanzas_cobro-20240423153726" tests="2" file="FinanzasCobro.py" time="344.233" timestamp="2024-04-23T15:43:10" failures="0" errors="2" skipped="0">
+	<testcase classname="FinanzasCobro.finanzas_cobro" name="test_finance_payment" time="0.000" timestamp="0001-01-01T00:00:00" file="FinanzasCobro.py" line="23">
+		<error type="AttributeError" message="'NoneType' object has no attribute 'is_displayed'"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\FinanzasCobro.py", line 80, in test_finance_payment
+    select_option_click(self.driver, select_method_payment, option_method )
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1009, in select_option_click
+    xpath_chevron = WebDriverWait(driver, 10).until(
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 364, in _predicate
+    element = visibility_of(target)(driver)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 173, in _predicate
+    return _element_if_visible(element)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 179, in _element_if_visible
+    return element if element.is_displayed() == visibility else False
+AttributeError: 'NoneType' object has no attribute 'is_displayed'
+]]></error>
+		<system-out><![CDATA[¡Elemento encontrado y clickeado 2 veces con éxito!
+Tiempo de espera agotado. El chevron no están presentes o no son clickeables.
+El valor es un carácter numérico. Valor: 336.800,50
+El valor es un carácter numérico. Valor: 2.754.461,66
+El texto encontrado es  Mercadería Remitida
+El texto encontrado es  Fecha
+El valor es un carácter numérico. Valor: 311.374,50
+El texto no fue encontrado 30/09/2021El valor es un carácter numérico. Valor: 2.463.061,51
+
+El texto encontrado es  Mercadería Facturada
+El texto encontrado es  Comprobante
+El texto encontrado es  Fecha
+El texto no fue encontrado REMBAL 0063 00031634
+El texto no fue encontrado 30/09/2021El texto encontrado es  Artículo
+
+El texto encontrado es  Comprobante
+El texto no fue encontrado Premezcla Final Feed Embolsado x 25 kgs Nutricion Superior
+El texto no fue encontrado FACBAL 1063 00029204
+El texto encontrado es  Salidas
+El texto encontrado es  Artículo
+El valor no es un carácter numérico. Valor: Salidas
+El texto encontrado es  Precio
+El texto no fue encontrado Premezcla Creci Feed Nutricion Superior x 25 kgs
+El valor es un carácter numérico. Valor: 63,24
+El texto encontrado es  Total ARS
+El valor es un carácter numérico. Valor: 126.470,80
+El texto encontrado es  Salidas
+El valor es un carácter numérico. Valor: 50,00
+El texto encontrado es  Precio
+El valor es un carácter numérico. Valor: 102,75
+El texto encontrado es  Total ARS
+El valor es un carácter numérico. Valor: 5.137,46
+]]></system-out>
+	</testcase>
+	<testcase classname="FinanzasCobro.finanzas_cobro" name="test_finance_payment" time="344.233" timestamp="2024-04-23T15:43:10" file="FinanzasCobro.py" line="23">
+		<error type="NoSuchWindowException" message="Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.61)
+Stacktrace:
+	GetHandleVerifier [0x00007FF793CDF922+3045234]
+	(No symbol) [0x00007FF793983652]
+	(No symbol) [0x00007FF793847564]
+	(No symbol) [0x00007FF79381DB4F]
+	(No symbol) [0x00007FF7938C1087]
+	(No symbol) [0x00007FF7938C8102]
+	(No symbol) [0x00007FF7938B9D70]
+	(No symbol) [0x00007FF79388813C]
+	(No symbol) [0x00007FF793888D71]
+	GetHandleVerifier [0x00007FF793D0E89D+3237613]
+	GetHandleVerifier [0x00007FF793D50BA7+3508727]
+	GetHandleVerifier [0x00007FF793D4976F+3478975]
+	GetHandleVerifier [0x00007FF793ABF1C6+815126]
+	(No symbol) [0x00007FF79398ED0F]
+	(No symbol) [0x00007FF793989854]
+	(No symbol) [0x00007FF7939899E2]
+	(No symbol) [0x00007FF79397A574]
+	BaseThreadInitThunk [0x00007FF834EC257D+29]
+	RtlUserThreadStart [0x00007FF835A2AA48+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\FinanzasCobro.py", line 136, in tearDown
+    self.driver.close()
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 459, in close
+    self.execute(Command.CLOSE)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.61)
+Stacktrace:
+	GetHandleVerifier [0x00007FF793CDF922+3045234]
+	(No symbol) [0x00007FF793983652]
+	(No symbol) [0x00007FF793847564]
+	(No symbol) [0x00007FF79381DB4F]
+	(No symbol) [0x00007FF7938C1087]
+	(No symbol) [0x00007FF7938C8102]
+	(No symbol) [0x00007FF7938B9D70]
+	(No symbol) [0x00007FF79388813C]
+	(No symbol) [0x00007FF793888D71]
+	GetHandleVerifier [0x00007FF793D0E89D+3237613]
+	GetHandleVerifier [0x00007FF793D50BA7+3508727]
+	GetHandleVerifier [0x00007FF793D4976F+3478975]
+	GetHandleVerifier [0x00007FF793ABF1C6+815126]
+	(No symbol) [0x00007FF79398ED0F]
+	(No symbol) [0x00007FF793989854]
+	(No symbol) [0x00007FF7939899E2]
+	(No symbol) [0x00007FF79397A574]
+	BaseThreadInitThunk [0x00007FF834EC257D+29]
+	RtlUserThreadStart [0x00007FF835A2AA48+40]
+
+]]></error>
+		<system-out><![CDATA[¡Elemento encontrado y clickeado 2 veces con éxito!
+Tiempo de espera agotado. El chevron no están presentes o no son clickeables.
+El valor es un carácter numérico. Valor: 336.800,50
+El valor es un carácter numérico. Valor: 2.754.461,66
+El texto encontrado es  Mercadería Remitida
+El texto encontrado es  Fecha
+El valor es un carácter numérico. Valor: 311.374,50
+El texto no fue encontrado 30/09/2021El valor es un carácter numérico. Valor: 2.463.061,51
+
+El texto encontrado es  Mercadería Facturada
+El texto encontrado es  Comprobante
+El texto encontrado es  Fecha
+El texto no fue encontrado REMBAL 0063 00031634
+El texto no fue encontrado 30/09/2021El texto encontrado es  Artículo
+
+El texto encontrado es  Comprobante
+El texto no fue encontrado Premezcla Final Feed Embolsado x 25 kgs Nutricion Superior
+El texto no fue encontrado FACBAL 1063 00029204
+El texto encontrado es  Salidas
+El texto encontrado es  Artículo
+El valor no es un carácter numérico. Valor: Salidas
+El texto encontrado es  Precio
+El texto no fue encontrado Premezcla Creci Feed Nutricion Superior x 25 kgs
+El valor es un carácter numérico. Valor: 63,24
+El texto encontrado es  Total ARS
+El valor es un carácter numérico. Valor: 126.470,80
+El texto encontrado es  Salidas
+El valor es un carácter numérico. Valor: 50,00
+El texto encontrado es  Precio
+El valor es un carácter numérico. Valor: 102,75
+El texto encontrado es  Total ARS
+El valor es un carácter numérico. Valor: 5.137,46
+]]></system-out>
+	</testcase>
+</testsuite>

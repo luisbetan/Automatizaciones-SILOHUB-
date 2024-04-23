@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CtaCtoDtalEntVta.detalle_ctro_entregaVentas-20240423154215" tests="1" file="CtaCtoDtalEntVta.py" time="45.902" timestamp="2024-04-23T15:43:01" failures="0" errors="1" skipped="0">
+	<testcase classname="CtaCtoDtalEntVta.detalle_ctro_entregaVentas" name="test_detail_deriverySales" time="45.902" timestamp="2024-04-23T15:43:01" file="CtaCtoDtalEntVta.py" line="22">
+		<error type="NoSuchWindowException" message="Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.61)
+Stacktrace:
+	GetHandleVerifier [0x00007FF793CDF922+3045234]
+	(No symbol) [0x00007FF793983652]
+	(No symbol) [0x00007FF793847564]
+	(No symbol) [0x00007FF79381DB4F]
+	(No symbol) [0x00007FF7938C1087]
+	(No symbol) [0x00007FF7938D8871]
+	(No symbol) [0x00007FF7938B9B53]
+	(No symbol) [0x00007FF79388813C]
+	(No symbol) [0x00007FF793888D71]
+	GetHandleVerifier [0x00007FF793D0E89D+3237613]
+	GetHandleVerifier [0x00007FF793D50BA7+3508727]
+	GetHandleVerifier [0x00007FF793D4976F+3478975]
+	GetHandleVerifier [0x00007FF793ABF1C6+815126]
+	(No symbol) [0x00007FF79398ED0F]
+	(No symbol) [0x00007FF793989854]
+	(No symbol) [0x00007FF7939899E2]
+	(No symbol) [0x00007FF79397A574]
+	BaseThreadInitThunk [0x00007FF834EC257D+29]
+	RtlUserThreadStart [0x00007FF835A2AA48+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\CtaCtoDtalEntVta.py", line 60, in test_detail_deriverySales
+    find_elements(self.driver, select_compliments )
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 19, in find_elements
+    select_nex_button = WebDriverWait(driver, 10).until(
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 363, in _predicate
+    target = driver.find_element(*target)  # grab element at locator
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.61)
+Stacktrace:
+	GetHandleVerifier [0x00007FF793CDF922+3045234]
+	(No symbol) [0x00007FF793983652]
+	(No symbol) [0x00007FF793847564]
+	(No symbol) [0x00007FF79381DB4F]
+	(No symbol) [0x00007FF7938C1087]
+	(No symbol) [0x00007FF7938D8871]
+	(No symbol) [0x00007FF7938B9B53]
+	(No symbol) [0x00007FF79388813C]
+	(No symbol) [0x00007FF793888D71]
+	GetHandleVerifier [0x00007FF793D0E89D+3237613]
+	GetHandleVerifier [0x00007FF793D50BA7+3508727]
+	GetHandleVerifier [0x00007FF793D4976F+3478975]
+	GetHandleVerifier [0x00007FF793ABF1C6+815126]
+	(No symbol) [0x00007FF79398ED0F]
+	(No symbol) [0x00007FF793989854]
+	(No symbol) [0x00007FF7939899E2]
+	(No symbol) [0x00007FF79397A574]
+	BaseThreadInitThunk [0x00007FF834EC257D+29]
+	RtlUserThreadStart [0x00007FF835A2AA48+40]
+
+]]></error>
+		<system-out><![CDATA[El texto encontrado es  Nueva Fijación de Tipo de Cambio
+¡Input encontrado y enviado con éxito!
+El texto encontrado es  Nueva Fijación de Precio
+¡Input encontrado y enviado con éxito!
+¡Elemento encontrado y clickeado 1 veces con éxito!
+¡Input encontrado y enviado con éxito!
+¡Elemento encontrado y clickeado 1 veces con éxito!
+]]></system-out>
+	</testcase>
+</testsuite>

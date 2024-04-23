@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Metricas.Metricas-20240423153807" tests="1" file="Metricas.py" time="67.794" timestamp="2024-04-23T15:39:15" failures="0" errors="0" skipped="0">
+	<testcase classname="Metricas.Metricas" name="test_metricas" time="67.794" timestamp="2024-04-23T15:39:15" file="Metricas.py" line="18">
+		<system-out><![CDATA[¡Cuenta encontrada y seleccionada 1023  con éxito!
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+¡Cuenta encontrada y seleccionada 1023  con éxito!
+El texto encontrado es  Estado de Solicitudes
+El texto encontrado es  Solicita-dos
+El valor es un carácter numérico. Valor: 5
+El texto encontrado es  Pen-dientes
+El valor es un carácter numérico. Valor: 5
+El texto encontrado es  Recha-zados
+El valor es un carácter numérico. Valor: 0
+El texto encontrado es  Recibi-dos
+El valor es un carácter numérico. Valor: 0
+El texto encontrado es  Estado Cupos Asignados
+El texto encontrado es  Sin CTG
+El valor es un carácter numérico. Valor: 0
+El texto encontrado es  CTG
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+¡Input encontrado y enviado con éxito!
+El valor es un carácter numérico. Valor: 0
+El texto encontrado es  En Destino
+El valor es un carácter numérico. Valor: 0
+El texto encontrado es  Descar-gados
+El valor es un carácter numérico. Valor: 0
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+]]></system-out>
+		<system-err><![CDATA[
+Running tests...
+----------------------------------------------------------------------
+]]></system-err>
+	</testcase>
+</testsuite>

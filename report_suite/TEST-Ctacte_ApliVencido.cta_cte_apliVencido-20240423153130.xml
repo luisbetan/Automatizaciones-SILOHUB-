@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Ctacte_ApliVencido.cta_cte_apliVencido-20240423153130" tests="1" file="Ctacte_ApliVencido.py" time="93.838" timestamp="2024-04-23T15:33:04" failures="0" errors="0" skipped="0">
+	<testcase classname="Ctacte_ApliVencido.cta_cte_apliVencido" name="test_ctacte_aplivencido" time="93.838" timestamp="2024-04-23T15:33:04" file="Ctacte_ApliVencido.py" line="17">
+		<system-out><![CDATA[Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+El texto encontrado es  CUENTA CORRIENTE
+El texto encontrado es  Movimiento NC 1051 00007140
+El texto encontrado es  USD 236,68
+El texto encontrado es  NC Bonificacion afecta a fra. 1051-14310-(3 bidon
+]]></system-out>
+		<system-err><![CDATA[
+Running tests...
+----------------------------------------------------------------------
+]]></system-err>
+	</testcase>
+</testsuite>

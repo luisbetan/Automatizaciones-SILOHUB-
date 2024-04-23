@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IndicaInsumosHome.IndicaInsumosHome-20240423152652" tests="1" file="IndicaInsumosHome.py" time="915.536" timestamp="2024-04-23T15:42:08" failures="0" errors="0" skipped="0">
+	<testcase classname="IndicaInsumosHome.IndicaInsumosHome" name="test__indicators_home" time="915.536" timestamp="2024-04-23T15:42:08" file="IndicaInsumosHome.py" line="18">
+		<system-out><![CDATA[El texto encontrado es  CONTRATOS
+El texto encontrado es  MERCADOS
+¡Cuenta encontrada y seleccionada 1023  con éxito!
+Se hizo clic en un icono de borrar.
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+El texto encontrado es  MIS ENTREGAS
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+¡Elemento encontrado y clickeado 1 veces con éxito!
+¡Elemento encontrado y clickeado 2 veces con éxito!
+¡Elemento encontrado y clickeado 3 veces con éxito!
+¡Elemento encontrado y clickeado 3 veces con éxito!
+¡Elemento encontrado y clickeado 2 veces con éxito!
+¡Elemento encontrado y clickeado 3 veces con éxito!
+No se encontraron más movimientos para borrar.
+¡Elemento encontrado y clickeado 1 veces con éxito!
+El texto encontrado es  Estado De Mis Contratos
+El texto es visible para el usuario
+El texto fue validado correctamente: Contrato 108280
+El texto es visible para el usuario
+El texto fue validado correctamente: De Maiz
+El texto no coincide con los valores esperados. Texto actual: '500.000,00 Kg'
+El texto no coincide con los valores esperados. Texto actual: '1.052.210,00'
+El texto es visible para el usuario: '982.676,00'
+Tiempo de espera agotado. El texto por texto no está presente.
+El texto es visible para el usuario
+El texto fue validado correctamente: Mis Ventas
+El texto es visible para el usuario
+El texto fue validado correctamente: Producto
+El texto es visible para el usuario
+El texto fue validado correctamente: Maiz
+El texto es visible para el usuario
+El texto fue validado correctamente: Fecha
+El texto es visible para el usuario
+El texto fue validado correctamente: 22/04/2021
+El texto es visible para el usuario
+El texto fue validado correctamente: Comprobante
+El valor es un carácter numérico. Valor: VN 0001 00108280
+El texto es visible para el usuario: 'Kg Fijados'
+El valor es un carácter numérico. Valor: 500.000,00
+El texto es visible para el usuario
+El texto fue validado correctamente: Precio
+El valor es un carácter numérico. Valor: 0,19
+El texto es visible para el usuario
+El texto fue validado correctamente: Moneda
+El texto es visible para el usuario
+El texto fue validado correctamente: USD
+Checkbox con XPAHT '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/tbody/tr/th/input' seleccionado con éxito!
+¡Input encontrado y enviado con éxito!
+¡Elemento encontrado y clickeado 6 veces con éxito!
+El texto encontrado es  MIS ENTREGAS
+¡Input encontrado y enviado con éxito!
+El texto es visible para el usuario
+El texto fue validado correctamente: Entrega TK 9999 00074351
+El texto es visible para el usuario: '30.330,00 Kg'
+El texto es visible para el usuario
+El texto fue validado correctamente: De Maiz
+El texto es visible para el usuario
+El texto fue validado correctamente: DATOS DE LA ENTREGA
+El texto es visible para el usuario
+El texto fue validado correctamente: 23/02/2022
+El texto es visible para el usuario
+El texto fue validado correctamente: 21/22
+El texto es visible para el usuario
+El texto fue validado correctamente: JUAN DEMO
+El texto es visible para el usuario
+El texto fue validado correctamente: 1032 El Rincon
+¡Elemento encontrado y clickeado 2 veces con éxito!
+¡Elemento encontrado y clickeado 3 veces con éxito!
+¡Elemento encontrado y clickeado 1 veces con éxito!
+El texto es visible para el usuario
+El texto fue validado correctamente: ANÁLISIS
+El texto es visible para el usuario
+El texto fue validado correctamente: Peso Hectolítrico
+El texto es visible para el usuario
+El texto fue validado correctamente: 69.961%
+El texto no coincide con los valores esperados. Texto actual: '1.052.210,00'
+El texto es visible para el usuario: '982.676,00'
+Tiempo de espera agotado. El input no está presente o no es clickeable.
+¡Cuenta encontrada y seleccionada 484  con éxito!
+¡Input encontrado y enviado con éxito!
+Email generado: _7ycq2k8f@yopmail.com
+El texto es visible para el usuario
+El texto fue validado correctamente: Entrega TK 9999 00074351
+El texto es visible para el usuario: '30.330,00 Kg'
+El texto es visible para el usuario
+El texto fue validado correctamente: De Maiz
+El texto es visible para el usuario
+El texto fue validado correctamente: DATOS DE LA ENTREGA
+El texto es visible para el usuario
+El texto fue validado correctamente: 23/02/2022
+El texto es visible para el usuario
+El texto fue validado correctamente: 21/22
+El texto es visible para el usuario
+El texto fue validado correctamente: JUAN DEMO
+El texto es visible para el usuario
+El texto fue validado correctamente: 1032 El Rincon
+El texto es visible para el usuario
+El texto fue validado correctamente: ANÁLISIS
+El texto es visible para el usuario
+El texto fue validado correctamente: Peso Hectolítrico
+El texto es visible para el usuario
+El texto fue validado correctamente: 69.961%
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+El texto encontrado es  Crear usuario
+Elemento desplazado, cantidad limpiada y nuevo valor '_7ycq2k8f@yopmail.com' ingresado con éxito!
+El texto encontrado es  MIS ENTREGAS
+Tiempo de espera agotado. El campo de búsqueda, las opciones de búsqueda, o ambos, no están presentes o no son clickeables.
+El texto encontrado es  MERCADOS
+Tiempo de espera agotado. El texto por texto no está presente.
+El texto es visible para el usuario
+El texto fue validado correctamente: Mis Ventas
+¡Elemento encontrado y clickeado 1 veces con éxito!
+¡Elemento encontrado y clickeado 9 veces con éxito!
+El texto es visible para el usuario: '431.360,00'
+El texto es visible para el usuario: '417.677,00'
+¡Elemento encontrado y clickeado 12 veces con éxito!
+¡Elemento encontrado y clickeado 1 veces con éxito!
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Elemento desplazado, cantidad limpiada y nuevo valor '_7ycq2k8f@yopmail.com' ingresado con éxito!
+¡Elemento encontrado y clickeado 6 veces con éxito!
+¡Elemento encontrado y clickeado 2 veces con éxito!
+¡Elemento encontrado y clickeado 6 veces con éxito!
+El texto es visible para el usuario
+El texto fue validado correctamente: Venta F 0001 00118245
+El texto es visible para el usuario: '150.000,00 Kg'
+El texto es visible para el usuario
+El texto fue validado correctamente: De Soja
+El texto encontrado es  CUENTA CORRIENTE APLICADA
+El texto es visible para el usuario
+El texto fue validado correctamente: DATOS DE LA VENTA
+El texto es visible para el usuario
+El texto fue validado correctamente: 29/03/2023
+El texto es visible para el usuario
+El texto fue validado correctamente: 21/22
+El texto encontrado es  03 Playa S. Miguel (T6 y M. Pampa)
+El texto es visible para el usuario
+El texto fue validado correctamente: 24/08/2022
+¡Elemento encontrado y clickeado 2 veces con éxito!
+El texto es visible para el usuario
+El texto fue validado correctamente: Entrega TK 0001 00121693
+El texto es visible para el usuario: '31.320,00 Kg'
+El texto es visible para el usuario
+El texto fue validado correctamente: De Maiz
+El texto es visible para el usuario
+El texto fue validado correctamente: DATOS DE LA ENTREGA
+El texto es visible para el usuario
+El texto fue validado correctamente: 26/07/2022
+El texto es visible para el usuario
+El texto fue validado correctamente: 21/22
+El texto es visible para el usuario
+El texto fue validado correctamente: DON EMIDIO SA
+El texto es visible para el usuario
+El texto fue validado correctamente: 19970 CAMPO RASSETTO (Don Emidio S.A.)
+El texto encontrado es  Cuenta Corriente Aplicada
+El valor es un carácter numérico. Valor: 45.348,34
+El valor es un carácter numérico. Valor: -2.493,50
+El valor es un carácter numérico. Valor: -254,10
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+El texto encontrado es  CUENTA CORRIENTE
+El texto encontrado es  Movimiento NC 1051 00007140
+El texto encontrado es  USD 236,68
+El texto encontrado es  NC Bonificacion afecta a fra. 1051-14310-(3 bidon
+Tiempo de espera agotado. El texto por xpaht no está presente.
+El texto encontrado es  Cuenta Corriente Aplicada
+El valor es un carácter numérico. Valor: -66.143.502,81
+El valor es un carácter numérico. Valor: 0,00
+El valor es un carácter numérico. Valor: 1.267.912,56
+¡Elemento encontrado y clickeado 11 veces con éxito!
+El texto encontrado es  Cuenta Corriente Aplicada
+El valor es un carácter numérico. Valor: -104.979.066,69
+El valor es un carácter numérico. Valor: 51.213.438,74
+El valor es un carácter numérico. Valor: 1.644.996,71
+¡Elemento encontrado y clickeado 1 veces con éxito!
+¡Elemento encontrado y clickeado 4 veces con éxito!
+El texto encontrado es  CUENTA CORRIENTE
+El texto encontrado es  Movimiento NC 1051 00007140
+El texto encontrado es  USD 236,68
+El texto encontrado es  NC Bonificacion afecta a fra. 1051-14310-(3 bidon
+¡Elemento encontrado y clickeado 4 veces con éxito!
+El texto encontrado es  CUENTA CORRIENTE
+El valor es un carácter numérico. Valor: 131.172.595,19
+El valor es un carácter numérico. Valor: 897.440,38
+El texto encontrado es  CUENTA CORRIENTE
+El texto encontrado es  Movimiento ID 0011 00294698
+El texto encontrado es  - ARS 3,50
+El texto encontrado es  IMPUTCC
+El texto encontrado es  Cuenta Corriente
+El valor es un carácter numérico. Valor: 1.516.284.997,06
+El valor es un carácter numérico. Valor: 4.837.351,06
+El texto encontrado es  CUENTA CORRIENTE
+El texto no fue encontrado Movimiento RI 0011 00077998
+El texto no fue encontrado + ARS 1.234,20
+El texto no fue encontrado Comprobante Contrapartida de: OP 0001 - 00038025 0
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+El texto encontrado es  CUENTA CORRIENTE
+El texto no fue encontrado Movimiento LC 3302 11350773
+El texto no fue encontrado + ARS 19.640,53
+El texto no fue encontrado Liq.1116C SOJA 2223 100 Kgs. 100,00%
+¡Elemento encontrado y clickeado 4 veces con éxito!
+Tiempo de espera agotado. El texto por xpaht no está presente.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+El texto es visible para el usuario
+El texto fue validado correctamente: Estado Impositivo
+El texto es visible para el usuario
+El texto fue validado correctamente: Apertura de legajo
+Archivo 'C:/Users/luist/OneDrive/Escritorio/Facturas/fractura Bezatbeth_files/factura Bezatbeth.pdf' cargado con éxito después de hacer clic en el chevron!
+Test finalizado con éxito
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Archivo 'C:/Users/luist/OneDrive/Escritorio/Capturas de pantalla/2022-02-14 (5).png' cargado con éxito después de hacer clic en el chevron!
+]]></system-out>
+		<system-err><![CDATA[
+Running tests...
+----------------------------------------------------------------------
+
+Running tests...
+----------------------------------------------------------------------
+
+Running tests...
+----------------------------------------------------------------------
+
+Running tests...
+----------------------------------------------------------------------
+
+Running tests...
+----------------------------------------------------------------------
+
+Running tests...
+----------------------------------------------------------------------
+
+Running tests...
+----------------------------------------------------------------------
+
+Running tests...
+----------------------------------------------------------------------
+E
+======================================================================
+ERROR [87.775s]: test_granos_contratos (GranosContratos.granos_contratos)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\GranosContratos.py", line 135, in test_granos_contratos
+    displace_element(self.driver, select_date)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 604, in displace_element
+    search_input_element.click()
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input class=" form-control input-calendar input-date-picker flatpickr-input input-calendar-white ng-untouched ng-pristine ng-valid" placeholder="-" tabindex="0" type="text" readonly="readonly"> is not clickable at point (1269, 54). Other element would receive the click: <div _ngcontent-gab-c132="" class="navbar-header">...</div>
+  (Session info: chrome=124.0.6367.61)
+Stacktrace:
+	GetHandleVerifier [0x00007FF793CDF922+3045234]
+	(No symbol) [0x00007FF793983652]
+	(No symbol) [0x00007FF793847564]
+	(No symbol) [0x00007FF79389DAA7]
+	(No symbol) [0x00007FF79389B584]
+	(No symbol) [0x00007FF793898A4A]
+	(No symbol) [0x00007FF793897C22]
+	(No symbol) [0x00007FF793889FDB]
+	(No symbol) [0x00007FF7938B9DAA]
+	(No symbol) [0x00007FF793889916]
+	(No symbol) [0x00007FF7938B9FC0]
+	(No symbol) [0x00007FF7938D91C4]
+	(No symbol) [0x00007FF7938B9B53]
+	(No symbol) [0x00007FF79388813C]
+	(No symbol) [0x00007FF793888D71]
+	GetHandleVerifier [0x00007FF793D0E89D+3237613]
+	GetHandleVerifier [0x00007FF793D50BA7+3508727]
+	GetHandleVerifier [0x00007FF793D4976F+3478975]
+	GetHandleVerifier [0x00007FF793ABF1C6+815126]
+	(No symbol) [0x00007FF79398ED0F]
+	(No symbol) [0x00007FF793989854]
+	(No symbol) [0x00007FF7939899E2]
+	(No symbol) [0x00007FF79397A574]
+	BaseThreadInitThunk [0x00007FF834EC257D+29]
+	RtlUserThreadStart [0x00007FF835A2AA48+40]
+
+
+----------------------------------------------------------------------
+Ran 1 test in 89.906s
+
+FAILED (errors=1)
+
+Generating XML reports...
+
+Running tests...
+----------------------------------------------------------------------
+.
+----------------------------------------------------------------------
+Ran 1 test in 143.204s
+
+OK
+
+Generating XML reports...
+.
+----------------------------------------------------------------------
+Ran 1 test in 141.219s
+
+OK
+
+Generating XML reports...
+
+Running tests...
+----------------------------------------------------------------------
+
+Running tests...
+----------------------------------------------------------------------
+.
+----------------------------------------------------------------------
+Ran 1 test in 164.765s
+
+OK
+
+Generating XML reports...
+
+Running tests...
+----------------------------------------------------------------------
+.
+----------------------------------------------------------------------
+Ran 1 test in 90.234s
+
+OK
+
+Generating XML reports...
+
+Running tests...
+----------------------------------------------------------------------
+E
+======================================================================
+ERROR [222.456s]: test_price_available (Precio_Disponible.precio_granos_desponible)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Precio_Disponible.py", line 48, in test_price_available
+    click_icon_delete(self.driver, delete_price_grain)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1298, in click_icon_delete
+    icono_borrar.click()
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (1471, 748)
+  (Session info: chrome=124.0.6367.61)
+Stacktrace:
+	GetHandleVerifier [0x00007FF793CDF922+3045234]
+	(No symbol) [0x00007FF793983652]
+	(No symbol) [0x00007FF793847564]
+	(No symbol) [0x00007FF79389DAA7]
+	(No symbol) [0x00007FF79389B584]
+	(No symbol) [0x00007FF793898A4A]
+	(No symbol) [0x00007FF793897C22]
+	(No symbol) [0x00007FF793889FDB]
+	(No symbol) [0x00007FF7938B9DAA]
+	(No symbol) [0x00007FF793889916]
+	(No symbol) [0x00007FF7938B9FC0]
+	(No symbol) [0x00007FF7938D91C4]
+	(No symbol) [0x00007FF7938B9B53]
+	(No symbol) [0x00007FF79388813C]
+	(No symbol) [0x00007FF793888D71]
+	GetHandleVerifier [0x00007FF793D0E89D+3237613]
+	GetHandleVerifier [0x00007FF793D50BA7+3508727]
+	GetHandleVerifier [0x00007FF793D4976F+3478975]
+	GetHandleVerifier [0x00007FF793ABF1C6+815126]
+	(No symbol) [0x00007FF79398ED0F]
+	(No symbol) [0x00007FF793989854]
+	(No symbol) [0x00007FF7939899E2]
+	(No symbol) [0x00007FF79397A574]
+	BaseThreadInitThunk [0x00007FF834EC257D+29]
+	RtlUserThreadStart [0x00007FF835A2AA48+40]
+
+
+----------------------------------------------------------------------
+Ran 1 test in 224.765s
+
+FAILED (errors=1)
+
+Generating XML reports...
+
+Running tests...
+----------------------------------------------------------------------
+E.
+======================================================================
+ERROR [77.492s]: test_ctacte_aplicada (CtaCte_Aplicada.cuenta_ctacte_aplicada)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\CtaCte_Aplicada.py", line 90, in test_ctacte_aplicada
+    validate_character_numeric_element(self.driver, total_to_pay)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1102, in validate_character_numeric_element
+    valor = elemento.text
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 90, in text
+    return self._execute(Command.GET_ELEMENT_TEXT)["value"]
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=124.0.6367.61); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF793CDF922+3045234]
+	(No symbol) [0x00007FF793983652]
+	(No symbol) [0x00007FF793847564]
+	(No symbol) [0x00007FF79384D6A6]
+	(No symbol) [0x00007FF79384FA6B]
+	(No symbol) [0x00007FF79384FB10]
+	(No symbol) [0x00007FF79389005B]
+	(No symbol) [0x00007FF7938B9DAA]
+	(No symbol) [0x00007FF793889916]
+	(No symbol) [0x00007FF7938B9FC0]
+	(No symbol) [0x00007FF7938D91C4]
+	(No symbol) [0x00007FF7938B9B53]
+	(No symbol) [0x00007FF79388813C]
+	(No symbol) [0x00007FF793888D71]
+	GetHandleVerifier [0x00007FF793D0E89D+3237613]
+	GetHandleVerifier [0x00007FF793D50BA7+3508727]
+	GetHandleVerifier [0x00007FF793D4976F+3478975]
+	GetHandleVerifier [0x00007FF793ABF1C6+815126]
+	(No symbol) [0x00007FF79398ED0F]
+	(No symbol) [0x00007FF793989854]
+	(No symbol) [0x00007FF7939899E2]
+	(No symbol) [0x00007FF79397A574]
+	BaseThreadInitThunk [0x00007FF834EC257D+29]
+	RtlUserThreadStart [0x00007FF835A2AA48+40]
+
+
+----------------------------------------------------------------------
+Ran 1 test in 79.875s
+
+FAILED (errors=1)
+
+Generating XML reports...
+
+----------------------------------------------------------------------
+Ran 1 test in 95.812s
+
+OK
+
+Generating XML reports...
+.
+----------------------------------------------------------------------
+Ran 1 test in 106.406s
+
+OK
+
+Generating XML reports...
+
+Running tests...
+----------------------------------------------------------------------
+
+Running tests...
+----------------------------------------------------------------------
+
+Running tests...
+----------------------------------------------------------------------
+.
+----------------------------------------------------------------------
+Ran 1 test in 85.922s
+
+OK
+
+Generating XML reports...
+.
+----------------------------------------------------------------------
+Ran 1 test in 105.172s
+
+OK
+
+Generating XML reports...
+
+Running tests...
+----------------------------------------------------------------------
+.
+----------------------------------------------------------------------
+Ran 1 test in 92.188s
+
+OK
+
+Generating XML reports...
+.
+----------------------------------------------------------------------
+Ran 1 test in 96.265s
+
+OK
+
+Generating XML reports...
+
+Running tests...
+----------------------------------------------------------------------
+.
+----------------------------------------------------------------------
+Ran 1 test in 99.297s
+
+OK
+
+Generating XML reports...
+
+Running tests...
+----------------------------------------------------------------------
+E
+======================================================================
+ERROR [34.654s]: test_comprobante_contrato (ComproContratos.comprobanteContrato)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\ComproContratos.py", line 33, in test_comprobante_contrato
+    find_elements(self.driver, select_menu_Account)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 22, in find_elements
+    select_nex_button.click()
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=124.0.6367.61); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF793CDF922+3045234]
+	(No symbol) [0x00007FF793983652]
+	(No symbol) [0x00007FF793847564]
+	(No symbol) [0x00007FF79384D6A6]
+	(No symbol) [0x00007FF79384FA6B]
+	(No symbol) [0x00007FF79384FB10]
+	(No symbol) [0x00007FF793897F54]
+	(No symbol) [0x00007FF793889E96]
+	(No symbol) [0x00007FF7938B9DAA]
+	(No symbol) [0x00007FF793889916]
+	(No symbol) [0x00007FF7938B9FC0]
+	(No symbol) [0x00007FF7938D91C4]
+	(No symbol) [0x00007FF7938B9B53]
+	(No symbol) [0x00007FF79388813C]
+	(No symbol) [0x00007FF793888D71]
+	GetHandleVerifier [0x00007FF793D0E89D+3237613]
+	GetHandleVerifier [0x00007FF793D50BA7+3508727]
+	GetHandleVerifier [0x00007FF793D4976F+3478975]
+	GetHandleVerifier [0x00007FF793ABF1C6+815126]
+	(No symbol) [0x00007FF79398ED0F]
+	(No symbol) [0x00007FF793989854]
+	(No symbol) [0x00007FF7939899E2]
+	(No symbol) [0x00007FF79397A574]
+	BaseThreadInitThunk [0x00007FF834EC257D+29]
+	RtlUserThreadStart [0x00007FF835A2AA48+40]
+
+
+----------------------------------------------------------------------
+Ran 1 test in 37.000s
+
+FAILED (errors=1)
+
+Generating XML reports...
+E
+======================================================================
+ERROR [167.796s]: test_ctacte_historica (CtaCte_HistoAvenver.cuenta_ctacte_histAvencer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\CtaCte_HistoAvenver.py", line 115, in test_ctacte_historica
+    validate_character_numeric_element(self.driver, balance_ars)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1101, in validate_character_numeric_element
+    elemento = driver.find_element(By.XPATH, xpath)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[1]/div/div[1]/app-totalizer/div/div/div[2]/div[2]/span[1]"}
+  (Session info: chrome=124.0.6367.61); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF793CDF922+3045234]
+	(No symbol) [0x00007FF793983652]
+	(No symbol) [0x00007FF793847564]
+	(No symbol) [0x00007FF793895F9D]
+	(No symbol) [0x00007FF79389606C]
+	(No symbol) [0x00007FF7938DBDD7]
+	(No symbol) [0x00007FF7938B9DEF]
+	(No symbol) [0x00007FF7938D91C4]
+	(No symbol) [0x00007FF7938B9B53]
+	(No symbol) [0x00007FF79388813C]
+	(No symbol) [0x00007FF793888D71]
+	GetHandleVerifier [0x00007FF793D0E89D+3237613]
+	GetHandleVerifier [0x00007FF793D50BA7+3508727]
+	GetHandleVerifier [0x00007FF793D4976F+3478975]
+	GetHandleVerifier [0x00007FF793ABF1C6+815126]
+	(No symbol) [0x00007FF79398ED0F]
+	(No symbol) [0x00007FF793989854]
+	(No symbol) [0x00007FF7939899E2]
+	(No symbol) [0x00007FF79397A574]
+	BaseThreadInitThunk [0x00007FF834EC257D+29]
+	RtlUserThreadStart [0x00007FF835A2AA48+40]
+
+
+----------------------------------------------------------------------
+Ran 1 test in 171.297s
+
+FAILED (errors=1)
+
+Generating XML reports...
+
+Running tests...
+----------------------------------------------------------------------
+.
+----------------------------------------------------------------------
+Ran 1 test in 77.609s
+
+OK
+
+Generating XML reports...
+E
+======================================================================
+ERROR [855.626s]: test_supplies_products (Insumos_Producto.insumosProductos)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Insumos_Producto.py", line 169, in test_supplies_products
+    validate_character_numeric_element_selector(self.driver, number_order_list )
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1110, in validate_character_numeric_element_selector
+    elemento = driver.find_element(By.CSS_SELECTOR, css_selector)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#layout-wrapper > div > div > div > app-orders > app-responsive-table > div > div > table > tbody > tr:nth-child(1) > td.text-nowrap.align-middle.f-size-12.fw-bold.cursor-pointer.ellipsis-cell > span"}
+  (Session info: chrome=124.0.6367.61); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF793CDF922+3045234]
+	(No symbol) [0x00007FF793983652]
+	(No symbol) [0x00007FF793847564]
+	(No symbol) [0x00007FF793895F9D]
+	(No symbol) [0x00007FF79389606C]
+	(No symbol) [0x00007FF7938DBDD7]
+	(No symbol) [0x00007FF7938B9DEF]
+	(No symbol) [0x00007FF7938D91C4]
+	(No symbol) [0x00007FF7938B9B53]
+	(No symbol) [0x00007FF79388813C]
+	(No symbol) [0x00007FF793888D71]
+	GetHandleVerifier [0x00007FF793D0E89D+3237613]
+	GetHandleVerifier [0x00007FF793D50BA7+3508727]
+	GetHandleVerifier [0x00007FF793D4976F+3478975]
+	GetHandleVerifier [0x00007FF793ABF1C6+815126]
+	(No symbol) [0x00007FF79398ED0F]
+	(No symbol) [0x00007FF793989854]
+	(No symbol) [0x00007FF7939899E2]
+	(No symbol) [0x00007FF79397A574]
+	BaseThreadInitThunk [0x00007FF834EC257D+29]
+	RtlUserThreadStart [0x00007FF835A2AA48+40]
+
+
+----------------------------------------------------------------------
+Ran 1 test in 857.938s
+
+FAILED (errors=1)
+
+Generating XML reports...
+]]></system-err>
+	</testcase>
+</testsuite>

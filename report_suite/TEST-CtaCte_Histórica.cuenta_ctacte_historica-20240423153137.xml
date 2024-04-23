@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CtaCte_Histórica.cuenta_ctacte_historica-20240423153137" tests="1" file="CtaCte_Histórica.py" time="96.870" timestamp="2024-04-23T15:33:14" failures="0" errors="0" skipped="0">
+	<testcase classname="CtaCte_Histórica.cuenta_ctacte_historica" name="test_ctacte_historica" time="96.870" timestamp="2024-04-23T15:33:14" file="CtaCte_Histórica.py" line="17"/>
+</testsuite>

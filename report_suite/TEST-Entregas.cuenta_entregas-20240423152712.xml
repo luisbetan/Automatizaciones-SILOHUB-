@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Entregas.cuenta_entregas-20240423152712" tests="1" file="Entregas.py" time="138.943" timestamp="2024-04-23T15:29:31" failures="0" errors="0" skipped="0">
+	<testcase classname="Entregas.cuenta_entregas" name="test_cuenta_entregas" time="138.943" timestamp="2024-04-23T15:29:31" file="Entregas.py" line="22">
+		<system-out><![CDATA[El texto encontrado es  CONTRATOS
+El texto encontrado es  MERCADOS
+¡Cuenta encontrada y seleccionada 1023  con éxito!
+Se hizo clic en un icono de borrar.
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+El texto encontrado es  MIS ENTREGAS
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+¡Elemento encontrado y clickeado 1 veces con éxito!
+]]></system-out>
+	</testcase>
+</testsuite>

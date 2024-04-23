@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="reportInsuRetirar.ReportinsumosPendRetirar-20240423115934" tests="1" file="reportInsuRetirar.py" time="43.320" timestamp="2024-04-23T12:52:05" failures="0" errors="0" skipped="0">
+	<testcase classname="reportInsuRetirar.ReportinsumosPendRetirar" name="test_Report_suppliesWithdrawal" time="43.320" timestamp="2024-04-23T12:52:05" file="reportInsuRetirar.py" line="17">
+		<system-out><![CDATA[El texto encontrado es  Insumos Pendientes de Retirar
+El texto encontrado es  Comprobante
+El texto encontrado 'FAC 1051 00014310' no coincide con el esperado ''
+El texto encontrado es  Artículo
+El texto encontrado 'Herbicida Sulfosato TD Touchdown S x 20 lts SYNGENTA AGRO SA' no coincide con el esperado ''
+El texto encontrado es  Pendiente
+El valor es un carácter numérico. Valor: 4.420,00
+segundo movimiento del listado
+El texto encontrado 'FAC 1051 00014313' no coincide con el esperado ''
+El texto encontrado 'Bio Potenciador de nitrogeno BIOESTIM NUTRICION EFICIENTE' no coincide con el esperado ''
+El valor es un carácter numérico. Valor: 18.800,00
+]]></system-out>
+	</testcase>
+</testsuite>

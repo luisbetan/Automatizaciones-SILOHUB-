@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Ctacte_ApliAcobrar.cta_cte_apliAcobrar-20240423153018" tests="1" file="Ctacte_ApliAcobrar.py" time="83.350" timestamp="2024-04-23T15:31:41" failures="0" errors="0" skipped="0">
+	<testcase classname="Ctacte_ApliAcobrar.cta_cte_apliAcobrar" name="test_ctacte_aplicada" time="83.350" timestamp="2024-04-23T15:31:41" file="Ctacte_ApliAcobrar.py" line="17">
+		<system-out><![CDATA[El texto encontrado es  MIS ENTREGAS
+Tiempo de espera agotado. El campo de búsqueda, las opciones de búsqueda, o ambos, no están presentes o no son clickeables.
+El texto encontrado es  MERCADOS
+Tiempo de espera agotado. El texto por texto no está presente.
+El texto es visible para el usuario
+El texto fue validado correctamente: Mis Ventas
+]]></system-out>
+	</testcase>
+</testsuite>

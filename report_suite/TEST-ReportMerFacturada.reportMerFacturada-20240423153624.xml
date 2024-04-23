@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ReportMerFacturada.reportMerFacturada-20240423153624" tests="1" file="ReportMerFacturada.py" time="95.244" timestamp="2024-04-23T15:37:59" failures="0" errors="0" skipped="0">
+	<testcase classname="ReportMerFacturada.reportMerFacturada" name="test_Report_MerFacturada" time="95.244" timestamp="2024-04-23T15:37:59" file="ReportMerFacturada.py" line="17">
+		<system-out><![CDATA[¡Elemento encontrado y clickeado 3 veces con éxito!
+¡Elemento encontrado y clickeado 2 veces con éxito!
+Tiempo de espera agotado. El input no está presente o no es clickeable.
+¡Elemento encontrado y clickeado 3 veces con éxito!
+El texto encontrado es  Estado De Mis Contratos
+El texto encontrado es  Insumos Pendientes de Retirar
+El texto encontrado es  Comprobante
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+El texto encontrado 'FAC 1051 00014310' no coincide con el esperado ''
+El texto encontrado es  Artículo
+El texto es visible para el usuario
+El texto fue validado correctamente: Contrato 108280
+El texto encontrado 'Herbicida Sulfosato TD Touchdown S x 20 lts SYNGENTA AGRO SA' no coincide con el esperado ''
+El texto es visible para el usuario
+El texto encontrado es  Pendiente
+El texto fue validado correctamente: De Maiz
+El valor es un carácter numérico. Valor: 4.420,00
+segundo movimiento del listado
+El texto encontrado 'FAC 1051 00014313' no coincide con el esperado ''
+El texto no coincide con los valores esperados. Texto actual: '500.000,00 Kg'
+El texto encontrado 'Bio Potenciador de nitrogeno BIOESTIM NUTRICION EFICIENTE' no coincide con el esperado ''
+El valor es un carácter numérico. Valor: 18.800,00
+]]></system-out>
+		<system-err><![CDATA[
+Running tests...
+----------------------------------------------------------------------
+
+Running tests...
+----------------------------------------------------------------------
+.]]></system-err>
+	</testcase>
+</testsuite>

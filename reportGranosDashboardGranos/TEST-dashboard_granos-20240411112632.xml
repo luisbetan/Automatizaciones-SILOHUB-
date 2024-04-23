@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dashboard_granos-20240411112632" tests="1" file=".py" time="31.620" timestamp="2024-04-11T11:27:04" failures="0" errors="0" skipped="0">
-	<testcase classname="dashboard_granos" name="test_dashboard_grain" time="31.620" timestamp="2024-04-11T11:27:04" file="DashboarGranos.py" line="23"/>
-</testsuite>

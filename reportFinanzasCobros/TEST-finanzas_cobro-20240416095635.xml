@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="finanzas_cobro-20240416095635" tests="1" file=".py" time="59.387" timestamp="2024-04-16T09:57:34" failures="0" errors="0" skipped="0">
-	<testcase classname="finanzas_cobro" name="test_finance_payment" time="59.387" timestamp="2024-04-16T09:57:34" file="FinanzasCobro.py" line="23">
-		<system-out><![CDATA[¡Input encontrado y enviado con éxito!
-¡Input encontrado y enviado con éxito!
-]]></system-out>
-	</testcase>
-</testsuite>

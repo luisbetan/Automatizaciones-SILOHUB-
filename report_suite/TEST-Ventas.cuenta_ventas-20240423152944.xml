@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Ventas.cuenta_ventas-20240423152944" tests="1" file="Ventas.py" time="93.475" timestamp="2024-04-23T15:31:17" failures="0" errors="0" skipped="0">
-	<testcase classname="Ventas.cuenta_ventas" name="test_cuenta_ventas" time="93.475" timestamp="2024-04-23T15:31:17" file="Ventas.py" line="22">
-		<system-out><![CDATA[Email generado: _7ycq2k8f@yopmail.com
-]]></system-out>
-	</testcase>
-</testsuite>

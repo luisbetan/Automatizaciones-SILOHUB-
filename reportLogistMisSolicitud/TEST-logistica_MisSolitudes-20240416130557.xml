@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="logistica_MisSolitudes-20240416130557" tests="1" file=".py" time="31.275" timestamp="2024-04-16T13:06:29" failures="0" errors="0" skipped="0">
-	<testcase classname="logistica_MisSolitudes" name="test_logistics_primaries" time="31.275" timestamp="2024-04-16T13:06:29" file="LogistMisSolitud.py" line="23">
-		<system-out><![CDATA[¡Cuenta encontrada y seleccionada 1023  con éxito!
-]]></system-out>
-	</testcase>
-</testsuite>

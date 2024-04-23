@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="granos_contratos-20240423175938" tests="2" file=".py" time="67.216" timestamp="2024-04-23T18:00:46" failures="0" errors="2" skipped="0">
+	<testcase classname="granos_contratos" name="test_granos_contratos" time="0.000" timestamp="0001-01-01T00:00:00" file="GranosContratos.py" line="23">
+		<error type="NoSuchWindowException" message="Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.61)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7564CF922+3045234]
+	(No symbol) [0x00007FF756173652]
+	(No symbol) [0x00007FF756037564]
+	(No symbol) [0x00007FF75600DB4F]
+	(No symbol) [0x00007FF7560B1087]
+	(No symbol) [0x00007FF7560C8871]
+	(No symbol) [0x00007FF7560A9B53]
+	(No symbol) [0x00007FF75607813C]
+	(No symbol) [0x00007FF756078D71]
+	GetHandleVerifier [0x00007FF7564FE89D+3237613]
+	GetHandleVerifier [0x00007FF756540BA7+3508727]
+	GetHandleVerifier [0x00007FF75653976F+3478975]
+	GetHandleVerifier [0x00007FF7562AF1C6+815126]
+	(No symbol) [0x00007FF75617ED0F]
+	(No symbol) [0x00007FF756179854]
+	(No symbol) [0x00007FF7561799E2]
+	(No symbol) [0x00007FF75616A574]
+	BaseThreadInitThunk [0x00007FF834EC257D+29]
+	RtlUserThreadStart [0x00007FF835A2AA48+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\GranosContratos.py", line 214, in test_granos_contratos
+    find_and_click_element(self.driver, select_arrow3, clicks)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 377, in find_and_click_element
+    element = WebDriverWait(driver, 10).until(
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 363, in _predicate
+    target = driver.find_element(*target)  # grab element at locator
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.61)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7564CF922+3045234]
+	(No symbol) [0x00007FF756173652]
+	(No symbol) [0x00007FF756037564]
+	(No symbol) [0x00007FF75600DB4F]
+	(No symbol) [0x00007FF7560B1087]
+	(No symbol) [0x00007FF7560C8871]
+	(No symbol) [0x00007FF7560A9B53]
+	(No symbol) [0x00007FF75607813C]
+	(No symbol) [0x00007FF756078D71]
+	GetHandleVerifier [0x00007FF7564FE89D+3237613]
+	GetHandleVerifier [0x00007FF756540BA7+3508727]
+	GetHandleVerifier [0x00007FF75653976F+3478975]
+	GetHandleVerifier [0x00007FF7562AF1C6+815126]
+	(No symbol) [0x00007FF75617ED0F]
+	(No symbol) [0x00007FF756179854]
+	(No symbol) [0x00007FF7561799E2]
+	(No symbol) [0x00007FF75616A574]
+	BaseThreadInitThunk [0x00007FF834EC257D+29]
+	RtlUserThreadStart [0x00007FF835A2AA48+40]
+
+]]></error>
+		<system-out><![CDATA[El texto encontrado es  CONTRATOS
+¡Cuenta encontrada y seleccionada 1023  con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+El clic en el chevron fue interceptado por otro elemento en la página.
+¡Elemento encontrado y clickeado 1 veces con éxito!
+¡Elemento encontrado y clickeado 6 veces con éxito!
+¡Elemento encontrado y clickeado 6 veces con éxito!
+]]></system-out>
+	</testcase>
+	<testcase classname="granos_contratos" name="test_granos_contratos" time="67.216" timestamp="2024-04-23T18:00:46" file="GranosContratos.py" line="23">
+		<error type="WebDriverException" message="Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=124.0.6367.61)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7564CF922+3045234]
+	(No symbol) [0x00007FF756173652]
+	(No symbol) [0x00007FF756037564]
+	(No symbol) [0x00007FF75601E324]
+	(No symbol) [0x00007FF75601EE8F]
+	(No symbol) [0x00007FF756037B5D]
+	(No symbol) [0x00007FF75600D63C]
+	(No symbol) [0x00007FF7560B80A4]
+	(No symbol) [0x00007FF7560A9D70]
+	(No symbol) [0x00007FF75607813C]
+	(No symbol) [0x00007FF756078D71]
+	GetHandleVerifier [0x00007FF7564FE89D+3237613]
+	GetHandleVerifier [0x00007FF756540BA7+3508727]
+	GetHandleVerifier [0x00007FF75653976F+3478975]
+	GetHandleVerifier [0x00007FF7562AF1C6+815126]
+	(No symbol) [0x00007FF75617ED0F]
+	(No symbol) [0x00007FF756179854]
+	(No symbol) [0x00007FF7561799E2]
+	(No symbol) [0x00007FF75616A574]
+	BaseThreadInitThunk [0x00007FF834EC257D+29]
+	RtlUserThreadStart [0x00007FF835A2AA48+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\GranosContratos.py", line 246, in tearDown
+    self.driver.close()
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 459, in close
+    self.execute(Command.CLOSE)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=124.0.6367.61)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7564CF922+3045234]
+	(No symbol) [0x00007FF756173652]
+	(No symbol) [0x00007FF756037564]
+	(No symbol) [0x00007FF75601E324]
+	(No symbol) [0x00007FF75601EE8F]
+	(No symbol) [0x00007FF756037B5D]
+	(No symbol) [0x00007FF75600D63C]
+	(No symbol) [0x00007FF7560B80A4]
+	(No symbol) [0x00007FF7560A9D70]
+	(No symbol) [0x00007FF75607813C]
+	(No symbol) [0x00007FF756078D71]
+	GetHandleVerifier [0x00007FF7564FE89D+3237613]
+	GetHandleVerifier [0x00007FF756540BA7+3508727]
+	GetHandleVerifier [0x00007FF75653976F+3478975]
+	GetHandleVerifier [0x00007FF7562AF1C6+815126]
+	(No symbol) [0x00007FF75617ED0F]
+	(No symbol) [0x00007FF756179854]
+	(No symbol) [0x00007FF7561799E2]
+	(No symbol) [0x00007FF75616A574]
+	BaseThreadInitThunk [0x00007FF834EC257D+29]
+	RtlUserThreadStart [0x00007FF835A2AA48+40]
+
+]]></error>
+		<system-out><![CDATA[El texto encontrado es  CONTRATOS
+¡Cuenta encontrada y seleccionada 1023  con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+El clic en el chevron fue interceptado por otro elemento en la página.
+¡Elemento encontrado y clickeado 1 veces con éxito!
+¡Elemento encontrado y clickeado 6 veces con éxito!
+¡Elemento encontrado y clickeado 6 veces con éxito!
+]]></system-out>
+	</testcase>
+</testsuite>

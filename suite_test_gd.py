@@ -38,6 +38,7 @@ from LogistSecundarias import logistica_secundarias
 from Metricas import Metricas
 from PrecioFijaciones import precio_granos_fijaciones
 from Precio_Disponible import precio_granos_desponible
+from Profile_User import Perfil_Usuario
 from RegistroUsuario import TestRegistroUsuario 
 from Entregas import cuenta_entregas
 from ReportCompPenFact import reportPendFacturar
@@ -61,7 +62,8 @@ from reportInsuRetirar import ReportinsumosPendRetirar
 def ejecutar_suite():
     test_suite = unittest.TestSuite()
     test_suite.addTest(unittest.makeSuite(TestRegistroUsuario))
-    """"test_suite.addTest(unittest.makeSuite(HomeTenant))
+    test_suite.addTest(unittest.makeSuite(Perfil_Usuario))
+    test_suite.addTest(unittest.makeSuite(HomeTenant))
     test_suite.addTest(unittest.makeSuite(IndicaInsumosHome))
     test_suite.addTest(unittest.makeSuite(granos_contratos))
     test_suite.addTest(unittest.makeSuite(Fijaciones_precio))
@@ -109,7 +111,7 @@ def ejecutar_suite():
     test_suite.addTest(unittest.makeSuite(confi_colaborador))
     test_suite.addTest(unittest.makeSuite(config_Sucursales))
     test_suite.addTest(unittest.makeSuite(confi_Solicitudes))
-    test_suite.addTest(unittest.makeSuite(Onboarding_test_tenant))"""
+    test_suite.addTest(unittest.makeSuite(Onboarding_test_tenant))
     
     # Configuración para generar informes XML
     output_folder = 'report_suite'  # Cambia el nombre de la carpeta según tu preferencia

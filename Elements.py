@@ -11,7 +11,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 from datetime import date, timedelta
-
+import datetime
 
 
 def find_elements(driver, xpath):
@@ -1367,3 +1367,42 @@ def hop_element(driver, xpath):
             print("No se encontraron suficientes elementos.")
     except TimeoutException:
         print("No se encontraron elementos o no fueron clickeables dentro del tiempo de espera.")
+
+def calendar_todate(driver, input_xpath, popup_xpath):
+    input_fecha = WebDriverWait(driver, 10).until(
+        EC.visibility_of_element_located((By.XPATH, input_xpath))
+    )
+    input_fecha.click()
+
+    # Esperar a que aparezca el pop-up del calendario
+    popup_calendario = WebDriverWait(driver, 10).until(
+        EC.visibility_of_element_located((By.XPATH, popup_xpath))
+    )
+
+    # Obtener la fecha actual
+    fecha_actual = datetime.datetime.now().strftime("%Y-%m-%d")
+
+    # Buscar el elemento de la fecha actual en el pop-up del calendario
+    try:
+        fecha_elemento = popup_calendario.find_element(By.XPATH, f"//span[contains(@class, 'flatpickr-day') and @aria-current='date']")
+        # Darle doble clic a la fecha
+        ActionChains(driver).move_to_element(fecha_elemento).double_click().perform()
+    except:
+        print("La fecha actual no está disponible en el calendario.")
+
+def  select_previous_day(driver, popup_xpath):
+    # Esperar a que aparezca el pop-up del calendario
+    popup_calendario = WebDriverWait(driver, 10).until(
+        EC.visibility_of_element_located((By.XPATH, popup_xpath))
+    )
+
+    # Obtener la fecha de ayer en el formato que coincide con el calendario
+    fecha_ayer = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime("%d-%m-%Y")
+
+    # Buscar el elemento del día de ayer en el pop-up del calendario y hacer clic
+    try:
+        fecha_elemento_ayer = popup_calendario.find_element(By.XPATH, f"//span[contains(@class, 'flatpickr-day') and @aria-label='{fecha_ayer}']")
+        fecha_elemento_ayer.click()
+        print("Día de ayer seleccionado con éxito.")
+    except:
+        print("La fecha de ayer no está disponible en el calendario.")

@@ -2,7 +2,7 @@ import unittest
 import time
 from selenium.webdriver.common.by import By
 import xmlrunner
-from Elements import  displace_element, find_and_click_element, find_and_click_element_selector, find_elements, find_elements_css_selector, find_elements_name, find_send_element, find_send_element_selector, search_and_select_producer, select_option_click, validate_strt, validate_text
+from Elements import  find_and_click_element, find_elements, find_send_element, search_and_select_producer, select_option_click, validate_strt, validate_text
 from Loginhelper import LoginHelper
 from startSession import StartSession
 

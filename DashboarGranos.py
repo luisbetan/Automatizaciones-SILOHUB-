@@ -2,7 +2,7 @@ from telnetlib import EC
 import unittest
 import xmlrunner
 import time
-from Elements import  find_elements, ingresar_rango_fecha
+from Elements import  calendar_todate, find_elements
 from Loginhelper import LoginHelper
 from startSession import StartSession
 
@@ -48,11 +48,13 @@ class dashboard_granos(unittest.TestCase):
         find_elements(self.driver,select_product2)
         time.sleep(2)
 
-        select_data_day = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-date-filter/div/app-date-picker/div/input[2]"  # Reemplazar con el XPath correcto
-        ingresar_rango_fecha(select_data_day, self.driver)
+        select_data_day = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-date-filter/div/app-date-picker/div/input[2]"
+        popup_calendar1 = "//div[contains(@class, 'flatpickr-calendar')]"
+        calendar_todate(self.driver, select_data_day, popup_calendar1)
         time.sleep(2)
 
-        appliy_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-date-filter/div/app-date-picker/div/input[1]"
+
+        appliy_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-filter-buttons/div/app-button[2]/button"
         find_elements(self.driver,appliy_filter)
         time.sleep(2)
 

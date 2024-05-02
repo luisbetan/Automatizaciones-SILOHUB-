@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dashboard_granos-20240502183413" tests="1" file=".py" time="101.659" timestamp="2024-05-02T18:35:55" failures="0" errors="0" skipped="0">
+	<testcase classname="dashboard_granos" name="test_dashboard_grain" time="101.659" timestamp="2024-05-02T18:35:55" file="DashboarGranos.py" line="23">
+		<system-out><![CDATA[La fecha de ayer no está disponible en el calendario.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+]]></system-out>
+	</testcase>
+</testsuite>

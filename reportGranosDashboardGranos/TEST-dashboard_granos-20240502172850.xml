@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dashboard_granos-20240502172850" tests="1" file=".py" time="30.299" timestamp="2024-05-02T17:29:20" failures="0" errors="1" skipped="0">
+	<testcase classname="dashboard_granos" name="test_dashboard_grain" time="30.299" timestamp="2024-05-02T17:29:20" file="DashboarGranos.py" line="23">
+		<error type="TypeError" message="calendar_todate() takes 2 positional arguments but 3 were given"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\DashboarGranos.py", line 53, in test_dashboard_grain
+    calendar_todate(select_data_day, self.driver,popup_calendar)
+TypeError: calendar_todate() takes 2 positional arguments but 3 were given
+]]></error>
+	</testcase>
+</testsuite>

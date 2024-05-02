@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dashboard_granos-20240502174033" tests="1" file=".py" time="29.178" timestamp="2024-05-02T17:41:02" failures="0" errors="1" skipped="0">
+	<testcase classname="dashboard_granos" name="test_dashboard_grain" time="29.178" timestamp="2024-05-02T17:41:02" file="DashboarGranos.py" line="23">
+		<error type="AttributeError" message="'str' object has no attribute 'click'"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\DashboarGranos.py", line 53, in test_dashboard_grain
+    popup_calendar.click()
+AttributeError: 'str' object has no attribute 'click'
+]]></error>
+	</testcase>
+</testsuite>

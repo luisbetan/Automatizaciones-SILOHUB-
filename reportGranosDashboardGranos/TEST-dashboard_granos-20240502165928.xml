@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dashboard_granos-20240502165928" tests="2" file=".py" time="51.745" timestamp="2024-05-02T17:00:19" failures="0" errors="2" skipped="0">
+	<testcase classname="dashboard_granos" name="test_dashboard_grain" time="0.000" timestamp="0001-01-01T00:00:00" file="DashboarGranos.py" line="23">
+		<error type="TimeoutException" message="Message: 
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\DashboarGranos.py", line 52, in test_dashboard_grain
+    ingresar_rango_fecha(select_data_day, self.driver)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1334, in ingresar_rango_fecha
+    fecha_actual_element = WebDriverWait(driver, 10).until(
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+]]></error>
+	</testcase>
+	<testcase classname="dashboard_granos" name="test_dashboard_grain" time="51.745" timestamp="2024-05-02T17:00:19" file="DashboarGranos.py" line="23">
+		<error type="WebDriverException" message="Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=124.0.6367.93)
+Stacktrace:
+	GetHandleVerifier [0x00007FF62D951502+60802]
+	(No symbol) [0x00007FF62D8CAC02]
+	(No symbol) [0x00007FF62D787CE4]
+	(No symbol) [0x00007FF62D76E894]
+	(No symbol) [0x00007FF62D76F3FF]
+	(No symbol) [0x00007FF62D7882DD]
+	(No symbol) [0x00007FF62D75DACC]
+	(No symbol) [0x00007FF62D808F74]
+	(No symbol) [0x00007FF62D7FAB40]
+	(No symbol) [0x00007FF62D7C8FEC]
+	(No symbol) [0x00007FF62D7C9C21]
+	GetHandleVerifier [0x00007FF62DC5411D+3217821]
+	GetHandleVerifier [0x00007FF62DC960B7+3488055]
+	GetHandleVerifier [0x00007FF62DC8F03F+3459263]
+	GetHandleVerifier [0x00007FF62DA0B846+823494]
+	(No symbol) [0x00007FF62D8D5F9F]
+	(No symbol) [0x00007FF62D8D0EC4]
+	(No symbol) [0x00007FF62D8D1052]
+	(No symbol) [0x00007FF62D8C18A4]
+	BaseThreadInitThunk [0x00007FFC92DE257D+29]
+	RtlUserThreadStart [0x00007FFC9438AA48+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\DashboarGranos.py", line 64, in tearDown
+    self.driver.close()
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 459, in close
+    self.execute(Command.CLOSE)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=124.0.6367.93)
+Stacktrace:
+	GetHandleVerifier [0x00007FF62D951502+60802]
+	(No symbol) [0x00007FF62D8CAC02]
+	(No symbol) [0x00007FF62D787CE4]
+	(No symbol) [0x00007FF62D76E894]
+	(No symbol) [0x00007FF62D76F3FF]
+	(No symbol) [0x00007FF62D7882DD]
+	(No symbol) [0x00007FF62D75DACC]
+	(No symbol) [0x00007FF62D808F74]
+	(No symbol) [0x00007FF62D7FAB40]
+	(No symbol) [0x00007FF62D7C8FEC]
+	(No symbol) [0x00007FF62D7C9C21]
+	GetHandleVerifier [0x00007FF62DC5411D+3217821]
+	GetHandleVerifier [0x00007FF62DC960B7+3488055]
+	GetHandleVerifier [0x00007FF62DC8F03F+3459263]
+	GetHandleVerifier [0x00007FF62DA0B846+823494]
+	(No symbol) [0x00007FF62D8D5F9F]
+	(No symbol) [0x00007FF62D8D0EC4]
+	(No symbol) [0x00007FF62D8D1052]
+	(No symbol) [0x00007FF62D8C18A4]
+	BaseThreadInitThunk [0x00007FFC92DE257D+29]
+	RtlUserThreadStart [0x00007FFC9438AA48+40]
+
+]]></error>
+	</testcase>
+</testsuite>

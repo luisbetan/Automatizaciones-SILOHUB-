@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dashboard_granos-20240502170317" tests="1" file=".py" time="34.925" timestamp="2024-05-02T17:03:52" failures="0" errors="1" skipped="0">
+	<testcase classname="dashboard_granos" name="test_dashboard_grain" time="34.925" timestamp="2024-05-02T17:03:52" file="DashboarGranos.py" line="23">
+		<error type="AttributeError" message="'str' object has no attribute 'find_element'"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\DashboarGranos.py", line 52, in test_dashboard_grain
+    calendar_todate(select_data_day, self.driver)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1372, in calendar_todate
+    calendario_btn = WebDriverWait(driver, 10).until(
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 363, in _predicate
+    target = driver.find_element(*target)  # grab element at locator
+AttributeError: 'str' object has no attribute 'find_element'
+]]></error>
+	</testcase>
+</testsuite>

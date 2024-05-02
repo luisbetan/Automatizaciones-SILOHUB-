@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dashboard_granos-20240502175647" tests="2" file=".py" time="60.577" timestamp="2024-05-02T17:57:48" failures="0" errors="2" skipped="0">
+	<testcase classname="dashboard_granos" name="test_dashboard_grain" time="0.000" timestamp="0001-01-01T00:00:00" file="DashboarGranos.py" line="23">
+		<error type="NoSuchWindowException" message="Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.93)
+Stacktrace:
+	GetHandleVerifier [0x00007FF799721502+60802]
+	(No symbol) [0x00007FF79969AC02]
+	(No symbol) [0x00007FF799557CE4]
+	(No symbol) [0x00007FF79952DFDF]
+	(No symbol) [0x00007FF7995D1E57]
+	(No symbol) [0x00007FF7995E98D1]
+	(No symbol) [0x00007FF7995CA923]
+	(No symbol) [0x00007FF799598FEC]
+	(No symbol) [0x00007FF799599C21]
+	GetHandleVerifier [0x00007FF799A2411D+3217821]
+	GetHandleVerifier [0x00007FF799A660B7+3488055]
+	GetHandleVerifier [0x00007FF799A5F03F+3459263]
+	GetHandleVerifier [0x00007FF7997DB846+823494]
+	(No symbol) [0x00007FF7996A5F9F]
+	(No symbol) [0x00007FF7996A0EC4]
+	(No symbol) [0x00007FF7996A1052]
+	(No symbol) [0x00007FF7996918A4]
+	BaseThreadInitThunk [0x00007FFC92DE257D+29]
+	RtlUserThreadStart [0x00007FFC9438AA48+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\DashboarGranos.py", line 57, in test_dashboard_grain
+    find_elements(self.driver,appliy_filter)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 19, in find_elements
+    select_nex_button = WebDriverWait(driver, 10).until(
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 363, in _predicate
+    target = driver.find_element(*target)  # grab element at locator
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.93)
+Stacktrace:
+	GetHandleVerifier [0x00007FF799721502+60802]
+	(No symbol) [0x00007FF79969AC02]
+	(No symbol) [0x00007FF799557CE4]
+	(No symbol) [0x00007FF79952DFDF]
+	(No symbol) [0x00007FF7995D1E57]
+	(No symbol) [0x00007FF7995E98D1]
+	(No symbol) [0x00007FF7995CA923]
+	(No symbol) [0x00007FF799598FEC]
+	(No symbol) [0x00007FF799599C21]
+	GetHandleVerifier [0x00007FF799A2411D+3217821]
+	GetHandleVerifier [0x00007FF799A660B7+3488055]
+	GetHandleVerifier [0x00007FF799A5F03F+3459263]
+	GetHandleVerifier [0x00007FF7997DB846+823494]
+	(No symbol) [0x00007FF7996A5F9F]
+	(No symbol) [0x00007FF7996A0EC4]
+	(No symbol) [0x00007FF7996A1052]
+	(No symbol) [0x00007FF7996918A4]
+	BaseThreadInitThunk [0x00007FFC92DE257D+29]
+	RtlUserThreadStart [0x00007FFC9438AA48+40]
+
+]]></error>
+		<system-out><![CDATA[La fecha actual no está disponible en el calendario.
+La fecha anterior no está disponible en el calendario.
+]]></system-out>
+	</testcase>
+	<testcase classname="dashboard_granos" name="test_dashboard_grain" time="60.577" timestamp="2024-05-02T17:57:48" file="DashboarGranos.py" line="23">
+		<error type="WebDriverException" message="Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=124.0.6367.93)
+Stacktrace:
+	GetHandleVerifier [0x00007FF799721502+60802]
+	(No symbol) [0x00007FF79969AC02]
+	(No symbol) [0x00007FF799557CE4]
+	(No symbol) [0x00007FF79953E894]
+	(No symbol) [0x00007FF79953F3FF]
+	(No symbol) [0x00007FF7995582DD]
+	(No symbol) [0x00007FF79952DACC]
+	(No symbol) [0x00007FF7995D8F74]
+	(No symbol) [0x00007FF7995CAB40]
+	(No symbol) [0x00007FF799598FEC]
+	(No symbol) [0x00007FF799599C21]
+	GetHandleVerifier [0x00007FF799A2411D+3217821]
+	GetHandleVerifier [0x00007FF799A660B7+3488055]
+	GetHandleVerifier [0x00007FF799A5F03F+3459263]
+	GetHandleVerifier [0x00007FF7997DB846+823494]
+	(No symbol) [0x00007FF7996A5F9F]
+	(No symbol) [0x00007FF7996A0EC4]
+	(No symbol) [0x00007FF7996A1052]
+	(No symbol) [0x00007FF7996918A4]
+	BaseThreadInitThunk [0x00007FFC92DE257D+29]
+	RtlUserThreadStart [0x00007FFC9438AA48+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\DashboarGranos.py", line 65, in tearDown
+    self.driver.close()
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 459, in close
+    self.execute(Command.CLOSE)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=124.0.6367.93)
+Stacktrace:
+	GetHandleVerifier [0x00007FF799721502+60802]
+	(No symbol) [0x00007FF79969AC02]
+	(No symbol) [0x00007FF799557CE4]
+	(No symbol) [0x00007FF79953E894]
+	(No symbol) [0x00007FF79953F3FF]
+	(No symbol) [0x00007FF7995582DD]
+	(No symbol) [0x00007FF79952DACC]
+	(No symbol) [0x00007FF7995D8F74]
+	(No symbol) [0x00007FF7995CAB40]
+	(No symbol) [0x00007FF799598FEC]
+	(No symbol) [0x00007FF799599C21]
+	GetHandleVerifier [0x00007FF799A2411D+3217821]
+	GetHandleVerifier [0x00007FF799A660B7+3488055]
+	GetHandleVerifier [0x00007FF799A5F03F+3459263]
+	GetHandleVerifier [0x00007FF7997DB846+823494]
+	(No symbol) [0x00007FF7996A5F9F]
+	(No symbol) [0x00007FF7996A0EC4]
+	(No symbol) [0x00007FF7996A1052]
+	(No symbol) [0x00007FF7996918A4]
+	BaseThreadInitThunk [0x00007FFC92DE257D+29]
+	RtlUserThreadStart [0x00007FFC9438AA48+40]
+
+]]></error>
+		<system-out><![CDATA[La fecha actual no está disponible en el calendario.
+La fecha anterior no está disponible en el calendario.
+]]></system-out>
+	</testcase>
+</testsuite>

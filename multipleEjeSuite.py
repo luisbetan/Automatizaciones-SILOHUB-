@@ -90,7 +90,7 @@ def enviar_informe_por_correo(resultados):
     smtp_server = "smtp.gmail.com"
     smtp_port = 587
     smtp_user = "luis.tacourt@gmail.com"
-    smtp_password = "gfgo cgez hiwn xnfa"
+    smtp_password = "tu_contrasena"
 
     mensaje = MIMEMultipart()
     mensaje.attach(MIMEText(cuerpo_correo, 'plain'))

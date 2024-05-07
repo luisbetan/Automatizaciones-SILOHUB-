@@ -69,7 +69,7 @@ class detalle_cto_liquidaciones(unittest.TestCase):
         find_and_click_element_selector(self.driver, arrow_filter1, amount_click1)
 
         arrow_filter2 = "/html/body/div/div[1]/span[1]"
-        amount_click2 = 2
+        amount_click2 = 3
         find_and_click_element(self.driver, arrow_filter2, amount_click2)
 
         select_date1 = "/html/body/div/div[2]/div/div[2]/div/span[2]"

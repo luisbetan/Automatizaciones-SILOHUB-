@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dashboard_granos-20240507122723" tests="1" file=".py" time="75.557" timestamp="2024-05-07T12:28:38" failures="0" errors="0" skipped="0">
+	<testcase classname="dashboard_granos" name="test_dashboard_grain" time="75.557" timestamp="2024-05-07T12:28:38" file="DashboarGranos.py" line="24">
+		<system-out><![CDATA[El estado actual es : 'Pendiente'
+Tiempo de espera excedido. No se encontró el elemento esperado.
+]]></system-out>
+	</testcase>
+</testsuite>

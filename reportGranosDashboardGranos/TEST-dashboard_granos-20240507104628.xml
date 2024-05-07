@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dashboard_granos-20240507104628" tests="1" file=".py" time="64.647" timestamp="2024-05-07T10:47:33" failures="0" errors="1" skipped="0">
+	<testcase classname="dashboard_granos" name="test_dashboard_grain" time="64.647" timestamp="2024-05-07T10:47:33" file="DashboarGranos.py" line="24">
+		<error type="TimeoutException" message="Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6641B1502+60802]
+	(No symbol) [0x00007FF66412AC02]
+	(No symbol) [0x00007FF663FE7CE4]
+	(No symbol) [0x00007FF664036D4D]
+	(No symbol) [0x00007FF664036E1C]
+	(No symbol) [0x00007FF66407CE37]
+	(No symbol) [0x00007FF66405ABBF]
+	(No symbol) [0x00007FF66407A224]
+	(No symbol) [0x00007FF66405A923]
+	(No symbol) [0x00007FF664028FEC]
+	(No symbol) [0x00007FF664029C21]
+	GetHandleVerifier [0x00007FF6644B411D+3217821]
+	GetHandleVerifier [0x00007FF6644F60B7+3488055]
+	GetHandleVerifier [0x00007FF6644EF03F+3459263]
+	GetHandleVerifier [0x00007FF66426B846+823494]
+	(No symbol) [0x00007FF664135F9F]
+	(No symbol) [0x00007FF664130EC4]
+	(No symbol) [0x00007FF664131052]
+	(No symbol) [0x00007FF6641218A4]
+	BaseThreadInitThunk [0x00007FFEF342257D+29]
+	RtlUserThreadStart [0x00007FFEF4B0AA48+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\DashboarGranos.py", line 62, in test_dashboard_grain
+    seleccionar_movimiento_pendiente(self.driver)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\SelectListDashb.py", line 8, in seleccionar_movimiento_pendiente
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-grain-dashboard/app-grain-dashboard-list/app-responsive-table/div/div/table/tbody/tr[1]/td[1]")))
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6641B1502+60802]
+	(No symbol) [0x00007FF66412AC02]
+	(No symbol) [0x00007FF663FE7CE4]
+	(No symbol) [0x00007FF664036D4D]
+	(No symbol) [0x00007FF664036E1C]
+	(No symbol) [0x00007FF66407CE37]
+	(No symbol) [0x00007FF66405ABBF]
+	(No symbol) [0x00007FF66407A224]
+	(No symbol) [0x00007FF66405A923]
+	(No symbol) [0x00007FF664028FEC]
+	(No symbol) [0x00007FF664029C21]
+	GetHandleVerifier [0x00007FF6644B411D+3217821]
+	GetHandleVerifier [0x00007FF6644F60B7+3488055]
+	GetHandleVerifier [0x00007FF6644EF03F+3459263]
+	GetHandleVerifier [0x00007FF66426B846+823494]
+	(No symbol) [0x00007FF664135F9F]
+	(No symbol) [0x00007FF664130EC4]
+	(No symbol) [0x00007FF664131052]
+	(No symbol) [0x00007FF6641218A4]
+	BaseThreadInitThunk [0x00007FFEF342257D+29]
+	RtlUserThreadStart [0x00007FFEF4B0AA48+40]
+
+]]></error>
+	</testcase>
+</testsuite>

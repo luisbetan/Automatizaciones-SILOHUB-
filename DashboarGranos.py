@@ -4,6 +4,7 @@ import xmlrunner
 import time
 from Elements import  calendar_todate, find_elements
 from Loginhelper import LoginHelper
+from SelectListDashb import seleccionar_movimiento_pendiente
 from startSession import StartSession
 
 
@@ -44,8 +45,12 @@ class dashboard_granos(unittest.TestCase):
         find_elements(self.driver,select_product1)
         time.sleep(2)
 
-        select_product2 = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-grain-container/div/app-grain-button[4]/div/div"
+        select_product2 = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-grain-container/div/app-grain-button[5]/div"
         find_elements(self.driver,select_product2)
+        time.sleep(2)
+
+        select_product3 = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-grain-container/div/app-grain-button[3]/div"
+        find_elements(self.driver,select_product3)
         time.sleep(2)
 
         select_data_day = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-date-filter/div/app-date-picker/div/input[2]"
@@ -58,10 +63,9 @@ class dashboard_granos(unittest.TestCase):
         find_elements(self.driver,appliy_filter)
         time.sleep(2)
 
-        select_movements_list = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-grain-dashboard/app-grain-dashboard-list/app-responsive-table/div/div/table/tbody/tr[1]/td[1]"
-        find_elements(self.driver,select_movements_list)
+        seleccionar_movimiento_pendiente(self.driver)
         time.sleep(2)
-
+        
     def tearDown(self):
            self.driver.close()
 

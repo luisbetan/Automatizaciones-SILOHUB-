@@ -79,7 +79,7 @@ class cta_cte_apliAcobrar(unittest.TestCase):
 
         apply_button_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-filter-buttons/div/app-button[2]/button"
         find_elements(self.driver,  apply_button_filter)
-        time.sleep(2)
+        time.sleep(4)
 
         ## validar titulo de pantalla cuenta corriente aplicada 
 

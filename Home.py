@@ -39,7 +39,7 @@ class HomeTenant(unittest.TestCase):
        
         selecct_button_aplicar = '/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-filter-buttons/div/app-button[2]/button'
         find_elements(self.driver, selecct_button_aplicar)
-        time.sleep(3)
+        time.sleep(6)
        
        ## validar si el texto es visible para el usuario 
         page_hello = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/app-welcome-home/div/div[1]/div/p'
@@ -94,22 +94,16 @@ class HomeTenant(unittest.TestCase):
         element4 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div/swiper/div/div[1]/div[4]/app-number-values-card/div/div/div/div[3]/div/h4/span'
         validate_character_numeric_element(self.driver, element4  )
 
-        validations = [  "Se velisan de forma correcta los titulos del totalizador de la pantalla del home", 
-        "Buen día JUAN DEMO!","VENCIDO A HOY", "ARS", "A VENCER", "USD"  
-         
-        ]
-        folder_path = 'reportClient'
-        file_name = 'reportHomeClient.xml'
-        xml_file_path = register_validation_results(validations, folder_path, file_name)
-
-        print(f"Archivo XML generado en: {xml_file_path}")
-
-         
+        
          ## Seleccionar el elemento que contiene el texto 
 
         element5 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[2]/app-business-indicators/div[1]/div[1]/div/p"
         text_expected = "Resumen de Mis Negocios de Granos"
         validate_text(self.driver,element5 , text_expected)
+
+        self.driver.execute_script("window.scrollTo(0,200);")
+        time.sleep(2)
+
 
         # Seleccionar el elemento de la imagen
         
@@ -143,6 +137,9 @@ class HomeTenant(unittest.TestCase):
            "https://pwa-portal-staging.silohub.ag/assets/images/grains/soja.svg"
         ]
         validate_image_css_selector(self.driver, image_3, image_3_expected)
+
+        self.driver.execute_script("window.scrollTo(0,200);")
+        time.sleep(2)
 
         ## validar los campor del resumen de mis negocios 
     
@@ -226,17 +223,7 @@ class HomeTenant(unittest.TestCase):
         validate_character_numeric_element(self.driver, element16  )
 
      
-        validations = [
-             "Se validan los siguentes campos de la pantalla",
-             "Buen día JUAN DEMO!",
-             "VENCIDO A HOY",
-             "ARS",
-             "Finalizan todas las validaciones de la pantalla de forma exitosa"
-        ]
-        folder_path = 'reportCliente'
-        file_prefix = 'reportHomeClient'
-        xml_file_path = register_validation_results(validations, folder_path, file_prefix)
-
+        
     def tearDown(self):
         self.driver.quit()
 

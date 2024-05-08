@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Fijaciones_precio-20240508164536" tests="1" file=".py" time="96.094" timestamp="2024-05-08T16:47:12" failures="0" errors="0" skipped="0">
+	<testcase classname="Fijaciones_precio" name="test_grain_pipup" time="96.094" timestamp="2024-05-08T16:47:12" file="Fijaciones.py" line="21">
+		<system-out><![CDATA[El texto encontrado es  Fijaciones Habilitadas
+Número de cuenta '484' ingresado y opción seleccionada con éxito!
+¡Elemento encontrado y clickeado 4 veces con éxito!
+El texto encontrado es  Nueva Fijación de Precio
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+¡Elemento encontrado y clickeado 1 veces con éxito!
+¡Elemento encontrado y clickeado 1 veces con éxito!
+El texto encontrado 'La Fecha Hasta TC es obligatoria.' no coincide con el esperado 'Tu fijación fue enviada al sistema'
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+]]></system-out>
+	</testcase>
+</testsuite>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LogistSecundarias.logistica_secundarias-20240508141427" tests="1" file="LogistSecundarias.py" time="72.525" timestamp="2024-05-08T16:10:09" failures="0" errors="0" skipped="0">
+	<testcase classname="LogistSecundarias.logistica_secundarias" name="test_logistics_primaries" time="72.525" timestamp="2024-05-08T16:10:09" file="LogistSecundarias.py" line="23">
+		<system-out><![CDATA[¡Cuenta encontrada y seleccionada 1023  con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+El texto no fue encontrado Tu Solicitud fue enviada al sistema
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+]]></system-out>
+	</testcase>
+</testsuite>

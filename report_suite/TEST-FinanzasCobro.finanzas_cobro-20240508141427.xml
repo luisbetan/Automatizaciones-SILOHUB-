@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FinanzasCobro.finanzas_cobro-20240508141427" tests="1" file="FinanzasCobro.py" time="596.204" timestamp="2024-05-08T16:22:09" failures="0" errors="0" skipped="0">
+	<testcase classname="FinanzasCobro.finanzas_cobro" name="test_finance_payment" time="596.204" timestamp="2024-05-08T16:22:09" file="FinanzasCobro.py" line="23">
+		<system-out><![CDATA[Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es visible.
+No se encontraron los datos para borrar.
+Tiempo de espera agotado. El input no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es visible.
+Tiempo de espera agotado. El elemento no está presente o no es visible.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El chevron no están presentes o no son clickeables.
+Tiempo de espera agotado. El chevron no están presentes o no son clickeables.
+Tiempo de espera agotado. El input no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El texto por xpaht no está presente.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+El valor es un carácter numérico. Valor: 16/04/2024
+El valor es un carácter numérico. Valor: 1-218036
+Tiempo de espera agotado. El texto por texto no está presente.
+]]></system-out>
+	</testcase>
+</testsuite>

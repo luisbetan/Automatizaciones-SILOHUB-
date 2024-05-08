@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ReportMerRemitida.reportMerRemitida-20240508141427" tests="1" file="ReportMerRemitida.py" time="314.032" timestamp="2024-05-08T16:06:34" failures="0" errors="1" skipped="0">
+	<testcase classname="ReportMerRemitida.reportMerRemitida" name="test_Report_MerFacturada" time="314.032" timestamp="2024-05-08T16:06:34" file="ReportMerRemitida.py" line="18">
+		<error type="NoSuchElementException" message="Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-remitted-merchandise/app-responsive-table/div/div[2]/table/thead/tr/th[5]&quot;}
+  (Session info: chrome=124.0.6367.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF74D951572+60802]
+	(No symbol) [0x00007FF74D8CAC72]
+	(No symbol) [0x00007FF74D787CE4]
+	(No symbol) [0x00007FF74D7D6D4D]
+	(No symbol) [0x00007FF74D7D6E1C]
+	(No symbol) [0x00007FF74D81CE37]
+	(No symbol) [0x00007FF74D7FABBF]
+	(No symbol) [0x00007FF74D81A224]
+	(No symbol) [0x00007FF74D7FA923]
+	(No symbol) [0x00007FF74D7C8FEC]
+	(No symbol) [0x00007FF74D7C9C21]
+	GetHandleVerifier [0x00007FF74DC5420D+3217949]
+	GetHandleVerifier [0x00007FF74DC961A7+3488183]
+	GetHandleVerifier [0x00007FF74DC8F12F+3459391]
+	GetHandleVerifier [0x00007FF74DA0B936+823622]
+	(No symbol) [0x00007FF74D8D600F]
+	(No symbol) [0x00007FF74D8D0F34]
+	(No symbol) [0x00007FF74D8D10C2]
+	(No symbol) [0x00007FF74D8C1914]
+	BaseThreadInitThunk [0x00007FFEF342257D+29]
+	RtlUserThreadStart [0x00007FFEF4B0AA48+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\ReportMerRemitida.py", line 125, in test_Report_MerFacturada
+    validate_character_numeric_element(self.driver,departures)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1101, in validate_character_numeric_element
+    elemento = driver.find_element(By.XPATH, xpath)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-remitted-merchandise/app-responsive-table/div/div[2]/table/thead/tr/th[5]"}
+  (Session info: chrome=124.0.6367.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF74D951572+60802]
+	(No symbol) [0x00007FF74D8CAC72]
+	(No symbol) [0x00007FF74D787CE4]
+	(No symbol) [0x00007FF74D7D6D4D]
+	(No symbol) [0x00007FF74D7D6E1C]
+	(No symbol) [0x00007FF74D81CE37]
+	(No symbol) [0x00007FF74D7FABBF]
+	(No symbol) [0x00007FF74D81A224]
+	(No symbol) [0x00007FF74D7FA923]
+	(No symbol) [0x00007FF74D7C8FEC]
+	(No symbol) [0x00007FF74D7C9C21]
+	GetHandleVerifier [0x00007FF74DC5420D+3217949]
+	GetHandleVerifier [0x00007FF74DC961A7+3488183]
+	GetHandleVerifier [0x00007FF74DC8F12F+3459391]
+	GetHandleVerifier [0x00007FF74DA0B936+823622]
+	(No symbol) [0x00007FF74D8D600F]
+	(No symbol) [0x00007FF74D8D0F34]
+	(No symbol) [0x00007FF74D8D10C2]
+	(No symbol) [0x00007FF74D8C1914]
+	BaseThreadInitThunk [0x00007FFEF342257D+29]
+	RtlUserThreadStart [0x00007FFEF4B0AA48+40]
+
+]]></error>
+		<system-out><![CDATA[¡Elemento encontrado y clickeado 2 veces con éxito!
+¡Elemento encontrado y clickeado 6 veces con éxito!
+El valor no es un carácter numérico. Valor: 
+El valor no es un carácter numérico. Valor: 
+Tiempo de espera agotado. El texto por xpaht no está presente.
+Tiempo de espera agotado. El texto por xpaht no está presente.
+Tiempo de espera agotado. El texto por xpaht no está presente.
+Tiempo de espera agotado. El texto por xpaht no está presente.
+Tiempo de espera agotado. El texto por xpaht no está presente.
+Tiempo de espera agotado. El texto por xpaht no está presente.
+Tiempo de espera agotado. El texto por xpaht no está presente.
+Tiempo de espera agotado. El texto por xpaht no está presente.
+]]></system-out>
+	</testcase>
+</testsuite>

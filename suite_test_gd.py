@@ -4,6 +4,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import os
 import smtplib
+import time
 import xmlrunner
 import unittest
 from ConfISolicitudes import confi_Solicitudes
@@ -112,6 +113,22 @@ def ejecutar_suite():
     test_suite.addTest(unittest.makeSuite(config_Sucursales))
     test_suite.addTest(unittest.makeSuite(confi_Solicitudes))
     test_suite.addTest(unittest.makeSuite(Onboarding_test_tenant))
+    
+    
+    tiempo_espera_despues_fallo = 5
+
+    try:
+        # Ejecuta las pruebas y maneja los errores aquí
+        resultados = unittest.TextTestRunner().run(test_suite)
+    except Exception as e:
+        print(f"Ocurrió un error al ejecutar los casos de prueba: {e}")
+        # Espera un tiempo antes de continuar con las pruebas restantes
+        print(f"Esperando {tiempo_espera_despues_fallo} segundos después de un fallo...")
+        time.sleep(tiempo_espera_despues_fallo)
+        # Vuelve a ejecutar las pruebas
+        resultados = unittest.TextTestRunner().run(test_suite)
+    
+        return resultados
     
     # Configuración para generar informes XML
     output_folder = 'report_suite'  # Cambia el nombre de la carpeta según tu preferencia

@@ -53,14 +53,14 @@ class cta_cte_apliAvencer(unittest.TestCase):
         apply_state = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-checklist/div/app-checks[3]/div/input" 
         find_elements(self.driver, apply_state)
 
-        ## seleccionar rango de fecha 02-10-2023 a 01/12/2024
+        ## seleccionar rango de fecha 02-10-2023 a 01/12/2023
 
         select_field_date = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-date-filter/div/app-date-picker/div/input[2]"
         find_elements(self.driver, select_field_date)
         time.sleep(2)
 
         select_arrow_1 = "/html/body/div/div[1]/span[1]"
-        clicks = 7
+        clicks = 6
         find_and_click_element(self.driver, select_arrow_1, clicks)
         time.sleep(2)
 
@@ -69,11 +69,11 @@ class cta_cte_apliAvencer(unittest.TestCase):
         time.sleep(2)
 
         select_arrow_2 = "/html/body/div/div[1]/span[2]"
-        clicks = 3
+        clicks = 2
         find_and_click_element(self.driver, select_arrow_2, clicks)
         time.sleep(2)
 
-        select_date_2 = "/html/body/div/div[2]/div/div[2]/div/span[1]"
+        select_date_2 = "/html/body/div/div[2]/div/div[2]/div/span[5]"
         find_elements(self.driver, select_date_2)
         time.sleep(2)
 
@@ -123,7 +123,7 @@ class cta_cte_apliAvencer(unittest.TestCase):
 
         select_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[1]/app-current-account-applied-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/button[2]"
         find_elements(self.driver, select_button)
-        ## descargar pdf 
+        ## descargar Excel 
 
         download_PDF = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[1]/app-current-account-applied-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/ul/li[2]/a"
         find_elements(self.driver, download_PDF)
@@ -143,15 +143,15 @@ class cta_cte_apliAvencer(unittest.TestCase):
 
         ## validar datos del detalle 
 
-        number_movements = "Movimiento FC 1051 00014525"
+        number_movements = "Movimiento NC 1051 00007140"
         validate_text_by_strt(self.driver, number_movements )
 
 
  
-        balance_movements = "USD 74.684,83"
+        balance_movements = "USD 236,68"
         validate_text_by_strt(self.driver, balance_movements )
 
-        settlement = "AGROQIMICOS-"
+        settlement = "NC Bonificacion afecta a fra. 1051-14310-(3 bidon"
         validate_text_by_strt(self.driver, settlement )
 
         ## Seleccionar salida al listado 

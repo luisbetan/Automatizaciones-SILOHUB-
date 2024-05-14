@@ -2,9 +2,8 @@ import unittest
 import time
 from selenium.webdriver.common.by import By
 from pyunitreport import HTMLTestRunner
-import xmlrunner
-from Elements import  find_and_click_element, find_and_click_element_selector, find_elements, find_send_element, find_send_element_selector, search_and_select_producer, select_option_click, validate_strt, validate_text
-from Loginhelper import LoginHelper
+from Elements import find_and_click_element, find_elements, find_send_element, find_send_element_selector, search_and_select_producer, select_option_click, validate_strt, validate_text
+from LoginSample import LoginSample
 from startSession import StartSession
 
 
@@ -15,24 +14,24 @@ class Fijaciones_precio(unittest.TestCase):
         self.start_session = StartSession()
         self.driver = self.start_session.driver
         # Inicializar la clase LoginHelper
-        self.login_helper = LoginHelper(self.driver)
+        self.login_sample = LoginSample(self.driver)
    
    
     def test_grain_pipup(self):
         # Utilizar métodos de LoginHelper para el inicio de sesión
-        self.login_helper.login("admingd@silohub.ag", "G@viglio123")
-        self.login_helper.select_tenant()
-        self.login_helper.search_and_select_account("1023")
+        self.login_sample.login("admingd@silohub.ag", "G@viglio123")
+        self.login_sample.select_tenant()
+        
 
        
 
-        select_grain = '/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[3]/div[1]/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[3]/a/span'
+        select_grain = '/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[2]/div/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[3]/a/span'
         find_elements(self.driver,select_grain )
         time.sleep(2)
 
 
 
-        select_fijaciones =  '/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[3]/div[1]/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[3]/div/ul/li[1]/a'
+        select_fijaciones =  '/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[2]/div/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[3]/div/ul/li[1]/a'
         find_elements(self.driver,select_fijaciones )
 
 
@@ -47,28 +46,30 @@ class Fijaciones_precio(unittest.TestCase):
         xpath_search_results = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-bindings/div/div[1]/app-bindings-enabled-list/app-header-for-responsive-table/div/div/div[1]/div/div/app-customer-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[5]/span"
         search_and_select_producer(self.driver, xpath_search_input, xpath_search_results, account_number)
 
-        # aplicar filtro  01/001/2024 al 16/01/2024
+        # aplicar filtro 
          
         apply_filter = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-bindings/div/div[1]/app-bindings-enabled-list/app-header-for-responsive-table/div/div/div[2]/div/div/app-filter-button/button/div/span"
         find_elements(self.driver, apply_filter )
         time.sleep(3)
-
-
        
         select_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-date-filter/div/app-date-picker/div/input[2]"
         find_elements(self.driver, select_filter )
         time.sleep(2)
 
         arrow_filter1 = "/html/body/div/div[1]/span[1]"
-        amount_click1 = 4
+        amount_click1 = 1
         find_and_click_element(self.driver, arrow_filter1, amount_click1)
 
-        select_date = "/html/body/div/div[2]/div/div[2]/div/span[1]"
+        select_date = "/html/body/div/div[2]/div/div[2]/div/span[10]"
         find_elements(self.driver, select_date )
         time.sleep(2)
 
-    
-        select_date = "/html/body/div/div[2]/div/div[2]/div/span[17]"
+        arrow_filter2 = "/html/body/div/div[1]/span[2]"
+        amount_click2 = 1
+        find_and_click_element(self.driver, arrow_filter2, amount_click2)
+
+
+        select_date = "/html/body/div/div[2]/div/div[2]/div/span[5]"
         find_elements(self.driver, select_date )
         time.sleep(2)
 
@@ -77,14 +78,12 @@ class Fijaciones_precio(unittest.TestCase):
         time.sleep(3)
 
 
-        # seleccionar el botón fijar precio del segundo movimiento del listado 
-
         select_button_pinup = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-bindings/div/div[1]/app-bindings-enabled-list/app-responsive-table-multiple-items/div/table/tbody/tr[2]/td[6]/div/div[2]/app-button/button"
         find_elements(self.driver,select_button_pinup )
         ## validar titulo de la pagima 
 
 
-        title_pinup_grain = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-set-price/div/div[1]/section/form/div/h2"
+        title_pinup_grain = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-set-price/div[1]/div[1]/section/form/div/h2"
         title_pinup_grain_expected = "Nueva Fijación de Precio"
         validate_text(self.driver,title_pinup_grain, title_pinup_grain_expected  )
 
@@ -97,7 +96,7 @@ class Fijaciones_precio(unittest.TestCase):
         ## selecciona el mercado 
 
         select_market = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-set-price/div/div[1]/section/form/div/div/div[8]/div/select'
-        send_market = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-set-price/div/div[1]/section/form/div/div/div[8]/div/select/option[3]"
+        send_market = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-set-price/div/div[1]/section/form/div/div/div[8]/div/select/option[7]"
         select_option_click(self.driver,select_market, send_market )
 
         ## insertar el precio
@@ -107,10 +106,10 @@ class Fijaciones_precio(unittest.TestCase):
         find_send_element_selector(self.driver, insert_price_grain, send_price_grain )
         time.sleep(2)
 
-        ## seleccionar fecha de TC desde 01/05/2024
+        ## seleccionar fecha 
 
-        select_date1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-set-price/div/div[1]/section/form/div/div/div[14]/app-date-picker/div/input[2]"
-        find_elements(self.driver,select_date1 )
+        """select_date = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-set-price/div/div[1]/section/form/div/div/div[14]/app-date-picker/div/input[2]"
+        find_elements(self.driver,select_date )
         time.sleep(2)
 
         select_arrow_1 = "/html/body/div[1]/div[1]/span[2]"
@@ -118,47 +117,32 @@ class Fijaciones_precio(unittest.TestCase):
         find_and_click_element(self.driver, select_arrow_1, clicks)
         time.sleep(2)
 
-        select_date_day = "/html/body/div[1]/div[2]/div/div[2]/div/span[3]"
+        select_date_day = "/html/body/div[1]/div[2]/div/div[2]/div/span[34]"
         find_elements(self.driver,select_date_day )
-        time.sleep(2) 
-
-        # Ingresa fecha hasta TC 28/06/2024
-
-        select_date2 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-set-price/div/div[1]/section/form/div/div/div[16]/app-date-picker/div/input[2]"
-        find_elements(self.driver,select_date2 )
-        time.sleep(2)
-
-        select_arrow_1 = "body > div.flatpickr-calendar.animate.open.arrowBottom.arrowLeft > div.flatpickr-months > span.flatpickr-next-month"
-        clicks = 1
-        find_and_click_element_selector(self.driver, select_arrow_1, clicks)
-        time.sleep(2)
-
-        select_date_day = "/html/body/div[2]/div[2]/div/div[2]/div/span[33]"
-        find_elements(self.driver,select_date_day )
-        time.sleep(2) 
+        time.sleep(2) """
 
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(2)
 
-        select_nex_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-set-price/div/div[1]/section/form/div/div/div[18]/div/div[2]/app-button/button"
+        select_nex_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-set-price/div/div[1]/section/form/div/div/div[14]/div/div[2]/app-button/button"
         find_elements(self.driver,select_nex_button )
         time.sleep(2)
 
-        continue_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-set-price/div/div[1]/section/form/div/div/div[18]/div/div[2]/app-button/button"
+        continue_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-set-price/div/div[1]/section/form/div/div/div[14]/div/div[2]/app-button/button"
         find_elements(self.driver,continue_button )
         time.sleep(2)
 
-        confim_button = "/html/body/div[4]/div/div[6]/button[3]"
+        confim_button = "/html/body/div[2]/div/div[6]/button[3]"
         find_elements(self.driver,confim_button )
         time.sleep(2)
 
         ## validar respuesta
 
-        message_finalized = "/html/body/div[4]/div/h2"
-        message_expected = "Tu fijación fue enviada al sistema"
+        message_finalized = "/html/body/div[3]/div/div[2]"
+        message_expected = "Verifica que todos los datos estén correctos y presiona confirmar para terminar la operación"
         validate_strt(self.driver, message_expected,message_finalized )
 
-        accept_button = "/html/body/div[4]/div/div[6]/button[3]"
+        accept_button = "/html/body/div[3]/div/div[6]/button[3]"
         find_elements(self.driver,accept_button )
         time.sleep(2)
 
@@ -179,8 +163,5 @@ class Fijaciones_precio(unittest.TestCase):
 
 
 if __name__ == "__main__":
-  test_suite = unittest.TestLoader().loadTestsFromTestCase(Fijaciones_precio)
-  runner = xmlrunner.XMLTestRunner(output='reportFijacionesPrecio')
-  runner.run(test_suite)
-        
+  unittest.main(verbosity= 2, testRunner = HTMLTestRunner(output = 'reportes', report_name = 'reporte_fijaciones'))
         

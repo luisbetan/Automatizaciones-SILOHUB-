@@ -60,7 +60,7 @@ class cta_cte_apliAcobrar(unittest.TestCase):
         time.sleep(2)
 
         select_arrow_1 = "/html/body/div/div[1]/span[1]"
-        clicks = 7
+        clicks = 6
         find_and_click_element(self.driver, select_arrow_1, clicks)
         time.sleep(2)
 
@@ -79,7 +79,7 @@ class cta_cte_apliAcobrar(unittest.TestCase):
 
         apply_button_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-filter-buttons/div/app-button[2]/button"
         find_elements(self.driver,  apply_button_filter)
-        time.sleep(4)
+        time.sleep(2)
 
         ## validar titulo de pantalla cuenta corriente aplicada 
 

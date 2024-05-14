@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="HomeTenant-20240514120447" tests="1" file=".py" time="119.766" timestamp="2024-05-14T12:06:47" failures="0" errors="0" skipped="0">
+	<testcase classname="HomeTenant" name="test_start_tenant" time="119.766" timestamp="2024-05-14T12:06:47" file="Home.py" line="18">
+		<system-out><![CDATA[Tiempo de espera agotado. El texto con XPath '//p[contains(@class, "fw-bold mb-0 t-gray-100 f-size-20")]' no está presente.
+]]></system-out>
+	</testcase>
+</testsuite>

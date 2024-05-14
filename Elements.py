@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, ElementClickInterceptedException,StaleElementReferenceException, InvalidSelectorException
+from selenium.common.exceptions import TimeoutException, ElementClickInterceptedException,StaleElementReferenceException, InvalidSelectorException,NoSuchElementException, WebDriverException
 import re
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
@@ -458,11 +458,21 @@ def validate_text(driver, xpath, valor_esperado):
         )
         valor = elemento.text
         if valor == valor_esperado:
-            print(f"El texto encontrado es  {valor_esperado}")
+            print(f"El texto encontrado es '{valor_esperado}'")
+            return True
         else:
-            print(f"El texto no fue encontrado {valor_esperado}")
+            print(f"El texto no coincide. Esperado: '{valor_esperado}', Encontrado: '{valor}'")
+            return False
     except TimeoutException:
-        print(f"Tiempo de espera agotado. El texto por xpaht no está presente.")
+        print(f"Tiempo de espera agotado. El texto con XPath '{xpath}' no está presente.")
+        return False
+    except NoSuchElementException:
+        print(f"El elemento con XPath '{xpath}' no se pudo encontrar.")
+        return False
+    except WebDriverException as e:
+        print(f"Se produjo un error en WebDriver: {e}")
+        return False
+
 
 def validate_text_css_selector(driver, css_selector, valor_esperado):
     try:

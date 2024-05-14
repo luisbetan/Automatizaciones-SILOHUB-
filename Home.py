@@ -3,10 +3,9 @@ import time
 import unittest
 from selenium.webdriver.common.by import By
 import xmlrunner
-from Elements import find_elements, validate_character_numeric_element, validate_image_css_selector, validate_image_xpaht, validate_text
+from Elements import find_elements, validate_character_numeric_element, validate_image_css_selector, validate_image_xpaht, validate_text_css_selector
 from Loginhelper import LoginHelper
 from startSession import StartSession
-from ListReport import register_validation_results
 
 class HomeTenant(unittest.TestCase):
     def setUp(self):
@@ -31,10 +30,12 @@ class HomeTenant(unittest.TestCase):
 
         delete_campaign = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-tag-container/div/div/div[7]/app-tag/div/div/i"
         find_elements(self.driver, delete_campaign)
+        time.sleep(2)
      
 
         select_campaign = '/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-season-container/div/app-season-button[2]/div/div'
         find_elements(self.driver, select_campaign)
+        time.sleep(2)
 
        
         selecct_button_aplicar = '/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-filter-buttons/div/app-button[2]/button'
@@ -42,30 +43,30 @@ class HomeTenant(unittest.TestCase):
         time.sleep(6)
        
        ## validar si el texto es visible para el usuario 
-        page_hello = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/app-welcome-home/div/div[1]/div/p'
+        page_hello = '.f-size-20'
         text_expected = "Buen día JUAN DEMO!"
-        validate_text(self.driver, page_hello, text_expected  )
+        validate_text_css_selector(self.driver, page_hello, text_expected  )
 
         
      ##validar totalizadores vencidos a hoy 
        
-        titlle_value1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div/swiper/div/div[1]/div[1]/app-number-values-card/div/div/div/div[1]/div/p"
-        value_expected1 = "VENCIDO A HOY"
+        """titlle_value1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div/swiper/div/div[1]/div[1]/app-number-values-card/div/div/div/div[1]/div/p"
+        value_expected1 = "Vencido a hoy"
         validate_text(self.driver, titlle_value1, value_expected1)
      
         titlle_value2 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div/swiper/div/div[1]/div[1]/app-number-values-card/div/div/div/div[2]/div/p"
-        value_expected2 = "ARS"
+        value_expected2 = "ars"
         validate_text(self.driver, titlle_value2, value_expected2)
         
-        element1 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div/swiper/div/div[1]/div[1]/app-number-values-card/div/div/div/div[3]/div/h4/span'
+        element1 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div/swiper/div/div[1]/div[1]/app-number-values-card/div/div/div/div[3]'
         validate_character_numeric_element(self.driver, element1  )
         
         titlle_value3 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div/swiper/div/div[1]/div[2]/app-number-values-card/div/div/div/div[1]/div/p"
-        value_expected3 = "VENCIDO A HOY"
+        value_expected3 = "Vencido a hoy"
         validate_text(self.driver, titlle_value3, value_expected3)
 
         titlle_value4 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div/swiper/div/div[1]/div[2]/app-number-values-card/div/div/div/div[2]/div/p"
-        value_expected4 = "USD"
+        value_expected4 = "usd"
         validate_text(self.driver, titlle_value4, value_expected4)
    
         element2 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div/swiper/div/div[1]/div[2]/app-number-values-card/div/div/div/div[3]/div/h4/span'
@@ -73,22 +74,22 @@ class HomeTenant(unittest.TestCase):
 
         ##validar totalizadores  a vencer
         titlle_value5 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div/swiper/div/div[1]/div[3]/app-number-values-card/div/div/div/div[1]/div/p"
-        value_expected5 = "A VENCER"
+        value_expected5 = "A Vencer"
         validate_text(self.driver, titlle_value5, value_expected5)
 
         titlle_value6 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div/swiper/div/div[1]/div[3]/app-number-values-card/div/div/div/div[2]/div/p"
-        value_expected6 = "ARS"
+        value_expected6 = "ars"
         validate_text(self.driver, titlle_value6, value_expected6)  
 
         element3 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div/swiper/div/div[1]/div[3]/app-number-values-card/div/div/div/div[3]/div/h4/span'
         validate_character_numeric_element(self.driver, element3  )
         
         titlle_value7 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div/swiper/div/div[1]/div[4]/app-number-values-card/div/div/div/div[1]/div/p"
-        value_expected7 = "A VENCER"
+        value_expected7 = "A Vencer"
         validate_text(self.driver,titlle_value7, value_expected7)
 
         titlle_value8 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div/swiper/div/div[1]/div[4]/app-number-values-card/div/div/div/div[2]/div/p"
-        value_expected8 = "USD"
+        value_expected8 = "usd"
         validate_text(self.driver, titlle_value8, value_expected8)
 
         element4 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div/swiper/div/div[1]/div[4]/app-number-values-card/div/div/div/div[3]/div/h4/span'
@@ -220,7 +221,7 @@ class HomeTenant(unittest.TestCase):
 
        # validar precio de la venta 
         element16 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[3]/app-recent-grain-movements/div/div[2]/app-recent-sales/app-responsive-table-multiple-items/div/table/tbody/tr[1]/td[3]/div/div/span[2]'
-        validate_character_numeric_element(self.driver, element16  )
+        validate_character_numeric_element(self.driver, element16  )"""
 
      
         

@@ -46,7 +46,7 @@ class Fijaciones_tc(unittest.TestCase):
         xpath_search_results = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-bindings/div/div[1]/app-bindings-enabled-list/app-header-for-responsive-table/div/div/div[1]/div/div/app-customer-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[5]/span"
         search_and_select_producer(self.driver, xpath_search_input, xpath_search_results, account_number)
 
-        # aplicar filtro  01/09/2024 al 30/09/2024
+        # aplicar filtro  01/01/2024 al 14/01/2024
          
         apply_filter = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-bindings/div/div[1]/app-bindings-enabled-list/app-header-for-responsive-table/div/div/div[2]/div/div/app-filter-button/button/div/span"
         find_elements(self.driver, apply_filter )

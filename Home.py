@@ -3,30 +3,30 @@ import time
 import unittest
 from selenium.webdriver.common.by import By
 import xmlrunner
-from Elements import find_elements, validate_character_numeric_element, validate_image_css_selector, validate_image_xpaht, validate_text
+from Elements import validate_character_numeric_element,  validate_text
 from Loginhelper import LoginHelper
 from startSession import StartSession
-"""from ListReport import register_validation_results"""
+
 
 class HomeTenant(unittest.TestCase):
-    def setUp(self):
+   def setUp(self):
         self.start_session = StartSession()
         self.driver = self.start_session.driver
 
         # Inicializar la clase LoginHelper
         self.login_helper = LoginHelper(self.driver)
 
-    def test_start_tenant(self):
+   def test_start_tenant(self):
         # Utilizar métodos de LoginHelper para el inicio de sesión
         self.login_helper.login("admingd@silohub.ag", "G@viglio123")
         self.login_helper.select_tenant()
         self.login_helper.search_and_select_account("1023")
-        time.sleep(5)
+        time.sleep(3)
 
         
        
        ## validar si el texto es visible para el usuario 
-        page_hello = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/app-welcome-home/div/div[1]/div/p'
+        page_hello = '//p[text()=" Buen día JUAN DEMO! "]'
         text_expected = "Buen día JUAN DEMO!"
         validate_text(self.driver, page_hello, text_expected  )
 
@@ -83,7 +83,7 @@ class HomeTenant(unittest.TestCase):
       
      
         
-    def tearDown(self):
+   def tearDown(self):
         self.driver.close()
 
 

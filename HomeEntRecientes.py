@@ -20,7 +20,7 @@ class HomeEntRecientesTenant(unittest.TestCase):
         self.login_helper.login("admingd@silohub.ag", "G@viglio123")
         self.login_helper.select_tenant()
         self.login_helper.search_and_select_account("1023")
-        time.sleep(6)
+        time.sleep(3)
 
        
        ## validar si el texto es visible para el usuario 
@@ -84,9 +84,9 @@ class HomeEntRecientesTenant(unittest.TestCase):
         validate_character_numeric_element(self.driver, element16  )
 
      
-        
    def tearDown(self):
-        self.driver.quit()
+        self.driver.close()
+        
 
 
 

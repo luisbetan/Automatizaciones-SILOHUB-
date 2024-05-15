@@ -448,107 +448,7 @@ def click_radioButton_xpaht(driver, checkbox_xpaht):
         print(f"Tiempo de espera agotado. El elemento con xpaht '{checkbox_xpaht}' no está presente o no es clickeable.")
 
 
-def validate_text(driver, xpath, valor_esperado):
-    try:
-        elemento = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.XPATH, xpath))
-        )
-        valor = elemento.text
-        if valor == valor_esperado:
-            print(f"El texto encontrado es  {valor_esperado}")
-        else:
-            print(f"El texto no fue encontrado {valor_esperado}")
-    except TimeoutException:
-        print(f"Tiempo de espera agotado. El texto por xpaht no está presente.")
 
-        
-
-def validate_text_css_selector(driver, css_selector, valor_esperado):
-    try:
-        elemento = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, css_selector))
-        )
-        valor = elemento.text
-        if valor == valor_esperado:
-            print(f"El texto encontrado es  {valor_esperado}")
-        else:
-            print(f"El texto no fue encontrado {valor_esperado}")
-    except TimeoutException:
-        print(f"Tiempo de espera agotado. el texto por selector no está presente.")
-
-def validate_text_by_text(driver, expected_text):
-    try:
-        elemento = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.XPATH, f"//*[contains(text(), '{expected_text}')]"))
-        )
-        valor = elemento.text
-        if valor == expected_text:
-            print(f"El texto encontrado es  {expected_text}")
-        else:
-            print(f"El texto no fue encontrado {expected_text}")
-    except TimeoutException:
-        print(f"Tiempo de espera agotado. El texto por texto no está presente.")
-
-def validate_text_by_strt(driver, expected_text):
-    try:
-        elemento = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.XPATH, f"//*[contains(text(), '{expected_text}')]"))
-        )
-        valor = elemento.text
-        if isinstance(valor, str):
-            if valor == expected_text:
-                print(f"El texto encontrado es  {expected_text}")
-            else:
-                print(f"El texto encontrado '{valor}' no coincide con el esperado '{expected_text}'")
-        else:
-            print(f"El valor encontrado no es un string: {valor}")
-    except TimeoutException:
-        print(f"Tiempo de espera agotado. El texto por texto no está presente.")
-
-def validate_strt(driver, expected_text, xpaht):
-    try:
-        elemento = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.XPATH, xpaht))
-        )
-        valor = elemento.text
-        if isinstance(valor, str):
-            if valor == expected_text:
-                print(f"El texto encontrado es  {expected_text}")
-            else:
-                print(f"El texto encontrado '{valor}' no coincide con el esperado '{expected_text}'")
-        else:
-            print(f"El valor encontrado no es un string: {valor}")
-    except TimeoutException:
-        print(f"Tiempo de espera agotado. El texto por texto no está presente.")
-
-def validate_strt_selector(driver, expected_text, css_aelector):
-    try:
-        elemento = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, css_aelector))
-        )
-        valor = elemento.text
-        if isinstance(valor, str):
-            if valor == expected_text:
-                print(f"El texto encontrado es  {expected_text}")
-            else:
-                print(f"El texto encontrado '{valor}' no coincide con el esperado '{expected_text}'")
-        else:
-            print(f"El valor encontrado no es un string: {valor}")
-    except TimeoutException:
-        print(f"Tiempo de espera agotado. El texto por texto no está presente.")
-
-
-def validate_chart_value(driver, html_content, valor_esperado):
-    try:
-        soup = BeautifulSoup(html_content, 'html.parser')
-        data_value = soup.find('path')['data:value']
-        if data_value == valor_esperado:
-            print(f"El valor del gráfico es {valor_esperado}.")
-        else:
-            print(f"El valor del gráfico es {data_value}, pero se esperaba {valor_esperado}.")
-    except TimeoutException:
-        print("Tiempo de espera agotado.")
-    
 
 # Otra función útil si deseas manipular la visibilidad de un elemento antes de interactuar con él
 def make_visible(driver, xpath):
@@ -1038,6 +938,108 @@ def locate_option_click(driver, xpath_chevron, xpath_upload_field ):
         print("Tiempo de espera agotado. El chevron no están presentes o no son clickeables.")
     except ElementClickInterceptedException:
         print("El clic en el chevron fue interceptado por otro elemento en la página.")
+
+def validate_text(driver, xpath, valor_esperado):
+    try:
+        elemento = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, xpath))
+        )
+        valor = elemento.text
+        if valor == valor_esperado:
+            print(f"El texto encontrado es  {valor_esperado}")
+        else:
+            print(f"El texto no fue encontrado {valor_esperado}")
+    except TimeoutException:
+        print(f"Tiempo de espera agotado. El texto por xpaht no está presente.")
+
+        
+
+def validate_text_css_selector(driver, css_selector, valor_esperado):
+    try:
+        elemento = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, css_selector))
+        )
+        valor = elemento.text
+        if valor == valor_esperado:
+            print(f"El texto encontrado es  {valor_esperado}")
+        else:
+            print(f"El texto no fue encontrado {valor_esperado}")
+    except TimeoutException:
+        print(f"Tiempo de espera agotado. el texto por selector no está presente.")
+
+def validate_text_by_text(driver, expected_text):
+    try:
+        elemento = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, f"//*[contains(text(), '{expected_text}')]"))
+        )
+        valor = elemento.text
+        if valor == expected_text:
+            print(f"El texto encontrado es  {expected_text}")
+        else:
+            print(f"El texto no fue encontrado {expected_text}")
+    except TimeoutException:
+        print(f"Tiempo de espera agotado. El texto por texto no está presente.")
+
+def validate_text_by_strt(driver, expected_text):
+    try:
+        elemento = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, f"//*[contains(text(), '{expected_text}')]"))
+        )
+        valor = elemento.text
+        if isinstance(valor, str):
+            if valor == expected_text:
+                print(f"El texto encontrado es  {expected_text}")
+            else:
+                print(f"El texto encontrado '{valor}' no coincide con el esperado '{expected_text}'")
+        else:
+            print(f"El valor encontrado no es un string: {valor}")
+    except TimeoutException:
+        print(f"Tiempo de espera agotado. El texto por texto no está presente.")
+
+def validate_strt(driver, expected_text, xpaht):
+    try:
+        elemento = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, xpaht))
+        )
+        valor = elemento.text
+        if isinstance(valor, str):
+            if valor == expected_text:
+                print(f"El texto encontrado es  {expected_text}")
+            else:
+                print(f"El texto encontrado '{valor}' no coincide con el esperado '{expected_text}'")
+        else:
+            print(f"El valor encontrado no es un string: {valor}")
+    except TimeoutException:
+        print(f"Tiempo de espera agotado. El texto por texto no está presente.")
+
+def validate_strt_selector(driver, expected_text, css_aelector):
+    try:
+        elemento = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, css_aelector))
+        )
+        valor = elemento.text
+        if isinstance(valor, str):
+            if valor == expected_text:
+                print(f"El texto encontrado es  {expected_text}")
+            else:
+                print(f"El texto encontrado '{valor}' no coincide con el esperado '{expected_text}'")
+        else:
+            print(f"El valor encontrado no es un string: {valor}")
+    except TimeoutException:
+        print(f"Tiempo de espera agotado. El texto por texto no está presente.")
+
+
+def validate_chart_value(driver, html_content, valor_esperado):
+    try:
+        soup = BeautifulSoup(html_content, 'html.parser')
+        data_value = soup.find('path')['data:value']
+        if data_value == valor_esperado:
+            print(f"El valor del gráfico es {valor_esperado}.")
+        else:
+            print(f"El valor del gráfico es {data_value}, pero se esperaba {valor_esperado}.")
+    except TimeoutException:
+        print("Tiempo de espera agotado.")
+    
 
 
 def validate_chain_text_xpaht(driver, xpath, expected_texts):

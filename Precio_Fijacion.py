@@ -1,7 +1,7 @@
 import unittest
 import xmlrunner
 import time
-from Elements import  click_icon_delete,displace_element,find_and_click_element, find_elements,find_send_element, hop_element,search_and_displace_account, select_option_click, validate_text
+from Elements import  click_icon_delete,displace_element,find_and_click_element,  find_elements,find_send_element,generate_and_send_number,search_and_displace_account, select_option_click, validate_text, verify_and_click
 from LoginSample import LoginSample
 from startSession import StartSession
 
@@ -38,11 +38,11 @@ class precio_granos_fijaciones(unittest.TestCase):
         validate_text(self.driver, title_pag_market, value_expected)
 
         self.driver.execute_script("window.scrollTo(0,600);")
-        time.sleep(4)
+        time.sleep(2)
 
         # borrar listado de disponible
 
-        delete_price_grain = "#layout-wrapper > div > div > div > app-market-main > app-grain-price > div:nth-child(2) > app-grain-price-table:nth-child(3) > div > div > table > tbody > tr:nth-child(1) > td.pt-3.padding-last-column > svg-icon > svg"
+        delete_price_grain = "#layout-wrapper > div > div > div > app-market-main > app-grain-price > div:nth-child(2) > app-grain-price-table:nth-child(3) > div > div > table > tbody > tr > td.pt-3.padding-last-column > svg-icon > svg"
         click_icon_delete(self.driver, delete_price_grain)
         time.sleep(2)
 
@@ -82,25 +82,29 @@ class precio_granos_fijaciones(unittest.TestCase):
         send_price = "3000"
         find_send_element(self.driver, insert_price, send_price )
 
-       # aplicar rango de fecha 01/10/2024 al 31/10/2024
-        select_date = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[3]/div/div/table/tbody/tr[1]/td[7]/app-date-picker/div/input[2]"
+       # seleccionar rango de fecha 02/12/2024 al 27/12/2024
+
+        select_date = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[3]/div/div/table/tbody/tr/td[7]/app-date-picker/div/input[2]"
         displace_element(self.driver, select_date)
 
         select_arrow = "/html/body/div[3]/div[1]/span[2]"
-        clicks = 6
+        clicks = 7
         find_and_click_element(self.driver, select_arrow, clicks)
 
-        insert_date1 = "/html/body/div[3]/div[2]/div/div[2]/div/span[2]"
+        insert_date1 = "/html/body/div[3]/div[2]/div/div[2]/div/span[8]"
         find_elements(self.driver, insert_date1)
         time.sleep(2)
 
-        insert_date2 = "/html/body/div[3]/div[2]/div/div[2]/div/span[32]"
+        insert_date2 = "/html/body/div[3]/div[2]/div/div[2]/div/span[33]"
         find_elements(self.driver, insert_date2)
         time.sleep(2)
 
         insert_amount1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[3]/div/div/table/tbody/tr[1]/td[8]/input"
         send_amount1 = "8000"
         find_send_element(self.driver, insert_amount1, send_amount1 )
+
+        insert_observation = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[3]/div/div/table/tbody/tr/td[9]/input'
+        number_generate = generate_and_send_number(self.driver, insert_observation)
 
 
         select_idea = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[3]/div/div/table/tbody/tr[1]/td[10]/input"
@@ -118,7 +122,7 @@ class precio_granos_fijaciones(unittest.TestCase):
         find_elements(self.driver, select_accept_post)
         time.sleep(2)
 
-        select_button_accept = "/html/body/div[2]/div/div[6]/button[1]"
+        select_button_accept = "/html/body/div[4]/div/div[6]/button[1]"
         find_elements(self.driver, select_button_accept)
         time.sleep(2)
 
@@ -133,8 +137,9 @@ class precio_granos_fijaciones(unittest.TestCase):
         self.driver.execute_script("window.scrollTo(0,600);")
         time.sleep(2)
 
-        select_icon_hand ='(//*[@id="Grupo_10473"])[2]'
-        find_elements(self.driver, select_icon_hand)
+        verify_number = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-view-main/app-grain-price-view/div[2]/app-grain-market-view-table[2]/div/div/div[2]/div[7]"
+        select_icon_hand = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-view-main/app-grain-price-view/div[2]/app-grain-market-view-table[2]/div/div/div[2]/div[9]/div'
+        verify_and_click(self.driver, number_generate, verify_number, select_icon_hand)
         time.sleep(2)
 
         located_element = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/div/div/div[2]/input"
@@ -153,7 +158,7 @@ class precio_granos_fijaciones(unittest.TestCase):
         time.sleep(2)
 
         insert_amount2 = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[3]/div/div[2]/div/div/input"
-        send_amount = "30"
+        send_amount = "1"
         find_send_element(self.driver, insert_amount2, send_amount )
 
         select_button_request = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[6]/app-button[2]/button"

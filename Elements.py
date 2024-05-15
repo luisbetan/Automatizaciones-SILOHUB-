@@ -1,7 +1,7 @@
 
 import datetime
 import time
-
+import random
 from bs4 import BeautifulSoup
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -399,6 +399,34 @@ def find_and_click_element_selector(driver, css_selector, clicks=1):
         print(f"¡Elemento encontrado y clickeado {clicks} veces con éxito!")
     except TimeoutException:
         print("Tiempo de espera agotado. El elemento no está presente o no es clickeable.")
+
+
+def find_duo_xpath_element(driver, xpath1, xpath2):
+    
+    element = None
+    
+    # Intenta encontrar el primer elemento por XPath
+    try:
+        element = element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, xpath1))
+        )
+        print("Elemento encontrado usando el primer XPath")
+    except NoSuchElementException:
+        print("Primer XPath no encontrado, intentando el segundo XPath")
+        try:
+            element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, xpath2))
+        )
+            print("Elemento encontrado usando el segundo XPath")
+        except NoSuchElementException:
+            print("Segundo XPath tampoco encontrado")
+    
+    # Haz clic en el elemento si fue encontrado
+    if element:
+        element.click()
+        return True
+    return False
+
 
 
 def click_checkbox(driver, checkbox_id):
@@ -1293,6 +1321,38 @@ def click_icon_delete(driver, css_selector):
             print("No se encontró el icono de borrar.")
             break
 
+def click_icon_delete_xpaht(driver, xpaht):
+    while True:
+        try:
+            icono_borrar = WebDriverWait(driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, xpaht)))
+            driver.execute_script("arguments[0].style.display = 'block';", icono_borrar)
+             
+            icono_borrar.click()
+            print("Se hizo clic en un icono de borrar.")
+        except TimeoutException:
+            print("No se encontraron más movimientos para borrar.")
+            break
+        except NoSuchElementException:
+            print("No se encontró el icono de borrar.")
+            break
+
+def click_icon_delete_id(driver, id):
+    while True:
+        try:
+            icono_borrar = WebDriverWait(driver, 10).until(
+            EC.visibility_of_element_located((By.ID, id)))
+            driver.execute_script("arguments[0].style.display = 'block';", icono_borrar)
+             
+            icono_borrar.click()
+            print("Se hizo clic en un icono de borrar.")
+        except TimeoutException:
+            print("No se encontraron más movimientos para borrar.")
+            break
+        except NoSuchElementException:
+            print("No se encontró el icono de borrar.")
+            break
+
 
 def seleccionar_ultimo_icono(driver, selector_iconos):
     WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.XPATH, selector_iconos)))
@@ -1396,3 +1456,59 @@ def  select_previous_day(driver, popup_xpath):
         print("Día de ayer seleccionado con éxito.")
     except:
         print("La fecha de ayer no está disponible en el calendario.")
+
+def generate_and_send_number(driver, xpath_input):
+   
+    # Genera un número aleatorio
+    random_number = random.randint(1000, 9999)
+    
+    # Encuentra el campo de entrada y envía el número
+    input_field = WebDriverWait(driver, 10).until(
+        EC.visibility_of_element_located((By.XPATH, xpath_input))
+    )
+    input_field.clear()  # Limpia el campo de entrada
+    input_field.send_keys(str(random_number))  # Envía el número como una cadena de texto
+    
+    # Espera un breve momento para permitir que la página procese la entrada
+    time.sleep(1)
+
+    return random_number
+
+def generate_and_number_sequential(driver, xpath_input):
+    
+    numero_secuencial = [0]  # Inicializa el contador dentro de una lista
+
+    def obtener_numero_secuencial():
+        numero_secuencial[0] += 1
+        return numero_secuencial[0]
+
+    # Encuentra el campo de entrada y envía el número secuencial
+    input_field = WebDriverWait(driver, 10).until(
+        EC.visibility_of_element_located((By.XPATH, xpath_input))
+    )
+    input_field.clear()  # Limpia el campo de entrada
+    input_field.send_keys(str(obtener_numero_secuencial()))  # Envía el número secuencial como una cadena de texto
+    
+    # Espera un breve momento para permitir que la página procese la entrada
+    time.sleep(1)
+
+    return numero_secuencial[0]
+
+
+def verify_and_click(driver, numero, xpath1, xpath2):
+    
+    # Verifica si el número está presente en el elemento
+    elemento = WebDriverWait(driver, 10).until(
+        EC.visibility_of_element_located((By.XPATH, xpath1))
+    )
+    if str(numero) in elemento.text:
+        # Si el número está presente, realiza la acción necesaria
+        # Por ejemplo, hacer clic en otro elemento
+        otro_elemento = WebDriverWait(driver, 10).until(
+        EC.visibility_of_element_located((By.XPATH, xpath2))
+    )
+        otro_elemento.click()
+        print(f"Se hizo clic en otro elemento porque el número {numero} está presente.")
+    else:
+        print(f"El número {numero} no está presente.")
+

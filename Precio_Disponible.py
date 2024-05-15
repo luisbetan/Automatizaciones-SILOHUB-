@@ -2,7 +2,7 @@ from telnetlib import EC
 import unittest
 import xmlrunner
 import time
-from Elements import  click_icon_delete,displace_element, find_and_click_element, find_elements, find_send_element, search_and_displace_account, seleccionar_ultimo_icono, select_option_click, validate_text
+from Elements import  click_icon_delete,displace_element, find_and_click_element, find_elements, find_elements_css_selector, find_elements_id, find_send_element, generate_and_send_number, search_and_displace_account, seleccionar_ultimo_icono, select_option_click, validate_text, verify_and_click
 from LoginSample import LoginSample
 from startSession import StartSession
 
@@ -93,19 +93,20 @@ class precio_granos(unittest.TestCase):
         clicks = 7
         find_and_click_element(self.driver, select_arrow, clicks)
 
-        insert_date1 = "/html/body/div[2]/div[2]/div/div[2]/div/span[8]"
+        insert_date1 = "/html/body/div[3]/div[2]/div/div[2]/div/span[8]"
         find_elements(self.driver, insert_date1)
-        time.sleep(2)
+      
 
-        insert_date2 = "/html/body/div[2]/div[2]/div/div[2]/div/span[33]"
-        find_elements(self.driver, insert_date2)
-        time.sleep(2)
+        insert_date2 = "div.flatpickr-calendar:nth-child(7) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span:nth-child(31)"
+        find_elements_css_selector(self.driver, insert_date2)
+        
 
         insert_amount1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[8]/input"
         send_amount1 = "8000"
         find_send_element(self.driver, insert_amount1, send_amount1 )
 
-
+        insert_observation = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[9]/input'
+        number_generate = generate_and_send_number(self.driver, insert_observation)
 
         select_idea = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[10]/input"
         find_elements(self.driver, select_idea)
@@ -129,14 +130,14 @@ class precio_granos(unittest.TestCase):
 
         select_market_home = "/html/body/app-root/app-layout/app-vertical/div/div/div/app-header-for-screen/div/div/span"
         find_elements(self.driver, select_market_home)
-        time.sleep(2)
+        time.sleep(4)
 
-        selector_iconos = "//div[@class='selector m-auto bg-primary']"
-        seleccionar_ultimo_icono(self.driver, selector_iconos)
+
+        verify_number = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-view-main/app-grain-price-view/div[2]/app-grain-market-view-table[1]/div/div/div[2]/div[7]/span"
+        select_icon_hand = '//*[@id="Grupo_10473"]'
+        verify_and_click(self.driver, number_generate, verify_number, select_icon_hand)
         
-        """select_icon_hand = "Grupo_10473"
-        find_elements_id(self.driver, select_icon_hand)
-        time.sleep(2)"""
+        
 
         located_element = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/div/div/div[2]/input"
         select_input = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[1]/span"

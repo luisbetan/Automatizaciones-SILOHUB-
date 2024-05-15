@@ -1495,20 +1495,31 @@ def generate_and_number_sequential(driver, xpath_input):
     return numero_secuencial[0]
 
 
-def verify_and_click(driver, numero, xpath1, xpath2):
-    
-    # Verifica si el número está presente en el elemento
-    elemento = WebDriverWait(driver, 10).until(
-        EC.visibility_of_element_located((By.XPATH, xpath1))
-    )
-    if str(numero) in elemento.text:
-        # Si el número está presente, realiza la acción necesaria
-        # Por ejemplo, hacer clic en otro elemento
-        otro_elemento = WebDriverWait(driver, 10).until(
-        EC.visibility_of_element_located((By.XPATH, xpath2))
-    )
-        otro_elemento.click()
-        print(f"Se hizo clic en otro elemento porque el número {numero} está presente.")
-    else:
-        print(f"El número {numero} no está presente.")
+def verify_and_click(driver, numero, xpath_para_clic):
+    try:
+        # Busca el elemento que contiene el número
+        elementos = WebDriverWait(driver, 10).until(
+            EC.visibility_of_all_elements_located((By.XPATH, "//*"))
+        )
 
+        # Busca el número como una cadena en el texto de los elementos
+        numero_str = str(numero)
+        elemento_encontrado = None
+        for elemento in elementos:
+            if numero_str in elemento.text:
+                elemento_encontrado = elemento
+                print(f"El número {numero_str} se encontró en el elemento: {elemento.text}")  # Imprimir el número encontrado
+                break
+
+        if elemento_encontrado:
+            # Si se encuentra el elemento, haz clic en el elemento proporcionado
+            otro_elemento = WebDriverWait(driver, 10).until(
+                EC.visibility_of_element_located((By.XPATH, xpath_para_clic))
+            )
+            otro_elemento.click()
+            print(f"Se hizo clic en otro elemento porque el número {numero_str} está presente.")
+        else:
+            print(f"El número {numero_str} no está presente.")
+
+    except TimeoutException:
+        print("Se ha agotado el tiempo de espera al buscar el elemento.")

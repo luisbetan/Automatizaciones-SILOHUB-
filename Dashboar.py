@@ -4,6 +4,7 @@ import xmlrunner
 import time
 from Elements import  calendar_todate, find_elements
 from Loginhelper import LoginHelper
+from SelectListDashboard import verify_text_and_click
 from startSession import StartSession
 
 
@@ -39,11 +40,11 @@ class dashboard_granos(unittest.TestCase):
         find_elements(self.driver,select_button_filter)
         time.sleep(2)
 
-        select_product1 = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-grain-container/div/app-grain-button[2]/div/img"
+        select_product1 = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-grain-container/div/app-grain-button[4]/div/img"
         find_elements(self.driver,select_product1)
         time.sleep(2)
 
-        select_product2 = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-grain-container/div/app-grain-button[4]/div/div"
+        select_product2 = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-grain-container/div/app-grain-button[6]/div/img"
         find_elements(self.driver,select_product2)
         time.sleep(2)
 
@@ -57,7 +58,11 @@ class dashboard_granos(unittest.TestCase):
         time.sleep(2)
 
         select_movements_list = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-grain-dashboard/app-grain-dashboard-list/app-responsive-table/div/div/table/tbody/tr[1]/td[1]"
-        find_elements(self.driver,select_movements_list)
+        validate_status = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-intentions-detail/app-responsive-table/div/div/table/tbody/tr/td[5]/span/span/div/div[1]"
+        select_dropdown_option = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-intentions-detail/app-responsive-table/div/div/table/tbody/tr/td[5]/span/span/div/div[2]/button/i"
+        select_option = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-intentions-detail/app-responsive-table/div/div/table/tbody/tr/td[5]/span/span/div/div[2]/div/a[1]"
+        select_go_to = "/html/body/app-root/app-layout/app-vertical/div/div/div/app-header-for-screen/div/div/div/a"
+        verify_text_and_click(self.driver,select_movements_list,validate_status,select_dropdown_option,select_option,select_go_to)
         time.sleep(2)
 
     def tearDown(self):

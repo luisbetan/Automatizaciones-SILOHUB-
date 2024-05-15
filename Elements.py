@@ -1,4 +1,5 @@
 
+import datetime
 import time
 
 from bs4 import BeautifulSoup
@@ -1297,3 +1298,99 @@ def seleccionar_ultimo_icono(driver, selector_iconos):
     
     ultimo_icono = iconos[-1]
     ultimo_icono.click()
+
+def ingresar_rango_fecha(xpath_calendario, driver):
+    # Obtener la fecha de hoy y la de ayer
+    hoy = datetime.date.today()
+    fecha_hoy = hoy.strftime("%d")
+
+    
+
+    # Encontrar el elemento de entrada de fecha por su XPath
+    calendario_element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located(( By.XPATH, xpath_calendario)))
+    driver.execute_script("arguments[0].style.display = 'block';",  calendario_element)
+    
+
+    calendario_element.click()
+
+    # Ingresar las fechas directamente en el campo de entrada
+    
+
+     # Encontrar el elemento que corresponde a la fecha actual y hacer clic en él
+    fecha_actual_element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH,"//td[@aria-label='Today']")))
+    fecha_actual_element.click()
+
+
+def delete_element(driver, xpaht):
+    try:
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH,xpaht)))
+        element.click()
+
+        element.send_keys(Keys.CONTROL, "a")
+
+        element.send_keys(Keys.BACKSPACE)
+
+        
+    except TimeoutException:
+            print("No se encontraron los datos para borrar.")
+
+
+
+def hop_element(driver, xpath):
+    try:
+        # Espera hasta que los elementos sean clickeables
+        elementos = WebDriverWait(driver, 10).until(
+            EC.presence_of_all_elements_located((By.XPATH, xpath))
+        )
+
+        # Haz clic en el segundo elemento si existe
+        if len(elementos) >= 2:
+            segundo_elemento = elementos[1]
+            segundo_elemento.click()
+            print("¡Elemento encontrado y clickeado con éxito!")
+        else:
+            print("No se encontraron suficientes elementos.")
+    except TimeoutException:
+        print("No se encontraron elementos o no fueron clickeables dentro del tiempo de espera.")
+
+def calendar_todate(driver, input_xpath, popup_xpath):
+    input_fecha = WebDriverWait(driver, 10).until(
+        EC.visibility_of_element_located((By.XPATH, input_xpath))
+    )
+    input_fecha.click()
+
+    # Esperar a que aparezca el pop-up del calendario
+    popup_calendario = WebDriverWait(driver, 10).until(
+        EC.visibility_of_element_located((By.XPATH, popup_xpath))
+    )
+
+    # Obtener la fecha actual
+    fecha_actual = datetime.datetime.now().strftime("%Y-%m-%d")
+
+    # Buscar el elemento de la fecha actual en el pop-up del calendario
+    try:
+        fecha_elemento = popup_calendario.find_element(By.XPATH, f"//span[contains(@class, 'flatpickr-day') and @aria-current='date']")
+        # Darle doble clic a la fecha
+        ActionChains(driver).move_to_element(fecha_elemento).double_click().perform()
+    except:
+        print("La fecha actual no está disponible en el calendario.")
+
+def  select_previous_day(driver, popup_xpath):
+    # Esperar a que aparezca el pop-up del calendario
+    popup_calendario = WebDriverWait(driver, 10).until(
+        EC.visibility_of_element_located((By.XPATH, popup_xpath))
+    )
+
+    # Obtener la fecha de ayer en el formato que coincide con el calendario
+    fecha_ayer = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime("%d-%m-%Y")
+
+    # Buscar el elemento del día de ayer en el pop-up del calendario y hacer clic
+    try:
+        fecha_elemento_ayer = popup_calendario.find_element(By.XPATH, f"//span[contains(@class, 'flatpickr-day') and @aria-label='{fecha_ayer}']")
+        fecha_elemento_ayer.click()
+        print("Día de ayer seleccionado con éxito.")
+    except:
+        print("La fecha de ayer no está disponible en el calendario.")

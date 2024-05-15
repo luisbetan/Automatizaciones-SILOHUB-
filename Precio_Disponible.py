@@ -84,18 +84,20 @@ class precio_granos(unittest.TestCase):
         send_price = "3000"
         find_send_element(self.driver, insert_price, send_price )
 
+       # seleccionar rango de fecha 02/12/2024 al 27/12/2024
+
         select_date = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[7]/app-date-picker/div/input[2]"
         displace_element(self.driver, select_date)
 
-        select_arrow = "/html/body/div[2]/div[1]/span[2]"
-        clicks = 1
+        select_arrow = "/html/body/div[3]/div[1]/span[2]"
+        clicks = 7
         find_and_click_element(self.driver, select_arrow, clicks)
 
-        insert_date1 = "/html/body/div[2]/div[2]/div/div[2]/div/span[18]"
+        insert_date1 = "/html/body/div[2]/div[2]/div/div[2]/div/span[8]"
         find_elements(self.driver, insert_date1)
         time.sleep(2)
 
-        insert_date2 = "/html/body/div[2]/div[2]/div/div[2]/div/span[27]"
+        insert_date2 = "/html/body/div[2]/div[2]/div/div[2]/div/span[33]"
         find_elements(self.driver, insert_date2)
         time.sleep(2)
 
@@ -113,11 +115,11 @@ class precio_granos(unittest.TestCase):
         find_elements(self.driver, select_post)
         time.sleep(2)
 
-        select_accept_post = "/html/body/div[3]/div/div[6]/button[3]"
+        select_accept_post = "/html/body/div[4]/div/div[6]/button[3]"
         find_elements(self.driver, select_accept_post)
         time.sleep(2)
 
-        select_button_accept = "/html/body/div[2]/div/div[6]/button[1]"
+        select_button_accept = "/html/body/div[4]/div/div[6]/button[1]"
         find_elements(self.driver, select_button_accept)
         time.sleep(2)
 

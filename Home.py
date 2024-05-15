@@ -1,11 +1,12 @@
 
 import time
 import unittest
+from selenium.webdriver.common.by import By
 import xmlrunner
-from Elements import validate_character_numeric_element, validate_text
+from Elements import find_elements, validate_character_numeric_element, validate_image_css_selector, validate_image_xpaht, validate_text
 from Loginhelper import LoginHelper
 from startSession import StartSession
-
+"""from ListReport import register_validation_results"""
 
 class HomeTenant(unittest.TestCase):
     def setUp(self):
@@ -20,8 +21,9 @@ class HomeTenant(unittest.TestCase):
         self.login_helper.login("admingd@silohub.ag", "G@viglio123")
         self.login_helper.select_tenant()
         self.login_helper.search_and_select_account("1023")
-        time.sleep(6)
+        time.sleep(5)
 
+        
        
        ## validar si el texto es visible para el usuario 
         page_hello = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/app-welcome-home/div/div[1]/div/p'
@@ -75,6 +77,8 @@ class HomeTenant(unittest.TestCase):
 
         element4 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div/swiper/div/div[1]/div[4]/app-number-values-card/div/div/div/div[3]/div/h4/span'
         validate_character_numeric_element(self.driver, element4  )
+
+        
 
       
      

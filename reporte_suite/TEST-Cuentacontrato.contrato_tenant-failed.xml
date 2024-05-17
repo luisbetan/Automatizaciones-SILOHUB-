@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cuentacontrato.contrato_tenant-failed" tests="1" file="Cuentacontrato.py" time="144.235" timestamp="2024-05-17T11:47:24" failures="0" errors="1" skipped="0">
+	<testcase classname="Cuentacontrato.contrato_tenant" name="test_contrato_tenant" time="144.235" timestamp="2024-05-17T11:47:24" file="Cuentacontrato.py" line="22">
+		<error type="ElementClickInterceptedException" message="Message: element click intercepted: Element &lt;div _ngcontent-eju-c201=&quot;&quot; class=&quot;truncate-text&quot;&gt;...&lt;/div&gt; is not clickable at point (521, 440). Other element would receive the click: &lt;ngb-offcanvas-backdrop class=&quot;offcanvas-backdrop fade show&quot;&gt;&lt;/ngb-offcanvas-backdrop&gt;
+  (Session info: chrome=125.0.6422.60)
+Stacktrace:
+	GetHandleVerifier [0x00007FF626B422C2+60002]
+	(No symbol) [0x00007FF626ABCA59]
+	(No symbol) [0x00007FF626977EDA]
+	(No symbol) [0x00007FF6269CF39E]
+	(No symbol) [0x00007FF6269CCD62]
+	(No symbol) [0x00007FF6269CA1FB]
+	(No symbol) [0x00007FF6269C93C6]
+	(No symbol) [0x00007FF6269BB4D1]
+	(No symbol) [0x00007FF6269EC28A]
+	(No symbol) [0x00007FF6269BADF6]
+	(No symbol) [0x00007FF6269EC4A0]
+	(No symbol) [0x00007FF626A0BCC7]
+	(No symbol) [0x00007FF6269EC033]
+	(No symbol) [0x00007FF6269B9657]
+	(No symbol) [0x00007FF6269BA251]
+	GetHandleVerifier [0x00007FF626E53E2D+3278285]
+	GetHandleVerifier [0x00007FF626EA0190+3590448]
+	GetHandleVerifier [0x00007FF626E961D0+3549552]
+	GetHandleVerifier [0x00007FF626BF1DE6+779654]
+	(No symbol) [0x00007FF626AC7ACF]
+	(No symbol) [0x00007FF626AC2EE4]
+	(No symbol) [0x00007FF626AC3072]
+	(No symbol) [0x00007FF626AB2C4F]
+	BaseThreadInitThunk [0x00007FFAAEB4257D+29]
+	RtlUserThreadStart [0x00007FFAAFA8AA48+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Cuentacontrato.py", line 88, in test_contrato_tenant
+    find_elements(self.driver, selet_list_contract )
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 22, in find_elements
+    select_nex_button.click()
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <div _ngcontent-eju-c201="" class="truncate-text">...</div> is not clickable at point (521, 440). Other element would receive the click: <ngb-offcanvas-backdrop class="offcanvas-backdrop fade show"></ngb-offcanvas-backdrop>
+  (Session info: chrome=125.0.6422.60)
+Stacktrace:
+	GetHandleVerifier [0x00007FF626B422C2+60002]
+	(No symbol) [0x00007FF626ABCA59]
+	(No symbol) [0x00007FF626977EDA]
+	(No symbol) [0x00007FF6269CF39E]
+	(No symbol) [0x00007FF6269CCD62]
+	(No symbol) [0x00007FF6269CA1FB]
+	(No symbol) [0x00007FF6269C93C6]
+	(No symbol) [0x00007FF6269BB4D1]
+	(No symbol) [0x00007FF6269EC28A]
+	(No symbol) [0x00007FF6269BADF6]
+	(No symbol) [0x00007FF6269EC4A0]
+	(No symbol) [0x00007FF626A0BCC7]
+	(No symbol) [0x00007FF6269EC033]
+	(No symbol) [0x00007FF6269B9657]
+	(No symbol) [0x00007FF6269BA251]
+	GetHandleVerifier [0x00007FF626E53E2D+3278285]
+	GetHandleVerifier [0x00007FF626EA0190+3590448]
+	GetHandleVerifier [0x00007FF626E961D0+3549552]
+	GetHandleVerifier [0x00007FF626BF1DE6+779654]
+	(No symbol) [0x00007FF626AC7ACF]
+	(No symbol) [0x00007FF626AC2EE4]
+	(No symbol) [0x00007FF626AC3072]
+	(No symbol) [0x00007FF626AB2C4F]
+	BaseThreadInitThunk [0x00007FFAAEB4257D+29]
+	RtlUserThreadStart [0x00007FFAAFA8AA48+40]
+
+]]></error>
+		<system-out><![CDATA[Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+El texto encontrado es  Estado De Mis Contratos
+]]></system-out>
+	</testcase>
+</testsuite>

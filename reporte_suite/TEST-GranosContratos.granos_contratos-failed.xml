@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="GranosContratos.granos_contratos-failed" tests="1" file="GranosContratos.py" time="34.069" timestamp="2024-05-17T11:43:48" failures="0" errors="1" skipped="0">
+	<testcase classname="GranosContratos.granos_contratos" name="test_granos_contratos" time="34.069" timestamp="2024-05-17T11:43:48" file="GranosContratos.py" line="23">
+		<error type="ElementClickInterceptedException" message="Message: element click intercepted: Element &lt;input class=&quot; form-control input-calendar input-date-picker flatpickr-input input-calendar-white ng-untouched ng-pristine ng-valid&quot; placeholder=&quot;-&quot; tabindex=&quot;0&quot; type=&quot;text&quot; readonly=&quot;readonly&quot;&gt; is not clickable at point (1269, 53). Other element would receive the click: &lt;div _ngcontent-pai-c132=&quot;&quot; class=&quot;navbar-header&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=125.0.6422.60)
+Stacktrace:
+	GetHandleVerifier [0x00007FF626B422C2+60002]
+	(No symbol) [0x00007FF626ABCA59]
+	(No symbol) [0x00007FF626977EDA]
+	(No symbol) [0x00007FF6269CF39E]
+	(No symbol) [0x00007FF6269CCD62]
+	(No symbol) [0x00007FF6269CA1FB]
+	(No symbol) [0x00007FF6269C93C6]
+	(No symbol) [0x00007FF6269BB4D1]
+	(No symbol) [0x00007FF6269EC28A]
+	(No symbol) [0x00007FF6269BADF6]
+	(No symbol) [0x00007FF6269EC4A0]
+	(No symbol) [0x00007FF626A0BCC7]
+	(No symbol) [0x00007FF6269EC033]
+	(No symbol) [0x00007FF6269B9657]
+	(No symbol) [0x00007FF6269BA251]
+	GetHandleVerifier [0x00007FF626E53E2D+3278285]
+	GetHandleVerifier [0x00007FF626EA0190+3590448]
+	GetHandleVerifier [0x00007FF626E961D0+3549552]
+	GetHandleVerifier [0x00007FF626BF1DE6+779654]
+	(No symbol) [0x00007FF626AC7ACF]
+	(No symbol) [0x00007FF626AC2EE4]
+	(No symbol) [0x00007FF626AC3072]
+	(No symbol) [0x00007FF626AB2C4F]
+	BaseThreadInitThunk [0x00007FFAAEB4257D+29]
+	RtlUserThreadStart [0x00007FFAAFA8AA48+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\GranosContratos.py", line 135, in test_granos_contratos
+    displace_element(self.driver, select_date)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 531, in displace_element
+    search_input_element.click()
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input class=" form-control input-calendar input-date-picker flatpickr-input input-calendar-white ng-untouched ng-pristine ng-valid" placeholder="-" tabindex="0" type="text" readonly="readonly"> is not clickable at point (1269, 53). Other element would receive the click: <div _ngcontent-pai-c132="" class="navbar-header">...</div>
+  (Session info: chrome=125.0.6422.60)
+Stacktrace:
+	GetHandleVerifier [0x00007FF626B422C2+60002]
+	(No symbol) [0x00007FF626ABCA59]
+	(No symbol) [0x00007FF626977EDA]
+	(No symbol) [0x00007FF6269CF39E]
+	(No symbol) [0x00007FF6269CCD62]
+	(No symbol) [0x00007FF6269CA1FB]
+	(No symbol) [0x00007FF6269C93C6]
+	(No symbol) [0x00007FF6269BB4D1]
+	(No symbol) [0x00007FF6269EC28A]
+	(No symbol) [0x00007FF6269BADF6]
+	(No symbol) [0x00007FF6269EC4A0]
+	(No symbol) [0x00007FF626A0BCC7]
+	(No symbol) [0x00007FF6269EC033]
+	(No symbol) [0x00007FF6269B9657]
+	(No symbol) [0x00007FF6269BA251]
+	GetHandleVerifier [0x00007FF626E53E2D+3278285]
+	GetHandleVerifier [0x00007FF626EA0190+3590448]
+	GetHandleVerifier [0x00007FF626E961D0+3549552]
+	GetHandleVerifier [0x00007FF626BF1DE6+779654]
+	(No symbol) [0x00007FF626AC7ACF]
+	(No symbol) [0x00007FF626AC2EE4]
+	(No symbol) [0x00007FF626AC3072]
+	(No symbol) [0x00007FF626AB2C4F]
+	BaseThreadInitThunk [0x00007FFAAEB4257D+29]
+	RtlUserThreadStart [0x00007FFAAFA8AA48+40]
+
+]]></error>
+		<system-out><![CDATA[El texto encontrado es  CONTRATOS
+¡Cuenta encontrada y seleccionada 1023  con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+¡Elemento encontrado y clickeado 1 veces con éxito!
+]]></system-out>
+	</testcase>
+</testsuite>

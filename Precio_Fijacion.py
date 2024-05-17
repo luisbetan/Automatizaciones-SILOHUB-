@@ -138,8 +138,8 @@ class precio_granos_fijaciones(unittest.TestCase):
         time.sleep(2)
 
         
-        select_icon_hand = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-view-main/app-grain-price-view/div[2]/app-grain-market-view-table[2]/div/div/div[2]/div[9]/div/svg-icon/svg'
-        verify_and_click(self.driver, number_generate, select_icon_hand)
+        
+        verify_and_click(self.driver, number_generate)
         time.sleep(2)
 
         located_element = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/div/div/div[2]/input"

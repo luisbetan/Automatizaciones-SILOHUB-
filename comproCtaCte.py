@@ -5,7 +5,7 @@ from Elements import displace_element, find_and_click_element, find_elements, fi
 from Loginhelper import LoginHelper
 from startSession import StartSession
 
-class comprobanteCtacte(unittest.TestCase):
+class comprobantectacte(unittest.TestCase):
     def setUp(self):
         self.start_session = StartSession()
         self.driver = self.start_session.driver
@@ -134,7 +134,7 @@ class comprobanteCtacte(unittest.TestCase):
 
 
 if __name__ == "__main__":
-  test_suite = unittest.TestLoader().loadTestsFromTestCase(comprobanteCtacte)
+  test_suite = unittest.TestLoader().loadTestsFromTestCase(comprobantectacte)
   runner = xmlrunner.XMLTestRunner(output='reportComprobCtacte')
   runner.run(test_suite)
         

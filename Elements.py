@@ -1495,31 +1495,43 @@ def generate_and_number_sequential(driver, xpath_input):
     return numero_secuencial[0]
 
 
-def verify_and_click(driver, numero, xpath_para_clic):
-    try:
-        # Busca el elemento que contiene el número
-        elementos = WebDriverWait(driver, 10).until(
-            EC.visibility_of_all_elements_located((By.XPATH, "//*"))
-        )
+def verify_and_click(driver, number):
+    # Imprimir el número que se va a buscar
+    print(f"Buscando el número: {number}")
+    
+    # Buscar el texto con el número generado en la página
+    result_xpath = f"//*[contains(text(), '{number}')]"
+    result_element = WebDriverWait(driver, 30).until(
+        EC.presence_of_element_located((By.XPATH, result_xpath))
+    )
+    
+    # Imprimir que el elemento ha sido localizado
+    print(f"Elemento localizado para el número: {number}")
+    
+    # Desplazarse hasta el elemento
+    driver.execute_script("arguments[0].scrollIntoView(true);", result_element)
+    
+    # Esperar un breve momento para asegurar que el elemento es interactuable
+    time.sleep(1)
+    
+    # Desplazar 200 píxeles hacia la derecha
+    scroll_script = "window.scrollBy(200, 0);"
+    driver.execute_script(scroll_script)
+    
+    # Encontrar la fila a la que pertenece el número
+    row_element = result_element.find_element(By.XPATH, "./ancestor::tr")
+    
+    # Dentro de esa fila, encontrar el elemento con el ID 'Grupo_10473'
+    target_element = row_element.find_element(By.ID, "Grupo_10473")
+    
+    # Esperar a que el elemento esté clicleable
+    wait = WebDriverWait(driver, 10)
+    clickable_element = wait.until(EC.element_to_be_clickable((By.ID, "Grupo_10473")))
+    
+    # Hacer clic en el elemento
+    clickable_element.click()
 
-        # Busca el número como una cadena en el texto de los elementos
-        numero_str = str(numero)
-        elemento_encontrado = None
-        for elemento in elementos:
-            if numero_str in elemento.text:
-                elemento_encontrado = elemento
-                print(f"El número {numero_str} se encontró en el elemento: {elemento.text}")  # Imprimir el número encontrado
-                break
-
-        if elemento_encontrado:
-            # Si se encuentra el elemento, haz clic en el elemento proporcionado
-            otro_elemento = WebDriverWait(driver, 10).until(
-                EC.visibility_of_element_located((By.XPATH, xpath_para_clic))
-            )
-            otro_elemento.click()
-            print(f"Se hizo clic en otro elemento porque el número {numero_str} está presente.")
-        else:
-            print(f"El número {numero_str} no está presente.")
-
-    except TimeoutException:
-        print("Se ha agotado el tiempo de espera al buscar el elemento.")
+    # Imprimir que el clic ha sido realizado
+    print(f"Clic realizado en el elemento con ID: Grupo_10473")
+    
+   

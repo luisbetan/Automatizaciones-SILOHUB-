@@ -128,23 +128,24 @@ class granos_contratos(unittest.TestCase):
         time.sleep(2)
 
         self.driver.execute_script("window.scrollTo(0, 0);")
+        time.sleep(2)
    
-        # seleccionar la fecha desde
+        # seleccionar la fecha desde 01/11/2024 al 30/11/2024
 
         select_date = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[2]/div[2]/div/div[1]/div[2]/app-date-picker/div/input[2]"
         displace_element(self.driver, select_date)
         time.sleep(2)
 
-        select_arrow2 = "/html/body/div[4]/div[1]/span[2]"
-        clicks = 1
+        select_arrow2 = "/html/body/div[5]/div[1]/span[2]"
+        clicks = 6
         find_and_click_element(self.driver, select_arrow2, clicks) 
         time.sleep(2)
 
-        select_calendar1 = "/html/body/div[4]/div[2]/div/div[2]/div/span[4]"
+        select_calendar1 = "/html/body/div[5]/div[2]/div/div[2]/div/span[5]"
         find_elements(self.driver, select_calendar1)
         time.sleep(1)
 
-        select_calendar2 = "/html/body/div[4]/div[2]/div/div[2]/div/span[32]"
+        select_calendar2 = "/html/body/div[5]/div[2]/div/div[2]/div/span[34]"
         find_elements(self.driver, select_calendar2)
         time.sleep(2)
 
@@ -211,7 +212,7 @@ class granos_contratos(unittest.TestCase):
         find_elements(self.driver, select_button_continue)
         time.sleep(2)
 
-        select_button_confirm = "/html/body/div[5]/div/div[6]/button[3]"
+        select_button_confirm = "/html/body/div[6]/div/div[6]/button[3]"
         find_elements(self.driver, select_button_confirm)
         time.sleep(2)
 
@@ -223,7 +224,7 @@ class granos_contratos(unittest.TestCase):
         validate_text(self.driver, element_text_8, text_expected_8 )
         time.sleep(2)
 
-        select_finish = "/html/body/div/div/div[6]/button[1]"
+        select_finish = "/html/body/div[6]/div/div[6]/button[1]"
         find_elements(self.driver, select_finish)
         time.sleep(3)
 

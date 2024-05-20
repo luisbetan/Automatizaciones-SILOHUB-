@@ -1494,44 +1494,44 @@ def generate_and_number_sequential(driver, xpath_input):
 
     return numero_secuencial[0]
 
+def highlight_element(driver, element):
+    """Esta función resalta un elemento en la página web."""
+    driver.execute_script("arguments[0].style.border='3px solid red'", element)
 
-def verify_and_click(driver, number):
-    # Imprimir el número que se va a buscar
+
+def verify_and_click(driver, number ):
+
+   # Localizar el elemento que contiene el número específico
     print(f"Buscando el número: {number}")
-    
-    # Buscar el texto con el número generado en la página
-    result_xpath = f"//*[contains(text(), '{number}')]"
-    result_element = WebDriverWait(driver, 30).until(
-        EC.presence_of_element_located((By.XPATH, result_xpath))
+    numero_elemento = WebDriverWait(driver, 30).until(
+        EC.presence_of_element_located((By.XPATH, f"//*[contains(text(), '{number}')]"))
     )
     
     # Imprimir que el elemento ha sido localizado
     print(f"Elemento localizado para el número: {number}")
     
-    # Desplazarse hasta el elemento
-    driver.execute_script("arguments[0].scrollIntoView(true);", result_element)
+    # Resaltar el elemento que contiene el número
+    highlight_element(driver, numero_elemento)
+    time.sleep(1)  # Pausar para ver la resaltación
     
-    # Esperar un breve momento para asegurar que el elemento es interactuable
-    time.sleep(1)
+    # Obtener el contenedor principal del elemento de referencia
+    contenedor_principal = numero_elemento.find_element(By.XPATH, "./ancestor::div[contains(@class, 'class_del_contenedor_principal')]")
     
-    # Desplazar 200 píxeles hacia la derecha
-    scroll_script = "window.scrollBy(200, 0);"
-    driver.execute_script(scroll_script)
+    # Obtener los elementos hermanos del contenedor principal
+    elementos_hermanos = contenedor_principal.find_elements(By.XPATH, "./following-sibling::*")
     
-    # Encontrar la fila a la que pertenece el número
-    row_element = result_element.find_element(By.XPATH, "./ancestor::tr")
-    
-    # Dentro de esa fila, encontrar el elemento con el ID 'Grupo_10473'
-    target_element = row_element.find_element(By.ID, "Grupo_10473")
-    
-    # Esperar a que el elemento esté clicleable
-    wait = WebDriverWait(driver, 10)
-    clickable_element = wait.until(EC.element_to_be_clickable((By.ID, "Grupo_10473")))
-    
-    # Hacer clic en el elemento
-    clickable_element.click()
-
-    # Imprimir que el clic ha sido realizado
-    print(f"Clic realizado en el elemento con ID: Grupo_10473")
-    
-   
+    # Verificar si hay suficientes elementos hermanos
+    if len(elementos_hermanos) >= 3:
+        # Marcar los tres elementos
+        for i in range(3):
+            highlight_element(driver, elementos_hermanos[i])
+            time.sleep(1)  # Pausar para ver la resaltación
+        
+        # Hacer clic en el tercer elemento
+        elemento_objetivo = elementos_hermanos[2]
+        elemento_objetivo.click()
+        
+        # Imprimir que el clic ha sido realizado
+        print("Clic realizado en el tercer elemento a la derecha del número especificado")
+    else:
+        print("No hay suficientes elementos hermanos a la derecha del número especificado")

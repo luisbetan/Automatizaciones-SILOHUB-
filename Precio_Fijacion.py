@@ -1,7 +1,7 @@
 import unittest
 import xmlrunner
 import time
-from Elements import  click_icon_delete,displace_element,find_and_click_element,  find_elements,find_send_element,generate_and_send_number,search_and_displace_account, select_option_click, validate_text, verify_and_click
+from Elements import  click_icon_delete,displace_element,find_and_click_element,  find_elements, find_elements_css_selector,find_send_element,generate_and_send_number,search_and_displace_account, select_option_click, validate_text, verify_and_click
 from LoginSample import LoginSample
 from startSession import StartSession
 
@@ -29,7 +29,7 @@ class precio_granos_fijaciones(unittest.TestCase):
 
         select_price_grain = "/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[2]/div[1]/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[3]/div/ul/li[3]/a"
         find_elements(self.driver,select_price_grain)
-        time.sleep(2)
+        time.sleep(5)
 
         # validar titulo de la pantalla
         
@@ -51,7 +51,7 @@ class precio_granos_fijaciones(unittest.TestCase):
 
         available = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[3]/div/app-grain-price-table-header/div/div[2]/app-add-and-clean/div/div[1]/app-button/button"
         find_elements(self.driver,available)
-
+        time.sleep(2)
         
 
         switch_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[3]/div/div/table/tbody/tr[1]/td[1]/app-switch/div/input"
@@ -138,8 +138,8 @@ class precio_granos_fijaciones(unittest.TestCase):
         time.sleep(2)
 
         
-       
-        verify_and_click(self.driver, number_generate)
+        button_hand = "#Grupo_10473"
+        find_elements_css_selector(self.driver,button_hand)
         time.sleep(2)
 
         located_element = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/div/div/div[2]/input"

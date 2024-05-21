@@ -58,11 +58,17 @@ class dashboard_granos(unittest.TestCase):
         time.sleep(2)
 
         select_movements_list = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-grain-dashboard/app-grain-dashboard-list/app-responsive-table/div/div/table/tbody/tr[1]/td[1]"
-        validate_status = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-intentions-detail/app-responsive-table/div/div/table/tbody/tr/td[5]/span/span/div/div[1]"
-        select_dropdown_option = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-intentions-detail/app-responsive-table/div/div/table/tbody/tr/td[5]/span/span/div/div[2]/button/i"
-        select_option = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-intentions-detail/app-responsive-table/div/div/table/tbody/tr/td[5]/span/span/div/div[2]/div/a[1]"
-        select_go_to = "/html/body/app-root/app-layout/app-vertical/div/div/div/app-header-for-screen/div/div/div/a"
-        verify_text_and_click(self.driver,select_movements_list,validate_status,select_dropdown_option,select_option,select_go_to)
+        validate_status1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-intentions-detail/app-responsive-table/div/div/table/tbody/tr/td[5]/span/span/div/div[1]"
+        select_dropdown_option1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-intentions-detail/app-responsive-table/div/div/table/tbody/tr/td[5]/span/span/div/div[2]/button/i"
+        select_option1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-intentions-detail/app-responsive-table/div/div/table/tbody/tr/td[5]/span/span/div/div[2]/div/a[1]"
+        validate_status2 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-intentions-detail/app-responsive-table/div/div/table/tbody/tr[2]/td[5]/span/span/div/div[1]"
+        select_dropdown_option2 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-intentions-detail/app-responsive-table/div/div/table/tbody/tr[2]/td[5]/span/span/div/div[2]/button/i"
+        select_option2 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-intentions-detail/app-responsive-table/div/div/table/tbody/tr[2]/td[5]/span/span/div/div[2]/div/a[1]"
+        validate_status3 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-intentions-detail/app-responsive-table/div/div/table/tbody/tr[3]/td[5]/span/span/div/div[1]"
+        select_dropdown_option3 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-intentions-detail/app-responsive-table/div/div/table/tbody/tr[3]/td[5]/span/span/div/div[2]/button/i"
+        select_option3 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-intentions-detail/app-responsive-table/div/div/table/tbody/tr[3]/td[5]/span/span/div/div[2]/div/a[1]"
+        select_go_to1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/app-header-for-screen/div/div/div/a"
+        verify_text_and_click(self.driver, select_movements_list, validate_status1, select_dropdown_option1, select_option1, validate_status2, select_dropdown_option2, select_option2, validate_status3, select_dropdown_option3, select_option3, select_go_to1)
         time.sleep(2)
 
     def tearDown(self):

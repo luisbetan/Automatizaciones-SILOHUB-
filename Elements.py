@@ -1494,44 +1494,40 @@ def generate_and_number_sequential(driver, xpath_input):
 
     return numero_secuencial[0]
 
-def highlight_element(driver, element):
-    """Esta función resalta un elemento en la página web."""
-    driver.execute_script("arguments[0].style.border='3px solid red'", element)
 
 
-def verify_and_click(driver, number ):
+def verify_and_click(driver, number, target_xpath):
+    try:
+        # Localizar el elemento que contiene el número específico
+        print(f"Buscando el número: {number}")
+        numero_elemento = WebDriverWait(driver, 30).until(
+            EC.presence_of_element_located((By.XPATH, f"//*[contains(text(), '{number}')]"))
+        )
 
-   # Localizar el elemento que contiene el número específico
-    print(f"Buscando el número: {number}")
-    numero_elemento = WebDriverWait(driver, 30).until(
-        EC.presence_of_element_located((By.XPATH, f"//*[contains(text(), '{number}')]"))
-    )
-    
-    # Imprimir que el elemento ha sido localizado
-    print(f"Elemento localizado para el número: {number}")
-    
-    # Resaltar el elemento que contiene el número
-    highlight_element(driver, numero_elemento)
-    time.sleep(1)  # Pausar para ver la resaltación
-    
-    # Obtener el contenedor principal del elemento de referencia
-    contenedor_principal = numero_elemento.find_element(By.XPATH, "./ancestor::div[contains(@class, 'class_del_contenedor_principal')]")
-    
-    # Obtener los elementos hermanos del contenedor principal
-    elementos_hermanos = contenedor_principal.find_elements(By.XPATH, "./following-sibling::*")
-    
-    # Verificar si hay suficientes elementos hermanos
-    if len(elementos_hermanos) >= 3:
-        # Marcar los tres elementos
-        for i in range(3):
-            highlight_element(driver, elementos_hermanos[i])
-            time.sleep(1)  # Pausar para ver la resaltación
+        # Imprimir que el elemento ha sido localizado y el valor encontrado
+        encontrado = numero_elemento.text
+        print(f"Elemento localizado para el número: {encontrado}")
+
+        # Validar si el número encontrado es el número deseado
+      
+        for encontrado  in number:
+              print(f"El número {number} ha sido validado correctamente")
+
+            # Buscar el elemento objetivo usando el XPath proporcionado
+        print(f"Buscando el elemento objetivo con XPath: {target_xpath}")
+        objetivo_elemento = WebDriverWait(driver, 30).until(
+                EC.presence_of_element_located((By.XPATH, target_xpath))
+            )
+
+            # Imprimir que el elemento objetivo ha sido localizado
+        print("Elemento objetivo localizado")
+
+            # Hacer clic en el elemento objetivo
+        objetivo_elemento.click()
+
+            # Imprimir que el clic ha sido realizado
+        print("Clic realizado en el elemento objetivo")
         
-        # Hacer clic en el tercer elemento
-        elemento_objetivo = elementos_hermanos[2]
-        elemento_objetivo.click()
-        
-        # Imprimir que el clic ha sido realizado
-        print("Clic realizado en el tercer elemento a la derecha del número especificado")
-    else:
-        print("No hay suficientes elementos hermanos a la derecha del número especificado")
+        print(f"El número encontrado ({encontrado}) no coincide con el número deseado ({number})")
+    except Exception as e:
+        print(f"Se produjo un error: {e}")

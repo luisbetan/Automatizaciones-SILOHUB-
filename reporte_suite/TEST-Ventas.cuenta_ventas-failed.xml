@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Ventas.cuenta_ventas-failed" tests="1" file="Ventas.py" time="264.422" timestamp="2024-05-24T11:37:51" failures="0" errors="1" skipped="0">
+	<testcase classname="Ventas.cuenta_ventas" name="test_cuenta_ventas" time="264.422" timestamp="2024-05-24T11:37:51" file="Ventas.py" line="22">
+		<error type="NoSuchElementException" message="Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-sales/div[1]/app-header-for-detail/div[1]/div&quot;}
+  (Session info: chrome=125.0.6422.112); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6156F1F22+60322]
+	(No symbol) [0x00007FF61566CE99]
+	(No symbol) [0x00007FF615527EBA]
+	(No symbol) [0x00007FF615577676]
+	(No symbol) [0x00007FF61557773C]
+	(No symbol) [0x00007FF6155BE967]
+	(No symbol) [0x00007FF61559C25F]
+	(No symbol) [0x00007FF6155BBC80]
+	(No symbol) [0x00007FF61559BFC3]
+	(No symbol) [0x00007FF615569617]
+	(No symbol) [0x00007FF61556A211]
+	GetHandleVerifier [0x00007FF615A0946D+3301613]
+	GetHandleVerifier [0x00007FF615A53693+3605267]
+	GetHandleVerifier [0x00007FF615A49410+3563664]
+	GetHandleVerifier [0x00007FF6157A42F6+790390]
+	(No symbol) [0x00007FF6156774DF]
+	(No symbol) [0x00007FF6156733D4]
+	(No symbol) [0x00007FF615673562]
+	(No symbol) [0x00007FF615662F6F]
+	BaseThreadInitThunk [0x00007FFFE64E257D+29]
+	RtlUserThreadStart [0x00007FFFE792AA48+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Ventas.py", line 129, in test_cuenta_ventas
+    validate_text_visible(self.driver, number_sale, number_sale_expected )
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1136, in validate_text_visible
+    element = driver.find_element(By.XPATH, xpath)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-sales/div[1]/app-header-for-detail/div[1]/div"}
+  (Session info: chrome=125.0.6422.112); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6156F1F22+60322]
+	(No symbol) [0x00007FF61566CE99]
+	(No symbol) [0x00007FF615527EBA]
+	(No symbol) [0x00007FF615577676]
+	(No symbol) [0x00007FF61557773C]
+	(No symbol) [0x00007FF6155BE967]
+	(No symbol) [0x00007FF61559C25F]
+	(No symbol) [0x00007FF6155BBC80]
+	(No symbol) [0x00007FF61559BFC3]
+	(No symbol) [0x00007FF615569617]
+	(No symbol) [0x00007FF61556A211]
+	GetHandleVerifier [0x00007FF615A0946D+3301613]
+	GetHandleVerifier [0x00007FF615A53693+3605267]
+	GetHandleVerifier [0x00007FF615A49410+3563664]
+	GetHandleVerifier [0x00007FF6157A42F6+790390]
+	(No symbol) [0x00007FF6156774DF]
+	(No symbol) [0x00007FF6156733D4]
+	(No symbol) [0x00007FF615673562]
+	(No symbol) [0x00007FF615662F6F]
+	BaseThreadInitThunk [0x00007FFFE64E257D+29]
+	RtlUserThreadStart [0x00007FFFE792AA48+40]
+
+]]></error>
+		<system-out><![CDATA[El texto es visible para el usuario
+El texto fue validado correctamente: Mis Ventas
+¡Elemento encontrado y clickeado 12 veces con éxito!
+¡Elemento encontrado y clickeado 1 veces con éxito!
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+]]></system-out>
+	</testcase>
+</testsuite>

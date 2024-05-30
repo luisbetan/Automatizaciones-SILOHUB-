@@ -3,7 +3,7 @@ import time
 from selenium.webdriver.common.by import By
 from pyunitreport import HTMLTestRunner
 import xmlrunner
-from Elements import find_and_click_element_selector, find_elements,  find_send_element_selector, select_option_click, send_display_element_xpaht, send_element_xpaht, validate_text, validate_text_by_text
+from Elements import find_elements,  find_send_element_selector, select_option_click,  validate_text
 from LoginSample import LoginSample
 from startSession import StartSession
 

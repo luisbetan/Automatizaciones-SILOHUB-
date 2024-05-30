@@ -1496,38 +1496,17 @@ def generate_and_number_sequential(driver, xpath_input):
 
 
 
-def verify_and_click(driver, number, target_xpath):
+def verify_and_click(driver):
     try:
-        # Localizar el elemento que contiene el número específico
-        print(f"Buscando el número: {number}")
-        numero_elemento = WebDriverWait(driver, 30).until(
-            EC.presence_of_element_located((By.XPATH, f"//*[contains(text(), '{number}')]"))
-        )
+        # Llama a la función de generación para obtener el número
+        random_number = generate_and_send_number(driver)  # Supongamos que ya tienes esta función definida
 
-        # Imprimir que el elemento ha sido localizado y el valor encontrado
-        encontrado = numero_elemento.text
-        print(f"Elemento localizado para el número: {encontrado}")
+        # Imprime el número obtenido
+        print(f"Número obtenido: {random_number}")
 
-        # Validar si el número encontrado es el número deseado
-      
-        for encontrado  in number:
-              print(f"El número {number} ha sido validado correctamente")
+        # Devuelve el número obtenido
+        return random_number
 
-            # Buscar el elemento objetivo usando el XPath proporcionado
-        print(f"Buscando el elemento objetivo con XPath: {target_xpath}")
-        objetivo_elemento = WebDriverWait(driver, 30).until(
-                EC.presence_of_element_located((By.XPATH, target_xpath))
-            )
-
-            # Imprimir que el elemento objetivo ha sido localizado
-        print("Elemento objetivo localizado")
-
-            # Hacer clic en el elemento objetivo
-        objetivo_elemento.click()
-
-            # Imprimir que el clic ha sido realizado
-        print("Clic realizado en el elemento objetivo")
-        
-        print(f"El número encontrado ({encontrado}) no coincide con el número deseado ({number})")
     except Exception as e:
-        print(f"Se produjo un error: {e}")
+        print(f"Ha ocurrido un error al obtener el número: {e}")
+        return None

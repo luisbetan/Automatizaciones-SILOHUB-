@@ -1,7 +1,7 @@
 import unittest
 import xmlrunner
 import time
-from Elements import  click_icon_delete,displace_element,find_and_click_element,  find_elements, find_elements_css_selector,find_send_element,generate_and_send_number,search_and_displace_account, select_option_click, validate_text, verify_and_click
+from Elements import  click_icon_delete,displace_element,find_and_click_element, find_and_click_element_selector,  find_elements, find_elements_css_selector,find_send_element,generate_and_send_number,search_and_displace_account, select_option_click, validate_text, verify_and_click
 from LoginSample import LoginSample
 from startSession import StartSession
 
@@ -87,15 +87,15 @@ class precio_granos_fijaciones(unittest.TestCase):
         select_date = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[3]/div/div/table/tbody/tr/td[7]/app-date-picker/div/input[2]"
         displace_element(self.driver, select_date)
 
-        select_arrow = "/html/body/div[2]/div[1]/span[2]"
+        select_arrow = "body > div.flatpickr-calendar.rangeMode.animate.open.arrowBottom.arrowLeft > div.flatpickr-months > span.flatpickr-next-month"
         clicks = 7
-        find_and_click_element(self.driver, select_arrow, clicks)
+        find_and_click_element_selector(self.driver, select_arrow, clicks)
 
-        insert_date1 = "/html/body/div[2]/div[2]/div/div[2]/div/span[8]"
+        insert_date1 = "/html/body/div[3]/div[2]/div/div[2]/div/span[8]"
         find_elements(self.driver, insert_date1)
         time.sleep(2)
 
-        insert_date2 = "/html/body/div[2]/div[2]/div/div[2]/div/span[33]"
+        insert_date2 = "/html/body/div[3]/div[2]/div/div[2]/div/span[37]"
         find_elements(self.driver, insert_date2)
         time.sleep(2)
 
@@ -118,29 +118,34 @@ class precio_granos_fijaciones(unittest.TestCase):
         find_elements(self.driver, select_post)
         time.sleep(2)
 
-        select_accept_post = "/html/body/div[3]/div/div[6]/button[3]"
+        select_accept_post = "//button[text()='Publicar']"
         find_elements(self.driver, select_accept_post)
         time.sleep(2)
 
-        select_button_accept = "/html/body/div[3]/div/div[6]/button[1]"
+        select_button_accept = "//button[text()='Aceptar']"
         find_elements(self.driver, select_button_accept)
         time.sleep(2)
 
-        select_menu = "/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[2]/div[1]/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[2]/a/span"
+        select_menu = "/html/body/app-root/app-layout/app-vertical/div/div/div/app-header-for-screen/div/div"
         find_elements(self.driver, select_menu)
         time.sleep(2)
 
-        select_market_home = "/html/body/app-root/app-layout/app-vertical/div/div/div/app-header-for-screen/div/div/span"
-        find_elements(self.driver, select_market_home)
-        time.sleep(5)
-
         self.driver.execute_script("window.scrollTo(0,600);")
         time.sleep(2)
+        
 
         
-        button_hand = "#Grupo_10473"
-        find_elements_css_selector(self.driver,button_hand)
+        
+
+     # Llamar a la función verify_and_click con el número generado
+        verify_and_click(self.driver, number_generate)
         time.sleep(2)
+        
+
+        
+        """button_hand = "//path[@id='Trazado_4123' and @data-name='Trazado 4123']"
+        find_elements_css_selector(self.driver,button_hand)
+        time.sleep(2)"""
 
         located_element = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/div/div/div[2]/input"
         select_input = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[5]"

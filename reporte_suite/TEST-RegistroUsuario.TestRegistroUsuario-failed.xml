@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RegistroUsuario.TestRegistroUsuario-failed" tests="1" file="RegistroUsuario.py" time="221.162" timestamp="2024-05-24T11:02:47" failures="0" errors="0" skipped="0">
+	<testcase classname="RegistroUsuario.TestRegistroUsuario" name="test_register_user" time="221.162" timestamp="2024-05-24T11:02:47" file="RegistroUsuario.py" line="18">
+		<system-out><![CDATA[Email generado: _3goe401p@yopmail.com
+El texto encontrado es  Crear usuario
+Elemento desplazado, cantidad limpiada y nuevo valor '_3goe401p@yopmail.com' ingresado con éxito!
+Tiempo de espera agotado. El texto por texto no está presente.
+Elemento desplazado, cantidad limpiada y nuevo valor '_3goe401p@yopmail.com' ingresado con éxito!
+Tiempo de espera agotado. El texto por xpaht no está presente.
+Elemento desplazado, cantidad limpiada y nuevo valor '_3goe401p@yopmail.com' ingresado con éxito!
+El texto encontrado es  Email del usuario validado correctamente.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+El texto encontrado es  Cuenta Pendiente de Vincular
+]]></system-out>
+	</testcase>
+</testsuite>

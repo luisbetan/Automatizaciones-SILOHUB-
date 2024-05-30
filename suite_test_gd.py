@@ -12,13 +12,18 @@ from CtaCtoDtalEntVta import detalle_ctro_entregaVentas
 from CtaCtoDtalFijaciones import detalle_ctro_fijaciones
 from CtaCtoDtalLiquidaciones import detalle_cto_liquidaciones
 from Cuentacontrato import contrato_tenant
+from Dashboar import dashboard_granos
 from EntregasAplicadas import cta_entregasAplicadas
 from EntregasPendApli import entregas_pend_Aplicadas
 from GranosContratos import granos_contratos
 from Home import HomeTenant
+from HomeEntRecientes import HomeEntRecientesTenant
 from IndicaInsumosHome import IndicaInsumosHome
+from Precio_Fijacion import precio_granos_fijaciones
+from Profile_User import Perfil_Usuario
 from RegistroUsuario import TestRegistroUsuario 
 from Entregas import cuenta_entregas
+from ReportCompPenFact import reportPendFacturar
 from Ventas import cuenta_ventas
 from Onboarding import Onboarding_test_tenant
 from comproContratos import comprobanteContrato
@@ -33,11 +38,15 @@ from Insumos_Producto import insumosProductos
 def ejecutar_suite():
     test_suite = unittest.TestSuite()
     test_suite.addTest(unittest.makeSuite(TestRegistroUsuario))
+    test_suite.addTest(unittest.makeSuite(Perfil_Usuario))
     test_suite.addTest(unittest.makeSuite(HomeTenant))
+    test_suite.addTest(unittest.makeSuite(HomeEntRecientesTenant))
     test_suite.addTest(unittest.makeSuite(IndicaInsumosHome))
     test_suite.addTest(unittest.makeSuite(granos_contratos))
     test_suite.addTest(unittest.makeSuite(insumosProductos))
     test_suite.addTest(unittest.makeSuite(contrato_tenant))
+    test_suite.addTest(unittest.makeSuite(precio_granos_fijaciones))
+    test_suite.addTest(unittest.makeSuite(dashboard_granos))
     test_suite.addTest(unittest.makeSuite(detalle_ctro_entregaVentas))
     test_suite.addTest(unittest.makeSuite(detalle_ctro_fijaciones))
     test_suite.addTest(unittest.makeSuite(detalle_cto_certificados))
@@ -53,6 +62,7 @@ def ejecutar_suite():
     test_suite.addTest(unittest.makeSuite(comprobanteContrato))
     test_suite.addTest(unittest.makeSuite(comprobanteEntregas))
     test_suite.addTest(unittest.makeSuite(comprobanteVentas))
+    test_suite.addTest(unittest.makeSuite(reportPendFacturar))
     test_suite.addTest(unittest.makeSuite(Onboarding_test_tenant))
     
     # Configuración para generar informes XML solo de los tests fallidos

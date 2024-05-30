@@ -219,7 +219,7 @@ class granos_contratos(unittest.TestCase):
         # validar el mensaje de respuesta
 
       
-        element_text_8 = "/html/body/div[5]/div/h2"
+        element_text_8 = "/html/body/div[6]/div/h2"
         text_expected_8 = "Confirmación de venta generada con éxito."
         validate_text(self.driver, element_text_8, text_expected_8 )
         time.sleep(2)

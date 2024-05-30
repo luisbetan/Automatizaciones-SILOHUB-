@@ -42,7 +42,7 @@ class reportPendFacturar(unittest.TestCase):
         find_elements(self.driver,select_receipts_pending)
         time.sleep(2)
 
-        ## seleccionar filtro 
+        ## seleccionar filtro 01/11/2024 al 22/05/2024
 
         insert_date_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-reports-options/app-date-filter/div/app-date-picker/div/input[2]"
         find_elements(self.driver, insert_date_filter)

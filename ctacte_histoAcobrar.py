@@ -1,7 +1,7 @@
 import time
 import unittest
 import xmlrunner
-from Elements import find_and_click_element, find_elements, validate_character_numeric_element, validate_text
+from Elements import find_and_click_element, find_elements, find_elements_css_selector, find_elements_id, validate_character_numeric_element, validate_text
 from Loginhelper import LoginHelper
 from startSession import StartSession
 
@@ -37,12 +37,12 @@ class cuenta_ctacte_histAcobrar(unittest.TestCase):
 
         ## seleccionar solapa cta cte historica 
 
-        select_account_history = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/ul/li[2]/a"
+        select_account_history = '//a[@id="current-account-file-tab"]'
         find_elements(self.driver, select_account_history)
         
         ## selecionar botón del filtro
 
-        select_filter = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[2]/app-filter-button/button/div/span"
+        select_filter = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[2]/app-filter-button/button"
         find_elements(self.driver, select_filter)
         time.sleep(2)
 
@@ -76,7 +76,7 @@ class cuenta_ctacte_histAcobrar(unittest.TestCase):
 
       
         select_arrow_1 = "/html/body/div/div[1]/span[1]"
-        clicks = 4
+        clicks = 5
         find_and_click_element(self.driver, select_arrow_1, clicks)
         time.sleep(2)
 

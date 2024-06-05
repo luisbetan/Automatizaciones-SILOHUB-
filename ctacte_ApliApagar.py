@@ -53,14 +53,14 @@ class cta_cte_apliApagar(unittest.TestCase):
         apply_state = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-checklist/div/app-checks[2]/div/input" 
         find_elements(self.driver, apply_state)
 
-        ## seleccionar rango de fecha
+        ## seleccionar rango de fecha 02-10-2023 a 01/12/2023
 
         select_field_date = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-date-filter/div/app-date-picker/div/input[2]"
         find_elements(self.driver, select_field_date)
         time.sleep(2)
 
         select_arrow_1 = "/html/body/div/div[1]/span[1]"
-        clicks = 6
+        clicks = 8
         find_and_click_element(self.driver, select_arrow_1, clicks)
         time.sleep(2)
 

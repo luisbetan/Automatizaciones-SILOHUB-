@@ -60,7 +60,7 @@ class cta_cte_apliAvencer(unittest.TestCase):
         time.sleep(2)
 
         select_arrow_1 = "/html/body/div/div[1]/span[1]"
-        clicks = 6
+        clicks = 8
         find_and_click_element(self.driver, select_arrow_1, clicks)
         time.sleep(2)
 

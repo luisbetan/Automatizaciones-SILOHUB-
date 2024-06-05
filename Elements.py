@@ -1496,17 +1496,40 @@ def generate_and_number_sequential(driver, xpath_input):
 
 
 
-def verify_and_click(driver):
+def verify_and_click(driver, number_generate, xpath_number):
     try:
-        # Llama a la función de generación para obtener el número
-        random_number = generate_and_send_number(driver)  # Supongamos que ya tienes esta función definida
-
-        # Imprime el número obtenido
-        print(f"Número obtenido: {random_number}")
-
-        # Devuelve el número obtenido
-        return random_number
+        # Encuentra el número generado
+        number_element = WebDriverWait(driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, f"//*[text()='{number_generate}']"))
+        )
+        
+        # Imprime el texto del número obtenido
+        print(f"Número obtenido desde la función: {number_element.text}")
+        
+        # Encuentra el contenedor padre del número
+        parent_element = WebDriverWait(driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, xpath_number))
+        )
+        
+        # Encuentra todos los elementos svg con el id 'Grupo_10473' dentro del contenedor padre
+        elements = parent_element.find_elements(By.XPATH, ".//svg[@id='Grupo_10473']")
+        
+        # Selecciona el segundo elemento (índice 1, ya que Python usa indexación basada en cero)
+        target_element = elements[1]
+        
+        # Verifica si el elemento está presente y es clickeable
+        clickable_element = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable(target_element)
+        )
+        
+        # Haz clic en el elemento
+        clickable_element.click()
+        
+        # Imprime una confirmación
+        print("El elemento en la posición siguiente ha sido clickeado.")
+        
+        return clickable_element
 
     except Exception as e:
-        print(f"Ha ocurrido un error al obtener el número: {e}")
+        print(f"Ha ocurrido un error al obtener o clicar en el elemento: {e}")
         return None

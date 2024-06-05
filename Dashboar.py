@@ -85,6 +85,12 @@ class dashboard_granos(unittest.TestCase):
         verify_text_and_click(self.driver, select_movements_list, validate_status1, select_dropdown_option1, select_option1, validate_status2, select_dropdown_option2, select_option2, validate_status3, select_dropdown_option3, select_option3, select_go_to1)
         time.sleep(2)
 
+        select_button_accept = "/html/body/div[1]/div/div[6]/button[1]"
+        find_elements(self.driver,select_button_accept)
+        time.sleep(2)
+
+
+
     def tearDown(self):
            self.driver.close()
 

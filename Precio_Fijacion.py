@@ -88,7 +88,7 @@ class precio_granos_fijaciones(unittest.TestCase):
         displace_element(self.driver, select_date)
 
         select_arrow = "body > div.flatpickr-calendar.rangeMode.animate.open.arrowBottom.arrowLeft > div.flatpickr-months > span.flatpickr-next-month"
-        clicks = 7
+        clicks = 6
         find_and_click_element_selector(self.driver, select_arrow, clicks)
 
         insert_date1 = "/html/body/div[3]/div[2]/div/div[2]/div/span[8]"
@@ -131,21 +131,16 @@ class precio_granos_fijaciones(unittest.TestCase):
         time.sleep(2)
 
         self.driver.execute_script("window.scrollTo(0,600);")
+        time.sleep(5)
+        
+
+        # Llamar a la función verify_and_click con el número generado
+        select_hand = '(//*[contains(@id, "Grupo_10473")])[2]'
+        displace_element(self.driver, select_hand)
         time.sleep(2)
         
 
-        
-        
-
-     # Llamar a la función verify_and_click con el número generado
-        verify_and_click(self.driver, number_generate)
-        time.sleep(2)
-        
-
-        
-        """button_hand = "//path[@id='Trazado_4123' and @data-name='Trazado 4123']"
-        find_elements_css_selector(self.driver,button_hand)
-        time.sleep(2)"""
+    
 
         located_element = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/div/div/div[2]/input"
         select_input = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[5]"
@@ -158,7 +153,7 @@ class precio_granos_fijaciones(unittest.TestCase):
         time.sleep(2)
 
         select_number_contract = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[2]/div/div[2]/div/app-contract-searcher/ng-select/div/div/div[2]/input"
-        option_number_contract = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[2]/div/div[2]/div/app-contract-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[3]/span"
+        option_number_contract = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[2]/div/div[2]/div/app-contract-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[4]/span"
         select_option_click(self.driver, select_number_contract, option_number_contract )
         time.sleep(2)
 

@@ -2,7 +2,7 @@ from telnetlib import EC
 import unittest
 import xmlrunner
 import time
-from Elements import  click_icon_delete,displace_element, find_and_click_element, find_elements, find_elements_css_selector, find_elements_id, find_send_element, generate_and_send_number, search_and_displace_account, seleccionar_ultimo_icono, select_option_click, validate_text, verify_and_click
+from Elements import  click_icon_delete,displace_element, find_and_click_element_selector, find_elements, find_send_element, generate_and_send_number, search_and_displace_account,select_option_click, validate_text
 from LoginSample import LoginSample
 from startSession import StartSession
 
@@ -38,13 +38,14 @@ class precio_granos(unittest.TestCase):
         title_pag_market = "/html/body/app-root/app-layout/app-vertical/div/div/div/app-header-for-screen/div/div/span"
         value_expected = "MERCADOS"
         validate_text(self.driver, title_pag_market, value_expected)
+        time.sleep(2)
 
-        self.driver.execute_script("window.scrollTo(0,300);")
+        self.driver.execute_script("window.scrollTo(0,500);")
         time.sleep(2)
 
         # borrar listado de disponible
 
-        delete_price_grain = "#layout-wrapper > div > div > div > app-market-main > app-grain-price > div:nth-child(2) > app-grain-price-table:nth-child(1) > div > div > table > tbody > tr:nth-child(1) > td.pt-3.padding-last-column > svg-icon > svg"
+        delete_price_grain = "#layout-wrapper > div > div > div > app-market-main > app-grain-price > div:nth-child(2) > app-grain-price-table:nth-child(1) > div > div > table > tbody > tr > td.pt-3.padding-last-column > svg-icon > svg"
         click_icon_delete(self.driver, delete_price_grain)
         time.sleep(2)
 
@@ -89,21 +90,22 @@ class precio_granos(unittest.TestCase):
         select_date = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[7]/app-date-picker/div/input[2]"
         displace_element(self.driver, select_date)
 
-        select_arrow = "/html/body/div[3]/div[1]/span[2]"
-        clicks = 7
-        find_and_click_element(self.driver, select_arrow, clicks)
+        select_arrow = "body > div.flatpickr-calendar.rangeMode.animate.open.arrowBottom.arrowLeft > div.flatpickr-months > span.flatpickr-next-month"
+        clicks = 6
+        find_and_click_element_selector(self.driver, select_arrow, clicks)
 
         insert_date1 = "/html/body/div[3]/div[2]/div/div[2]/div/span[8]"
         find_elements(self.driver, insert_date1)
-      
+        time.sleep(2)
 
-        insert_date2 = "div.flatpickr-calendar:nth-child(7) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span:nth-child(31)"
-        find_elements_css_selector(self.driver, insert_date2)
-        
+        insert_date2 = "/html/body/div[3]/div[2]/div/div[2]/div/span[37]"
+        find_elements(self.driver, insert_date2)
+        time.sleep(2)
 
         insert_amount1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[8]/input"
         send_amount1 = "8000"
         find_send_element(self.driver, insert_amount1, send_amount1 )
+
 
         insert_observation = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[2]/app-grain-price-table[1]/div/div/table/tbody/tr/td[9]/input'
         number_generate = generate_and_send_number(self.driver, insert_observation)
@@ -112,36 +114,35 @@ class precio_granos(unittest.TestCase):
         find_elements(self.driver, select_idea)
         time.sleep(2)
 
+        self.driver.execute_script("window.scrollTo(600,0);")
+        time.sleep(2)
+
         select_post = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-main/app-grain-price/div[1]/app-grain-price-header/app-grain-price-header-release/div/div[2]/div/div[2]/app-button/button"
         find_elements(self.driver, select_post)
         time.sleep(2)
 
-        select_accept_post = "/html/body/div[4]/div/div[6]/button[3]"
+        select_accept_post = "//button[text()='Publicar']"
         find_elements(self.driver, select_accept_post)
         time.sleep(2)
 
-        select_button_accept = "/html/body/div[4]/div/div[6]/button[1]"
+        select_button_accept = "//button[text()='Aceptar']"
         find_elements(self.driver, select_button_accept)
         time.sleep(2)
 
-        select_menu = "/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[2]/div[1]/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[2]/a/span"
+        select_menu = "/html/body/app-root/app-layout/app-vertical/div/div/div/app-header-for-screen/div/div/span"
         find_elements(self.driver, select_menu)
         time.sleep(2)
 
-        select_market_home = "/html/body/app-root/app-layout/app-vertical/div/div/div/app-header-for-screen/div/div/span"
-        find_elements(self.driver, select_market_home)
-        time.sleep(4)
+         # Llamar a la función verify_and_click con el número generado
+        select_hand = '(//*[contains(@id, "Grupo_10473")])[1]'
+        displace_element(self.driver, select_hand)
+        time.sleep(2)
 
 
-        verify_number = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-market-view-main/app-grain-price-view/div[2]/app-grain-market-view-table[1]/div/div/div[2]/div[7]/span"
-        select_icon_hand = '//*[@id="Grupo_10473"]'
-        verify_and_click(self.driver, number_generate, verify_number, select_icon_hand)
         
-        
-
         located_element = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/div/div/div[2]/input"
-        select_input = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[1]/span"
-        account_number = "1023"
+        select_input = "/html/body/ngb-modal-window/div/div/app-sales-intent-modal/div[2]/app-sales-intent-form/div/div[1]/div/div[2]/div/app-customer-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[5]/span"
+        account_number = "484"
         search_and_displace_account(self.driver, account_number, select_input, located_element )
         time.sleep(2)
 

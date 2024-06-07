@@ -90,7 +90,7 @@ class cuenta_ctacte_histVencido(unittest.TestCase):
 
 
         select_arrow_2 = "/html/body/div/div[1]/span[2]"
-        clicks = 4
+        clicks = 3
         find_and_click_element(self.driver, select_arrow_2, clicks)
         time.sleep(2)
 
@@ -111,54 +111,52 @@ class cuenta_ctacte_histVencido(unittest.TestCase):
 
 
 
-        balance_ars = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[1]/div/div[1]/app-totalizer/div/div/div[2]/div[2]/span[1]"
+        balance_ars = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[1]/div/div[1]/app-totalizer/div/div/div[2]/div[2]/span[1]"
         validate_character_numeric_element(self.driver, balance_ars)
 
 
-        balance_usd = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[1]/div/div[2]/app-totalizer/div/div/div[2]/div[2]/span[1]"
+        balance_usd = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[1]/div/div[2]/app-totalizer/div/div/div[2]/div[2]/span[1]"
         validate_character_numeric_element(self.driver, balance_usd)
 
 
         ## seleccionar movimientos del lisatos 
 
-        movements_list_1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[1]/th/input"
+        movements_list_1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[1]/th/input"
         find_elements(self.driver, movements_list_1)
 
-        movements_list_2 =  "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[2]/th/input"
+        movements_list_2 =  "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[2]/th/input"
         find_elements(self.driver, movements_list_2)
 
-        movements_list_3 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[3]/th/input"
+        movements_list_3 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[3]/th/input"
         find_elements(self.driver, movements_list_3)
 
-        movements_list_4 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[4]/th/input"
-        find_elements(self.driver, movements_list_4)
-      
+        
        ## seleccionar botón descargar  
 
-        select_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/button[2]"
+        select_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/button[2]"
         find_elements(self.driver,   select_button)
 
         ## descargar Excel 
 
-        download_Excel = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/ul/li[1]/a"
+        download_Excel = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/ul/li[1]/a"
         find_elements(self.driver, download_Excel)
         time.sleep(3)
 
-        ## descargar PDF 
+        ## seleccionar botón descargar   
 
-        select_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/button[2]"
+        select_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/button[2]"
         find_elements(self.driver,  select_button)
 
-        ## descargar Excel 
+        ## descargar PDF 
 
-        download_PDF = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/ul/li[2]/a"
+        download_PDF = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/ul/li[2]/a"
         find_elements(self.driver, download_PDF)
         time.sleep(3)
 
 
         ## ingresar al detalle  del tercer movimiento
 
-        detail_movements = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[3]/td[3]/span/span"
+        detail_movements = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[4]/td[2]/span/div/span"
         find_elements(self.driver, detail_movements)
         time.sleep(3)
 

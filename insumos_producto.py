@@ -25,7 +25,7 @@ class insumosProductos(unittest.TestCase):
 
         select_supplies = "/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[3]/div[1]/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[4]/a"
         displace_element(self.driver,select_supplies )
-        time.sleep(3)
+        time.sleep(5)
 
         select_menu_product = "/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[3]/div[1]/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[4]/div/ul/li[1]/a"
         find_elements(self.driver,select_menu_product )

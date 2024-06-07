@@ -128,10 +128,10 @@ class precio_granos_fijaciones(unittest.TestCase):
 
         select_menu = "/html/body/app-root/app-layout/app-vertical/div/div/div/app-header-for-screen/div/div"
         find_elements(self.driver, select_menu)
-        time.sleep(2)
-
-        self.driver.execute_script("window.scrollTo(0,600);")
         time.sleep(5)
+
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(2)
         
 
         # Llamar a la función verify_and_click con el número generado

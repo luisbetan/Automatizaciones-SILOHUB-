@@ -70,7 +70,7 @@ class detalle_cto_certificados(unittest.TestCase):
         time.sleep(2)
 
         arrow_filter2 = "/html/body/div/div[1]/span[1]"
-        amount_click2 = 2
+        amount_click2 = 4
         find_and_click_element(self.driver, arrow_filter2, amount_click2)
         time.sleep(2)
 
@@ -97,7 +97,7 @@ class detalle_cto_certificados(unittest.TestCase):
         validate_text_by_text(self.driver, text_expected)
         
         #ingresar al detalle de tercer contrato del listado
-        selet_list_contract = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-contracts/app-responsive-table-multiple-items/div/table/tbody/tr[3]/td[1]/app-contract/div/div[2]/div[1]/div[1]/span"
+        selet_list_contract = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-contracts/app-responsive-table-multiple-items/div/table/tbody/tr[3]/td[2]/app-column-percentage/div"
         find_elements(self.driver, selet_list_contract )
         time.sleep(3)
 
@@ -106,7 +106,7 @@ class detalle_cto_certificados(unittest.TestCase):
 
         # validar numero de contrato 
         element1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/div/div[1]/div[1]/div/span"
-        number_expected = "Contrato 108280"
+        number_expected = "Contrato 107474"
         validate_text_visible(self.driver, element1, number_expected)
 
         # validar produto 
@@ -117,7 +117,7 @@ class detalle_cto_certificados(unittest.TestCase):
        # Validar kilos pactados 
         
         amount_kilos = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/div/div[1]/div[2]/div[2]/div[2]/span[1]"
-        amount_kilos_expected = ["500,00 Tn", "De 5000,00 QQ Pactados", "De 500.000,00 Kg Pactados"]
+        amount_kilos_expected = ["1000,00 Tn", "De 10000,00 QQ Pactados", "De 1000.000,00 Kg Pactados"]
         validate_chain_text_xpaht(self.driver, amount_kilos, amount_kilos_expected)
 
         self.driver.execute_script("window.scrollTo(0, 1000);")
@@ -140,15 +140,15 @@ class detalle_cto_certificados(unittest.TestCase):
         text_expected = "Fecha"
         validate_text_visible(self.driver, element4, text_expected)
 
-        date_delivery = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[3]/app-contract-certificates/app-responsive-table/div/div/table/tbody/tr[1]/td[1]/span/span"
-        strt_expected = "21/03/2022"
+        date_delivery = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[3]/app-contract-certificates/app-responsive-table/div/div/table/tbody/tr[1]/td[1]/span/div/span"
+        strt_expected = "14/03/2022"
         validate_text_visible(self.driver,date_delivery, strt_expected)
 
         element7 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[3]/app-contract-certificates/app-responsive-table/div/div/table/thead/tr/th[3]'
         text_expected =  "Comprobante" 
         validate_text_visible(self.driver, element7, text_expected)
 
-        number_vaucher = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[3]/app-contract-certificates/app-responsive-table/div/div/table/tbody/tr[1]/td[2]"
+        number_vaucher = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[3]/app-contract-certificates/app-responsive-table/div/div/table/tbody/tr[1]/td[2]/span/div/span"
         validate_character_numeric_element(self.driver, number_vaucher)
 
 
@@ -157,14 +157,14 @@ class detalle_cto_certificados(unittest.TestCase):
         validate_text_visible(self.driver, element8, text_expected)
 
         
-        set_kilos = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[3]/app-contract-certificates/app-responsive-table/div/div/table/tbody/tr[1]/td[3]/span/span"
+        set_kilos = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[3]/app-contract-certificates/app-responsive-table/div/div/table/tbody/tr[1]/td[3]/span/div/span"
         validate_character_numeric_element(self.driver, set_kilos)
 
         element9 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[3]/app-contract-certificates/app-responsive-table/div/div/table/thead/tr/th[5]'
         text_expected = "Tn Aplicadas"
         validate_text_visible(self.driver, element9, text_expected)
 
-        tn_applied = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[3]/app-contract-certificates/app-responsive-table/div/div/table/tbody/tr[1]/td[4]/span/span"
+        tn_applied = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[3]/app-contract-certificates/app-responsive-table/div/div/table/tbody/tr[1]/td[4]/span/div/span"
         validate_character_numeric_element(self.driver, tn_applied)
 
 
@@ -172,7 +172,7 @@ class detalle_cto_certificados(unittest.TestCase):
         text_expected = "Planta"
         validate_text_visible(self.driver, element10, text_expected)
 
-        number_plant = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[3]/app-contract-certificates/app-responsive-table/div/div/table/tbody/tr[1]/td[5]/span/span"
+        number_plant = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[3]/app-contract-certificates/app-responsive-table/div/div/table/tbody/tr[1]/td[5]/span/div/span"
         validate_character_numeric_element(self.driver, number_plant)
 
 

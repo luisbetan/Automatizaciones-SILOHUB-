@@ -1,80 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CtaCtoDtalEntVta.detalle_ctro_entregaVentas-failed" tests="1" file="CtaCtoDtalEntVta.py" time="86.670" timestamp="2024-05-24T11:18:44" failures="0" errors="1" skipped="0">
-	<testcase classname="CtaCtoDtalEntVta.detalle_ctro_entregaVentas" name="test_detail_deriverySales" time="86.670" timestamp="2024-05-24T11:18:44" file="CtaCtoDtalEntVta.py" line="22">
-		<error type="NoSuchElementException" message="Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[1]/span/span&quot;}
-  (Session info: chrome=125.0.6422.112); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+<testsuite name="CtaCtoDtalEntVta.detalle_ctro_entregaVentas-failed" tests="1" file="CtaCtoDtalEntVta.py" time="75.482" timestamp="2024-06-06T12:42:28" failures="0" errors="1" skipped="0">
+	<testcase classname="CtaCtoDtalEntVta.detalle_ctro_entregaVentas" name="test_detail_deriverySales" time="75.482" timestamp="2024-06-06T12:42:28" file="CtaCtoDtalEntVta.py" line="22">
+		<error type="WebDriverException" message="Message: disconnected: unable to send message to renderer
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=125.0.6422.142)
 Stacktrace:
-	GetHandleVerifier [0x00007FF6156F1F22+60322]
-	(No symbol) [0x00007FF61566CE99]
-	(No symbol) [0x00007FF615527EBA]
-	(No symbol) [0x00007FF615577676]
-	(No symbol) [0x00007FF61557773C]
-	(No symbol) [0x00007FF6155BE967]
-	(No symbol) [0x00007FF61559C25F]
-	(No symbol) [0x00007FF6155BBC80]
-	(No symbol) [0x00007FF61559BFC3]
-	(No symbol) [0x00007FF615569617]
-	(No symbol) [0x00007FF61556A211]
-	GetHandleVerifier [0x00007FF615A0946D+3301613]
-	GetHandleVerifier [0x00007FF615A53693+3605267]
-	GetHandleVerifier [0x00007FF615A49410+3563664]
-	GetHandleVerifier [0x00007FF6157A42F6+790390]
-	(No symbol) [0x00007FF6156774DF]
-	(No symbol) [0x00007FF6156733D4]
-	(No symbol) [0x00007FF615673562]
-	(No symbol) [0x00007FF615662F6F]
-	BaseThreadInitThunk [0x00007FFFE64E257D+29]
-	RtlUserThreadStart [0x00007FFFE792AA48+40]
+	GetHandleVerifier [0x00007FF6A6381F52+60322]
+	(No symbol) [0x00007FF6A62FCEC9]
+	(No symbol) [0x00007FF6A61B7EBA]
+	(No symbol) [0x00007FF6A619F79C]
+	(No symbol) [0x00007FF6A619F70C]
+	(No symbol) [0x00007FF6A619DEFC]
+	(No symbol) [0x00007FF6A619EBAF]
+	(No symbol) [0x00007FF6A61BBAAF]
+	(No symbol) [0x00007FF6A61BC5D3]
+	(No symbol) [0x00007FF6A61C0641]
+	(No symbol) [0x00007FF6A61C06E0]
+	(No symbol) [0x00007FF6A620733B]
+	(No symbol) [0x00007FF6A620773C]
+	(No symbol) [0x00007FF6A624E967]
+	(No symbol) [0x00007FF6A622C25F]
+	(No symbol) [0x00007FF6A624BC80]
+	(No symbol) [0x00007FF6A622BFC3]
+	(No symbol) [0x00007FF6A61F9617]
+	(No symbol) [0x00007FF6A61FA211]
+	GetHandleVerifier [0x00007FF6A66994AD+3301629]
+	GetHandleVerifier [0x00007FF6A66E36D3+3605283]
+	GetHandleVerifier [0x00007FF6A66D9450+3563680]
+	GetHandleVerifier [0x00007FF6A6434326+790390]
+	(No symbol) [0x00007FF6A630750F]
+	(No symbol) [0x00007FF6A6303404]
+	(No symbol) [0x00007FF6A6303592]
+	(No symbol) [0x00007FF6A62F2F9F]
+	BaseThreadInitThunk [0x00007FFBED37257D+29]
+	RtlUserThreadStart [0x00007FFBEECEAA48+40]
 "><![CDATA[Traceback (most recent call last):
-  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\CtaCtoDtalEntVta.py", line 132, in test_detail_deriverySales
-    validate_text_visible(self.driver, element5, text_expected)
-  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1136, in validate_text_visible
-    element = driver.find_element(By.XPATH, xpath)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\CtaCtoDtalEntVta.py", line 96, in test_detail_deriverySales
+    find_elements(self.driver, selet_list_contract )
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 19, in find_elements
+    select_nex_button = WebDriverWait(driver, 10).until(
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 363, in _predicate
+    target = driver.find_element(*target)  # grab element at locator
   File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
     return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
   File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
     self.error_handler.check_response(response)
   File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
     raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[1]/app-deliveries-applied/app-deliveries-shared/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[1]/span/span"}
-  (Session info: chrome=125.0.6422.112); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+selenium.common.exceptions.WebDriverException: Message: disconnected: unable to send message to renderer
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=125.0.6422.142)
 Stacktrace:
-	GetHandleVerifier [0x00007FF6156F1F22+60322]
-	(No symbol) [0x00007FF61566CE99]
-	(No symbol) [0x00007FF615527EBA]
-	(No symbol) [0x00007FF615577676]
-	(No symbol) [0x00007FF61557773C]
-	(No symbol) [0x00007FF6155BE967]
-	(No symbol) [0x00007FF61559C25F]
-	(No symbol) [0x00007FF6155BBC80]
-	(No symbol) [0x00007FF61559BFC3]
-	(No symbol) [0x00007FF615569617]
-	(No symbol) [0x00007FF61556A211]
-	GetHandleVerifier [0x00007FF615A0946D+3301613]
-	GetHandleVerifier [0x00007FF615A53693+3605267]
-	GetHandleVerifier [0x00007FF615A49410+3563664]
-	GetHandleVerifier [0x00007FF6157A42F6+790390]
-	(No symbol) [0x00007FF6156774DF]
-	(No symbol) [0x00007FF6156733D4]
-	(No symbol) [0x00007FF615673562]
-	(No symbol) [0x00007FF615662F6F]
-	BaseThreadInitThunk [0x00007FFFE64E257D+29]
-	RtlUserThreadStart [0x00007FFFE792AA48+40]
+	GetHandleVerifier [0x00007FF6A6381F52+60322]
+	(No symbol) [0x00007FF6A62FCEC9]
+	(No symbol) [0x00007FF6A61B7EBA]
+	(No symbol) [0x00007FF6A619F79C]
+	(No symbol) [0x00007FF6A619F70C]
+	(No symbol) [0x00007FF6A619DEFC]
+	(No symbol) [0x00007FF6A619EBAF]
+	(No symbol) [0x00007FF6A61BBAAF]
+	(No symbol) [0x00007FF6A61BC5D3]
+	(No symbol) [0x00007FF6A61C0641]
+	(No symbol) [0x00007FF6A61C06E0]
+	(No symbol) [0x00007FF6A620733B]
+	(No symbol) [0x00007FF6A620773C]
+	(No symbol) [0x00007FF6A624E967]
+	(No symbol) [0x00007FF6A622C25F]
+	(No symbol) [0x00007FF6A624BC80]
+	(No symbol) [0x00007FF6A622BFC3]
+	(No symbol) [0x00007FF6A61F9617]
+	(No symbol) [0x00007FF6A61FA211]
+	GetHandleVerifier [0x00007FF6A66994AD+3301629]
+	GetHandleVerifier [0x00007FF6A66E36D3+3605283]
+	GetHandleVerifier [0x00007FF6A66D9450+3563680]
+	GetHandleVerifier [0x00007FF6A6434326+790390]
+	(No symbol) [0x00007FF6A630750F]
+	(No symbol) [0x00007FF6A6303404]
+	(No symbol) [0x00007FF6A6303592]
+	(No symbol) [0x00007FF6A62F2F9F]
+	BaseThreadInitThunk [0x00007FFBED37257D+29]
+	RtlUserThreadStart [0x00007FFBEECEAA48+40]
 
 ]]></error>
-		<system-out><![CDATA[¡Elemento encontrado y clickeado 3 veces con éxito!
+		<system-out><![CDATA[¡Elemento encontrado y clickeado 5 veces con éxito!
 ¡Elemento encontrado y clickeado 2 veces con éxito!
 ¡Elemento encontrado y clickeado 3 veces con éxito!
 El texto encontrado es  Estado De Mis Contratos
-El texto es visible para el usuario
-El texto fue validado correctamente: Contrato 108280
-El texto es visible para el usuario
-El texto fue validado correctamente: De Maiz
-El texto no coincide con los valores esperados. Texto actual: '5.000,00 QQ'
-El texto es visible para el usuario
-El texto fue validado correctamente: Mis Entregas
-El texto es visible para el usuario
-El texto fue validado correctamente: Producto
 ]]></system-out>
 	</testcase>
 </testsuite>

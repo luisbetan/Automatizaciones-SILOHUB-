@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ReportCompPenFact.reportPendFacturar-failed" tests="1" file="ReportCompPenFact.py" time="43.304" timestamp="2024-05-24T11:54:03" failures="0" errors="0" skipped="0">
-	<testcase classname="ReportCompPenFact.reportPendFacturar" name="test_Report_PendFacturar" time="43.304" timestamp="2024-05-24T11:54:03" file="ReportCompPenFact.py" line="17">
+<testsuite name="ReportCompPenFact.reportPendFacturar-failed" tests="1" file="ReportCompPenFact.py" time="45.476" timestamp="2024-06-06T13:03:11" failures="0" errors="0" skipped="0">
+	<testcase classname="ReportCompPenFact.reportPendFacturar" name="test_Report_PendFacturar" time="45.476" timestamp="2024-06-06T13:03:11" file="ReportCompPenFact.py" line="17">
 		<system-out><![CDATA[¡Elemento encontrado y clickeado 6 veces con éxito!
 ¡Elemento encontrado y clickeado 6 veces con éxito!
 El texto encontrado es  Comprobantes Pendientes de Facturar

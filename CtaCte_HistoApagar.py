@@ -46,7 +46,7 @@ class cuenta_ctacte_histApagar(unittest.TestCase):
         find_elements(self.driver, select_filter)
         time.sleep(2)
 
-          ## aplicar filtro de rubros 12/12/2023 al 12/03/2024
+          ## aplicar filtro de rubros
 
         apply_filter_1 = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-agricultural-category-container/div/app-agricultural-category-button[1]/div/img"
         find_elements(self.driver, apply_filter_1)
@@ -90,7 +90,7 @@ class cuenta_ctacte_histApagar(unittest.TestCase):
 
 
         select_arrow_2 = "/html/body/div/div[1]/span[2]"
-        clicks = 4
+        clicks = 3
         find_and_click_element(self.driver, select_arrow_2, clicks)
         time.sleep(2)
 
@@ -111,54 +111,54 @@ class cuenta_ctacte_histApagar(unittest.TestCase):
 
 
 
-        balance_ars = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[1]/div/div[1]/app-totalizer/div/div/div[2]/div[2]/span[1]"
+        balance_ars = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[1]/div/div[1]/app-totalizer/div/div/div[2]/div[2]/span[1]"
         validate_character_numeric_element(self.driver, balance_ars)
 
 
-        balance_usd = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[1]/div/div[2]/app-totalizer/div/div/div[2]/div[2]/span[1]"
+        balance_usd = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[1]/div/div[2]/app-totalizer/div/div/div[2]/div[2]/span[1]"
         validate_character_numeric_element(self.driver, balance_usd)
 
 
         ## seleccionar movimientos del lisatos 
 
-        movements_list_1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[1]/th/input"
+        movements_list_1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[1]/th/input"
         find_elements(self.driver, movements_list_1)
 
-        movements_list_2 =  "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[2]/th/input"
+        movements_list_2 =  "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[2]/th/input"
         find_elements(self.driver, movements_list_2)
 
-        movements_list_3 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[3]/th/input"
+        movements_list_3 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[3]/th/input"
         find_elements(self.driver, movements_list_3)
 
-        movements_list_4 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[4]/th/input"
+        movements_list_4 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[4]/th/input"
         find_elements(self.driver, movements_list_4)
       
        ## seleccionar botón descargar  
 
-        select_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/button[2]"
+        select_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/button[2]"
         find_elements(self.driver,   select_button)
 
         ## descargar Excel 
 
-        download_Excel = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/ul/li[1]/a"
+        download_Excel = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/ul/li[1]/a"
         find_elements(self.driver, download_Excel)
         time.sleep(3)
 
         ## descargar PDF 
 
-        select_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/button[2]"
+        select_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/button[2]"
         find_elements(self.driver,  select_button)
 
         ## descargar Excel 
 
-        download_PDF = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/ul/li[2]/a"
+        download_PDF = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/ul/li[2]/a"
         find_elements(self.driver, download_PDF)
         time.sleep(3)
 
 
         ## ingresar al detalle  del cuarto movimiento
 
-        detail_movements = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[4]/td[2]/span/span"
+        detail_movements = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[4]/td[2]/span/div/span"
         find_elements(self.driver, detail_movements)
         time.sleep(3)
 
@@ -170,16 +170,16 @@ class cuenta_ctacte_histApagar(unittest.TestCase):
         ## validar datos del detalle 
 
         number_movements = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account-detail/app-header-for-detail/div[1]/div"
-        number_movements_expected = "Movimiento OP 0011 00499478"
+        number_movements_expected = "Movimiento AT 0011 00500764"
         validate_text(self.driver,number_movements,number_movements_expected )
 
         balance_movements = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account-detail/app-header-for-detail/div[2]/div/div[2]/div[1]"
-        balance_movements_expected = "- ARS 87.725,00"
+        balance_movements_expected = "- ARS 100,25"
         validate_text(self.driver, balance_movements, balance_movements_expected )
 
 
         settlement = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account-detail/app-header-for-detail/div[2]/div/div[2]/div[2]"
-        settlement_expected = "PAGO A CTA.VTA.MAIZ"
+        settlement_expected = "Comprobante registrado desde la APP SoftCereal"
         validate_text(self.driver,  settlement, settlement_expected )
 
         ## Seleccionar salida al listado 
@@ -187,7 +187,7 @@ class cuenta_ctacte_histApagar(unittest.TestCase):
         go_out_list = "/html/body/app-root/app-layout/app-vertical/div/div/div/app-header-for-screen/div/div/div/a"
         find_elements(self.driver, go_out_list)
         time.sleep(3)
-
+ 
 
 
         

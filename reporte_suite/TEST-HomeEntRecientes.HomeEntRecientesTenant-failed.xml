@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HomeEntRecientes.HomeEntRecientesTenant-failed" tests="1" file="HomeEntRecientes.py" time="30.769" timestamp="2024-05-24T11:07:04" failures="0" errors="0" skipped="0">
-	<testcase classname="HomeEntRecientes.HomeEntRecientesTenant" name="test_start_tenant" time="30.769" timestamp="2024-05-24T11:07:04" file="HomeEntRecientes.py" line="18">
+<testsuite name="HomeEntRecientes.HomeEntRecientesTenant-failed" tests="1" file="HomeEntRecientes.py" time="32.743" timestamp="2024-06-06T12:29:46" failures="0" errors="0" skipped="0">
+	<testcase classname="HomeEntRecientes.HomeEntRecientesTenant" name="test_start_tenant" time="32.743" timestamp="2024-06-06T12:29:46" file="HomeEntRecientes.py" line="18">
 		<system-out><![CDATA[El texto encontrado es  Buen día JUAN DEMO!
 El texto encontrado es  Entregas y Ventas Recientes
 La imagen es visible para el usuario. URL: https://pwa-portal-staging.silohub.ag/assets/images/grains/trigo.svg

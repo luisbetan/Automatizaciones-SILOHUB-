@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CtaContOperSecundaria.contrato_operSecundarias-failed" tests="1" file="CtaContOperSecundaria.py" time="70.624" timestamp="2024-05-24T11:24:57" failures="0" errors="0" skipped="0">
-	<testcase classname="CtaContOperSecundaria.contrato_operSecundarias" name="test_contratc_oparSecondary" time="70.624" timestamp="2024-05-24T11:24:57" file="CtaContOperSecundaria.py" line="22">
+<testsuite name="CtaContOperSecundaria.contrato_operSecundarias-failed" tests="1" file="CtaContOperSecundaria.py" time="78.056" timestamp="2024-06-06T12:47:35" failures="0" errors="0" skipped="0">
+	<testcase classname="CtaContOperSecundaria.contrato_operSecundarias" name="test_contratc_oparSecondary" time="78.056" timestamp="2024-06-06T12:47:35" file="CtaContOperSecundaria.py" line="22">
 		<system-out><![CDATA[¡Elemento encontrado y clickeado 2 veces con éxito!
-¡Elemento encontrado y clickeado 5 veces con éxito!
+¡Elemento encontrado y clickeado 6 veces con éxito!
 El texto encontrado es  Estado De Mis Contratos
 El texto es visible para el usuario
 El texto fue validado correctamente: Contrato 2070

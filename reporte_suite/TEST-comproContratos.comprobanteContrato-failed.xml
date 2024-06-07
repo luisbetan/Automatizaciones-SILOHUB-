@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="comproContratos.comprobanteContrato-failed" tests="1" file="comproContratos.py" time="53.506" timestamp="2024-05-24T11:48:35" failures="0" errors="0" skipped="0">
-	<testcase classname="comproContratos.comprobanteContrato" name="test_comprobante_contrato" time="53.506" timestamp="2024-05-24T11:48:35" file="comproContratos.py" line="22">
+<testsuite name="comproContratos.comprobanteContrato-failed" tests="1" file="comproContratos.py" time="49.545" timestamp="2024-06-06T12:59:20" failures="0" errors="0" skipped="0">
+	<testcase classname="comproContratos.comprobanteContrato" name="test_comprobante_contrato" time="49.545" timestamp="2024-06-06T12:59:20" file="comproContratos.py" line="22">
 		<system-out><![CDATA[El texto encontrado es  COMPROBANTES
-¡Elemento encontrado y clickeado 4 veces con éxito!
+¡Elemento encontrado y clickeado 5 veces con éxito!
 ¡Elemento encontrado y clickeado 1 veces con éxito!
 El texto encontrado es  Mis Comprobantes
 El texto no fue encontrado VC 0001 00125165

@@ -90,7 +90,7 @@ class cuenta_ctacte_histAvencer(unittest.TestCase):
 
 
         select_arrow_2 = "/html/body/div/div[1]/span[2]"
-        clicks = 4
+        clicks = 3
         find_and_click_element(self.driver, select_arrow_2, clicks)
         time.sleep(2)
 
@@ -111,11 +111,11 @@ class cuenta_ctacte_histAvencer(unittest.TestCase):
 
 
 
-        balance_ars = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[1]/div/div[1]/app-totalizer/div/div/div[2]/div[2]/span[1]"
+        balance_ars = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[1]/div/div[1]/app-totalizer/div/div/div[2]/div[2]/span[1]"
         validate_character_numeric_element(self.driver, balance_ars)
 
 
-        balance_usd = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[1]/div/div[2]/app-totalizer/div/div/div[2]/div[2]/span[1]"
+        balance_usd = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[1]/div/div[2]/app-totalizer/div/div/div[2]/div[2]/span[1]"
         validate_character_numeric_element(self.driver, balance_usd)
 
 

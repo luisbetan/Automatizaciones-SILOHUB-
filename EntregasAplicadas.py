@@ -144,7 +144,7 @@ class cta_entregasAplicadas(unittest.TestCase):
 
         # ingresar al detalle del tercer movimiento
 
-        insert_movemenst = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-deliveries/app-deliveries-shared/app-responsive-table/div/div[2]/table/tbody/tr[3]/td[2]/span/span"
+        insert_movemenst = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-deliveries/app-deliveries-shared/app-responsive-table/div/div[2]/table/tbody/tr[3]/td[3]/span/div"
         find_elements(self.driver, insert_movemenst )
         time.sleep(3)
 
@@ -202,11 +202,11 @@ class cta_entregasAplicadas(unittest.TestCase):
         validate_text_visible(self.driver, title_analysis,  title_analysis_expected  ) 
   
 
-        data_analysis = '#layout-wrapper > div > div > div > app-quality-analisis > app-responsive-table > div > div.table-responsive > table > tbody > tr:nth-child(9) > td.text-nowrap.align-middle.f-size-12.fw-bold.ellipsis-cell > span > span'
+        data_analysis = '.table > tbody:nth-child(2) > tr:nth-child(9) > td:nth-child(1) > span:nth-child(1) > div:nth-child(1) > span:nth-child(1)'
         data_analysis_expected = "Peso Hectolítrico"
         validate_text_visible_selector(self.driver, data_analysis,  data_analysis_expected  )  
 
-        foreign_matter = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-quality-analisis/app-responsive-table/div/div[2]/table/tbody/tr[9]/td[2]/span/span'
+        foreign_matter = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-quality-analisis/app-responsive-table/div/div[2]/table/tbody/tr[9]/td[2]/span/div/span'
         foreign_matter_expected = "69.961%"
         validate_text_visible(self.driver, foreign_matter,  foreign_matter_expected  ) 
 

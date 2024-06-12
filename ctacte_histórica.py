@@ -65,7 +65,7 @@ class cuenta_ctacte_historica(unittest.TestCase):
         older_by_expiration = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-radio-button-list[1]/div/app-radio[2]/div/input"
         find_elements(self.driver,   older_by_expiration)
 
-        ## seleccionar rango de fecha 06/05/2023 al 28/06/2023
+        ## seleccionar rango de fecha 06/05/2023 al 28/07/2023
 
         select_field_date = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-date-filter/div/app-date-picker/div/input[2]"
         find_elements(self.driver,   select_field_date)
@@ -104,54 +104,54 @@ class cuenta_ctacte_historica(unittest.TestCase):
 
 
 
-        balance_ars = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[1]/div/div[1]/app-totalizer/div/div/div[2]/div[2]/span[1]"
+        balance_ars = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[1]/div/div[1]/app-totalizer/div/div/div[2]/div[2]/span[1]"
         validate_character_numeric_element(self.driver, balance_ars)
 
 
-        balance_usd = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[1]/div/div[2]/app-totalizer/div/div/div[2]/div[2]/span[1]"
+        balance_usd = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[1]/div/div[2]/app-totalizer/div/div/div[2]/div[2]/span[1]"
         validate_character_numeric_element(self.driver, balance_usd)
 
 
         ## seleccionar movimientos del lisatos 
 
-        movements_list_1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[1]/th/input"
+        movements_list_1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[2]/th/input"
         find_elements(self.driver, movements_list_1)
 
-        movements_list_2 =  "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[2]/th/input"
+        movements_list_2 =  "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[3]/th/input"
         find_elements(self.driver, movements_list_2)
 
-        movements_list_3 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[3]/th/input"
+        movements_list_3 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[4]/th/input"
         find_elements(self.driver, movements_list_3)
 
-        movements_list_4 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[4]/th/input"
+        movements_list_4 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[5]/th/input"
         find_elements(self.driver, movements_list_4)
       
        ## seleccionar botón descargar  
 
-        select_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/button[2]"
+        select_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/button[2]"
         find_elements(self.driver,   select_button)
 
         ## descargar Excel 
 
-        download_Excel = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/ul/li[1]/a"
+        download_Excel = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/ul/li[1]/a"
         find_elements(self.driver, download_Excel)
         time.sleep(3)
 
         ## descargar PDF 
 
-        select_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/button[2]"
+        select_button = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/button[2]"
         find_elements(self.driver,  select_button)
 
-        ## descargar Excel 
+        ## descargar PDF
 
-        download_PDF = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/ul/li[2]/a"
+        download_PDF = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[2]/div/div[1]/app-download-button/div/ul/li[2]/a"
         find_elements(self.driver, download_PDF)
         time.sleep(3)
 
 
         ## ingresar al detalle 
 
-        detail_movements = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[2]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[4]/td[2]"
+        detail_movements = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[4]/td[2]"
         find_elements(self.driver, detail_movements)
         time.sleep(3)
 
@@ -163,16 +163,16 @@ class cuenta_ctacte_historica(unittest.TestCase):
         ## validar datos del detalle 
 
         number_movements = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account-detail/app-header-for-detail/div[1]/div"
-        number_movements_expected = "Movimiento RI 0011 00077998"
+        number_movements_expected = "Movimiento ED 0011 00285494"
         validate_text(self.driver,number_movements,number_movements_expected )
 
         balance_movements = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account-detail/app-header-for-detail/div[2]/div/div[2]/div[1]"
-        balance_movements_expected = "+ ARS 1.234,20"
+        balance_movements_expected = "+ ARS 2.487.087,83"
         validate_text(self.driver, balance_movements, balance_movements_expected )
 
 
         settlement = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account-detail/app-header-for-detail/div[2]/div/div[2]/div[2]"
-        settlement_expected = "Comprobante Contrapartida de: OP 0001 - 00038025 0"
+        settlement_expected = "IMPUTACION CANJE"
         validate_text(self.driver,  settlement, settlement_expected )
 
         ## Seleccionar salida al listado 

@@ -77,7 +77,7 @@ class entregas_pend_Aplicadas(unittest.TestCase):
         find_and_click_element_selector(self.driver, arrow_filter1, amount_click1)
 
         arrow_filter1 = "/html/body/div/div[1]/span[1]"
-        amount_click1 = 10
+        amount_click1 = 11
         find_and_click_element(self.driver, arrow_filter1, amount_click1)
 
         select_date1 = "/html/body/div/div[2]/div/div[2]/div/span[29]"
@@ -140,7 +140,7 @@ class entregas_pend_Aplicadas(unittest.TestCase):
 
         # ingresar al detalle del tercer movimiento
 
-        insert_movemenst = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-deliveries/app-deliveries-shared/app-responsive-table/div/div[2]/table/tbody/tr[3]/td[4]/span/span"
+        insert_movemenst = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-deliveries/app-deliveries-shared/app-responsive-table/div/div[2]/table/tbody/tr[3]/td[3]/span/div/span"
         find_elements(self.driver, insert_movemenst )
         time.sleep(3)
 

@@ -187,7 +187,7 @@ class Onboarding_test_tenant(unittest.TestCase):
          #contancia de CBU
 
         select_field2 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-documentation-process/div/div/aw-wizard/div/app-legacy-documentation/div/div/app-legacy-opening/div/div/app-acordion-for-upload[1]/div/div/h2/button'
-        element_archive_3 =  "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-documentation-process/div/div/aw-wizard/div/app-legacy-documentation/div/div/app-legacy-opening/div/div/app-acordion-for-upload[1]/div/div/h2/button/app-upload-input/div/div[2]/input"
+        element_archive_3 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-documentation-process/div/div/aw-wizard/div/app-legacy-documentation/div/div/app-legacy-opening/div/div/app-acordion-for-upload[1]/div/div/h2/button/app-upload-input/div/div[2]/input'
         archive2 = "C:/Users/luist/OneDrive/Escritorio/Facturas/fractura Bezatbeth_files/factura Bezatbeth.pdf"
         upload_file_after_click(self.driver, select_field2, element_archive_3, archive2)
         time.sleep(3)
@@ -200,8 +200,8 @@ class Onboarding_test_tenant(unittest.TestCase):
         upload_file_after_click(self.driver, select_field3, element_archive_4, archive3)
         time.sleep(3)
 
-        select_field4 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-documentation-process/div/div/aw-wizard/div/app-legacy-documentation/div/div/app-legacy-opening/div/div/app-acordion-for-upload[2]/div/div/h2/button'
-        element_archive_5 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-documentation-process/div/div/aw-wizard/div/app-legacy-documentation/div/div/app-legacy-opening/div/div/app-acordion-for-upload[2]/div/div/h2/button/app-upload-input/div/div[2]/input'
+        select_field4 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-documentation-process/div/div/aw-wizard/div/app-legacy-documentation/div/div/app-legacy-opening/div/div/app-acordion-for-upload[3]/div/div/h2/button'
+        element_archive_5 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-documentation-process/div/div/aw-wizard/div/app-legacy-documentation/div/div/app-legacy-opening/div/div/app-acordion-for-upload[3]/div/div/h2/button/app-upload-input/div/div[2]/input'
         archive4 = "C:/Users/luist/OneDrive/Escritorio/Capturas de pantalla/2022-02-14 (5).png"
         upload_file_after_click(self.driver, select_field4, element_archive_5, archive4)
         time.sleep(3)

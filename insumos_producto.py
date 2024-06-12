@@ -20,12 +20,12 @@ class insumosProductos(unittest.TestCase):
         # Utilizar métodos de LoginHelper para el inicio de sesión
         self.login_sample.login("comercialgd@silohub.ag", "G@viglio123")
         self.login_sample.select_tenant()
-        time.sleep(2)
+        time.sleep(4)
         ## seleccionar menú de insumos 
 
         select_supplies = "/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[3]/div[1]/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[4]/a"
         displace_element(self.driver,select_supplies )
-        time.sleep(5)
+        time.sleep(2)
 
         select_menu_product = "/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[3]/div[1]/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[4]/div/ul/li[1]/a"
         find_elements(self.driver,select_menu_product )

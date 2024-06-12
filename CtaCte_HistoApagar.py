@@ -158,7 +158,7 @@ class cuenta_ctacte_histApagar(unittest.TestCase):
 
         ## ingresar al detalle  del cuarto movimiento
 
-        detail_movements = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[4]/td[2]/span/div/span"
+        detail_movements = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-responsive-table/div/div/table/tbody/tr[4]/td[2]/span/div"
         find_elements(self.driver, detail_movements)
         time.sleep(3)
 

@@ -2,7 +2,7 @@ import time
 import unittest
 from selenium.webdriver.common.by import By
 import xmlrunner
-from Elements import find_and_click_element, find_and_click_element_selector, find_elements, validate_character_numeric_element, validate_text, validate_text_by_strt
+from Elements import calendar_todate_retro, find_and_click_element, find_and_click_element_selector, find_elements, validate_character_numeric_element, validate_character_numeric_element_selector, validate_strt_selector, validate_text, validate_text_by_strt
 from Loginhelper import LoginHelper
 from startSession import StartSession
 
@@ -44,28 +44,14 @@ class reportMerFacturada(unittest.TestCase):
 
         # aplicar rando de fecha 01/09/2021 al 30/09/2021
 
-        select_date_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-reports-options/app-date-filter/div/app-date-picker/div/input[2]"
-        find_elements(self.driver,select_date_filter)
-        time.sleep(2)
+        # aplicar filtro de fecha actual a seis meses para atras 
 
-        select_arrow_1 = "body > div > div.flatpickr-months > div > div > div > span.arrowDown"
-        clicks = 2
-        find_and_click_element_selector(self.driver, select_arrow_1, clicks)
-        time.sleep(2)
-
-        select_arrow_2 = "/html/body/div/div[1]/span[1]"
-        clicks = 6
-        find_and_click_element(self.driver, select_arrow_2, clicks)
-        time.sleep(2)
-
-
-        select_date_1 = "/html/body/div/div[2]/div/div[2]/div/span[3]"
-        find_elements(self.driver, select_date_1)
-        time.sleep(2)
-
-
-        select_date_2 ="/html/body/div/div[2]/div/div[2]/div/span[32]"
-        find_elements(self.driver, select_date_2)
+        select_calendar = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-reports-options/app-date-filter/div/app-date-picker/div/input[2]"
+        popup_xpath = "//div[contains(@class, 'flatpickr-calendar')]"
+        select_chevron = "//span[@class='flatpickr-prev-month']"
+        popup_xpath2 = "//div[contains(@class, 'flatpickr-calendar')]"
+        click_chevron = 6
+        calendar_todate_retro(self.driver, select_calendar, popup_xpath, select_chevron, popup_xpath2, clicks=click_chevron)
         time.sleep(2)
 
         apply_button_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-filter-buttons/div/app-button[2]/button"
@@ -92,50 +78,47 @@ class reportMerFacturada(unittest.TestCase):
         first_column = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-remitted-merchandise/app-responsive-table/div/div[2]/table/thead/tr/th[2]"
         first_column_expected = "Fecha"
         validate_text(self.driver,first_column,first_column_expected )
-        
-        date_movements = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-remitted-merchandise/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[1]/span/span"
-        date_movements_expected = "30/09/2021"
-        validate_text(self.driver,date_movements,date_movements_expected )
 
+        date_movements = "#layout-wrapper > div > div > div > app-remitted-merchandise > app-responsive-table > div > div.table-responsive > table > tbody > tr:nth-child(1) > td.text-nowrap.align-middle.f-size-12.fw-bold.ellipsis-cell > span > div > span"
+        validate_strt_selector(self.driver, "", date_movements)
+        
         second_column = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-remitted-merchandise/app-responsive-table/div/div[2]/table/thead/tr/th[3]"
         second_column_expected = "Comprobante"
         validate_text(self.driver,second_column,second_column_expected )
 
-        voucher_movements = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-remitted-merchandise/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[2]/span/span"
-        voucher_movements_expected = "FACBAL 1063 00029204"
-        validate_text(self.driver,voucher_movements,voucher_movements_expected )
+        voucher_movements = "#layout-wrapper > div > div > div > app-remitted-merchandise > app-responsive-table > div > div.table-responsive > table > tbody > tr:nth-child(1) > td:nth-child(3) > span > div > span"
+        validate_strt_selector(self.driver,"",voucher_movements )
       
 
         third_column = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-remitted-merchandise/app-responsive-table/div/div[2]/table/thead/tr/th[4]"
         third_column_column_expected = "Artículo"
         validate_text(self.driver,third_column,third_column_column_expected )
 
-        article_description2 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-remitted-merchandise/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[3]/span/span"
-        article_description2_expected = "Premezcla Creci Feed Nutricion Superior x 25 kgs"
-        validate_text(self.driver,article_description2,article_description2_expected )
+        article_description2 = "#layout-wrapper > div > div > div > app-remitted-merchandise > app-responsive-table > div > div.table-responsive > table > tbody > tr:nth-child(1) > td:nth-child(4) > span > div > span"
+        validate_strt_selector(self.driver,"" ,article_description2 )
       
 
 
         quarter_column = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-remitted-merchandise/app-responsive-table/div/div[2]/table/thead/tr/th[5]"
-        quarter_column_expected = "Salidas"
+        quarter_column_expected = "Cantidad"
         validate_text(self.driver,quarter_column,quarter_column_expected )
 
-        departures = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-remitted-merchandise/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[4]/span/span"
-        validate_character_numeric_element(self.driver,departures)
+        departures = "#layout-wrapper > div > div > div > app-remitted-merchandise > app-responsive-table > div > div.table-responsive > table > tbody > tr:nth-child(1) > td:nth-child(5) > span > div > span"
+        validate_character_numeric_element_selector(self.driver,departures)
 
         fifth_column = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-remitted-merchandise/app-responsive-table/div/div[2]/table/thead/tr/th[6]"
-        fifth_column_expected = "Precio"
+        fifth_column_expected = "Moneda"
         validate_text(self.driver,fifth_column,fifth_column_expected )
 
-        price = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-remitted-merchandise/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[5]/span/span"
-        validate_character_numeric_element(self.driver,price)
+        type_money = "#layout-wrapper > div > div > div > app-remitted-merchandise > app-responsive-table > div > div.table-responsive > table > tbody > tr:nth-child(1) > td:nth-child(6) > span > div > span"
+        validate_strt_selector(self.driver,"",type_money )
 
-        sixth_column = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-remitted-merchandise/app-responsive-table/div/div[2]/table/thead/tr/th[9]"
-        sixth_column_expected = "Total ARS"
+        sixth_column = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-remitted-merchandise/app-responsive-table/div/div[2]/table/thead/tr/th[7]"
+        sixth_column_expected = "Precio"
         validate_text(self.driver,sixth_column,sixth_column_expected )
 
-        total_money2 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-remitted-merchandise/app-responsive-table/div/div[2]/table/tbody/tr[1]/td[8]/span/span"
-        validate_character_numeric_element(self.driver,total_money2)
+        price = "#layout-wrapper > div > div > div > app-remitted-merchandise > app-responsive-table > div > div.table-responsive > table > tbody > tr:nth-child(1) > td:nth-child(7) > span > div > span"
+        validate_character_numeric_element_selector(self.driver,price)
 
            
        # descargar compromabtes 

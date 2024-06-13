@@ -1469,20 +1469,15 @@ def calendar_todate(driver, input_xpath, popup_xpath):
         print("La fecha actual no está disponible en el calendario.")
 
 def calendar_todate_retro(driver, input_xpath, popup_xpath, chevron_xpath, popup_xpath2, clicks=6):
-    def take_screenshot(driver, filename):
-        driver.save_screenshot(filename)
-
     input_fecha = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.XPATH, input_xpath))
     )
     input_fecha.click()
-    take_screenshot(driver, "step1_input_clicked.png")
 
     # Esperar a que aparezca el pop-up del calendario
     popup_calendario = WebDriverWait(driver, 10).until(
         EC.visibility_of_element_located((By.XPATH, popup_xpath))
     )
-    take_screenshot(driver, "step2_calendar_popup.png")
 
     # Obtener el día actual
     dia_actual = datetime.datetime.now().day
@@ -1494,9 +1489,7 @@ def calendar_todate_retro(driver, input_xpath, popup_xpath, chevron_xpath, popup
         )
         # Darle clic a la fecha para seleccionarla
         ActionChains(driver).move_to_element(fecha_elemento).click().perform()
-        take_screenshot(driver, "step3_date_clicked.png")
     except Exception as e:
-        take_screenshot(driver, "step3_date_not_found.png")
         print("La fecha actual no está disponible en el calendario.")
         print(e)
         return
@@ -1508,10 +1501,8 @@ def calendar_todate_retro(driver, input_xpath, popup_xpath, chevron_xpath, popup
                 EC.element_to_be_clickable((By.XPATH, chevron_xpath))
             )
             back_button.click()
-            take_screenshot(driver, f"step4_back_button_clicked_{i+1}.png")
             time.sleep(1)  # Esperar un segundo para que el calendario se actualice
         except Exception as e:
-            take_screenshot(driver, f"step4_back_button_not_clicked_{i+1}.png")
             print(f"No se pudo hacer clic en el botón de retroceso en el intento {i+1}.")
             print(e)
             return
@@ -1520,7 +1511,6 @@ def calendar_todate_retro(driver, input_xpath, popup_xpath, chevron_xpath, popup
     popup_calendario2 = WebDriverWait(driver, 10).until(
         EC.visibility_of_element_located((By.XPATH, popup_xpath2))
     )
-    take_screenshot(driver, "step5_calendar_updated.png")
 
     # Seleccionar el día correspondiente al número del día actual después de retroceder meses
     try:
@@ -1528,9 +1518,7 @@ def calendar_todate_retro(driver, input_xpath, popup_xpath, chevron_xpath, popup
             EC.element_to_be_clickable((By.XPATH, f"//span[contains(@class, 'flatpickr-day') and text()='{dia_actual}']"))
         )
         dia_elemento.click()
-        take_screenshot(driver, "step6_day_selected.png")
     except Exception as e:
-        take_screenshot(driver, "step6_day_not_found.png")
         print(f"El día {dia_actual} no está disponible en el calendario después de retroceder meses.")
         print(e)
 

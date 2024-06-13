@@ -896,7 +896,7 @@ def upload_file_after_click(driver, xpath_chevron, xpath_upload_field, file_path
     try:
         # Esperar hasta que el chevron sea clickeable
         chevron_element = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, xpath_chevron))
+            EC.presence_of_element_located((By.XPATH, xpath_chevron))
         )
 
         # Hacer clic en el chevron para desplegar el campo de carga de archivo
@@ -904,7 +904,7 @@ def upload_file_after_click(driver, xpath_chevron, xpath_upload_field, file_path
 
         # Encontrar el campo de carga de archivo después de desplegar el chevron
         upload_input_element = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, xpath_upload_field))
+            EC.presence_of_element_located((By.XPATH, xpath_upload_field))
         )
 
         # Adjuntar el archivo al campo de carga de archivo
@@ -916,6 +916,34 @@ def upload_file_after_click(driver, xpath_chevron, xpath_upload_field, file_path
         print("Tiempo de espera agotado. El chevron o el campo de carga de archivo no están presentes o no son clickeables.")
     except ElementClickInterceptedException:
         print("El clic en el chevron fue interceptado por otro elemento en la página.")
+
+
+def upload_file_after_click_selector(driver, selector_chevron, selector_upload_field, file_path):
+    try:
+        # Esperar hasta que el chevron sea clickeable
+        chevron_element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, selector_chevron))
+        )
+
+        # Hacer clic en el chevron para desplegar el campo de carga de archivo
+        chevron_element.click()
+
+        # Encontrar el campo de carga de archivo después de desplegar el chevron
+        upload_input_element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, selector_upload_field))
+        )
+
+        # Adjuntar el archivo al campo de carga de archivo
+        upload_input_element.send_keys(file_path)
+
+        print(f"Archivo '{file_path}' cargado con éxito después de hacer clic en el chevron!")
+
+    except TimeoutException:
+        print("Tiempo de espera agotado. El chevron o el campo de carga de archivo no están presentes o no son clickeables.")
+    except ElementClickInterceptedException:
+        print("El clic en el chevron fue interceptado por otro elemento en la página.")
+
+
 
 
 def select_option_click(driver, xpath_chevron, xpath_upload_field ):

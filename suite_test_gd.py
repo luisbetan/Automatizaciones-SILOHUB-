@@ -7,10 +7,14 @@ import smtplib
 import xmlrunner
 import unittest
 from CtaContOperSecundaria import contrato_operSecundarias
+from CtaCte_HistoApagar import cuenta_ctacte_histApagar
+from CtaCte_HistoAvenver import cuenta_ctacte_histAvencer
+from CtaCte_HistoVencido import cuenta_ctacte_histVencido
 from CtaCtoDtalCertificados import detalle_cto_certificados
 from CtaCtoDtalEntVta import detalle_ctro_entregaVentas
 from CtaCtoDtalFijaciones import detalle_ctro_fijaciones
 from CtaCtoDtalLiquidaciones import detalle_cto_liquidaciones
+from Ctacte_histoAcobrar import cuenta_ctacte_histAcobrar
 from Cuentacontrato import contrato_tenant
 from Dashboar import dashboard_granos
 from EntregasAplicadas import cta_entregasAplicadas
@@ -19,20 +23,28 @@ from GranosContratos import granos_contratos
 from Home import HomeTenant
 from HomeEntRecientes import HomeEntRecientesTenant
 from IndicaInsumosHome import IndicaInsumosHome
+from MisIntenciones import mis_intenciones
 from Precio_Fijacion import precio_granos_fijaciones
 from Profile_User import Perfil_Usuario
 from RegistroUsuario import TestRegistroUsuario 
 from Entregas import cuenta_entregas
 from ReportCompPenFact import reportPendFacturar
+from ReportEntreVentas import reportEntregasVentas
+from ReportMerFacturada import reportMerFacturada
 from Ventas import cuenta_ventas
 from Onboarding import Onboarding_test_tenant
 from comproContratos import comprobanteContrato
 from comproCtaCte import comprobantectacte
 from comproEntregas import comprobanteEntregas
 from comproVentas import comprobanteVentas
+from ctacte_ApliApagar import cta_cte_apliApagar
+from ctacte_ApliAvencer import cta_cte_apliAvencer
+from ctacte_ApliVencido import cta_cte_apliVencido
+from ctacte_apliAcobrar import cta_cte_apliAcobrar
 from ctacte_aplicada import cuenta_ctacte_aplicada
 from CtaCte_Histórica import cuenta_ctacte_historica
 from Insumos_Producto import insumosProductos
+from reportInsuRetirar import ReportinsumosPendRetirar
 
 
 def ejecutar_suite():
@@ -44,9 +56,10 @@ def ejecutar_suite():
     test_suite.addTest(unittest.makeSuite(IndicaInsumosHome))
     test_suite.addTest(unittest.makeSuite(granos_contratos))
     test_suite.addTest(unittest.makeSuite(insumosProductos))
-    test_suite.addTest(unittest.makeSuite(contrato_tenant))
     test_suite.addTest(unittest.makeSuite(precio_granos_fijaciones))
     test_suite.addTest(unittest.makeSuite(dashboard_granos))
+    test_suite.addTest(unittest.makeSuite(mis_intenciones))
+    test_suite.addTest(unittest.makeSuite(contrato_tenant))
     test_suite.addTest(unittest.makeSuite(detalle_ctro_entregaVentas))
     test_suite.addTest(unittest.makeSuite(detalle_ctro_fijaciones))
     test_suite.addTest(unittest.makeSuite(detalle_cto_certificados))
@@ -57,12 +70,23 @@ def ejecutar_suite():
     test_suite.addTest(unittest.makeSuite(entregas_pend_Aplicadas))
     test_suite.addTest(unittest.makeSuite(cuenta_ventas))
     test_suite.addTest(unittest.makeSuite(cuenta_ctacte_aplicada))
+    test_suite.addTest(unittest.makeSuite(cta_cte_apliAcobrar))
+    test_suite.addTest(unittest.makeSuite(cta_cte_apliApagar))
+    test_suite.addTest(unittest.makeSuite(cta_cte_apliAvencer))
+    test_suite.addTest(unittest.makeSuite(cta_cte_apliVencido))
     test_suite.addTest(unittest.makeSuite(cuenta_ctacte_historica))
+    test_suite.addTest(unittest.makeSuite(cuenta_ctacte_histApagar))
+    test_suite.addTest(unittest.makeSuite(cuenta_ctacte_histAcobrar))
+    test_suite.addTest(unittest.makeSuite(cuenta_ctacte_histAvencer))
+    test_suite.addTest(unittest.makeSuite(cuenta_ctacte_histVencido))
     test_suite.addTest(unittest.makeSuite(comprobantectacte))
     test_suite.addTest(unittest.makeSuite(comprobanteContrato))
     test_suite.addTest(unittest.makeSuite(comprobanteEntregas))
     test_suite.addTest(unittest.makeSuite(comprobanteVentas))
     test_suite.addTest(unittest.makeSuite(reportPendFacturar))
+    test_suite.addTest(unittest.makeSuite(reportEntregasVentas))
+    test_suite.addTest(unittest.makeSuite(ReportinsumosPendRetirar))
+    test_suite.addTest(unittest.makeSuite(reportMerFacturada))
     test_suite.addTest(unittest.makeSuite(Onboarding_test_tenant))
     
     # Configuración para generar informes XML solo de los tests fallidos

@@ -132,7 +132,7 @@ class cta_cte_apliAvencer(unittest.TestCase):
 
         ## ingresar al detalle del segundo movimiento 
 
-        detail_movements4 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[1]/app-current-account-applied-list/app-responsive-table/div/div/table/tbody/tr[3]/td[2]/span/span"
+        detail_movements4 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[1]/app-current-account-applied-list/app-responsive-table/div/div/table/tbody/tr[2]/td[2]/span/div/span"
         find_elements(self.driver, detail_movements4)
         time.sleep(3)
 
@@ -143,7 +143,7 @@ class cta_cte_apliAvencer(unittest.TestCase):
 
         ## validar datos del detalle 
 
-        number_movements = "Movimiento NC 1051 00007140"
+        number_movements = "Movimiento NC 1051 00007141"
         validate_text_by_strt(self.driver, number_movements )
 
 
@@ -151,7 +151,7 @@ class cta_cte_apliAvencer(unittest.TestCase):
         balance_movements = "USD 236,68"
         validate_text_by_strt(self.driver, balance_movements )
 
-        settlement = "NC Bonificacion afecta a fra. 1051-14310-(3 bidon"
+        settlement = "NC Bonificacion afecta a fra. 1051-14357-(Bidon c"
         validate_text_by_strt(self.driver, settlement )
 
         ## Seleccionar salida al listado 

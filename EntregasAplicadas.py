@@ -42,7 +42,7 @@ class cta_entregasAplicadas(unittest.TestCase):
         validate_text(self.driver, title_menu, tille_expected )
 
         # selecionar botón del filtro
-        selct_filter = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-deliveries/app-deliveries-shared/app-header-for-responsive-table/div/div/div[2]/div/div[2]/app-filter-button/button/div/i"
+        selct_filter = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-deliveries/app-deliveries-shared/app-header-for-responsive-table/div/div/div[2]/div/div/app-filter-button/button/div/span"
         find_elements(self.driver, selct_filter )
         time.sleep(3)
  

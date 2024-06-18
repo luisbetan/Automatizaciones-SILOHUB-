@@ -33,6 +33,7 @@ class Fijaciones_precio(unittest.TestCase):
 
         select_fijaciones =  '/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[2]/div/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[3]/div/ul/li[1]/a'
         find_elements(self.driver,select_fijaciones )
+        time.sleep(3)
 
 
         ## validar que estamos en la solapa fijaciones habilitadas 
@@ -45,7 +46,7 @@ class Fijaciones_precio(unittest.TestCase):
         account_number = '484'
         xpath_search_results = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-bindings/div/div[1]/app-bindings-enabled-list/app-header-for-responsive-table/div/div/div[1]/div/div/app-customer-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[5]/span"
         search_and_select_producer(self.driver, xpath_search_input, xpath_search_results, account_number)
-
+        time.sleep(5)
         # aplicar filtro  rango de fecha 09/01/2024 al 22/02/2024
          
         apply_filter = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-bindings/div/div[1]/app-bindings-enabled-list/app-header-for-responsive-table/div/div/div[2]/div/div/app-filter-button/button/div/span"

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CtaCtoDtalCertificados.detalle_cto_certificados-failed" tests="1" file="CtaCtoDtalCertificados.py" time="64.192" timestamp="2024-06-26T12:25:20" failures="1" errors="0" skipped="0">
+	<testcase classname="CtaCtoDtalCertificados.detalle_cto_certificados" name="test_detail_certificates" time="64.192" timestamp="2024-06-26T12:25:20" file="CtaCtoDtalCertificados.py" line="22">
+		<failure type="AssertionError" message=""><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\CtaCtoDtalCertificados.py", line 110, in test_detail_certificates
+    validate_text_visible(self.driver, element1, number_expected)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1173, in validate_text_visible
+    assert text_obtained == text_expected
+AssertionError
+]]></failure>
+		<system-out><![CDATA[¡Elemento encontrado y clickeado 3 veces con éxito!
+¡Elemento encontrado y clickeado 4 veces con éxito!
+¡Elemento encontrado y clickeado 3 veces con éxito!
+El texto encontrado es  Estado De Mis Contratos
+El texto es visible para el usuario
+]]></system-out>
+	</testcase>
+</testsuite>

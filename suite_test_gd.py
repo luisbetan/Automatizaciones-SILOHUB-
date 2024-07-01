@@ -14,7 +14,7 @@ from CtaCtoDtalCertificados import detalle_cto_certificados
 from CtaCtoDtalEntVta import detalle_ctro_entregaVentas
 from CtaCtoDtalFijaciones import detalle_ctro_fijaciones
 from CtaCtoDtalLiquidaciones import detalle_cto_liquidaciones
-from Ctacte_histoAcobrar import cuenta_ctacte_histAcobrar
+from ctacte_histoAcobrar import cuenta_ctacte_histAcobrar
 from Cuentacontrato import contrato_tenant
 from Dashboar import dashboard_granos
 from EntregasAplicadas import cta_entregasAplicadas
@@ -42,8 +42,8 @@ from ctacte_ApliAvencer import cta_cte_apliAvencer
 from ctacte_ApliVencido import cta_cte_apliVencido
 from ctacte_apliAcobrar import cta_cte_apliAcobrar
 from ctacte_aplicada import cuenta_ctacte_aplicada
-from CtaCte_Histórica import cuenta_ctacte_historica
-from Insumos_Producto import insumosProductos
+from ctacte_histórica import cuenta_ctacte_historica
+from insumos_producto import insumosProductos
 from reportInsuRetirar import ReportinsumosPendRetirar
 
 

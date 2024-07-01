@@ -58,7 +58,7 @@ class Fijaciones_precio(unittest.TestCase):
         time.sleep(2)
 
         arrow_filter1 = "/html/body/div/div[1]/span[1]"
-        amount_click1 = 5
+        amount_click1 = 6
         find_and_click_element(self.driver, arrow_filter1, amount_click1)
 
         select_date = "/html/body/div/div[2]/div/div[2]/div/span[9]"

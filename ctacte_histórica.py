@@ -73,7 +73,7 @@ class cuenta_ctacte_historica(unittest.TestCase):
 
       
         select_arrow_1 = "/html/body/div/div[1]/span[1]"
-        clicks = 12
+        clicks = 13
         find_and_click_element(self.driver, select_arrow_1, clicks)
         time.sleep(2)
 

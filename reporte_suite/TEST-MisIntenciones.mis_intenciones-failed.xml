@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MisIntenciones.mis_intenciones-failed" tests="1" file="MisIntenciones.py" time="238.652" timestamp="2024-06-26T12:21:09" failures="0" errors="0" skipped="0">
+	<testcase classname="MisIntenciones.mis_intenciones" name="test_my_intentions" time="238.652" timestamp="2024-06-26T12:21:09" file="MisIntenciones.py" line="22">
+		<system-out><![CDATA[Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+]]></system-out>
+	</testcase>
+</testsuite>

@@ -40,7 +40,7 @@ class Metricas(unittest.TestCase):
         find_elements(self.driver, select_filter)
      
         select_arrow_1 = "body > div > div.flatpickr-months > span.flatpickr-prev-month"
-        clicks = 5
+        clicks = 6
         find_and_click_element_selector(self.driver, select_arrow_1, clicks)
         time.sleep(2)
 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="GranosContratos.granos_contratos-failed" tests="1" file="GranosContratos.py" time="202.007" timestamp="2024-06-26T12:10:56" failures="0" errors="0" skipped="0">
+	<testcase classname="GranosContratos.granos_contratos" name="test_granos_contratos" time="202.007" timestamp="2024-06-26T12:10:56" file="GranosContratos.py" line="23">
+		<system-out><![CDATA[El texto encontrado es  CONTRATOS
+¡Cuenta encontrada y seleccionada 1023  con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+Tiempo de espera agotado. El chevron no están presentes o no son clickeables.
+¡Elemento encontrado y clickeado 1 veces con éxito!
+¡Elemento encontrado y clickeado 6 veces con éxito!
+¡Elemento encontrado y clickeado 1 veces con éxito!
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El texto por xpaht no está presente.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+]]></system-out>
+	</testcase>
+</testsuite>

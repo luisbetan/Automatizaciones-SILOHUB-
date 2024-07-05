@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ReportEntreVentas.reportEntregasVentas-failed" tests="1" file="ReportEntreVentas.py" time="89.693" timestamp="2024-06-26T12:59:58" failures="0" errors="0" skipped="0">
-	<testcase classname="ReportEntreVentas.reportEntregasVentas" name="test_Report_deliverySales" time="89.693" timestamp="2024-06-26T12:59:58" file="ReportEntreVentas.py" line="17">
+<testsuite name="ReportEntreVentas.reportEntregasVentas-failed" tests="1" file="ReportEntreVentas.py" time="98.089" timestamp="2024-07-02T16:46:11" failures="0" errors="0" skipped="0">
+	<testcase classname="ReportEntreVentas.reportEntregasVentas" name="test_Report_deliverySales" time="98.089" timestamp="2024-07-02T16:46:11" file="ReportEntreVentas.py" line="17">
 		<system-out><![CDATA[El texto encontrado es  Entregas y Ventas
 El texto encontrado es  Soja
 El texto encontrado es  23/24

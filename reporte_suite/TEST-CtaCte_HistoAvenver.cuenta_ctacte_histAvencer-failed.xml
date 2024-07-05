@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CtaCte_HistoAvenver.cuenta_ctacte_histAvencer-failed" tests="1" file="CtaCte_HistoAvenver.py" time="106.683" timestamp="2024-06-26T12:50:35" failures="0" errors="1" skipped="0">
-	<testcase classname="CtaCte_HistoAvenver.cuenta_ctacte_histAvencer" name="test_ctacte_historica" time="106.683" timestamp="2024-06-26T12:50:35" file="CtaCte_HistoAvenver.py" line="17">
+<testsuite name="CtaCte_HistoAvenver.cuenta_ctacte_histAvencer-failed" tests="1" file="CtaCte_HistoAvenver.py" time="108.202" timestamp="2024-07-02T16:35:34" failures="0" errors="1" skipped="0">
+	<testcase classname="CtaCte_HistoAvenver.cuenta_ctacte_histAvencer" name="test_ctacte_historica" time="108.202" timestamp="2024-07-02T16:35:34" file="CtaCte_HistoAvenver.py" line="17">
 		<error type="NoSuchElementException" message="Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[1]/div/div[1]/app-totalizer/div/div/div[2]/div[2]/span[1]&quot;}
-  (Session info: chrome=126.0.6478.116); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+  (Session info: chrome=126.0.6478.127); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Stacktrace:
-	GetHandleVerifier [0x00007FF77C83EEA2+31554]
-	(No symbol) [0x00007FF77C7B7ED9]
-	(No symbol) [0x00007FF77C67872A]
-	(No symbol) [0x00007FF77C6C8434]
-	(No symbol) [0x00007FF77C6C853C]
-	(No symbol) [0x00007FF77C70F6A7]
-	(No symbol) [0x00007FF77C6ED06F]
-	(No symbol) [0x00007FF77C70C977]
-	(No symbol) [0x00007FF77C6ECDD3]
-	(No symbol) [0x00007FF77C6BA33B]
-	(No symbol) [0x00007FF77C6BAED1]
-	GetHandleVerifier [0x00007FF77CB48B1D+3217341]
-	GetHandleVerifier [0x00007FF77CB95AE3+3532675]
-	GetHandleVerifier [0x00007FF77CB8B0E0+3489152]
-	GetHandleVerifier [0x00007FF77C8EE776+750614]
-	(No symbol) [0x00007FF77C7C375F]
-	(No symbol) [0x00007FF77C7BEB14]
-	(No symbol) [0x00007FF77C7BECA2]
-	(No symbol) [0x00007FF77C7AE16F]
-	BaseThreadInitThunk [0x00007FFBED37257D+29]
-	RtlUserThreadStart [0x00007FFBEECEAA48+40]
+	GetHandleVerifier [0x00007FF62C34EEA2+31554]
+	(No symbol) [0x00007FF62C2C7ED9]
+	(No symbol) [0x00007FF62C18872A]
+	(No symbol) [0x00007FF62C1D8434]
+	(No symbol) [0x00007FF62C1D853C]
+	(No symbol) [0x00007FF62C21F6A7]
+	(No symbol) [0x00007FF62C1FD06F]
+	(No symbol) [0x00007FF62C21C977]
+	(No symbol) [0x00007FF62C1FCDD3]
+	(No symbol) [0x00007FF62C1CA33B]
+	(No symbol) [0x00007FF62C1CAED1]
+	GetHandleVerifier [0x00007FF62C658B1D+3217341]
+	GetHandleVerifier [0x00007FF62C6A5AE3+3532675]
+	GetHandleVerifier [0x00007FF62C69B0E0+3489152]
+	GetHandleVerifier [0x00007FF62C3FE776+750614]
+	(No symbol) [0x00007FF62C2D375F]
+	(No symbol) [0x00007FF62C2CEB14]
+	(No symbol) [0x00007FF62C2CECA2]
+	(No symbol) [0x00007FF62C2BE16F]
+	BaseThreadInitThunk [0x00007FF99BFF257D+29]
+	RtlUserThreadStart [0x00007FF99CAAAF28+40]
 "><![CDATA[Traceback (most recent call last):
   File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\CtaCte_HistoAvenver.py", line 115, in test_ctacte_historica
     validate_character_numeric_element(self.driver, balance_ars)
@@ -37,32 +37,32 @@ Stacktrace:
   File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
     raise exception_class(message, screen, stacktrace)
 selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[3]/app-current-account-file-list/app-header-for-responsive-table/div/div/div[1]/div/div[1]/app-totalizer/div/div/div[2]/div[2]/span[1]"}
-  (Session info: chrome=126.0.6478.116); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+  (Session info: chrome=126.0.6478.127); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Stacktrace:
-	GetHandleVerifier [0x00007FF77C83EEA2+31554]
-	(No symbol) [0x00007FF77C7B7ED9]
-	(No symbol) [0x00007FF77C67872A]
-	(No symbol) [0x00007FF77C6C8434]
-	(No symbol) [0x00007FF77C6C853C]
-	(No symbol) [0x00007FF77C70F6A7]
-	(No symbol) [0x00007FF77C6ED06F]
-	(No symbol) [0x00007FF77C70C977]
-	(No symbol) [0x00007FF77C6ECDD3]
-	(No symbol) [0x00007FF77C6BA33B]
-	(No symbol) [0x00007FF77C6BAED1]
-	GetHandleVerifier [0x00007FF77CB48B1D+3217341]
-	GetHandleVerifier [0x00007FF77CB95AE3+3532675]
-	GetHandleVerifier [0x00007FF77CB8B0E0+3489152]
-	GetHandleVerifier [0x00007FF77C8EE776+750614]
-	(No symbol) [0x00007FF77C7C375F]
-	(No symbol) [0x00007FF77C7BEB14]
-	(No symbol) [0x00007FF77C7BECA2]
-	(No symbol) [0x00007FF77C7AE16F]
-	BaseThreadInitThunk [0x00007FFBED37257D+29]
-	RtlUserThreadStart [0x00007FFBEECEAA48+40]
+	GetHandleVerifier [0x00007FF62C34EEA2+31554]
+	(No symbol) [0x00007FF62C2C7ED9]
+	(No symbol) [0x00007FF62C18872A]
+	(No symbol) [0x00007FF62C1D8434]
+	(No symbol) [0x00007FF62C1D853C]
+	(No symbol) [0x00007FF62C21F6A7]
+	(No symbol) [0x00007FF62C1FD06F]
+	(No symbol) [0x00007FF62C21C977]
+	(No symbol) [0x00007FF62C1FCDD3]
+	(No symbol) [0x00007FF62C1CA33B]
+	(No symbol) [0x00007FF62C1CAED1]
+	GetHandleVerifier [0x00007FF62C658B1D+3217341]
+	GetHandleVerifier [0x00007FF62C6A5AE3+3532675]
+	GetHandleVerifier [0x00007FF62C69B0E0+3489152]
+	GetHandleVerifier [0x00007FF62C3FE776+750614]
+	(No symbol) [0x00007FF62C2D375F]
+	(No symbol) [0x00007FF62C2CEB14]
+	(No symbol) [0x00007FF62C2CECA2]
+	(No symbol) [0x00007FF62C2BE16F]
+	BaseThreadInitThunk [0x00007FF99BFF257D+29]
+	RtlUserThreadStart [0x00007FF99CAAAF28+40]
 
 ]]></error>
-		<system-out><![CDATA[¡Elemento encontrado y clickeado 6 veces con éxito!
+		<system-out><![CDATA[¡Elemento encontrado y clickeado 7 veces con éxito!
 ¡Elemento encontrado y clickeado 4 veces con éxito!
 Tiempo de espera agotado. El texto por xpaht no está presente.
 ]]></system-out>

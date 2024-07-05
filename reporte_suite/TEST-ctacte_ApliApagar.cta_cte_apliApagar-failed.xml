@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ctacte_ApliApagar.cta_cte_apliApagar-failed" tests="1" file="ctacte_ApliApagar.py" time="57.632" timestamp="2024-06-26T12:40:36" failures="0" errors="0" skipped="0">
-	<testcase classname="ctacte_ApliApagar.cta_cte_apliApagar" name="test_ctacte_apliApagar" time="57.632" timestamp="2024-06-26T12:40:36" file="ctacte_ApliApagar.py" line="17">
-		<system-out><![CDATA[¡Elemento encontrado y clickeado 8 veces con éxito!
+<testsuite name="ctacte_ApliApagar.cta_cte_apliApagar-failed" tests="1" file="ctacte_ApliApagar.py" time="60.024" timestamp="2024-07-02T16:25:18" failures="0" errors="0" skipped="0">
+	<testcase classname="ctacte_ApliApagar.cta_cte_apliApagar" name="test_ctacte_apliApagar" time="60.024" timestamp="2024-07-02T16:25:18" file="ctacte_ApliApagar.py" line="17">
+		<system-out><![CDATA[¡Elemento encontrado y clickeado 9 veces con éxito!
 ¡Elemento encontrado y clickeado 2 veces con éxito!
 El texto encontrado es  Cuenta Corriente Aplicada
 El valor es un carácter numérico. Valor: -171.167.917,83

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ReportMerFacturada.reportMerFacturada-failed" tests="1" file="ReportMerFacturada.py" time="41.824" timestamp="2024-06-26T13:01:34" failures="0" errors="0" skipped="0">
-	<testcase classname="ReportMerFacturada.reportMerFacturada" name="test_Report_MerFacturada" time="41.824" timestamp="2024-06-26T13:01:34" file="ReportMerFacturada.py" line="17">
-		<system-out><![CDATA[El valor es un carácter numérico. Valor: 12.284,00
+<testsuite name="ReportMerFacturada.reportMerFacturada-failed" tests="1" file="ReportMerFacturada.py" time="57.320" timestamp="2024-07-02T16:48:06" failures="0" errors="0" skipped="0">
+	<testcase classname="ReportMerFacturada.reportMerFacturada" name="test_Report_MerFacturada" time="57.320" timestamp="2024-07-02T16:48:06" file="ReportMerFacturada.py" line="17">
+		<system-out><![CDATA[El valor es un carácter numérico. Valor: 24,00
 El valor es un carácter numérico. Valor: 10.000,00
 El texto encontrado es  Mercadería Facturada
 El texto encontrado es  Fecha

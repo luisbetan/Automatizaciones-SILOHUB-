@@ -1,7 +1,7 @@
 import unittest
 import time
 import xmlrunner
-from Elements import displace_element,find_elements,find_elements_id, find_send_element, search_and_select_option, select_option_click, send_element, validate_character_numeric_element_selector, validate_strt_selector, validate_text, validate_text_by_text
+from Elements import displace_element, displace_element_clear_send_keys, find_elements,find_elements_id, find_send_element, search_and_select_option, select_option_click,  validate_character_numeric_element_selector, validate_strt_selector, validate_text, validate_text_by_text
 from LoginSample import LoginSample
 from startSession import StartSession
 
@@ -20,16 +20,16 @@ class insumosProductos(unittest.TestCase):
         # Utilizar métodos de LoginHelper para el inicio de sesión
         self.login_sample.login("comercialgd@silohub.ag", "G@viglio123")
         self.login_sample.select_tenant()
-        time.sleep(4)
+        time.sleep(5)
         ## seleccionar menú de insumos 
 
         select_supplies = "/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[3]/div[1]/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[4]/a"
         displace_element(self.driver,select_supplies )
-        time.sleep(2)
+        time.sleep(5)
 
         select_menu_product = "/html/body/app-root/app-layout/app-vertical/div/app-sidebar/div[1]/div[3]/div[1]/ngx-simplebar/div[1]/div[2]/div/div/div/ul/li[4]/div/ul/li[1]/a"
         find_elements(self.driver,select_menu_product )
-        time.sleep(2)
+        time.sleep(5)
 
         ## validar titulo de la pagina 
 
@@ -107,7 +107,7 @@ class insumosProductos(unittest.TestCase):
 
         inser_new_amount = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-supplies-cart/div/div[1]/div/app-supplies-selected-products/app-supplies-selected-products-item/div/div/app-supplies-selected-products-item-price-item/div/div[2]/div/div[2]/input"
         send_new_amount = "3"
-        send_element(self.driver, inser_new_amount,  send_new_amount)
+        displace_element_clear_send_keys(self.driver, inser_new_amount,  send_new_amount)
         time.sleep(2)
         ## insertar comentario
 

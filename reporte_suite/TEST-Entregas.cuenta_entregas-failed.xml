@@ -1,100 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Entregas.cuenta_entregas-failed" tests="2" file="Entregas.py" time="246.751" timestamp="2024-06-26T12:31:42" failures="0" errors="2" skipped="0">
-	<testcase classname="Entregas.cuenta_entregas" name="test_cuenta_entregas" time="0.000" timestamp="0001-01-01T00:00:00" file="Entregas.py" line="22">
-		<error type="AttributeError" message="'NoneType' object has no attribute 'is_displayed'"><![CDATA[Traceback (most recent call last):
+<testsuite name="Entregas.cuenta_entregas-failed" tests="1" file="Entregas.py" time="139.426" timestamp="2024-07-02T16:18:33" failures="0" errors="1" skipped="0">
+	<testcase classname="Entregas.cuenta_entregas" name="test_cuenta_entregas" time="139.426" timestamp="2024-07-02T16:18:33" file="Entregas.py" line="22">
+		<error type="NoSuchElementException" message="Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-deliveries/div/app-header-for-detail/div[1]/div&quot;}
+  (Session info: chrome=126.0.6478.127); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C34EEA2+31554]
+	(No symbol) [0x00007FF62C2C7ED9]
+	(No symbol) [0x00007FF62C18872A]
+	(No symbol) [0x00007FF62C1D8434]
+	(No symbol) [0x00007FF62C1D853C]
+	(No symbol) [0x00007FF62C21F6A7]
+	(No symbol) [0x00007FF62C1FD06F]
+	(No symbol) [0x00007FF62C21C977]
+	(No symbol) [0x00007FF62C1FCDD3]
+	(No symbol) [0x00007FF62C1CA33B]
+	(No symbol) [0x00007FF62C1CAED1]
+	GetHandleVerifier [0x00007FF62C658B1D+3217341]
+	GetHandleVerifier [0x00007FF62C6A5AE3+3532675]
+	GetHandleVerifier [0x00007FF62C69B0E0+3489152]
+	GetHandleVerifier [0x00007FF62C3FE776+750614]
+	(No symbol) [0x00007FF62C2D375F]
+	(No symbol) [0x00007FF62C2CEB14]
+	(No symbol) [0x00007FF62C2CECA2]
+	(No symbol) [0x00007FF62C2BE16F]
+	BaseThreadInitThunk [0x00007FF99BFF257D+29]
+	RtlUserThreadStart [0x00007FF99CAAAF28+40]
+"><![CDATA[Traceback (most recent call last):
   File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Entregas.py", line 156, in test_cuenta_entregas
     validate_text_visible(self.driver, number_TK, number_TK_expected )
-  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1165, in validate_text_visible
-    is_visible = element.is_displayed()
-AttributeError: 'NoneType' object has no attribute 'is_displayed'
-]]></error>
-		<system-out><![CDATA[El texto encontrado es  MIS ENTREGAS
-¡Elemento encontrado y clickeado 2 veces con éxito!
-¡Elemento encontrado y clickeado 5 veces con éxito!
-¡Elemento encontrado y clickeado 1 veces con éxito!
-El texto es visible para el usuario: '992.210,00'
-El texto es visible para el usuario: '982.676,00'
-Tiempo de espera agotado. El elemento no está presente o no es clickeable.
-Tiempo de espera agotado. El elemento no está presente o no es clickeable.
-Tiempo de espera agotado. El elemento no está presente o no es clickeable.
-Tiempo de espera agotado. El elemento no está presente o no es clickeable.
-Tiempo de espera agotado. El elemento no está presente o no es clickeable.
-]]></system-out>
-	</testcase>
-	<testcase classname="Entregas.cuenta_entregas" name="test_cuenta_entregas" time="246.751" timestamp="2024-06-26T12:31:42" file="Entregas.py" line="22">
-		<error type="WebDriverException" message="Message: disconnected: unable to send message to renderer
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=126.0.6478.116)
-Stacktrace:
-	GetHandleVerifier [0x00007FF77C83EEA2+31554]
-	(No symbol) [0x00007FF77C7B7ED9]
-	(No symbol) [0x00007FF77C67872A]
-	(No symbol) [0x00007FF77C66006C]
-	(No symbol) [0x00007FF77C65E7CC]
-	(No symbol) [0x00007FF77C65F47F]
-	(No symbol) [0x00007FF77C678D53]
-	(No symbol) [0x00007FF77C64D47C]
-	(No symbol) [0x00007FF77C6FB614]
-	(No symbol) [0x00007FF77C6ECFF0]
-	(No symbol) [0x00007FF77C6BA33B]
-	(No symbol) [0x00007FF77C6BAED1]
-	GetHandleVerifier [0x00007FF77CB48B1D+3217341]
-	GetHandleVerifier [0x00007FF77CB95AE3+3532675]
-	GetHandleVerifier [0x00007FF77CB8B0E0+3489152]
-	GetHandleVerifier [0x00007FF77C8EE776+750614]
-	(No symbol) [0x00007FF77C7C375F]
-	(No symbol) [0x00007FF77C7BEB14]
-	(No symbol) [0x00007FF77C7BECA2]
-	(No symbol) [0x00007FF77C7AE16F]
-	BaseThreadInitThunk [0x00007FFBED37257D+29]
-	RtlUserThreadStart [0x00007FFBEECEAA48+40]
-"><![CDATA[Traceback (most recent call last):
-  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Entregas.py", line 233, in tearDown
-    self.driver.close()
-  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 459, in close
-    self.execute(Command.CLOSE)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1164, in validate_text_visible
+    element = driver.find_element(By.XPATH, xpath)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
   File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
     self.error_handler.check_response(response)
   File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
     raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.WebDriverException: Message: disconnected: unable to send message to renderer
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=126.0.6478.116)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-deliveries/div/app-header-for-detail/div[1]/div"}
+  (Session info: chrome=126.0.6478.127); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Stacktrace:
-	GetHandleVerifier [0x00007FF77C83EEA2+31554]
-	(No symbol) [0x00007FF77C7B7ED9]
-	(No symbol) [0x00007FF77C67872A]
-	(No symbol) [0x00007FF77C66006C]
-	(No symbol) [0x00007FF77C65E7CC]
-	(No symbol) [0x00007FF77C65F47F]
-	(No symbol) [0x00007FF77C678D53]
-	(No symbol) [0x00007FF77C64D47C]
-	(No symbol) [0x00007FF77C6FB614]
-	(No symbol) [0x00007FF77C6ECFF0]
-	(No symbol) [0x00007FF77C6BA33B]
-	(No symbol) [0x00007FF77C6BAED1]
-	GetHandleVerifier [0x00007FF77CB48B1D+3217341]
-	GetHandleVerifier [0x00007FF77CB95AE3+3532675]
-	GetHandleVerifier [0x00007FF77CB8B0E0+3489152]
-	GetHandleVerifier [0x00007FF77C8EE776+750614]
-	(No symbol) [0x00007FF77C7C375F]
-	(No symbol) [0x00007FF77C7BEB14]
-	(No symbol) [0x00007FF77C7BECA2]
-	(No symbol) [0x00007FF77C7AE16F]
-	BaseThreadInitThunk [0x00007FFBED37257D+29]
-	RtlUserThreadStart [0x00007FFBEECEAA48+40]
+	GetHandleVerifier [0x00007FF62C34EEA2+31554]
+	(No symbol) [0x00007FF62C2C7ED9]
+	(No symbol) [0x00007FF62C18872A]
+	(No symbol) [0x00007FF62C1D8434]
+	(No symbol) [0x00007FF62C1D853C]
+	(No symbol) [0x00007FF62C21F6A7]
+	(No symbol) [0x00007FF62C1FD06F]
+	(No symbol) [0x00007FF62C21C977]
+	(No symbol) [0x00007FF62C1FCDD3]
+	(No symbol) [0x00007FF62C1CA33B]
+	(No symbol) [0x00007FF62C1CAED1]
+	GetHandleVerifier [0x00007FF62C658B1D+3217341]
+	GetHandleVerifier [0x00007FF62C6A5AE3+3532675]
+	GetHandleVerifier [0x00007FF62C69B0E0+3489152]
+	GetHandleVerifier [0x00007FF62C3FE776+750614]
+	(No symbol) [0x00007FF62C2D375F]
+	(No symbol) [0x00007FF62C2CEB14]
+	(No symbol) [0x00007FF62C2CECA2]
+	(No symbol) [0x00007FF62C2BE16F]
+	BaseThreadInitThunk [0x00007FF99BFF257D+29]
+	RtlUserThreadStart [0x00007FF99CAAAF28+40]
 
 ]]></error>
 		<system-out><![CDATA[El texto encontrado es  MIS ENTREGAS
 ¡Elemento encontrado y clickeado 2 veces con éxito!
-¡Elemento encontrado y clickeado 5 veces con éxito!
+¡Elemento encontrado y clickeado 6 veces con éxito!
 ¡Elemento encontrado y clickeado 1 veces con éxito!
 El texto es visible para el usuario: '992.210,00'
 El texto es visible para el usuario: '982.676,00'
-Tiempo de espera agotado. El elemento no está presente o no es clickeable.
-Tiempo de espera agotado. El elemento no está presente o no es clickeable.
-Tiempo de espera agotado. El elemento no está presente o no es clickeable.
-Tiempo de espera agotado. El elemento no está presente o no es clickeable.
 Tiempo de espera agotado. El elemento no está presente o no es clickeable.
 ]]></system-out>
 	</testcase>

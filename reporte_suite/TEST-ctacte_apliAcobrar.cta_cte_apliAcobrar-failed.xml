@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ctacte_apliAcobrar.cta_cte_apliAcobrar-failed" tests="1" file="ctacte_apliAcobrar.py" time="56.386" timestamp="2024-06-26T12:39:36" failures="0" errors="0" skipped="0">
-	<testcase classname="ctacte_apliAcobrar.cta_cte_apliAcobrar" name="test_ctacte_aplicada" time="56.386" timestamp="2024-06-26T12:39:36" file="ctacte_apliAcobrar.py" line="17">
-		<system-out><![CDATA[¡Elemento encontrado y clickeado 8 veces con éxito!
+<testsuite name="ctacte_apliAcobrar.cta_cte_apliAcobrar-failed" tests="1" file="ctacte_apliAcobrar.py" time="62.739" timestamp="2024-07-02T16:24:16" failures="0" errors="0" skipped="0">
+	<testcase classname="ctacte_apliAcobrar.cta_cte_apliAcobrar" name="test_ctacte_aplicada" time="62.739" timestamp="2024-07-02T16:24:16" file="ctacte_apliAcobrar.py" line="17">
+		<system-out><![CDATA[¡Elemento encontrado y clickeado 9 veces con éxito!
 ¡Elemento encontrado y clickeado 2 veces con éxito!
 El texto encontrado es  Cuenta Corriente Aplicada
 El valor es un carácter numérico. Valor: 45.348,34

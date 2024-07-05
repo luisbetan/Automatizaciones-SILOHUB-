@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CtaCtoDtalFijaciones.detalle_ctro_fijaciones-failed" tests="1" file="CtaCtoDtalFijaciones.py" time="54.090" timestamp="2024-06-26T12:24:12" failures="1" errors="0" skipped="0">
-	<testcase classname="CtaCtoDtalFijaciones.detalle_ctro_fijaciones" name="test_detail_fixings" time="54.090" timestamp="2024-06-26T12:24:12" file="CtaCtoDtalFijaciones.py" line="22">
+<testsuite name="CtaCtoDtalFijaciones.detalle_ctro_fijaciones-failed" tests="1" file="CtaCtoDtalFijaciones.py" time="56.358" timestamp="2024-07-02T16:12:41" failures="1" errors="0" skipped="0">
+	<testcase classname="CtaCtoDtalFijaciones.detalle_ctro_fijaciones" name="test_detail_fixings" time="56.358" timestamp="2024-07-02T16:12:41" file="CtaCtoDtalFijaciones.py" line="22">
 		<failure type="AssertionError" message=""><![CDATA[Traceback (most recent call last):
   File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\CtaCtoDtalFijaciones.py", line 105, in test_detail_fixings
     validate_text_visible(self.driver, element1, number_expected)
@@ -9,7 +9,7 @@
 AssertionError
 ]]></failure>
 		<system-out><![CDATA[¡Elemento encontrado y clickeado 3 veces con éxito!
-¡Elemento encontrado y clickeado 4 veces con éxito!
+¡Elemento encontrado y clickeado 5 veces con éxito!
 ¡Elemento encontrado y clickeado 3 veces con éxito!
 El texto encontrado es  Estado De Mis Contratos
 El texto es visible para el usuario

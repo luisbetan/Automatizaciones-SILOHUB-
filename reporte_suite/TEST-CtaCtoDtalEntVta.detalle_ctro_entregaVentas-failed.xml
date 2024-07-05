@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CtaCtoDtalEntVta.detalle_ctro_entregaVentas-failed" tests="1" file="CtaCtoDtalEntVta.py" time="53.529" timestamp="2024-06-26T12:23:13" failures="1" errors="0" skipped="0">
-	<testcase classname="CtaCtoDtalEntVta.detalle_ctro_entregaVentas" name="test_detail_deriverySales" time="53.529" timestamp="2024-06-26T12:23:13" file="CtaCtoDtalEntVta.py" line="22">
-		<failure type="AssertionError" message=""><![CDATA[Traceback (most recent call last):
-  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\CtaCtoDtalEntVta.py", line 105, in test_detail_deriverySales
-    validate_text_visible(self.driver, element1, number_expected)
-  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1173, in validate_text_visible
-    assert text_obtained == text_expected
-AssertionError
-]]></failure>
-		<system-out><![CDATA[¡Elemento encontrado y clickeado 3 veces con éxito!
-¡Elemento encontrado y clickeado 4 veces con éxito!
-¡Elemento encontrado y clickeado 3 veces con éxito!
-El texto encontrado es  Estado De Mis Contratos
-El texto es visible para el usuario
+<testsuite name="CtaCtoDtalEntVta.detalle_ctro_entregaVentas-failed" tests="1" file="CtaCtoDtalEntVta.py" time="123.150" timestamp="2024-07-02T16:11:41" failures="0" errors="1" skipped="0">
+	<testcase classname="CtaCtoDtalEntVta.detalle_ctro_entregaVentas" name="test_detail_deriverySales" time="123.150" timestamp="2024-07-02T16:11:41" file="CtaCtoDtalEntVta.py" line="22">
+		<error type="AttributeError" message="'NoneType' object has no attribute 'is_displayed'"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\CtaCtoDtalEntVta.py", line 52, in test_detail_deriverySales
+    find_elements(self.driver,select_product_filter )
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 19, in find_elements
+    select_nex_button = WebDriverWait(driver, 10).until(
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 364, in _predicate
+    element = visibility_of(target)(driver)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 173, in _predicate
+    return _element_if_visible(element)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 179, in _element_if_visible
+    return element if element.is_displayed() == visibility else False
+AttributeError: 'NoneType' object has no attribute 'is_displayed'
+]]></error>
+		<system-out><![CDATA[Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
 ]]></system-out>
 	</testcase>
 </testsuite>

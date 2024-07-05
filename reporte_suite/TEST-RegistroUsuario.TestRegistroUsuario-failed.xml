@@ -1,16 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RegistroUsuario.TestRegistroUsuario-failed" tests="1" file="RegistroUsuario.py" time="212.112" timestamp="2024-06-26T12:05:30" failures="0" errors="0" skipped="0">
-	<testcase classname="RegistroUsuario.TestRegistroUsuario" name="test_register_user" time="212.112" timestamp="2024-06-26T12:05:30" file="RegistroUsuario.py" line="18">
-		<system-out><![CDATA[Email generado: _3kgpoo34@yopmail.com
+<testsuite name="RegistroUsuario.TestRegistroUsuario-failed" tests="1" file="RegistroUsuario.py" time="82.092" timestamp="2024-07-02T15:54:01" failures="0" errors="1" skipped="0">
+	<testcase classname="RegistroUsuario.TestRegistroUsuario" name="test_register_user" time="82.092" timestamp="2024-07-02T15:54:01" file="RegistroUsuario.py" line="18">
+		<error type="ElementClickInterceptedException" message="Message: element click intercepted: Element &lt;i class=&quot;material-icons-outlined f36&quot;&gt;...&lt;/i&gt; is not clickable at point (497, 15). Other element would receive the click: &lt;iframe id=&quot;aswift_6&quot; name=&quot;aswift_6&quot; browsingtopics=&quot;true&quot; style=&quot;width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;&quot; sandbox=&quot;allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation&quot; width=&quot;&quot; height=&quot;&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; vspace=&quot;0&quot; hspace=&quot;0&quot; allowtransparency=&quot;true&quot; scrolling=&quot;no&quot; allow=&quot;attribution-reporting&quot; src=&quot;https://googleads.g.doubleclick.net/pagead/html/r20240626/r20110914/zrt_lookup_fy2021.html#RS-0-&amp;amp;adk=1812271808&amp;amp;client=ca-pub-5609129721109980&amp;amp;fa=8&amp;amp;ifi=7&amp;amp;uci=a!7&quot; data-google-container-id=&quot;a!7&quot; tabindex=&quot;0&quot; title=&quot;Advertisement&quot; aria-label=&quot;Advertisement&quot; data-google-query-id=&quot;CJWD6e2DiYcDFXJZuAQd9JABaA&quot; data-load-complete=&quot;true&quot;&gt;&lt;/iframe&gt;
+  (Session info: chrome=126.0.6478.127)
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C34EEA2+31554]
+	(No symbol) [0x00007FF62C2C7ED9]
+	(No symbol) [0x00007FF62C18872A]
+	(No symbol) [0x00007FF62C1E012E]
+	(No symbol) [0x00007FF62C1DDAF2]
+	(No symbol) [0x00007FF62C1DAF8B]
+	(No symbol) [0x00007FF62C1DA156]
+	(No symbol) [0x00007FF62C1CC151]
+	(No symbol) [0x00007FF62C1FD02A]
+	(No symbol) [0x00007FF62C1CBA76]
+	(No symbol) [0x00007FF62C1FD240]
+	(No symbol) [0x00007FF62C21C977]
+	(No symbol) [0x00007FF62C1FCDD3]
+	(No symbol) [0x00007FF62C1CA33B]
+	(No symbol) [0x00007FF62C1CAED1]
+	GetHandleVerifier [0x00007FF62C658B1D+3217341]
+	GetHandleVerifier [0x00007FF62C6A5AE3+3532675]
+	GetHandleVerifier [0x00007FF62C69B0E0+3489152]
+	GetHandleVerifier [0x00007FF62C3FE776+750614]
+	(No symbol) [0x00007FF62C2D375F]
+	(No symbol) [0x00007FF62C2CEB14]
+	(No symbol) [0x00007FF62C2CECA2]
+	(No symbol) [0x00007FF62C2BE16F]
+	BaseThreadInitThunk [0x00007FF99BFF257D+29]
+	RtlUserThreadStart [0x00007FF99CAAAF28+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\RegistroUsuario.py", line 85, in test_register_user
+    find_elements(self.driver, select_chevron)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 22, in find_elements
+    select_nex_button.click()
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <i class="material-icons-outlined f36">...</i> is not clickable at point (497, 15). Other element would receive the click: <iframe id="aswift_6" name="aswift_6" browsingtopics="true" style="width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting" src="https://googleads.g.doubleclick.net/pagead/html/r20240626/r20110914/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271808&amp;client=ca-pub-5609129721109980&amp;fa=8&amp;ifi=7&amp;uci=a!7" data-google-container-id="a!7" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CJWD6e2DiYcDFXJZuAQd9JABaA" data-load-complete="true"></iframe>
+  (Session info: chrome=126.0.6478.127)
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C34EEA2+31554]
+	(No symbol) [0x00007FF62C2C7ED9]
+	(No symbol) [0x00007FF62C18872A]
+	(No symbol) [0x00007FF62C1E012E]
+	(No symbol) [0x00007FF62C1DDAF2]
+	(No symbol) [0x00007FF62C1DAF8B]
+	(No symbol) [0x00007FF62C1DA156]
+	(No symbol) [0x00007FF62C1CC151]
+	(No symbol) [0x00007FF62C1FD02A]
+	(No symbol) [0x00007FF62C1CBA76]
+	(No symbol) [0x00007FF62C1FD240]
+	(No symbol) [0x00007FF62C21C977]
+	(No symbol) [0x00007FF62C1FCDD3]
+	(No symbol) [0x00007FF62C1CA33B]
+	(No symbol) [0x00007FF62C1CAED1]
+	GetHandleVerifier [0x00007FF62C658B1D+3217341]
+	GetHandleVerifier [0x00007FF62C6A5AE3+3532675]
+	GetHandleVerifier [0x00007FF62C69B0E0+3489152]
+	GetHandleVerifier [0x00007FF62C3FE776+750614]
+	(No symbol) [0x00007FF62C2D375F]
+	(No symbol) [0x00007FF62C2CEB14]
+	(No symbol) [0x00007FF62C2CECA2]
+	(No symbol) [0x00007FF62C2BE16F]
+	BaseThreadInitThunk [0x00007FF99BFF257D+29]
+	RtlUserThreadStart [0x00007FF99CAAAF28+40]
+
+]]></error>
+		<system-out><![CDATA[Email generado: _f932hqxh@yopmail.com
 El texto encontrado es  Crear usuario
-Elemento desplazado, cantidad limpiada y nuevo valor '_3kgpoo34@yopmail.com' ingresado con éxito!
+Elemento desplazado, cantidad limpiada y nuevo valor '_f932hqxh@yopmail.com' ingresado con éxito!
 Tiempo de espera agotado. El texto por texto no está presente.
-Elemento desplazado, cantidad limpiada y nuevo valor '_3kgpoo34@yopmail.com' ingresado con éxito!
-Tiempo de espera agotado. El texto por xpaht no está presente.
-Elemento desplazado, cantidad limpiada y nuevo valor '_3kgpoo34@yopmail.com' ingresado con éxito!
-El texto encontrado es  Email del usuario validado correctamente.
-Tiempo de espera agotado. El elemento no está presente o no es clickeable.
-El texto encontrado es  Cuenta Pendiente de Vincular
+Elemento desplazado, cantidad limpiada y nuevo valor '_f932hqxh@yopmail.com' ingresado con éxito!
 ]]></system-out>
 	</testcase>
 </testsuite>

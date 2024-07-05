@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="comproEntregas.comprobanteEntregas-failed" tests="1" file="comproEntregas.py" time="52.896" timestamp="2024-06-26T12:55:48" failures="0" errors="0" skipped="0">
-	<testcase classname="comproEntregas.comprobanteEntregas" name="test_vouchers_delivery" time="52.896" timestamp="2024-06-26T12:55:48" file="comproEntregas.py" line="16">
+<testsuite name="comproEntregas.comprobanteEntregas-failed" tests="1" file="comproEntregas.py" time="51.950" timestamp="2024-07-02T16:41:43" failures="0" errors="0" skipped="0">
+	<testcase classname="comproEntregas.comprobanteEntregas" name="test_vouchers_delivery" time="51.950" timestamp="2024-07-02T16:41:43" file="comproEntregas.py" line="16">
 		<system-out><![CDATA[El texto encontrado es  COMPROBANTES
-¡Elemento encontrado y clickeado 6 veces con éxito!
+¡Elemento encontrado y clickeado 7 veces con éxito!
 ¡Elemento encontrado y clickeado 1 veces con éxito!
 El texto encontrado es  Mis Comprobantes
 El texto no fue encontrado TK 0001 00127175

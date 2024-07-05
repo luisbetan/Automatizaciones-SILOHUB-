@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="comproCtaCte.comprobantectacte-failed" tests="1" file="comproCtaCte.py" time="108.908" timestamp="2024-06-26T12:53:58" failures="0" errors="0" skipped="0">
-	<testcase classname="comproCtaCte.comprobantectacte" name="test_vouchers_ctacte" time="108.908" timestamp="2024-06-26T12:53:58" file="comproCtaCte.py" line="16">
-		<system-out><![CDATA[El texto encontrado es  COMPROBANTES
-¡Elemento encontrado y clickeado 6 veces con éxito!
+<testsuite name="comproCtaCte.comprobantectacte-failed" tests="1" file="comproCtaCte.py" time="152.833" timestamp="2024-07-02T16:39:44" failures="0" errors="0" skipped="0">
+	<testcase classname="comproCtaCte.comprobantectacte" name="test_vouchers_ctacte" time="152.833" timestamp="2024-07-02T16:39:44" file="comproCtaCte.py" line="16">
+		<system-out><![CDATA[El texto no fue encontrado COMPROBANTES
+¡Elemento encontrado y clickeado 7 veces con éxito!
 ¡Elemento encontrado y clickeado 1 veces con éxito!
 El texto encontrado es  Mis Comprobantes
 El texto encontrado es  NC 1053 00000779

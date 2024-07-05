@@ -1,103 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EntregasPendApli.entregas_pend_Aplicadas-failed" tests="2" file="EntregasPendApli.py" time="190.762" timestamp="2024-06-26T12:36:51" failures="0" errors="2" skipped="0">
-	<testcase classname="EntregasPendApli.entregas_pend_Aplicadas" name="test_delivery_earrings" time="0.000" timestamp="0001-01-01T00:00:00" file="EntregasPendApli.py" line="22">
-		<error type="AttributeError" message="'NoneType' object has no attribute 'is_displayed'"><![CDATA[Traceback (most recent call last):
-  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\EntregasPendApli.py", line 137, in test_delivery_earrings
-    find_elements(self.driver, apply_download_pdf )
-  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 19, in find_elements
-    select_nex_button = WebDriverWait(driver, 10).until(
-  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\wait.py", line 96, in until
-    value = method(self._driver)
-  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 364, in _predicate
-    element = visibility_of(target)(driver)
-  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 173, in _predicate
-    return _element_if_visible(element)
-  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 179, in _element_if_visible
-    return element if element.is_displayed() == visibility else False
-AttributeError: 'NoneType' object has no attribute 'is_displayed'
-]]></error>
+<testsuite name="EntregasPendApli.entregas_pend_Aplicadas-failed" tests="1" file="EntregasPendApli.py" time="78.363" timestamp="2024-07-02T16:21:22" failures="0" errors="0" skipped="0">
+	<testcase classname="EntregasPendApli.entregas_pend_Aplicadas" name="test_delivery_earrings" time="78.363" timestamp="2024-07-02T16:21:22" file="EntregasPendApli.py" line="22">
 		<system-out><![CDATA[El texto encontrado es  MIS ENTREGAS
 ¡Elemento encontrado y clickeado 1 veces con éxito!
-¡Elemento encontrado y clickeado 11 veces con éxito!
+¡Elemento encontrado y clickeado 12 veces con éxito!
 El texto es visible para el usuario: '431.360,00'
 El texto es visible para el usuario: '417.677,00'
-Tiempo de espera agotado. El elemento no está presente o no es clickeable.
-Tiempo de espera agotado. El elemento no está presente o no es clickeable.
-Tiempo de espera agotado. El elemento no está presente o no es clickeable.
-]]></system-out>
-	</testcase>
-	<testcase classname="EntregasPendApli.entregas_pend_Aplicadas" name="test_delivery_earrings" time="190.762" timestamp="2024-06-26T12:36:51" file="EntregasPendApli.py" line="22">
-		<error type="WebDriverException" message="Message: disconnected: Unable to receive message from renderer
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=126.0.6478.116)
-Stacktrace:
-	GetHandleVerifier [0x00007FF77C83EEA2+31554]
-	(No symbol) [0x00007FF77C7B7ED9]
-	(No symbol) [0x00007FF77C67872A]
-	(No symbol) [0x00007FF77C660FDD]
-	(No symbol) [0x00007FF77C65EC6D]
-	(No symbol) [0x00007FF77C65F47F]
-	(No symbol) [0x00007FF77C678D53]
-	(No symbol) [0x00007FF77C64D47C]
-	(No symbol) [0x00007FF77C6FB614]
-	(No symbol) [0x00007FF77C6ECFF0]
-	(No symbol) [0x00007FF77C6BA33B]
-	(No symbol) [0x00007FF77C6BAED1]
-	GetHandleVerifier [0x00007FF77CB48B1D+3217341]
-	GetHandleVerifier [0x00007FF77CB95AE3+3532675]
-	GetHandleVerifier [0x00007FF77CB8B0E0+3489152]
-	GetHandleVerifier [0x00007FF77C8EE776+750614]
-	(No symbol) [0x00007FF77C7C375F]
-	(No symbol) [0x00007FF77C7BEB14]
-	(No symbol) [0x00007FF77C7BECA2]
-	(No symbol) [0x00007FF77C7AE16F]
-	BaseThreadInitThunk [0x00007FFBED37257D+29]
-	RtlUserThreadStart [0x00007FFBEECEAA48+40]
-"><![CDATA[Traceback (most recent call last):
-  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\EntregasPendApli.py", line 226, in tearDown
-    self.driver.close()
-  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 459, in close
-    self.execute(Command.CLOSE)
-  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.WebDriverException: Message: disconnected: Unable to receive message from renderer
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=126.0.6478.116)
-Stacktrace:
-	GetHandleVerifier [0x00007FF77C83EEA2+31554]
-	(No symbol) [0x00007FF77C7B7ED9]
-	(No symbol) [0x00007FF77C67872A]
-	(No symbol) [0x00007FF77C660FDD]
-	(No symbol) [0x00007FF77C65EC6D]
-	(No symbol) [0x00007FF77C65F47F]
-	(No symbol) [0x00007FF77C678D53]
-	(No symbol) [0x00007FF77C64D47C]
-	(No symbol) [0x00007FF77C6FB614]
-	(No symbol) [0x00007FF77C6ECFF0]
-	(No symbol) [0x00007FF77C6BA33B]
-	(No symbol) [0x00007FF77C6BAED1]
-	GetHandleVerifier [0x00007FF77CB48B1D+3217341]
-	GetHandleVerifier [0x00007FF77CB95AE3+3532675]
-	GetHandleVerifier [0x00007FF77CB8B0E0+3489152]
-	GetHandleVerifier [0x00007FF77C8EE776+750614]
-	(No symbol) [0x00007FF77C7C375F]
-	(No symbol) [0x00007FF77C7BEB14]
-	(No symbol) [0x00007FF77C7BECA2]
-	(No symbol) [0x00007FF77C7AE16F]
-	BaseThreadInitThunk [0x00007FFBED37257D+29]
-	RtlUserThreadStart [0x00007FFBEECEAA48+40]
-
-]]></error>
-		<system-out><![CDATA[El texto encontrado es  MIS ENTREGAS
-¡Elemento encontrado y clickeado 1 veces con éxito!
-¡Elemento encontrado y clickeado 11 veces con éxito!
-El texto es visible para el usuario: '431.360,00'
-El texto es visible para el usuario: '417.677,00'
-Tiempo de espera agotado. El elemento no está presente o no es clickeable.
-Tiempo de espera agotado. El elemento no está presente o no es clickeable.
-Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+El texto es visible para el usuario
+El texto fue validado correctamente: Entrega TK 0001 00121693
+El texto es visible para el usuario: '31.320,00 Kg'
+El texto es visible para el usuario
+El texto fue validado correctamente: De Maiz
+El texto es visible para el usuario
+El texto fue validado correctamente: DATOS DE LA ENTREGA
+El texto es visible para el usuario
+El texto fue validado correctamente: 26/07/2022
+El texto es visible para el usuario
+El texto fue validado correctamente: 21/22
+El texto es visible para el usuario
+El texto fue validado correctamente: DON EMIDIO SA
+El texto es visible para el usuario
+El texto fue validado correctamente: 19970 CAMPO RASSETTO (Don Emidio S.A.)
 ]]></system-out>
 	</testcase>
 </testsuite>

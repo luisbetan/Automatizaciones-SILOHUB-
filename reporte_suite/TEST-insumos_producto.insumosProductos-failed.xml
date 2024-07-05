@@ -1,26 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="insumos_producto.insumosProductos-failed" tests="1" file="insumos_producto.py" time="75.131" timestamp="2024-06-26T12:12:13" failures="0" errors="0" skipped="0">
-	<testcase classname="insumos_producto.insumosProductos" name="test_supplies_products" time="75.131" timestamp="2024-06-26T12:12:13" file="insumos_producto.py" line="19">
-		<system-out><![CDATA[El texto encontrado es  PRODUCTOS
-¡Input encontrado y enviado con éxito!
-¡Valor '30 días' ingresado y opción seleccionada con éxito!
-El texto encontrado es  Productos Seleccionados
-El texto no fue encontrado Herbicida 2-4 DB 96% Rainwon x 20 lts RAINWON AGRO
-¡Input encontrado y enviado con éxito!
-¡Input encontrado y enviado con éxito!
-¡Input encontrado y enviado con éxito!
-El texto encontrado es  Tu orden fue enviada al sistema
-El texto encontrado es  Mis Órdenes
-El texto encontrado es  Número
-El valor es un carácter numérico. Valor: 84
-El texto encontrado es  Fecha
-El texto encontrado '17/05/2024' no coincide con el esperado ''
-El texto encontrado es  Hora
-El texto encontrado '16:58 hs.' no coincide con el esperado ''
-El texto encontrado es  Productor
-El texto encontrado '(1023) JUAN DEMO' no coincide con el esperado ''
-El texto encontrado es  Estado
-El texto encontrado 'Gen. C/ Error' no coincide con el esperado ''
+<testsuite name="insumos_producto.insumosProductos-failed" tests="2" file="insumos_producto.py" time="70.492" timestamp="2024-07-02T16:01:05" failures="0" errors="2" skipped="0">
+	<testcase classname="insumos_producto.insumosProductos" name="test_supplies_products" time="0.000" timestamp="0001-01-01T00:00:00" file="insumos_producto.py" line="19">
+		<error type="AttributeError" message="'NoneType' object has no attribute 'is_displayed'"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\insumos_producto.py", line 44, in test_supplies_products
+    find_send_element(self.driver, add_product, send_product )
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 295, in find_send_element
+    input_element = WebDriverWait(driver, 10).until(
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 364, in _predicate
+    element = visibility_of(target)(driver)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 173, in _predicate
+    return _element_if_visible(element)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 179, in _element_if_visible
+    return element if element.is_displayed() == visibility else False
+AttributeError: 'NoneType' object has no attribute 'is_displayed'
+]]></error>
+		<system-out><![CDATA[Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El texto por texto no está presente.
+]]></system-out>
+	</testcase>
+	<testcase classname="insumos_producto.insumosProductos" name="test_supplies_products" time="70.492" timestamp="2024-07-02T16:01:05" file="insumos_producto.py" line="19">
+		<error type="NoSuchWindowException" message="Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.127)
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C34EEA2+31554]
+	(No symbol) [0x00007FF62C2C7ED9]
+	(No symbol) [0x00007FF62C18872A]
+	(No symbol) [0x00007FF62C15D995]
+	(No symbol) [0x00007FF62C2044D7]
+	(No symbol) [0x00007FF62C20B672]
+	(No symbol) [0x00007FF62C1FCFF0]
+	(No symbol) [0x00007FF62C1CA33B]
+	(No symbol) [0x00007FF62C1CAED1]
+	GetHandleVerifier [0x00007FF62C658B1D+3217341]
+	GetHandleVerifier [0x00007FF62C6A5AE3+3532675]
+	GetHandleVerifier [0x00007FF62C69B0E0+3489152]
+	GetHandleVerifier [0x00007FF62C3FE776+750614]
+	(No symbol) [0x00007FF62C2D375F]
+	(No symbol) [0x00007FF62C2CEB14]
+	(No symbol) [0x00007FF62C2CECA2]
+	(No symbol) [0x00007FF62C2BE16F]
+	BaseThreadInitThunk [0x00007FF99BFF257D+29]
+	RtlUserThreadStart [0x00007FF99CAAAF28+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\insumos_producto.py", line 204, in tearDown
+    self.driver.close()
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 459, in close
+    self.execute(Command.CLOSE)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.127)
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C34EEA2+31554]
+	(No symbol) [0x00007FF62C2C7ED9]
+	(No symbol) [0x00007FF62C18872A]
+	(No symbol) [0x00007FF62C15D995]
+	(No symbol) [0x00007FF62C2044D7]
+	(No symbol) [0x00007FF62C20B672]
+	(No symbol) [0x00007FF62C1FCFF0]
+	(No symbol) [0x00007FF62C1CA33B]
+	(No symbol) [0x00007FF62C1CAED1]
+	GetHandleVerifier [0x00007FF62C658B1D+3217341]
+	GetHandleVerifier [0x00007FF62C6A5AE3+3532675]
+	GetHandleVerifier [0x00007FF62C69B0E0+3489152]
+	GetHandleVerifier [0x00007FF62C3FE776+750614]
+	(No symbol) [0x00007FF62C2D375F]
+	(No symbol) [0x00007FF62C2CEB14]
+	(No symbol) [0x00007FF62C2CECA2]
+	(No symbol) [0x00007FF62C2BE16F]
+	BaseThreadInitThunk [0x00007FF99BFF257D+29]
+	RtlUserThreadStart [0x00007FF99CAAAF28+40]
+
+]]></error>
+		<system-out><![CDATA[Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El texto por texto no está presente.
 ]]></system-out>
 	</testcase>
 </testsuite>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ctacte_histórica.cuenta_ctacte_historica-failed" tests="1" file="ctacte_histórica.py" time="60.027" timestamp="2024-06-26T12:45:41" failures="0" errors="0" skipped="0">
-	<testcase classname="ctacte_histórica.cuenta_ctacte_historica" name="test_ctacte_historica" time="60.027" timestamp="2024-06-26T12:45:41" file="ctacte_histórica.py" line="17">
-		<system-out><![CDATA[¡Elemento encontrado y clickeado 12 veces con éxito!
+<testsuite name="ctacte_histórica.cuenta_ctacte_historica-failed" tests="1" file="ctacte_histórica.py" time="64.596" timestamp="2024-07-02T16:30:32" failures="0" errors="0" skipped="0">
+	<testcase classname="ctacte_histórica.cuenta_ctacte_historica" name="test_ctacte_historica" time="64.596" timestamp="2024-07-02T16:30:32" file="ctacte_histórica.py" line="17">
+		<system-out><![CDATA[¡Elemento encontrado y clickeado 13 veces con éxito!
 ¡Elemento encontrado y clickeado 1 veces con éxito!
 El texto encontrado es  CUENTA CORRIENTE
 El valor es un carácter numérico. Valor: 145.869.433,96

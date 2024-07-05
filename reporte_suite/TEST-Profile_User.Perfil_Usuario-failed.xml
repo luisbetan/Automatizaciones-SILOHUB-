@@ -1,87 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Profile_User.Perfil_Usuario-failed" tests="1" file="Profile_User.py" time="41.164" timestamp="2024-06-26T12:06:11" failures="0" errors="1" skipped="0">
-	<testcase classname="Profile_User.Perfil_Usuario" name="test_Profile_User" time="41.164" timestamp="2024-06-26T12:06:11" file="Profile_User.py" line="21">
-		<error type="WebDriverException" message="Message: unknown error: session deleted because of page crash
-from unknown error: cannot determine loading status
-from tab crashed
-  (Session info: chrome=126.0.6478.116)
-Stacktrace:
-	GetHandleVerifier [0x00007FF77C83EEA2+31554]
-	(No symbol) [0x00007FF77C7B7ED9]
-	(No symbol) [0x00007FF77C678559]
-	(No symbol) [0x00007FF77C661D25]
-	(No symbol) [0x00007FF77C6615E7]
-	(No symbol) [0x00007FF77C660DA1]
-	(No symbol) [0x00007FF77C660CE0]
-	(No symbol) [0x00007FF77C65EC6D]
-	(No symbol) [0x00007FF77C65F47F]
-	(No symbol) [0x00007FF77C66E25E]
-	(No symbol) [0x00007FF77C68674F]
-	(No symbol) [0x00007FF77C68C16A]
-	(No symbol) [0x00007FF77C65FC0A]
-	(No symbol) [0x00007FF77C68630D]
-	(No symbol) [0x00007FF77C70CCD5]
-	(No symbol) [0x00007FF77C6ECDD3]
-	(No symbol) [0x00007FF77C6BA33B]
-	(No symbol) [0x00007FF77C6BAED1]
-	GetHandleVerifier [0x00007FF77CB48B1D+3217341]
-	GetHandleVerifier [0x00007FF77CB95AE3+3532675]
-	GetHandleVerifier [0x00007FF77CB8B0E0+3489152]
-	GetHandleVerifier [0x00007FF77C8EE776+750614]
-	(No symbol) [0x00007FF77C7C375F]
-	(No symbol) [0x00007FF77C7BEB14]
-	(No symbol) [0x00007FF77C7BECA2]
-	(No symbol) [0x00007FF77C7AE16F]
-	BaseThreadInitThunk [0x00007FFBED37257D+29]
-	RtlUserThreadStart [0x00007FFBEECEAA48+40]
-"><![CDATA[Traceback (most recent call last):
-  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Profile_User.py", line 107, in test_Profile_User
-    select_option_click(self.driver, select_locate, option_locate)
-  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 957, in select_option_click
-    xpath_chevron.click()
-  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
-    self._execute(Command.CLICK_ELEMENT)
-  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
-    return self._parent.execute(command, params)
-  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.WebDriverException: Message: unknown error: session deleted because of page crash
-from unknown error: cannot determine loading status
-from tab crashed
-  (Session info: chrome=126.0.6478.116)
-Stacktrace:
-	GetHandleVerifier [0x00007FF77C83EEA2+31554]
-	(No symbol) [0x00007FF77C7B7ED9]
-	(No symbol) [0x00007FF77C678559]
-	(No symbol) [0x00007FF77C661D25]
-	(No symbol) [0x00007FF77C6615E7]
-	(No symbol) [0x00007FF77C660DA1]
-	(No symbol) [0x00007FF77C660CE0]
-	(No symbol) [0x00007FF77C65EC6D]
-	(No symbol) [0x00007FF77C65F47F]
-	(No symbol) [0x00007FF77C66E25E]
-	(No symbol) [0x00007FF77C68674F]
-	(No symbol) [0x00007FF77C68C16A]
-	(No symbol) [0x00007FF77C65FC0A]
-	(No symbol) [0x00007FF77C68630D]
-	(No symbol) [0x00007FF77C70CCD5]
-	(No symbol) [0x00007FF77C6ECDD3]
-	(No symbol) [0x00007FF77C6BA33B]
-	(No symbol) [0x00007FF77C6BAED1]
-	GetHandleVerifier [0x00007FF77CB48B1D+3217341]
-	GetHandleVerifier [0x00007FF77CB95AE3+3532675]
-	GetHandleVerifier [0x00007FF77CB8B0E0+3489152]
-	GetHandleVerifier [0x00007FF77C8EE776+750614]
-	(No symbol) [0x00007FF77C7C375F]
-	(No symbol) [0x00007FF77C7BEB14]
-	(No symbol) [0x00007FF77C7BECA2]
-	(No symbol) [0x00007FF77C7AE16F]
-	BaseThreadInitThunk [0x00007FFBED37257D+29]
-	RtlUserThreadStart [0x00007FFBEECEAA48+40]
-
-]]></error>
+<testsuite name="Profile_User.Perfil_Usuario-failed" tests="1" file="Profile_User.py" time="59.584" timestamp="2024-07-02T15:55:08" failures="0" errors="0" skipped="0">
+	<testcase classname="Profile_User.Perfil_Usuario" name="test_Profile_User" time="59.584" timestamp="2024-07-02T15:55:08" file="Profile_User.py" line="21">
 		<system-out><![CDATA[El texto encontrado es  MIS DATOS
 El texto encontrado es  Datos personales
 ¡Input encontrado y enviado con éxito!
@@ -89,6 +8,9 @@ El texto encontrado es  Datos personales
 ¡Input encontrado y enviado con éxito!
 ¡Input encontrado y enviado con éxito!
 ¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+Perfil guardado con éxito
 ]]></system-out>
 	</testcase>
 </testsuite>

@@ -1,95 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EntregasAplicadas.cta_entregasAplicadas-failed" tests="2" file="EntregasAplicadas.py" time="113.779" timestamp="2024-06-26T12:33:38" failures="0" errors="2" skipped="0">
-	<testcase classname="EntregasAplicadas.cta_entregasAplicadas" name="test_delivery_applied" time="0.000" timestamp="0001-01-01T00:00:00" file="EntregasAplicadas.py" line="22">
-		<error type="AttributeError" message="'NoneType' object has no attribute 'is_displayed'"><![CDATA[Traceback (most recent call last):
-  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\EntregasAplicadas.py", line 133, in test_delivery_applied
-    find_elements(self.driver, apply_download_excel )
-  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 19, in find_elements
-    select_nex_button = WebDriverWait(driver, 10).until(
-  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\wait.py", line 96, in until
-    value = method(self._driver)
-  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 364, in _predicate
-    element = visibility_of(target)(driver)
-  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 173, in _predicate
-    return _element_if_visible(element)
-  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 179, in _element_if_visible
-    return element if element.is_displayed() == visibility else False
-AttributeError: 'NoneType' object has no attribute 'is_displayed'
-]]></error>
+<testsuite name="EntregasAplicadas.cta_entregasAplicadas-failed" tests="1" file="EntregasAplicadas.py" time="86.326" timestamp="2024-07-02T16:20:01" failures="0" errors="0" skipped="0">
+	<testcase classname="EntregasAplicadas.cta_entregasAplicadas" name="test_delivery_applied" time="86.326" timestamp="2024-07-02T16:20:01" file="EntregasAplicadas.py" line="22">
 		<system-out><![CDATA[El texto encontrado es  MIS ENTREGAS
 ¡Elemento encontrado y clickeado 2 veces con éxito!
-¡Elemento encontrado y clickeado 5 veces con éxito!
+¡Elemento encontrado y clickeado 6 veces con éxito!
 ¡Elemento encontrado y clickeado 2 veces con éxito!
 El texto es visible para el usuario: '992.210,00'
 El texto es visible para el usuario: '982.676,00'
-Tiempo de espera agotado. El elemento no está presente o no es clickeable.
-]]></system-out>
-	</testcase>
-	<testcase classname="EntregasAplicadas.cta_entregasAplicadas" name="test_delivery_applied" time="113.779" timestamp="2024-06-26T12:33:38" file="EntregasAplicadas.py" line="22">
-		<error type="NoSuchWindowException" message="Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=126.0.6478.116)
-Stacktrace:
-	GetHandleVerifier [0x00007FF77C83EEA2+31554]
-	(No symbol) [0x00007FF77C7B7ED9]
-	(No symbol) [0x00007FF77C67872A]
-	(No symbol) [0x00007FF77C64D995]
-	(No symbol) [0x00007FF77C6F44D7]
-	(No symbol) [0x00007FF77C6FB672]
-	(No symbol) [0x00007FF77C6ECFF0]
-	(No symbol) [0x00007FF77C6BA33B]
-	(No symbol) [0x00007FF77C6BAED1]
-	GetHandleVerifier [0x00007FF77CB48B1D+3217341]
-	GetHandleVerifier [0x00007FF77CB95AE3+3532675]
-	GetHandleVerifier [0x00007FF77CB8B0E0+3489152]
-	GetHandleVerifier [0x00007FF77C8EE776+750614]
-	(No symbol) [0x00007FF77C7C375F]
-	(No symbol) [0x00007FF77C7BEB14]
-	(No symbol) [0x00007FF77C7BECA2]
-	(No symbol) [0x00007FF77C7AE16F]
-	BaseThreadInitThunk [0x00007FFBED37257D+29]
-	RtlUserThreadStart [0x00007FFBEECEAA48+40]
-"><![CDATA[Traceback (most recent call last):
-  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\EntregasAplicadas.py", line 232, in tearDown
-    self.driver.close()
-  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 459, in close
-    self.execute(Command.CLOSE)
-  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=126.0.6478.116)
-Stacktrace:
-	GetHandleVerifier [0x00007FF77C83EEA2+31554]
-	(No symbol) [0x00007FF77C7B7ED9]
-	(No symbol) [0x00007FF77C67872A]
-	(No symbol) [0x00007FF77C64D995]
-	(No symbol) [0x00007FF77C6F44D7]
-	(No symbol) [0x00007FF77C6FB672]
-	(No symbol) [0x00007FF77C6ECFF0]
-	(No symbol) [0x00007FF77C6BA33B]
-	(No symbol) [0x00007FF77C6BAED1]
-	GetHandleVerifier [0x00007FF77CB48B1D+3217341]
-	GetHandleVerifier [0x00007FF77CB95AE3+3532675]
-	GetHandleVerifier [0x00007FF77CB8B0E0+3489152]
-	GetHandleVerifier [0x00007FF77C8EE776+750614]
-	(No symbol) [0x00007FF77C7C375F]
-	(No symbol) [0x00007FF77C7BEB14]
-	(No symbol) [0x00007FF77C7BECA2]
-	(No symbol) [0x00007FF77C7AE16F]
-	BaseThreadInitThunk [0x00007FFBED37257D+29]
-	RtlUserThreadStart [0x00007FFBEECEAA48+40]
-
-]]></error>
-		<system-out><![CDATA[El texto encontrado es  MIS ENTREGAS
-¡Elemento encontrado y clickeado 2 veces con éxito!
-¡Elemento encontrado y clickeado 5 veces con éxito!
-¡Elemento encontrado y clickeado 2 veces con éxito!
-El texto es visible para el usuario: '992.210,00'
-El texto es visible para el usuario: '982.676,00'
-Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+El texto es visible para el usuario
+El texto fue validado correctamente: Entrega TK 9999 00074351
+El texto es visible para el usuario: '30.330,00 Kg'
+El texto es visible para el usuario
+El texto fue validado correctamente: De Maiz
+El texto es visible para el usuario
+El texto fue validado correctamente: DATOS DE LA ENTREGA
+El texto es visible para el usuario
+El texto fue validado correctamente: 23/02/2022
+El texto es visible para el usuario
+El texto fue validado correctamente: 21/22
+El texto es visible para el usuario
+El texto fue validado correctamente: JUAN DEMO
+El texto es visible para el usuario
+El texto fue validado correctamente: 1032 El Rincon
+El texto es visible para el usuario
+El texto fue validado correctamente: ANÁLISIS
+El texto es visible para el usuario
+El texto fue validado correctamente: Peso Hectolítrico
+El texto es visible para el usuario
+El texto fue validado correctamente: 69.961%
 ]]></system-out>
 	</testcase>
 </testsuite>

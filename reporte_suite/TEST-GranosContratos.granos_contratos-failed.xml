@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="GranosContratos.granos_contratos-failed" tests="1" file="GranosContratos.py" time="202.007" timestamp="2024-06-26T12:10:56" failures="0" errors="0" skipped="0">
-	<testcase classname="GranosContratos.granos_contratos" name="test_granos_contratos" time="202.007" timestamp="2024-06-26T12:10:56" file="GranosContratos.py" line="23">
+<testsuite name="GranosContratos.granos_contratos-failed" tests="2" file="GranosContratos.py" time="187.773" timestamp="2024-07-02T15:59:53" failures="0" errors="2" skipped="0">
+	<testcase classname="GranosContratos.granos_contratos" name="test_granos_contratos" time="0.000" timestamp="0001-01-01T00:00:00" file="GranosContratos.py" line="23">
+		<error type="AttributeError" message="'NoneType' object has no attribute 'is_displayed'"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\GranosContratos.py", line 228, in test_granos_contratos
+    find_elements(self.driver, select_finish)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 19, in find_elements
+    select_nex_button = WebDriverWait(driver, 10).until(
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 364, in _predicate
+    element = visibility_of(target)(driver)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 173, in _predicate
+    return _element_if_visible(element)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\support\expected_conditions.py", line 179, in _element_if_visible
+    return element if element.is_displayed() == visibility else False
+AttributeError: 'NoneType' object has no attribute 'is_displayed'
+]]></error>
 		<system-out><![CDATA[El texto encontrado es  CONTRATOS
 ¡Cuenta encontrada y seleccionada 1023  con éxito!
 ¡Input encontrado y enviado con éxito!
@@ -12,7 +27,77 @@ Tiempo de espera agotado. El chevron no están presentes o no son clickeables.
 Tiempo de espera agotado. El elemento no está presente o no es clickeable.
 Tiempo de espera agotado. El elemento no está presente o no es clickeable.
 Tiempo de espera agotado. El texto por xpaht no está presente.
+]]></system-out>
+	</testcase>
+	<testcase classname="GranosContratos.granos_contratos" name="test_granos_contratos" time="187.773" timestamp="2024-07-02T15:59:53" file="GranosContratos.py" line="23">
+		<error type="NoSuchWindowException" message="Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.127)
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C34EEA2+31554]
+	(No symbol) [0x00007FF62C2C7ED9]
+	(No symbol) [0x00007FF62C18872A]
+	(No symbol) [0x00007FF62C15D995]
+	(No symbol) [0x00007FF62C2044D7]
+	(No symbol) [0x00007FF62C20B672]
+	(No symbol) [0x00007FF62C1FCFF0]
+	(No symbol) [0x00007FF62C1CA33B]
+	(No symbol) [0x00007FF62C1CAED1]
+	GetHandleVerifier [0x00007FF62C658B1D+3217341]
+	GetHandleVerifier [0x00007FF62C6A5AE3+3532675]
+	GetHandleVerifier [0x00007FF62C69B0E0+3489152]
+	GetHandleVerifier [0x00007FF62C3FE776+750614]
+	(No symbol) [0x00007FF62C2D375F]
+	(No symbol) [0x00007FF62C2CEB14]
+	(No symbol) [0x00007FF62C2CECA2]
+	(No symbol) [0x00007FF62C2BE16F]
+	BaseThreadInitThunk [0x00007FF99BFF257D+29]
+	RtlUserThreadStart [0x00007FF99CAAAF28+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\GranosContratos.py", line 232, in tearDown
+    self.driver.close()
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 459, in close
+    self.execute(Command.CLOSE)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.127)
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C34EEA2+31554]
+	(No symbol) [0x00007FF62C2C7ED9]
+	(No symbol) [0x00007FF62C18872A]
+	(No symbol) [0x00007FF62C15D995]
+	(No symbol) [0x00007FF62C2044D7]
+	(No symbol) [0x00007FF62C20B672]
+	(No symbol) [0x00007FF62C1FCFF0]
+	(No symbol) [0x00007FF62C1CA33B]
+	(No symbol) [0x00007FF62C1CAED1]
+	GetHandleVerifier [0x00007FF62C658B1D+3217341]
+	GetHandleVerifier [0x00007FF62C6A5AE3+3532675]
+	GetHandleVerifier [0x00007FF62C69B0E0+3489152]
+	GetHandleVerifier [0x00007FF62C3FE776+750614]
+	(No symbol) [0x00007FF62C2D375F]
+	(No symbol) [0x00007FF62C2CEB14]
+	(No symbol) [0x00007FF62C2CECA2]
+	(No symbol) [0x00007FF62C2BE16F]
+	BaseThreadInitThunk [0x00007FF99BFF257D+29]
+	RtlUserThreadStart [0x00007FF99CAAAF28+40]
+
+]]></error>
+		<system-out><![CDATA[El texto encontrado es  CONTRATOS
+¡Cuenta encontrada y seleccionada 1023  con éxito!
+¡Input encontrado y enviado con éxito!
+¡Input encontrado y enviado con éxito!
+Tiempo de espera agotado. El chevron no están presentes o no son clickeables.
+¡Elemento encontrado y clickeado 1 veces con éxito!
+¡Elemento encontrado y clickeado 6 veces con éxito!
+¡Elemento encontrado y clickeado 1 veces con éxito!
 Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El elemento no está presente o no es clickeable.
+Tiempo de espera agotado. El texto por xpaht no está presente.
 ]]></system-out>
 	</testcase>
 </testsuite>

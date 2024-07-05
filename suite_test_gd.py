@@ -6,6 +6,9 @@ import os
 import smtplib
 import xmlrunner
 import unittest
+from ConfISolicitudes import confi_Solicitudes
+from ConfiClientes import confi_registro_cliente
+from ConfigSucursales import config_Sucursales
 from CtaContOperSecundaria import contrato_operSecundarias
 from CtaCte_HistoApagar import cuenta_ctacte_histApagar
 from CtaCte_HistoAvenver import cuenta_ctacte_histAvencer
@@ -87,6 +90,9 @@ def ejecutar_suite():
     test_suite.addTest(unittest.makeSuite(reportEntregasVentas))
     test_suite.addTest(unittest.makeSuite(ReportinsumosPendRetirar))
     test_suite.addTest(unittest.makeSuite(reportMerFacturada))
+    test_suite.addTest(unittest.makeSuite(confi_registro_cliente))
+    test_suite.addTest(unittest.makeSuite(config_Sucursales))
+    test_suite.addTest(unittest.makeSuite(confi_Solicitudes))
     test_suite.addTest(unittest.makeSuite(Onboarding_test_tenant))
     
     # Configuración para generar informes XML solo de los tests fallidos

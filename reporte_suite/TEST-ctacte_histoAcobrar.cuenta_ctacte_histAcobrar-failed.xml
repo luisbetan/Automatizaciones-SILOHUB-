@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ctacte_histoAcobrar.cuenta_ctacte_histAcobrar-failed" tests="1" file="ctacte_histoAcobrar.py" time="90.399" timestamp="2024-06-26T12:48:47" failures="0" errors="0" skipped="0">
-	<testcase classname="ctacte_histoAcobrar.cuenta_ctacte_histAcobrar" name="test_ctacte_historica" time="90.399" timestamp="2024-06-26T12:48:47" file="ctacte_histoAcobrar.py" line="17">
-		<system-out><![CDATA[¡Elemento encontrado y clickeado 5 veces con éxito!
+<testsuite name="ctacte_histoAcobrar.cuenta_ctacte_histAcobrar-failed" tests="1" file="ctacte_histoAcobrar.py" time="95.127" timestamp="2024-07-02T16:33:44" failures="0" errors="0" skipped="0">
+	<testcase classname="ctacte_histoAcobrar.cuenta_ctacte_histAcobrar" name="test_ctacte_historica" time="95.127" timestamp="2024-07-02T16:33:44" file="ctacte_histoAcobrar.py" line="17">
+		<system-out><![CDATA[¡Elemento encontrado y clickeado 6 veces con éxito!
 ¡Elemento encontrado y clickeado 3 veces con éxito!
 Tiempo de espera agotado. El texto por xpaht no está presente.
 El valor es un carácter numérico. Valor: 1.516.284.997,06

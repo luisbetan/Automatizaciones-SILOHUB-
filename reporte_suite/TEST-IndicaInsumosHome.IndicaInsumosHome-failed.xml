@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="IndicaInsumosHome.IndicaInsumosHome-failed" tests="1" file="IndicaInsumosHome.py" time="25.762" timestamp="2024-06-26T12:07:29" failures="0" errors="0" skipped="0">
-	<testcase classname="IndicaInsumosHome.IndicaInsumosHome" name="test__indicators_home" time="25.762" timestamp="2024-06-26T12:07:29" file="IndicaInsumosHome.py" line="18">
+<testsuite name="IndicaInsumosHome.IndicaInsumosHome-failed" tests="1" file="IndicaInsumosHome.py" time="27.154" timestamp="2024-07-02T15:56:41" failures="0" errors="0" skipped="0">
+	<testcase classname="IndicaInsumosHome.IndicaInsumosHome" name="test__indicators_home" time="27.154" timestamp="2024-07-02T15:56:41" file="IndicaInsumosHome.py" line="18">
 		<system-out><![CDATA[El texto no coincide con los valores esperados. Texto actual: 'Indicadores de Insumos (correspondiente a los últimos 12 meses)'
 El texto encontrado es  Insumos Pendientes de Retirar
 El texto es visible para el usuario: 'Fertilizante'
 El valor es un carácter numérico. Valor: Cant: 185.929,00
 El texto encontrado es  Mercadería Remitida
 El texto es visible para el usuario: 'Fertilizantes'
-El valor es un carácter numérico. Valor: Cant: 125.190,00
+El valor es un carácter numérico. Valor: Cant: 127.190,00
 El texto encontrado es  Mercadería Facturada
 El texto es visible para el usuario: 'Fertilizantes'
-El valor es un carácter numérico. Valor: Cant: 298.340,00
+El valor es un carácter numérico. Valor: Cant: 300.340,00
 ]]></system-out>
 	</testcase>
 </testsuite>

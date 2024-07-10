@@ -2,7 +2,7 @@ import unittest
 import time
 from selenium.webdriver.common.by import By
 import xmlrunner
-from Elements import calendar_todate, find_and_click_element, find_elements, find_send_element, find_send_element_selector, search_and_select_producer, select_option_click, send_element, validate_strt, validate_text, verify_todate
+from Elements import find_elements, select_option_click, send_element, validate_text, verify_todate
 from LoginSample import LoginSample
 from startSession import StartSession
 
@@ -121,6 +121,6 @@ class logistOperPrimarias(unittest.TestCase):
 
 if __name__ == "__main__":
   test_suite = unittest.TestLoader().loadTestsFromTestCase(logistOperPrimarias)
-  runner = xmlrunner.XMLTestRunner(output='reportfinanzaspago')
+  runner = xmlrunner.XMLTestRunner(output='reportlogistOperPrimar')
   runner.run(test_suite)
         

@@ -1,5 +1,5 @@
 import time
-from FindElements import find_element_by_css_selector, find_element_by_xpath, find_element_by_id
+from findElements import find_element_by_css_selector, find_element_by_xpath, find_element_by_id
 
 class LoginHelper:
     def __init__(self, driver):

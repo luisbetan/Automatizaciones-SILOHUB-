@@ -4,7 +4,7 @@ import unittest
 from selenium.webdriver.common.by import By
 import xmlrunner
 from Elements import validate_character_numeric_element,  validate_text
-from Loginhelper import LoginHelper
+from loginhelper import LoginHelper
 from startSession import StartSession
 
 

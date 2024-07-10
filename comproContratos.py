@@ -2,7 +2,7 @@ import unittest
 import xmlrunner
 import time
 from Elements import displace_element, find_and_click_element, find_elements, find_elements_css_selector,validate_text
-from Loginhelper import LoginHelper
+from loginhelper import LoginHelper
 from startSession import StartSession
 
 

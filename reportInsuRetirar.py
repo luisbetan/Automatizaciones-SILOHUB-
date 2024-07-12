@@ -3,7 +3,7 @@ import unittest
 from selenium.webdriver.common.by import By
 import xmlrunner
 from Elements import calendar_todate_retro, find_elements, validate_character_numeric_element_selector, validate_strt_selector, validate_text
-from Loginhelper import LoginHelper
+from loginhelper import LoginHelper
 from startSession import StartSession
 
 class ReportinsumosPendRetirar(unittest.TestCase):

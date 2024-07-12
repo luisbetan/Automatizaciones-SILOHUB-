@@ -2,8 +2,8 @@ import time
 import unittest
 from selenium.webdriver.common.by import By
 import xmlrunner
-from Elements import calendar_todate_retro, find_and_click_element, find_and_click_element_selector, find_elements, validate_character_numeric_element, validate_character_numeric_element_selector, validate_strt_selector, validate_text, validate_text_by_strt
-from Loginhelper import LoginHelper
+from Elements import calendar_todate_retro, find_elements, validate_character_numeric_element, validate_character_numeric_element_selector, validate_strt_selector, validate_text
+from loginhelper import LoginHelper
 from startSession import StartSession
 
 class reportMerFacturada(unittest.TestCase):

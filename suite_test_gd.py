@@ -25,7 +25,8 @@ from EntregasPendApli import entregas_pend_Aplicadas
 from GranosContratos import granos_contratos
 from Home import HomeTenant
 from HomeEntRecientes import HomeEntRecientesTenant
-from IndicaInsumosHome import IndicaInsumosHome
+from finanzasPagos import finanzaspagos
+from indicaInsumosHome import IndicaInsumosHome
 from MisIntenciones import mis_intenciones
 from Precio_Fijacion import precio_granos_fijaciones
 from Profile_User import Perfil_Usuario
@@ -47,6 +48,7 @@ from ctacte_apliAcobrar import cta_cte_apliAcobrar
 from ctacte_aplicada import cuenta_ctacte_aplicada
 from ctacte_histórica import cuenta_ctacte_historica
 from insumos_producto import insumosProductos
+import logistOperPrimarias
 from reportInsuRetirar import ReportinsumosPendRetirar
 
 
@@ -90,6 +92,8 @@ def ejecutar_suite():
     test_suite.addTest(unittest.makeSuite(reportEntregasVentas))
     test_suite.addTest(unittest.makeSuite(ReportinsumosPendRetirar))
     test_suite.addTest(unittest.makeSuite(reportMerFacturada))
+    test_suite.addTest(unittest.makeSuite(finanzaspagos))
+    test_suite.addTest(unittest.makeSuite(logistOperPrimarias))
     test_suite.addTest(unittest.makeSuite(confi_registro_cliente))
     test_suite.addTest(unittest.makeSuite(config_Sucursales))
     test_suite.addTest(unittest.makeSuite(confi_Solicitudes))

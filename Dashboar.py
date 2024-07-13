@@ -3,7 +3,7 @@ import unittest
 import xmlrunner
 import time
 from Elements import  calendar_todate, find_elements
-from Loginhelper import LoginHelper
+from loginhelper import LoginHelper
 from SelectListDashboard import verify_text_and_click
 from startSession import StartSession
 

@@ -9,7 +9,6 @@ class comprobantectacte(unittest.TestCase):
     def setUp(self):
         self.start_session = StartSession()
         self.driver = self.start_session.driver
-
         # Inicializar la clase LoginHelper
         self.login_helper = LoginHelper(self.driver)
 

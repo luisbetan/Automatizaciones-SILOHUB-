@@ -48,7 +48,7 @@ from ctacte_apliAcobrar import cta_cte_apliAcobrar
 from ctacte_aplicada import cuenta_ctacte_aplicada
 from ctacte_histórica import cuenta_ctacte_historica
 from insumos_producto import insumosProductos
-import logistOperPrimarias
+from logistOperPrimarias import logistOperPrimarias
 from reportInsuRetirar import ReportinsumosPendRetirar
 
 

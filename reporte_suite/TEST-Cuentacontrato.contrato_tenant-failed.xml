@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cuentacontrato.contrato_tenant-failed" tests="1" file="Cuentacontrato.py" time="71.030" timestamp="2024-07-02T16:09:34" failures="0" errors="0" skipped="0">
-	<testcase classname="Cuentacontrato.contrato_tenant" name="test_contrato_tenant" time="71.030" timestamp="2024-07-02T16:09:34" file="Cuentacontrato.py" line="22">
+<testsuite name="Cuentacontrato.contrato_tenant-failed" tests="1" file="Cuentacontrato.py" time="63.439" timestamp="2024-07-13T12:01:35" failures="0" errors="0" skipped="0">
+	<testcase classname="Cuentacontrato.contrato_tenant" name="test_contrato_tenant" time="63.439" timestamp="2024-07-13T12:01:35" file="Cuentacontrato.py" line="22">
 		<system-out><![CDATA[¡Elemento encontrado y clickeado 9 veces con éxito!
 ¡Elemento encontrado y clickeado 1 veces con éxito!
 El texto encontrado es  Estado De Mis Contratos

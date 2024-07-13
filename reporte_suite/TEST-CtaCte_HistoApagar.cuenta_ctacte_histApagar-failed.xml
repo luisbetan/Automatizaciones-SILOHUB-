@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CtaCte_HistoApagar.cuenta_ctacte_histApagar-failed" tests="1" file="CtaCte_HistoApagar.py" time="92.241" timestamp="2024-07-02T16:32:06" failures="0" errors="0" skipped="0">
-	<testcase classname="CtaCte_HistoApagar.cuenta_ctacte_histApagar" name="test_ctacte_historica" time="92.241" timestamp="2024-07-02T16:32:06" file="CtaCte_HistoApagar.py" line="17">
+<testsuite name="CtaCte_HistoApagar.cuenta_ctacte_histApagar-failed" tests="1" file="CtaCte_HistoApagar.py" time="90.873" timestamp="2024-07-13T12:21:42" failures="0" errors="0" skipped="0">
+	<testcase classname="CtaCte_HistoApagar.cuenta_ctacte_histApagar" name="test_ctacte_historica" time="90.873" timestamp="2024-07-13T12:21:42" file="CtaCte_HistoApagar.py" line="17">
 		<system-out><![CDATA[¡Elemento encontrado y clickeado 6 veces con éxito!
 ¡Elemento encontrado y clickeado 3 veces con éxito!
 Tiempo de espera agotado. El texto por xpaht no está presente.

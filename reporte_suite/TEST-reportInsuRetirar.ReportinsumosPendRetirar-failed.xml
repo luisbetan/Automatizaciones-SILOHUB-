@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="reportInsuRetirar.ReportinsumosPendRetirar-failed" tests="1" file="reportInsuRetirar.py" time="51.085" timestamp="2024-07-02T16:47:06" failures="0" errors="0" skipped="0">
-	<testcase classname="reportInsuRetirar.ReportinsumosPendRetirar" name="test_Report_suppliesWithdrawal" time="51.085" timestamp="2024-07-02T16:47:06" file="reportInsuRetirar.py" line="17">
+<testsuite name="reportInsuRetirar.ReportinsumosPendRetirar-failed" tests="1" file="reportInsuRetirar.py" time="48.926" timestamp="2024-07-13T12:35:32" failures="0" errors="0" skipped="0">
+	<testcase classname="reportInsuRetirar.ReportinsumosPendRetirar" name="test_Report_suppliesWithdrawal" time="48.926" timestamp="2024-07-13T12:35:32" file="reportInsuRetirar.py" line="17">
 		<system-out><![CDATA[El texto encontrado es  Insumos Pendientes de Retirar
 El texto encontrado es  Comprobante
 El texto encontrado 'FAC 1051 00014530' no coincide con el esperado ''

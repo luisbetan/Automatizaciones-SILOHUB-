@@ -3,7 +3,7 @@ import unittest
 import xmlrunner
 import time
 from Elements import  calendar_todate, find_elements, find_elements_id
-from Loginhelper import LoginHelper
+from loginhelper import LoginHelper
 from startSession import StartSession
 
 

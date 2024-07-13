@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Ventas.cuenta_ventas-failed" tests="1" file="Ventas.py" time="46.039" timestamp="2024-07-02T16:22:10" failures="0" errors="0" skipped="0">
-	<testcase classname="Ventas.cuenta_ventas" name="test_cuenta_ventas" time="46.039" timestamp="2024-07-02T16:22:10" file="Ventas.py" line="23">
+<testsuite name="Ventas.cuenta_ventas-failed" tests="1" file="Ventas.py" time="42.986" timestamp="2024-07-13T12:12:39" failures="0" errors="0" skipped="0">
+	<testcase classname="Ventas.cuenta_ventas" name="test_cuenta_ventas" time="42.986" timestamp="2024-07-13T12:12:39" file="Ventas.py" line="23">
 		<system-out><![CDATA[El texto es visible para el usuario
 El texto fue validado correctamente: Mis Ventas
 ¡Elemento encontrado y clickeado 7 veces con éxito!

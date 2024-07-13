@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="comproVentas.comprobanteVentas-failed" tests="1" file="comproVentas.py" time="111.121" timestamp="2024-07-02T16:43:37" failures="0" errors="0" skipped="0">
-	<testcase classname="comproVentas.comprobanteVentas" name="test_vouchers_sales" time="111.121" timestamp="2024-07-02T16:43:37" file="comproVentas.py" line="18">
+<testsuite name="comproVentas.comprobanteVentas-failed" tests="1" file="comproVentas.py" time="108.538" timestamp="2024-07-13T12:32:27" failures="0" errors="0" skipped="0">
+	<testcase classname="comproVentas.comprobanteVentas" name="test_vouchers_sales" time="108.538" timestamp="2024-07-13T12:32:27" file="comproVentas.py" line="18">
 		<system-out><![CDATA[El texto encontrado es  COMPROBANTES
 ¡Elemento encontrado y clickeado 7 veces con éxito!
 ¡Elemento encontrado y clickeado 1 veces con éxito!

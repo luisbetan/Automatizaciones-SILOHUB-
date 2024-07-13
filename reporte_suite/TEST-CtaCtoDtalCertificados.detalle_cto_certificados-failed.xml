@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CtaCtoDtalCertificados.detalle_cto_certificados-failed" tests="1" file="CtaCtoDtalCertificados.py" time="67.538" timestamp="2024-07-02T16:13:53" failures="1" errors="0" skipped="0">
-	<testcase classname="CtaCtoDtalCertificados.detalle_cto_certificados" name="test_detail_certificates" time="67.538" timestamp="2024-07-02T16:13:53" file="CtaCtoDtalCertificados.py" line="22">
+<testsuite name="CtaCtoDtalCertificados.detalle_cto_certificados-failed" tests="1" file="CtaCtoDtalCertificados.py" time="62.746" timestamp="2024-07-13T12:04:36" failures="1" errors="0" skipped="0">
+	<testcase classname="CtaCtoDtalCertificados.detalle_cto_certificados" name="test_detail_certificates" time="62.746" timestamp="2024-07-13T12:04:36" file="CtaCtoDtalCertificados.py" line="22">
 		<failure type="AssertionError" message=""><![CDATA[Traceback (most recent call last):
   File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\CtaCtoDtalCertificados.py", line 110, in test_detail_certificates
     validate_text_visible(self.driver, element1, number_expected)
-  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1173, in validate_text_visible
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1174, in validate_text_visible
     assert text_obtained == text_expected
 AssertionError
 ]]></failure>

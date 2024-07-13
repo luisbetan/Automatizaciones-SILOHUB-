@@ -3,7 +3,7 @@ import time
 import unittest
 from selenium.webdriver.common.by import By
 import xmlrunner
-from Elements import find_and_click_element, find_and_click_element_selector, find_elements, validate_character_numeric_element, validate_text
+from Elements import calendar_todate_retro, find_and_click_element, find_and_click_element_selector, find_elements, validate_character_numeric_element, validate_text
 from loginhelper import LoginHelper
 from startSession import StartSession
 
@@ -43,36 +43,19 @@ class reportMerRemitida(unittest.TestCase):
         find_elements(self.driver,select_sent_merchandise)
         time.sleep(2)
 
-        # aplicar rando de fecha 01/09/2021 al 30/09/2021
+        # aplicar filtro de fecha actual a seis meses para atras 
 
-        select_date_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-reports-options/app-date-filter/div/app-date-picker/div/input[2]"
-        find_elements(self.driver,select_date_filter)
-        time.sleep(2)
-
-        select_arrow_1 = "body > div > div.flatpickr-months > div > div > div > span.arrowDown"
-        clicks = 2
-        find_and_click_element_selector(self.driver, select_arrow_1, clicks)
-        time.sleep(2)
-
-        select_arrow_2 = "/html/body/div/div[1]/span[1]"
-        clicks = 6
-        find_and_click_element(self.driver, select_arrow_2, clicks)
-        time.sleep(2)
-
-
-        select_date_1 = "/html/body/div/div[2]/div/div[2]/div/span[3]"
-        find_elements(self.driver, select_date_1)
-        time.sleep(2)
-
-
-        select_date_2 ="/html/body/div/div[2]/div/div[2]/div/span[32]"
-        find_elements(self.driver, select_date_2)
+        select_calendar = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-reports-options/app-date-filter/div/app-date-picker/div/input[2]"
+        popup_xpath = "//div[contains(@class, 'flatpickr-calendar')]"
+        select_chevron = "//span[@class='flatpickr-prev-month']"
+        popup_xpath2 = "//div[contains(@class, 'flatpickr-calendar')]"
+        click_chevron = 6
+        calendar_todate_retro(self.driver, select_calendar, popup_xpath, select_chevron, popup_xpath2, clicks=click_chevron)
         time.sleep(2)
 
         apply_button_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-filter-buttons/div/app-button[2]/button"
         find_elements(self.driver, apply_button_filter)
-        time.sleep(2)
-
+        time.sleep(3)
         # validar totalizadores
 
         total_outputs = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-remitted-merchandise/app-header-for-responsive-table/div/div/div[1]/div/div[1]/app-totalizer/div/div/div[2]/div[2]/span[1]"

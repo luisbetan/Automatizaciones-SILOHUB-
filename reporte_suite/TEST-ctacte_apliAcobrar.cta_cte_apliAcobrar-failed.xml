@@ -1,16 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ctacte_apliAcobrar.cta_cte_apliAcobrar-failed" tests="1" file="ctacte_apliAcobrar.py" time="62.739" timestamp="2024-07-02T16:24:16" failures="0" errors="0" skipped="0">
-	<testcase classname="ctacte_apliAcobrar.cta_cte_apliAcobrar" name="test_ctacte_aplicada" time="62.739" timestamp="2024-07-02T16:24:16" file="ctacte_apliAcobrar.py" line="17">
+<testsuite name="ctacte_apliAcobrar.cta_cte_apliAcobrar-failed" tests="1" file="ctacte_apliAcobrar.py" time="103.944" timestamp="2024-07-13T12:15:41" failures="0" errors="1" skipped="0">
+	<testcase classname="ctacte_apliAcobrar.cta_cte_apliAcobrar" name="test_ctacte_aplicada" time="103.944" timestamp="2024-07-13T12:15:41" file="ctacte_apliAcobrar.py" line="17">
+		<error type="NoSuchElementException" message="Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[1]/app-current-account-applied-list/app-header-for-responsive-table/div/div/div[1]/div/div[1]/app-totalizer/div/div[1]/div[2]/div[2]/span[1]&quot;}
+  (Session info: chrome=126.0.6478.127); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C711EEA2+31554]
+	(No symbol) [0x00007FF6C7097ED9]
+	(No symbol) [0x00007FF6C6F5872A]
+	(No symbol) [0x00007FF6C6FA8434]
+	(No symbol) [0x00007FF6C6FA853C]
+	(No symbol) [0x00007FF6C6FEF6A7]
+	(No symbol) [0x00007FF6C6FCD06F]
+	(No symbol) [0x00007FF6C6FEC977]
+	(No symbol) [0x00007FF6C6FCCDD3]
+	(No symbol) [0x00007FF6C6F9A33B]
+	(No symbol) [0x00007FF6C6F9AED1]
+	GetHandleVerifier [0x00007FF6C7428B1D+3217341]
+	GetHandleVerifier [0x00007FF6C7475AE3+3532675]
+	GetHandleVerifier [0x00007FF6C746B0E0+3489152]
+	GetHandleVerifier [0x00007FF6C71CE776+750614]
+	(No symbol) [0x00007FF6C70A375F]
+	(No symbol) [0x00007FF6C709EB14]
+	(No symbol) [0x00007FF6C709ECA2]
+	(No symbol) [0x00007FF6C708E16F]
+	BaseThreadInitThunk [0x00007FFBD5F8257D+29]
+	RtlUserThreadStart [0x00007FFBD704AF28+40]
+"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\ctacte_apliAcobrar.py", line 93, in test_ctacte_aplicada
+    validate_character_numeric_element(self.driver, total_to_pay)
+  File "c:\Users\luist\repos\Automatizaciones-SILOHUB-\Elements.py", line 1147, in validate_character_numeric_element
+    elemento = driver.find_element(By.XPATH, xpath)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\luist\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-current-account/div/div/div[1]/app-current-account-applied-list/app-header-for-responsive-table/div/div/div[1]/div/div[1]/app-totalizer/div/div[1]/div[2]/div[2]/span[1]"}
+  (Session info: chrome=126.0.6478.127); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C711EEA2+31554]
+	(No symbol) [0x00007FF6C7097ED9]
+	(No symbol) [0x00007FF6C6F5872A]
+	(No symbol) [0x00007FF6C6FA8434]
+	(No symbol) [0x00007FF6C6FA853C]
+	(No symbol) [0x00007FF6C6FEF6A7]
+	(No symbol) [0x00007FF6C6FCD06F]
+	(No symbol) [0x00007FF6C6FEC977]
+	(No symbol) [0x00007FF6C6FCCDD3]
+	(No symbol) [0x00007FF6C6F9A33B]
+	(No symbol) [0x00007FF6C6F9AED1]
+	GetHandleVerifier [0x00007FF6C7428B1D+3217341]
+	GetHandleVerifier [0x00007FF6C7475AE3+3532675]
+	GetHandleVerifier [0x00007FF6C746B0E0+3489152]
+	GetHandleVerifier [0x00007FF6C71CE776+750614]
+	(No symbol) [0x00007FF6C70A375F]
+	(No symbol) [0x00007FF6C709EB14]
+	(No symbol) [0x00007FF6C709ECA2]
+	(No symbol) [0x00007FF6C708E16F]
+	BaseThreadInitThunk [0x00007FFBD5F8257D+29]
+	RtlUserThreadStart [0x00007FFBD704AF28+40]
+
+]]></error>
 		<system-out><![CDATA[¡Elemento encontrado y clickeado 9 veces con éxito!
 ¡Elemento encontrado y clickeado 2 veces con éxito!
-El texto encontrado es  Cuenta Corriente Aplicada
-El valor es un carácter numérico. Valor: 45.348,34
-El valor es un carácter numérico. Valor: 2.493,50
-El valor es un carácter numérico. Valor: 254,10
-El texto encontrado es  CUENTA CORRIENTE
-El texto encontrado es  Movimiento NC 1051 00007140
-El texto encontrado es  USD 236,68
-El texto encontrado es  NC Bonificacion afecta a fra. 1051-14310-(3 bidon
+Tiempo de espera agotado. El texto por xpaht no está presente.
 ]]></system-out>
 	</testcase>
 </testsuite>

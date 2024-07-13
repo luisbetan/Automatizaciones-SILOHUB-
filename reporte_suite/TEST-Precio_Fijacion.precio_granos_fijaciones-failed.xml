@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Precio_Fijacion.precio_granos_fijaciones-failed" tests="1" file="Precio_Fijacion.py" time="175.697" timestamp="2024-07-02T16:04:03" failures="0" errors="0" skipped="0">
-	<testcase classname="Precio_Fijacion.precio_granos_fijaciones" name="test_price_fixings" time="175.697" timestamp="2024-07-02T16:04:03" file="Precio_Fijacion.py" line="21">
+<testsuite name="Precio_Fijacion.precio_granos_fijaciones-failed" tests="1" file="Precio_Fijacion.py" time="146.000" timestamp="2024-07-13T11:57:06" failures="0" errors="0" skipped="0">
+	<testcase classname="Precio_Fijacion.precio_granos_fijaciones" name="test_price_fixings" time="146.000" timestamp="2024-07-13T11:57:06" file="Precio_Fijacion.py" line="21">
 		<system-out><![CDATA[El texto encontrado es  MERCADOS
+Se hizo clic en un icono de borrar.
 Se hizo clic en un icono de borrar.
 No se encontraron más movimientos para borrar.
 ¡Input encontrado y enviado con éxito!
@@ -10,8 +11,7 @@ Tiempo de espera agotado. El elemento no está presente o no es clickeable.
 Tiempo de espera agotado. El elemento no está presente o no es clickeable.
 ¡Input encontrado y enviado con éxito!
 ¡Cuenta encontrada y seleccionada 484  con éxito!
-Tiempo de espera agotado. El chevron no están presentes o no son clickeables.
-Tiempo de espera agotado. El input no está presente o no es clickeable.
+¡Input encontrado y enviado con éxito!
 ]]></system-out>
 	</testcase>
 </testsuite>

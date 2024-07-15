@@ -1,7 +1,7 @@
 import unittest
 import xmlrunner
 import time
-from Elements import delete_element, displace_element, find_elements, find_elements_css_selector, select_option_click, send_element, validate_text, verify_todate
+from Elements import delete_element,  find_elements, find_elements_css_selector, select_option_click, send_element, validate_text, verify_todate
 from loginhelper import LoginHelper
 from startSession import StartSession
 

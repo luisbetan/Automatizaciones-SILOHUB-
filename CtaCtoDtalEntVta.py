@@ -90,6 +90,7 @@ class detalle_ctro_entregaVentas(unittest.TestCase):
         element10 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-contracts/app-responsive-table-multiple-items/div/div/span"
         text_expected = "Estado De Mis Contratos"
         validate_text_by_text(self.driver, text_expected)
+        time.sleep(2)
         
         #ingresar al detalle de cuarto contrato del listado
         selet_list_contract = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-contracts/app-responsive-table-multiple-items/div/table/tbody/tr[4]/td[1]/app-contract/div"
@@ -97,11 +98,9 @@ class detalle_ctro_entregaVentas(unittest.TestCase):
         time.sleep(3)
 
        
-        
-
         # validar numero de contrato 
         element1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/div/div[1]/div[1]/div/span"
-        number_expected = "Contrato 107571"
+        number_expected = "Contrato 108169"
         validate_text_visible(self.driver, element1, number_expected)
 
         # validar produto 
@@ -112,7 +111,7 @@ class detalle_ctro_entregaVentas(unittest.TestCase):
        # Validar kilos pactados 
         
         amount_kilos = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/div/div[2]/div/span"
-        amount_kilos_expected = ["1000,00 Tn", "De 10000,00 QQ Pactados", "De 1000.000,00 Kg Pactados"]
+        amount_kilos_expected = ["500,00 Tn", "De 5000,00 QQ Pactados", "De 500.000,00 Kg Pactados"]
         validate_chain_text_xpaht(self.driver, amount_kilos, amount_kilos_expected)
 
         self.driver.execute_script("window.scrollTo(0, 900);")

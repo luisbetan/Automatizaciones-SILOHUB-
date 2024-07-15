@@ -3,7 +3,7 @@ import unittest
 from selenium.webdriver.common.by import By
 import xmlrunner
 from Elements import find_and_click_element_selector, find_elements, validate_character_numeric_element, validate_text
-from Loginhelper import LoginHelper
+from loginhelper import LoginHelper
 from startSession import StartSession
 
 class reportenImpositivas(unittest.TestCase):

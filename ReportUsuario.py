@@ -2,7 +2,7 @@ import time
 import unittest
 import xmlrunner
 from Elements import find_and_click_element, find_and_click_element_selector, find_elements, validate_character_numeric_element, validate_text
-from Loginhelper import LoginHelper
+from loginhelper import LoginHelper
 from startSession import StartSession
 
 class reportUsuarios(unittest.TestCase):

@@ -101,7 +101,7 @@ class detalle_ctro_fijaciones(unittest.TestCase):
 
         # validar numero de contrato 
         element1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/div/div[1]/div[1]/div/span"
-        number_expected = "Contrato 107571"
+        number_expected = "Contrato 108169"
         validate_text_visible(self.driver, element1, number_expected)
 
         # validar produto 
@@ -112,7 +112,7 @@ class detalle_ctro_fijaciones(unittest.TestCase):
        # Validar kilos pactados 
         
         amount_kilos = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/div/div[2]/div/span"
-        amount_kilos_expected = ["1000,00 Tn", "De 10000,00 QQ Pactados", "De 1000.000,00 Kg Pactados"]
+        amount_kilos_expected = ["500,00 Tn", "De 5000,00 QQ Pactados", "De 500.000,00 Kg Pactados"]
         validate_chain_text_xpaht(self.driver, amount_kilos, amount_kilos_expected)
 
         
@@ -146,7 +146,7 @@ class detalle_ctro_fijaciones(unittest.TestCase):
         validate_text_visible(self.driver, element6, text_expected)
 
         date_delivery = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/tbody/tr/td[2]/span/div/span"
-        strt_expected = "05/04/2021"
+        strt_expected = "20/04/2021"
         validate_text_visible(self.driver,date_delivery, strt_expected)
 
         element7 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-detail-contract/app-contract-detail-tabs/div/div[2]/app-contract-sales/app-sales-shared/app-responsive-table/div/div/table/thead/tr/th[4]'

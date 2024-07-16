@@ -2,9 +2,11 @@ import unittest
 import time
 from selenium.webdriver.common.by import By
 import xmlrunner
-from Elements import find_elements, select_option_click, send_element, validate_text, verify_todate
+from Elements import find_elements, select_option_click, send_element, validate_text 
+from Elements2 import verify_todate
 from LoginSample import LoginSample
 from startSession import StartSession
+
 
 
 class logistOperPrimarias(unittest.TestCase):
@@ -45,7 +47,7 @@ class logistOperPrimarias(unittest.TestCase):
         time.sleep(2)
 
         button_dopdown1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-logistics/div/div[2]/div[1]/app-reservation-request/div[2]/app-reservation-request-header/div/div/div[1]/div/div[2]/div[2]/div/div[1]/select"
-        option_desired1 =  "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-logistics/div/div[2]/div[1]/app-reservation-request/div[2]/app-reservation-request-header/div/div/div[1]/div/div[2]/div[2]/div/div[1]/select/option[20]"
+        option_desired1 =  '//option[text() = " TRIGO "]'
         select_option_click(self.driver, button_dopdown1, option_desired1, )
         time.sleep(2)
 
@@ -100,7 +102,7 @@ class logistOperPrimarias(unittest.TestCase):
         find_elements(self.driver, select_account2)
         time.sleep(5)
 
-        select_todate = "#current-account-file > app-my-reservations > div > table > tbody > tr:nth-child(2) > td:nth-child(4)"
+        select_todate = '//*[@id="current-account-file"]/app-my-reservations/div/table/tbody/tr[2]/td[4]'
         verify_todate(self.driver,select_todate)
         time.sleep(2)
 

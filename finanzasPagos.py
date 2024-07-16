@@ -1,7 +1,8 @@
 import unittest
 import xmlrunner
 import time
-from Elements import delete_element,  find_elements, find_elements_css_selector, select_option_click, send_element, validate_text, verify_todate
+from Elements import delete_element,  find_elements, find_elements_css_selector, select_option_click, send_element, validate_text
+from Elements2 import verify_todate
 from loginhelper import LoginHelper
 from startSession import StartSession
 
@@ -94,12 +95,6 @@ class finanzaspagos(unittest.TestCase):
         select_option_click(self.driver, button_dopdown2, option_desired2, )
         time.sleep(2)
  
-
-        select_input_amount2 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-forecast-main/div/app-means-of-payment-table/div/table/tbody/tr/td[3]/input'
-        send_account2 = '10000'
-        send_element(self.driver, select_input_amount2, send_account2 )
-        time.sleep(2)
-
 
         select_button_confirm2 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-forecast-main/div/div[2]/app-button[2]/button"
         find_elements(self.driver, select_button_confirm2)

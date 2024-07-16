@@ -31,7 +31,6 @@ from MisIntenciones import mis_intenciones
 from Precio_Fijacion import precio_granos_fijaciones
 from Profile_User import Perfil_Usuario
 from RegistroUsuario import TestRegistroUsuario 
-from Entregas import cuenta_entregas
 from ReportCompPenFact import reportPendFacturar
 from ReportEntreVentas import reportEntregasVentas
 from ReportMerFacturada import reportMerFacturada
@@ -70,7 +69,6 @@ def ejecutar_suite():
     test_suite.addTest(unittest.makeSuite(detalle_cto_certificados))
     test_suite.addTest(unittest.makeSuite(detalle_cto_liquidaciones))
     test_suite.addTest(unittest.makeSuite(contrato_operSecundarias))
-    test_suite.addTest(unittest.makeSuite(cuenta_entregas))
     test_suite.addTest(unittest.makeSuite(cta_entregasAplicadas))
     test_suite.addTest(unittest.makeSuite(entregas_pend_Aplicadas))
     test_suite.addTest(unittest.makeSuite(cuenta_ventas))

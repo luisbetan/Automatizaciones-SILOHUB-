@@ -2,7 +2,7 @@ import time
 import unittest
 from selenium.webdriver.common.by import By
 import xmlrunner
-from Elements import  find_and_click_element, find_elements, validate_character_numeric_element, validate_text, validate_text_by_strt
+from Elements import  calendar_todate_retro, find_and_click_element, find_elements, validate_character_numeric_element, validate_text
 from loginhelper import LoginHelper
 from startSession import StartSession
 
@@ -42,30 +42,15 @@ class reportPendFacturar(unittest.TestCase):
         find_elements(self.driver,select_receipts_pending)
         time.sleep(2)
 
-        ## seleccionar filtro 01/11/2024 al 22/05/2024
+        ## seleccionar filtro de los ultimos seis meses 
 
-        insert_date_filter = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-reports-options/app-date-filter/div/app-date-picker/div/input[2]"
-        find_elements(self.driver, insert_date_filter)
+        select_calendar = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-reports-options/app-date-filter/div/app-date-picker/div/input[2]"
+        popup_xpath = "//div[contains(@class, 'flatpickr-calendar')]"
+        select_chevron = "//span[@class='flatpickr-prev-month']"
+        popup_xpath2 = "//div[contains(@class, 'flatpickr-calendar')]"
+        click_chevron = 6
+        calendar_todate_retro(self.driver, select_calendar, popup_xpath, select_chevron, popup_xpath2, clicks=click_chevron)
         time.sleep(2)
-
-        select_arrow_filter1 = "/html/body/div/div[1]/span[1]"
-        amount_click1 = 6
-        find_and_click_element(self.driver, select_arrow_filter1, amount_click1)
-        time.sleep(2)
-
-         ##Espera hasta que el checkbox esté visible y activo
-      
-        select_date_filter1 = "/html/body/div/div[2]/div/div[2]/div/span[3]"
-        find_elements(self.driver, select_date_filter1)
-
-        select_arrow_filter2 = "/html/body/div/div[1]/span[2]"
-        amount_click2 = 6
-        find_and_click_element(self.driver, select_arrow_filter2, amount_click2)
-        time.sleep(2)
-
-        select_date_filter2 = "/html/body/div/div[2]/div/div[2]/div/span[24]"
-        find_elements(self.driver, select_date_filter2)
-
 
         apply_option_select = "/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-filter-buttons/div/app-button[2]/button"
         find_elements(self.driver,apply_option_select)

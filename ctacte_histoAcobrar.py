@@ -1,7 +1,7 @@
 import time
 import unittest
 import xmlrunner
-from Elements import find_and_click_element, find_elements, find_elements_css_selector, find_elements_id, validate_character_numeric_element, validate_text
+from Elements import find_and_click_element, find_elements, find_elements_css_selector, validate_character_numeric_element, validate_text
 from loginhelper import LoginHelper
 from startSession import StartSession
 

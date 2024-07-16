@@ -1,5 +1,4 @@
-
-from datetime import datetime
+import datetime
 import time
 import random
 from bs4 import BeautifulSoup
@@ -11,7 +10,7 @@ import re
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
-import datetime
+
 
 
 
@@ -1617,16 +1616,3 @@ def verify_and_click(driver, number_generate, xpath_number):
         print(f"Ha ocurrido un error al obtener o clicar en el elemento: {e}")
         return None
     
-def verify_todate(driver, selector):
-    # Obtener la fecha actual
-    fecha_actual = datetime.now().strftime('%Y-%m-%d')
-    
-    # Encontrar el elemento de la fecha en la página
-    elemento_fecha = driver.find_element(By.CSS_SELECTOR, selector)
-    fecha_elemento = elemento_fecha.text
-    
-    # Comparar la fecha del elemento con la fecha actual
-    if fecha_elemento == fecha_actual:
-        print(f"La fecha encontrada es la actual: {fecha_elemento}")
-    else:
-         print(f"Fecha encontrada: {fecha_elemento}")
